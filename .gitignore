@@ -41,3 +41,10 @@ yarn-error.log*
 /playwright-report/
 /blob-report/
 /playwright/*
+
+# Local Storage
+/local_storage/
+
+# Editor directories
+.vscode/
+.cursor/

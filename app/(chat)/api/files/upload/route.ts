@@ -1,6 +1,9 @@
-import { put } from '@vercel/blob';
+// import { put } from '@vercel/blob';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
+import { promises as fs } from 'fs'; // Import fs promises
+import path from 'path'; // Import path
+import crypto from 'crypto'; // Import crypto for unique names
 
 import { auth } from '@/app/(auth)/auth';
 
@@ -51,13 +54,36 @@ export async function POST(request: Request) {
     const fileBuffer = await file.arrayBuffer();
 
     try {
-      const data = await put(`${filename}`, fileBuffer, {
-        access: 'public',
+      // Generate a unique filename to avoid collisions and potential security issues
+      const uniqueFilename = `${crypto.randomUUID()}-${filename}`;
+      const storageDir = path.join(process.cwd(), 'local_storage', 'blobs');
+      const localPath = path.join(storageDir, uniqueFilename);
+
+      // Ensure the storage directory exists
+      await fs.mkdir(storageDir, { recursive: true });
+
+      // Write the file to the local filesystem
+      await fs.writeFile(localPath, Buffer.from(fileBuffer));
+
+      // Construct the URL to serve the file locally
+      const localUrl = `/api/local-files/${encodeURIComponent(uniqueFilename)}`;
+
+      // Return a response mimicking Vercel Blob's structure but with the local URL
+      return NextResponse.json({
+        url: localUrl,
+        pathname: uniqueFilename, // Use the unique name as the pathname identifier
+        contentType: file.type,
+        contentDisposition: `attachment; filename="${filename}"`, // Keep original filename for download suggestion
       });
 
-      return NextResponse.json(data);
+      // const data = await put(`${filename}`, fileBuffer, {
+      //   access: 'public',
+      // });
+      //
+      // return NextResponse.json(data);
     } catch (error) {
-      return NextResponse.json({ error: 'Upload failed' }, { status: 500 });
+      console.error('Local upload failed:', error); // Log specific error
+      return NextResponse.json({ error: 'Local upload failed' }, { status: 500 });
     }
   } catch (error) {
     return NextResponse.json(

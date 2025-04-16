@@ -1,16 +1,14 @@
 import { PreviewMessage } from './message';
 import { useScrollToBottom } from './use-scroll-to-bottom';
-import { Vote } from '@/lib/db/schema';
 import { UIMessage } from 'ai';
 import { memo } from 'react';
 import equal from 'fast-deep-equal';
 import { UIArtifact } from './artifact';
 import { UseChatHelpers } from '@ai-sdk/react';
 
-interface ArtifactMessagesProps {
+export interface ArtifactMessagesProps {
   chatId: string;
   status: UseChatHelpers['status'];
-  votes: Array<Vote> | undefined;
   messages: Array<UIMessage>;
   setMessages: UseChatHelpers['setMessages'];
   reload: UseChatHelpers['reload'];
@@ -21,7 +19,6 @@ interface ArtifactMessagesProps {
 function PureArtifactMessages({
   chatId,
   status,
-  votes,
   messages,
   setMessages,
   reload,
@@ -40,12 +37,7 @@ function PureArtifactMessages({
           chatId={chatId}
           key={message.id}
           message={message}
-          isLoading={status === 'streaming' && index === messages.length - 1}
-          vote={
-            votes
-              ? votes.find((vote) => vote.messageId === message.id)
-              : undefined
-          }
+          isLoading={status === 'streaming' && messages.length - 1 === index}
           setMessages={setMessages}
           reload={reload}
           isReadonly={isReadonly}
@@ -71,9 +63,8 @@ function areEqual(
     return true;
 
   if (prevProps.status !== nextProps.status) return false;
-  if (prevProps.status && nextProps.status) return false;
   if (prevProps.messages.length !== nextProps.messages.length) return false;
-  if (!equal(prevProps.votes, nextProps.votes)) return false;
+  if (!equal(prevProps.messages, nextProps.messages)) return false;
 
   return true;
 }

@@ -11,7 +11,7 @@ import {
 } from 'react';
 import useSWR, { useSWRConfig } from 'swr';
 import { useDebounceCallback, useWindowSize } from 'usehooks-ts';
-import type { Document, Vote } from '@/lib/db/schema';
+import type { Document } from '@/lib/db/schema';
 import { fetcher } from '@/lib/utils';
 import { MultimodalInput } from './multimodal-input';
 import { Toolbar } from './toolbar';
@@ -27,6 +27,7 @@ import { sheetArtifact } from '@/artifacts/sheet/client';
 import { textArtifact } from '@/artifacts/text/client';
 import equal from 'fast-deep-equal';
 import { UseChatHelpers } from '@ai-sdk/react';
+import { useArtifactSelector } from '@/hooks/use-artifact';
 
 export const artifactDefinitions = [
   textArtifact,
@@ -51,6 +52,22 @@ export interface UIArtifact {
   };
 }
 
+interface ArtifactProps {
+  chatId: string;
+  input: string;
+  setInput: Dispatch<SetStateAction<string>>;
+  handleSubmit: UseChatHelpers['handleSubmit'];
+  status: UseChatHelpers['status'];
+  stop: UseChatHelpers['stop'];
+  attachments: Array<Attachment>;
+  setAttachments: Dispatch<SetStateAction<Array<Attachment>>>;
+  append: UseChatHelpers['append'];
+  messages: Array<UIMessage>;
+  setMessages: UseChatHelpers['setMessages'];
+  reload: UseChatHelpers['reload'];
+  isReadonly: boolean;
+}
+
 function PureArtifact({
   chatId,
   input,
@@ -64,24 +81,8 @@ function PureArtifact({
   messages,
   setMessages,
   reload,
-  votes,
   isReadonly,
-}: {
-  chatId: string;
-  input: string;
-  setInput: UseChatHelpers['setInput'];
-  status: UseChatHelpers['status'];
-  stop: UseChatHelpers['stop'];
-  attachments: Array<Attachment>;
-  setAttachments: Dispatch<SetStateAction<Array<Attachment>>>;
-  messages: Array<UIMessage>;
-  setMessages: UseChatHelpers['setMessages'];
-  votes: Array<Vote> | undefined;
-  append: UseChatHelpers['append'];
-  handleSubmit: UseChatHelpers['handleSubmit'];
-  reload: UseChatHelpers['reload'];
-  isReadonly: boolean;
-}) {
+}: ArtifactProps) {
   const { artifact, setArtifact, metadata, setMetadata } = useArtifact();
 
   const {
@@ -313,7 +314,6 @@ function PureArtifact({
                 <ArtifactMessages
                   chatId={chatId}
                   status={status}
-                  votes={votes}
                   messages={messages}
                   setMessages={setMessages}
                   reload={reload}
@@ -500,7 +500,6 @@ function PureArtifact({
 
 export const Artifact = memo(PureArtifact, (prevProps, nextProps) => {
   if (prevProps.status !== nextProps.status) return false;
-  if (!equal(prevProps.votes, nextProps.votes)) return false;
   if (prevProps.input !== nextProps.input) return false;
   if (!equal(prevProps.messages, nextProps.messages.length)) return false;
 

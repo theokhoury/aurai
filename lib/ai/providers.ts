@@ -3,7 +3,8 @@ import {
   extractReasoningMiddleware,
   wrapLanguageModel,
 } from 'ai';
-import { xai } from '@ai-sdk/xai';
+// import { xai } from '@ai-sdk/xai'; // Remove xAI import
+import { createGoogleGenerativeAI } from '@ai-sdk/google'; // Correct Google AI SDK import
 import { isTestEnvironment } from '../constants';
 import {
   artifactModel,
@@ -23,15 +24,15 @@ export const myProvider = isTestEnvironment
     })
   : customProvider({
       languageModels: {
-        'chat-model': xai('grok-2-1212'),
+        'chat-model': createGoogleGenerativeAI()('models/gemini-2.0-flash'), // Keep chat model as 2.0 flash
         'chat-model-reasoning': wrapLanguageModel({
-          model: xai('grok-3-mini-beta'),
+          // Use the specified experimental model for reasoning
+          model: createGoogleGenerativeAI()('models/gemini-2.5-pro-exp-03-25'),
           middleware: extractReasoningMiddleware({ tagName: 'think' }),
         }),
-        'title-model': xai('grok-2-1212'),
-        'artifact-model': xai('grok-2-1212'),
+        'title-model': createGoogleGenerativeAI()('models/gemini-2.0-flash'), // Keep title model as 2.0 flash
+        // Use the specified experimental model for artifact generation
+        'artifact-model': createGoogleGenerativeAI()('models/gemini-2.5-pro-exp-03-25'),
       },
-      imageModels: {
-        'small-model': xai.image('grok-2-image'),
-      },
+      // Remove imageModels section as Gemini API via AI SDK doesn't directly support it here
     });

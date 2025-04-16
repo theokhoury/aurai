@@ -196,7 +196,7 @@ export async function getMessagesByChatId({ id }: { id: string }) {
   }
 }
 
-export async function voteMessage({
+export async function saveMessageState({
   chatId,
   messageId,
   type,
@@ -205,6 +205,8 @@ export async function voteMessage({
   messageId: string;
   type: 'up' | 'down';
 }) {
+  const isUpvoted = type === 'up';
+
   try {
     const [existingVote] = await db
       .select()
@@ -214,25 +216,25 @@ export async function voteMessage({
     if (existingVote) {
       return await db
         .update(vote)
-        .set({ isUpvoted: type === 'up' })
+        .set({ isUpvoted })
         .where(and(eq(vote.messageId, messageId), eq(vote.chatId, chatId)));
     }
     return await db.insert(vote).values({
       chatId,
       messageId,
-      isUpvoted: type === 'up',
+      isUpvoted,
     });
   } catch (error) {
-    console.error('Failed to upvote message in database', error);
+    console.error('Failed to save message state in database', error);
     throw error;
   }
 }
 
-export async function getVotesByChatId({ id }: { id: string }) {
+export async function getSavesByChatId({ id }: { id: string }) {
   try {
     return await db.select().from(vote).where(eq(vote.chatId, id));
   } catch (error) {
-    console.error('Failed to get votes by chat id from database', error);
+    console.error('Failed to get saves by chat id from database', error);
     throw error;
   }
 }
@@ -416,6 +418,79 @@ export async function updateChatVisiblityById({
     return await db.update(chat).set({ visibility }).where(eq(chat.id, chatId));
   } catch (error) {
     console.error('Failed to update chat visibility in database');
+    throw error;
+  }
+}
+
+// Function to get chats marked as saved (isUpvoted = true) for a user, with pagination
+export async function getSavedChatsByUserId({
+  userId,
+  limit,
+  startingAfter,
+  endingBefore,
+}: {
+  userId: string;
+  limit: number;
+  startingAfter: string | null;
+  endingBefore: string | null;
+}) {
+  try {
+    const extendedLimit = limit + 1;
+    let cursorCondition: SQL | undefined = undefined;
+
+    // Determine cursor condition based on input
+    if (startingAfter) {
+      const [selectedChat] = await db
+        .select({ createdAt: chat.createdAt })
+        .from(chat)
+        .where(eq(chat.id, startingAfter))
+        .limit(1);
+      if (!selectedChat) throw new Error(`Chat with id ${startingAfter} not found`);
+      cursorCondition = gt(chat.createdAt, selectedChat.createdAt);
+    } else if (endingBefore) {
+      const [selectedChat] = await db
+        .select({ createdAt: chat.createdAt })
+        .from(chat)
+        .where(eq(chat.id, endingBefore))
+        .limit(1);
+      if (!selectedChat) throw new Error(`Chat with id ${endingBefore} not found`);
+      cursorCondition = lt(chat.createdAt, selectedChat.createdAt);
+    }
+
+    // Base query joining chat and vote tables, filtering for saved chats of the user
+    // Apply cursor condition directly in the where clause if it exists
+    const query = db
+      .select({
+        id: chat.id,
+        createdAt: chat.createdAt,
+        userId: chat.userId,
+        title: chat.title,
+        visibility: chat.visibility,
+      })
+      .from(chat)
+      .innerJoin(vote, eq(chat.id, vote.chatId))
+      .where(
+        and(
+          eq(chat.userId, userId),
+          eq(vote.isUpvoted, true),
+          cursorCondition // Conditionally add the cursor condition
+        )
+      )
+      .orderBy(desc(chat.createdAt))
+      .limit(extendedLimit);
+
+    const filteredChats = await query;
+
+    const hasMore = filteredChats.length > limit;
+    const chatsToReturn = hasMore ? filteredChats.slice(0, limit) : filteredChats;
+
+    return {
+      chats: chatsToReturn as Chat[],
+      hasMore,
+    };
+
+  } catch (error) {
+    console.error("Failed to get saved chats by user from database", error);
     throw error;
   }
 }

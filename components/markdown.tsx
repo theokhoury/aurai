@@ -5,9 +5,41 @@ import remarkGfm from 'remark-gfm';
 import { CodeBlock } from './code-block';
 
 const components: Partial<Components> = {
-  // @ts-expect-error
-  code: CodeBlock,
-  pre: ({ children }) => <>{children}</>,
+  // Override 'pre' to handle fenced code blocks with CodeBlock
+  pre: ({ node, children, ...props }) => {
+    const match = /language-(\w+)/.exec(props.className || '');
+    const codeElement = React.Children.toArray(children).find(
+      (child) => React.isValidElement(child) && child.type === 'code'
+    ) as React.ReactElement<{ children: string }> | undefined;
+
+    const codeContent = codeElement?.props.children;
+    const language = match?.[1];
+
+    if (codeContent) {
+      // Render CodeBlock directly, it should handle its own container (like a div)
+      // Pass language and content
+      return <CodeBlock language={language} code={codeContent} />;
+    }
+
+    // Fallback for pre tags without code content
+    return <pre {...props}>{children}</pre>;
+  },
+  // Override 'code' to handle inline code differently
+  code: ({ node, inline, className, children, ...props }) => {
+    if (inline) {
+      // Render inline code with specific styling
+      return (
+        <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold" {...props}>
+          {children}
+        </code>
+      );
+    }
+    // For code within pre (fenced blocks), let the 'pre' override handle it.
+    // Return children directly as the 'pre' override extracts the content.
+    // Alternatively, return null if pre handles everything including rendering the text.
+    // Let's return children to be safe, pre will extract it.
+    return <code {...props} className={className}>{children}</code>;
+  },
   ol: ({ node, children, ...props }) => {
     return (
       <ol className="list-decimal list-outside ml-4" {...props}>

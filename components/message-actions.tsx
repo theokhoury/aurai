@@ -2,9 +2,10 @@ import type { Message } from 'ai';
 import { useSWRConfig } from 'swr';
 import { useCopyToClipboard } from 'usehooks-ts';
 
-import type { Vote } from '@/lib/db/schema';
+import type { Vote as SaveState } from '@/lib/db/schema';
 
-import { CopyIcon, ThumbDownIcon, ThumbUpIcon } from './icons';
+import { CopyIcon } from './icons';
+import { Bookmark } from 'lucide-react';
 import { Button } from './ui/button';
 import {
   Tooltip,
@@ -19,12 +20,12 @@ import { toast } from 'sonner';
 export function PureMessageActions({
   chatId,
   message,
-  vote,
+  saveState,
   isLoading,
 }: {
   chatId: string;
   message: Message;
-  vote: Vote | undefined;
+  saveState: SaveState | undefined;
   isLoading: boolean;
 }) {
   const { mutate } = useSWRConfig();
@@ -66,107 +67,57 @@ export function PureMessageActions({
         <Tooltip>
           <TooltipTrigger asChild>
             <Button
-              data-testid="message-upvote"
+              data-testid="message-save"
               className="py-1 px-2 h-fit text-muted-foreground !pointer-events-auto"
-              disabled={vote?.isUpvoted}
-              variant="outline"
+              variant={saveState?.isUpvoted ? 'secondary' : 'outline'}
               onClick={async () => {
-                const upvote = fetch('/api/vote', {
+                const isCurrentlySaved = saveState?.isUpvoted;
+                const typeToSend = isCurrentlySaved ? 'down' : 'up';
+                const endpoint = '/api/save';
+                const loadingMessage = isCurrentlySaved ? 'Unsaving Response...' : 'Saving Response...';
+                const successMessage = isCurrentlySaved ? 'Unsaved Response!' : 'Saved Response!';
+                const errorMessage = isCurrentlySaved ? 'Failed to unsave response.' : 'Failed to save response.';
+
+                const saveRequest = fetch(endpoint, {
                   method: 'PATCH',
                   body: JSON.stringify({
                     chatId,
                     messageId: message.id,
-                    type: 'up',
+                    type: typeToSend,
                   }),
                 });
 
-                toast.promise(upvote, {
-                  loading: 'Upvoting Response...',
+                toast.promise(saveRequest, {
+                  loading: loadingMessage,
                   success: () => {
-                    mutate<Array<Vote>>(
-                      `/api/vote?chatId=${chatId}`,
-                      (currentVotes) => {
-                        if (!currentVotes) return [];
-
-                        const votesWithoutCurrent = currentVotes.filter(
-                          (vote) => vote.messageId !== message.id,
+                    mutate<Array<SaveState>>(
+                      `/api/save?chatId=${chatId}`,
+                      (currentSaves) => {
+                        if (!currentSaves) return [];
+                        const savesWithoutCurrent = currentSaves.filter(
+                          (save) => save.messageId !== message.id,
                         );
-
                         return [
-                          ...votesWithoutCurrent,
+                          ...savesWithoutCurrent,
                           {
                             chatId,
                             messageId: message.id,
-                            isUpvoted: true,
+                            isUpvoted: !isCurrentlySaved,
                           },
                         ];
                       },
                       { revalidate: false },
                     );
-
-                    return 'Upvoted Response!';
+                    return successMessage;
                   },
-                  error: 'Failed to upvote response.',
+                  error: errorMessage,
                 });
               }}
             >
-              <ThumbUpIcon />
+              <Bookmark size={16} />
             </Button>
           </TooltipTrigger>
-          <TooltipContent>Upvote Response</TooltipContent>
-        </Tooltip>
-
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Button
-              data-testid="message-downvote"
-              className="py-1 px-2 h-fit text-muted-foreground !pointer-events-auto"
-              variant="outline"
-              disabled={vote && !vote.isUpvoted}
-              onClick={async () => {
-                const downvote = fetch('/api/vote', {
-                  method: 'PATCH',
-                  body: JSON.stringify({
-                    chatId,
-                    messageId: message.id,
-                    type: 'down',
-                  }),
-                });
-
-                toast.promise(downvote, {
-                  loading: 'Downvoting Response...',
-                  success: () => {
-                    mutate<Array<Vote>>(
-                      `/api/vote?chatId=${chatId}`,
-                      (currentVotes) => {
-                        if (!currentVotes) return [];
-
-                        const votesWithoutCurrent = currentVotes.filter(
-                          (vote) => vote.messageId !== message.id,
-                        );
-
-                        return [
-                          ...votesWithoutCurrent,
-                          {
-                            chatId,
-                            messageId: message.id,
-                            isUpvoted: false,
-                          },
-                        ];
-                      },
-                      { revalidate: false },
-                    );
-
-                    return 'Downvoted Response!';
-                  },
-                  error: 'Failed to downvote response.',
-                });
-              }}
-            >
-              <ThumbDownIcon />
-            </Button>
-          </TooltipTrigger>
-          <TooltipContent>Downvote Response</TooltipContent>
+          <TooltipContent>{saveState?.isUpvoted ? 'Unsave Response' : 'Save Response'}</TooltipContent>
         </Tooltip>
       </div>
     </TooltipProvider>
@@ -176,7 +127,7 @@ export function PureMessageActions({
 export const MessageActions = memo(
   PureMessageActions,
   (prevProps, nextProps) => {
-    if (!equal(prevProps.vote, nextProps.vote)) return false;
+    if (!equal(prevProps.saveState, nextProps.saveState)) return false;
     if (prevProps.isLoading !== nextProps.isLoading) return false;
 
     return true;

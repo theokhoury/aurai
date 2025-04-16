@@ -4,6 +4,8 @@ import {
   createDataStreamResponse,
   smoothStream,
   streamText,
+  CoreMessage,
+  TextPart
 } from 'ai';
 import { auth } from '@/app/(auth)/auth';
 import { systemPrompt } from '@/lib/ai/prompts';
@@ -79,12 +81,63 @@ export async function POST(request: Request) {
       ],
     });
 
+    // --- BEGIN REFINED MODIFICATION: Format messages for multimodal input ---
+    const formattedMessages: CoreMessage[] = messages.map((msg): CoreMessage => {
+      // Process the most recent user message if it has attachments
+      if (msg.role === 'user' && msg.id === userMessage.id && msg.experimental_attachments?.length) {
+        const content: Array<{ type: 'text'; text: string } | { type: 'image'; image: URL; mimeType?: string }> = [];
+
+        // Add text parts correctly
+        msg.parts.forEach(part => {
+          if (part.type === 'text') {
+            content.push({ type: 'text', text: part.text }); // Use part.text
+          }
+        });
+
+        // Add image attachments
+        msg.experimental_attachments.forEach(attachment => {
+          if (attachment.url) {
+            try {
+              content.push({ type: 'image', image: new URL(attachment.url), mimeType: attachment.contentType });
+            } catch (e) {
+              console.error(`Invalid image URL provided: ${attachment.url}`, e);
+            }
+          }
+        });
+
+        // Construct the CoreUserMessage
+        return { role: 'user', content };
+      }
+
+      // For other message types or user messages without attachments, provide a basic conversion
+      // Assuming simple text content for system/assistant roles in this basic conversion
+      const textContent = msg.parts
+        .filter((part): part is TextPart => part.type === 'text') // Use correct type guard
+        .map(part => part.text)
+        .join('\n');
+
+      // Return the message in CoreMessage format
+      // Note: This simplification might omit tool calls/results for assistant messages if they exist
+      if (msg.role === 'system') {
+        return { role: 'system', content: textContent };
+      } else if (msg.role === 'assistant') {
+        // Basic assistant message - might need enhancement if tool calls are used
+        return { role: 'assistant', content: textContent };
+      } else if (msg.role === 'user') {
+        // User message without attachments
+        return { role: 'user', content: textContent };
+      }
+      // Fallback for unexpected roles (e.g., tool) - might need proper handling
+      return { role: msg.role as any, content: textContent }; // Use 'as any' cautiously or add tool handling
+    });
+    // --- END REFINED MODIFICATION ---
+
     return createDataStreamResponse({
       execute: (dataStream) => {
         const result = streamText({
           model: myProvider.languageModel(selectedChatModel),
           system: systemPrompt({ selectedChatModel }),
-          messages,
+          messages: formattedMessages,
           maxSteps: 5,
           experimental_activeTools:
             selectedChatModel === 'chat-model-reasoning'

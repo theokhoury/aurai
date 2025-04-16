@@ -1,4 +1,5 @@
-import { put } from '@vercel/blob';
+// import { put } from '@vercel/blob'; // Remove Vercel Blob import
+import { saveFileLocally } from '@/lib/local-storage'; // Import local storage utility
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
@@ -51,9 +52,11 @@ export async function POST(request: Request) {
     const fileBuffer = await file.arrayBuffer();
 
     try {
-      const data = await put(`${filename}`, fileBuffer, {
-        access: 'public',
-      });
+      // Replace put call with saveFileLocally
+      // const data = await put(`${filename}`, fileBuffer, {
+      //   access: 'public',
+      // });
+      const data = await saveFileLocally(filename, fileBuffer);
 
       return NextResponse.json(data);
     } catch (error) {

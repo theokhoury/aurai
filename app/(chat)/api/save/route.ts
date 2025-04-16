@@ -1,5 +1,5 @@
 import { auth } from '@/app/(auth)/auth';
-import { getChatById, getVotesByChatId, voteMessage } from '@/lib/db/queries';
+import { getChatById, getSavesByChatId, saveMessageState } from '@/lib/db/queries';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -25,9 +25,9 @@ export async function GET(request: Request) {
     return new Response('Unauthorized', { status: 401 });
   }
 
-  const votes = await getVotesByChatId({ id: chatId });
+  const saves = await getSavesByChatId({ id: chatId });
 
-  return Response.json(votes, { status: 200 });
+  return Response.json(saves, { status: 200 });
 }
 
 export async function PATCH(request: Request) {
@@ -58,11 +58,11 @@ export async function PATCH(request: Request) {
     return new Response('Unauthorized', { status: 401 });
   }
 
-  await voteMessage({
+  await saveMessageState({
     chatId,
     messageId,
     type: type,
   });
 
-  return new Response('Message voted', { status: 200 });
-}
+  return new Response('Message save state updated', { status: 200 });
+} 

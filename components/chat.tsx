@@ -6,6 +6,7 @@ import { useState } from 'react';
 import useSWR, { useSWRConfig } from 'swr';
 import { ChatHeader } from '@/components/chat-header';
 import { fetcher, generateUUID } from '@/lib/utils';
+import type { Bookmark } from '@/lib/db/schema';
 import { Artifact } from './artifact';
 import { MultimodalInput } from './multimodal-input';
 import { Messages } from './messages';
@@ -55,6 +56,12 @@ export function Chat({
     },
   });
 
+  // Fetch bookmarks for this chat
+  const { data: bookmarks } = useSWR<Array<Bookmark>>(
+    messages.length >= 1 ? `/api/bookmark?chatId=${id}` : null,
+    fetcher,
+  );
+
   const [attachments, setAttachments] = useState<Array<Attachment>>([]);
   const isArtifactVisible = useArtifactSelector((state) => state.isVisible);
 
@@ -71,6 +78,7 @@ export function Chat({
         <Messages
           chatId={id}
           status={status}
+          bookmarks={bookmarks}
           messages={messages}
           setMessages={setMessages}
           reload={reload}

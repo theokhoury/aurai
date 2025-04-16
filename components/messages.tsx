@@ -5,11 +5,13 @@ import { Greeting } from './greeting';
 import { memo } from 'react';
 import equal from 'fast-deep-equal';
 import type { UseChatHelpers } from '@ai-sdk/react';
+import type { Bookmark } from '@/lib/db/schema';
 
 interface MessagesProps {
   chatId: string;
   status: UseChatHelpers['status'];
   messages: Array<UIMessage>;
+  bookmarks: Array<Bookmark> | undefined;
   setMessages: UseChatHelpers['setMessages'];
   reload: UseChatHelpers['reload'];
   isReadonly: boolean;
@@ -20,6 +22,7 @@ function PureMessages({
   chatId,
   status,
   messages,
+  bookmarks,
   setMessages,
   reload,
   isReadonly,
@@ -40,6 +43,7 @@ function PureMessages({
           chatId={chatId}
           message={message}
           isLoading={status === 'streaming' && messages.length - 1 === index}
+          isBookmarked={bookmarks?.some((bookmark) => bookmark.messageId === message.id)}
           setMessages={setMessages}
           reload={reload}
           isReadonly={isReadonly}
@@ -65,6 +69,7 @@ export const Messages = memo(PureMessages, (prevProps, nextProps) => {
   if (prevProps.status && nextProps.status) return false;
   if (prevProps.messages.length !== nextProps.messages.length) return false;
   if (!equal(prevProps.messages, nextProps.messages)) return false;
+  if (!equal(prevProps.bookmarks, nextProps.bookmarks)) return false;
 
   return true;
 });

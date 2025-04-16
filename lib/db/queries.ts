@@ -25,6 +25,8 @@ import {
   message,
   type DBMessage,
   type Chat,
+  bookmark,
+  type Bookmark,
 } from './schema';
 import type { ArtifactKind } from '@/components/artifact';
 
@@ -81,6 +83,7 @@ export async function saveChat({
 
 export async function deleteChatById({ id }: { id: string }) {
   try {
+    await db.delete(bookmark).where(eq(bookmark.chatId, id));
     await db.delete(message).where(eq(message.chatId, id));
 
     return await db.delete(chat).where(eq(chat.id, id));
@@ -342,6 +345,12 @@ export async function deleteMessagesByChatIdAfterTimestamp({
     const messageIds = messagesToDelete.map((message) => message.id);
 
     if (messageIds.length > 0) {
+      await db
+        .delete(bookmark)
+        .where(
+          and(eq(bookmark.chatId, chatId), inArray(bookmark.messageId, messageIds)),
+        );
+
       return await db
         .delete(message)
         .where(
@@ -367,6 +376,101 @@ export async function updateChatVisiblityById({
     return await db.update(chat).set({ visibility }).where(eq(chat.id, chatId));
   } catch (error) {
     console.error('Failed to update chat visibility in database');
+    throw error;
+  }
+}
+
+export async function getBookmarksByChatId({
+  chatId,
+  userId,
+}: {
+  chatId: string;
+  userId: string;
+}): Promise<Array<Bookmark>> {
+  try {
+    return await db
+      .select()
+      .from(bookmark)
+      .where(and(eq(bookmark.chatId, chatId), eq(bookmark.userId, userId)));
+  } catch (error) {
+    console.error('Failed to get bookmarks by chat id from database', error);
+    throw error;
+  }
+}
+
+export async function addBookmark({
+  userId,
+  chatId,
+  messageId,
+  title,
+}: {
+  userId: string;
+  chatId: string;
+  messageId: string;
+  title: string;
+}) {
+  try {
+    return await db.insert(bookmark).values({
+      userId,
+      chatId,
+      messageId,
+      title,
+    });
+  } catch (error) {
+    console.error('Failed to add bookmark in database', error);
+    throw error;
+  }
+}
+
+export async function removeBookmark({
+  userId,
+  chatId,
+  messageId,
+}: {
+  userId: string;
+  chatId: string;
+  messageId: string;
+}) {
+  try {
+    return await db
+      .delete(bookmark)
+      .where(
+        and(
+          eq(bookmark.userId, userId),
+          eq(bookmark.chatId, chatId),
+          eq(bookmark.messageId, messageId),
+        ),
+      );
+  } catch (error) {
+    console.error('Failed to remove bookmark from database', error);
+    throw error;
+  }
+}
+
+export async function getBookmarksByUserIdWithMessages({ 
+  userId 
+}: { 
+  userId: string 
+}) {
+  try {
+    const results = await db
+      .select({
+        bookmarkCreatedAt: bookmark.createdAt,
+        chatId: bookmark.chatId,
+        messageId: bookmark.messageId,
+        title: bookmark.title,
+        messageRole: message.role,
+        messageParts: message.parts,
+        messageCreatedAt: message.createdAt,
+      })
+      .from(bookmark)
+      .innerJoin(message, eq(bookmark.messageId, message.id))
+      .where(eq(bookmark.userId, userId))
+      .orderBy(desc(bookmark.createdAt));
+
+    return results;
+  } catch (error) {
+    console.error('Failed to get bookmarks with messages by user id from database', error);
     throw error;
   }
 }

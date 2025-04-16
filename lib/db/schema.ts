@@ -60,6 +60,32 @@ export const message = pgTable('Message_v2', {
 
 export type DBMessage = InferSelectModel<typeof message>;
 
+// Add Bookmark Table
+export const bookmark = pgTable(
+  'Bookmark', // Table name
+  {
+    userId: uuid('userId') // Foreign key to user
+      .notNull()
+      .references(() => user.id),
+    chatId: uuid('chatId') // Foreign key to chat
+      .notNull()
+      .references(() => chat.id),
+    messageId: uuid('messageId') // Foreign key to message
+      .notNull()
+      .references(() => message.id),
+    title: text('title').notNull().default('Bookmarked Message'), // Add title column with default
+    createdAt: timestamp('createdAt').defaultNow().notNull(), // Timestamp for when bookmark was created
+  },
+  (table) => {
+    return {
+      // Composite primary key to ensure a user can only bookmark a specific message once
+      pk: primaryKey({ columns: [table.userId, table.chatId, table.messageId] }),
+    };
+  },
+);
+
+export type Bookmark = InferSelectModel<typeof bookmark>; // Export Bookmark type
+
 export const document = pgTable(
   'Document',
   {

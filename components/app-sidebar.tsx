@@ -30,7 +30,7 @@ type ActiveSection = 'home' | 'bookmarks' | 'history' | 'settings';
 export function AppSidebar({ user }: { user: User | undefined }) {
   const router = useRouter();
   const { setOpenMobile } = useSidebar();
-  const [activeSection, setActiveSection] = useState<ActiveSection>('history');
+  const [activeSection, setActiveSection] = useState<ActiveSection>('home');
 
   const getButtonClass = (section: ActiveSection) => {
     return cn(
@@ -65,14 +65,14 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                 variant="ghost"
                 size="icon"
                 className={getButtonClass('bookmarks')}
-                aria-label="Bookmarks"
+                aria-label="Snippets"
                 onClick={() => setActiveSection('bookmarks')}
               >
                 <BookmarkIcon className="size-5" />
               </Button>
             </TooltipTrigger>
             <TooltipContent side="right" sideOffset={5}>
-              Bookmarks
+              Snippets
             </TooltipContent>
           </Tooltip>
           <Tooltip>

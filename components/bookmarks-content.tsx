@@ -2,12 +2,15 @@
 
 import useSWR from 'swr';
 import Link from 'next/link';
-import { AlertTriangleIcon, BotIcon, LoaderIcon } from 'lucide-react';
+import { AlertTriangleIcon, BotIcon, LoaderIcon, PlusIcon } from 'lucide-react';
 
 import { fetcher } from '@/lib/utils';
 import { type DBMessage } from '@/lib/db/schema';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { Button } from '@/components/ui/button';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { emitter } from '@/lib/event-emitter';
 
 // Define the expected shape of data from the API
 interface BookmarkedMessage extends Omit<DBMessage, 'parts' | 'attachments'> {
@@ -31,10 +34,38 @@ export function BookmarksContent() {
     return textPart ? textPart.text : null;
   };
 
+  const handleBookmarkClick = (title: string, text: string | null) => {
+    if (text) {
+      emitter.emit('displayBookmarkedMessage', { title, text });
+    }
+    // Link navigation still happens
+  };
+
   return (
     <ScrollArea className="h-full flex-grow">
       <div className="p-4 space-y-4">
-        <h2 className="text-lg font-semibold">Bookmarks</h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-lg font-semibold">Snippets</h2>
+          <TooltipProvider delayDuration={0}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="size-7"
+                  onClick={() => {
+                    console.log('Add bookmark clicked');
+                  }}
+                >
+                  <PlusIcon className="size-4" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                Add Bookmark
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
         {isLoading && (
           <div className="flex items-center justify-center py-4">
             <LoaderIcon className="mr-2 size-4 animate-spin" />
@@ -60,29 +91,20 @@ export function BookmarksContent() {
             {bookmarks.map((bookmark) => {
               const messageText = getFirstTextPart(bookmark.messageParts);
               return (
-                <Link
-                  href={`/chat/${bookmark.chatId}#${bookmark.messageId}`}
+                <button
                   key={bookmark.messageId}
-                  className="block p-3 border rounded-md hover:bg-muted transition-colors"
+                  className="block w-full text-left p-3 border rounded-md hover:bg-muted transition-colors"
+                  onClick={() => handleBookmarkClick(bookmark.title, messageText)}
+                  aria-label={`Select snippet: ${bookmark.title}`}
                 >
                   <div className="flex items-start gap-2">
-                    <div className="flex items-center justify-center size-6 rounded-full bg-background border shrink-0 mt-1">
-                      <BotIcon className="size-3" />
-                    </div>
                     <div className="flex-1 space-y-1">
                       <p className="text-sm font-medium">
                         {bookmark.title}
                       </p>
-                      <p className="text-xs text-muted-foreground line-clamp-2">
-                        {messageText ?? ''}
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        Bookmarked:{' '}
-                        {new Date(bookmark.bookmarkCreatedAt).toLocaleDateString()}
-                      </p>
                     </div>
                   </div>
-                </Link>
+                </button>
               );
             })}
           </div>

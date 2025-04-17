@@ -1,7 +1,7 @@
 import type { Message } from 'ai';
 import { useCopyToClipboard } from 'usehooks-ts';
 import { useSWRConfig } from 'swr';
-import type { Bookmark } from '@/lib/db/schema';
+import type { Snippet } from '@/lib/db/schema';
 
 import { CopyIcon } from './icons';
 import { BookmarkIcon } from 'lucide-react';
@@ -71,7 +71,7 @@ export function PureMessageActions({
               variant="outline"
               onClick={async () => {
                 const action = isBookmarked ? 'remove' : 'add';
-                const promise = fetch('/api/bookmark', {
+                const promise = fetch('/api/snippet', {
                   method: 'POST',
                   body: JSON.stringify({
                     chatId,
@@ -82,32 +82,34 @@ export function PureMessageActions({
                 });
 
                 toast.promise(promise, {
-                  loading: `${action === 'add' ? 'Adding' : 'Removing'} bookmark...`,
+                  loading: `${action === 'add' ? 'Adding' : 'Removing'} snippet...`,
                   success: () => {
-                    mutate<Array<Bookmark>>(
-                      `/api/bookmark?chatId=${chatId}`,
-                      (currentBookmarks = []) => {
+                    mutate<Array<Snippet>>(
+                      `/api/snippets?chatId=${chatId}`,
+                      (currentSnippets = []) => {
                         if (action === 'add') {
-                          return [
-                            ...currentBookmarks,
-                            {
+                        return [
+                            ...currentSnippets,
+                          {
                               userId: '',
-                              chatId,
-                              messageId: message.id,
+                            chatId,
+                            messageId: message.id,
                               createdAt: new Date(),
+                              title: 'Untitled Snippet',
+                              text: message.parts?.find(p => p.type === 'text')?.text || ''
                             },
                           ];
                         } else {
-                          return currentBookmarks.filter(
-                            (b) => b.messageId !== message.id,
-                          );
+                          return currentSnippets.filter(
+                            (s) => s.messageId !== message.id,
+                        );
                         }
                       },
                       { revalidate: false },
                     );
-                    return `Bookmark ${action === 'add' ? 'added' : 'removed'}!`;
+                    return `Snippet ${action === 'add' ? 'added' : 'removed'}!`;
                   },
-                  error: `Failed to ${action} bookmark.`,
+                  error: `Failed to ${action} snippet.`,
                 });
               }}
             >

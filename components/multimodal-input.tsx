@@ -246,11 +246,11 @@ function PureMultimodalInput({
 }
 
 export const MultimodalInput = memo(PureMultimodalInput, (prevProps, nextProps) => {
-  if (prevProps.input !== nextProps.input) return false;
-  if (prevProps.status !== nextProps.status) return false;
-  if (!equal(prevProps.attachments, nextProps.attachments)) return false;
+    if (prevProps.input !== nextProps.input) return false;
+    if (prevProps.status !== nextProps.status) return false;
+    if (!equal(prevProps.attachments, nextProps.attachments)) return false;
 
-  return true;
+    return true;
 });
 
 function PureAttachmentsButton({

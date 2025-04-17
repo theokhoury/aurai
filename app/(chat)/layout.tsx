@@ -1,30 +1,29 @@
+import React from 'react';
 import { cookies } from 'next/headers';
-
 import { AppSidebar } from '@/components/app-sidebar';
-import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
-import { auth } from '../(auth)/auth';
-import Script from 'next/script';
+import { auth } from '@/app/(auth)/auth';
 
-export const experimental_ppr = true;
-
-export default async function Layout({
-  children,
-}: {
+interface ChatLayoutProps {
   children: React.ReactNode;
-}) {
-  const [session, cookieStore] = await Promise.all([auth(), cookies()]);
-  const isCollapsed = cookieStore.get('sidebar:state')?.value !== 'true';
+}
+
+export default async function ChatLayout({ children }: ChatLayoutProps) {
+  const session = await auth();
+
+  // You can grab the default layout settings from cookies
+  // const layout = cookies().get('react-resizable-panels:layout');
+  // const isCollapsed = cookies().get('react-resizable-panels:collapsed');
 
   return (
     <>
-      <Script
-        src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"
-        strategy="beforeInteractive"
-      />
-      <SidebarProvider defaultOpen={!isCollapsed}>
-        <AppSidebar user={session?.user} />
-        <SidebarInset>{children}</SidebarInset>
-      </SidebarProvider>
+      {/* Removed SidebarProvider and AppSidebar */}
+      {/* <SidebarProvider defaultOpen={!isCollapsed}> */}
+        {/* <AppSidebar user={session?.user} /> */}
+        {/* <SidebarInset>{children}</SidebarInset> */}
+      {/* </SidebarProvider> */}
+
+      {/* Render children directly now */}
+      {children}
     </>
   );
 }

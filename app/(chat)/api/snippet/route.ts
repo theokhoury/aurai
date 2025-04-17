@@ -3,21 +3,21 @@ import { z } from 'zod';
 
 import { auth } from '@/app/(auth)/auth';
 import {
-  addBookmark,
-  removeBookmark,
-  getBookmarksByChatId,
+  addSnippet,
+  removeSnippet,
+  getSnippetsByChatId,
   getMessageById,
 } from '@/lib/db/queries';
 import { generateTitleFromAssistantMessage } from '@/lib/ai/actions/generate-title';
 
-// Schema for POST requests (adding/removing a bookmark)
-const bookmarkActionSchema = z.object({
+// Schema for POST requests (renamed)
+const snippetActionSchema = z.object({
   chatId: z.string().uuid(),
   messageId: z.string().uuid(),
   action: z.enum(['add', 'remove']),
 });
 
-// GET handler to fetch bookmarks for a chat
+// GET handler (updated logic)
 export async function GET(request: Request) {
   const session = await auth();
   if (!session?.user?.id) {
@@ -32,21 +32,21 @@ export async function GET(request: Request) {
   }
 
   try {
-    const bookmarks = await getBookmarksByChatId({
+    const snippets = await getSnippetsByChatId({
       chatId,
       userId: session.user.id,
     });
-    return NextResponse.json(bookmarks);
+    return NextResponse.json(snippets);
   } catch (error) {
-    console.error('Error fetching bookmarks:', error);
+    console.error('Error fetching snippets:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch bookmarks' },
+      { error: 'Failed to fetch snippets' },
       { status: 500 },
     );
   }
 }
 
-// POST handler to add or remove a bookmark
+// POST handler (updated logic)
 export async function POST(request: Request) {
   const session = await auth();
   if (!session?.user?.id) {
@@ -55,7 +55,7 @@ export async function POST(request: Request) {
 
   try {
     const json = await request.json();
-    const parsed = bookmarkActionSchema.safeParse(json);
+    const parsed = snippetActionSchema.safeParse(json);
 
     if (!parsed.success) {
       return NextResponse.json({ error: parsed.error.format() }, { status: 400 });
@@ -65,28 +65,36 @@ export async function POST(request: Request) {
     const userId = session.user.id;
 
     if (action === 'add') {
-      let title = 'Bookmarked Message';
+      let title = 'Untitled Snippet';
+      let textContent = '';
       try {
         const [messageToBookmark] = await getMessageById({ id: messageId });
-        if (messageToBookmark && messageToBookmark.role === 'assistant') {
-          title = await generateTitleFromAssistantMessage(messageToBookmark);
+        if (messageToBookmark) {
+          if (Array.isArray(messageToBookmark.parts)) {
+             textContent = messageToBookmark.parts.find((p: { type: string, text?: string }) => p.type === 'text')?.text || '';
+          }
+          if (messageToBookmark.role === 'assistant') {
+            title = await generateTitleFromAssistantMessage(messageToBookmark);
+          } else {
+            console.warn('Attempted to create snippet from non-assistant message, using default title.');
+          }
         } else {
-          console.warn('Attempted to bookmark non-assistant message or message not found, using default title.');
+          console.warn('Message to create snippet from not found, using default title and empty text.');
         }
       } catch (titleError) {
         console.error('Error fetching message or generating title:', titleError);
       }
 
-      await addBookmark({ userId, chatId, messageId, title });
+      await addSnippet({ userId, chatId, messageId, title, text: textContent });
       return NextResponse.json({ success: true, action: 'added' });
     } else if (action === 'remove') {
-      await removeBookmark({ userId, chatId, messageId });
+      await removeSnippet({ userId, chatId, messageId });
       return NextResponse.json({ success: true, action: 'removed' });
     }
   } catch (error) {
-    console.error('Error processing bookmark action:', error);
+    console.error('Error processing snippet action:', error);
     return NextResponse.json(
-      { error: 'Failed to process bookmark action' },
+      { error: 'Failed to process snippet action' },
       { status: 500 },
     );
   }

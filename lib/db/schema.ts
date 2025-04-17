@@ -60,9 +60,9 @@ export const message = pgTable('Message_v2', {
 
 export type DBMessage = InferSelectModel<typeof message>;
 
-// Add Bookmark Table
-export const bookmark = pgTable(
-  'Bookmark', // Table name
+// Renamed table and variable
+export const snippet = pgTable(
+  'Snippet', // Table name changed
   {
     userId: uuid('userId') // Foreign key to user
       .notNull()
@@ -73,8 +73,9 @@ export const bookmark = pgTable(
     messageId: uuid('messageId') // Foreign key to message
       .notNull()
       .references(() => message.id),
-    title: text('title').notNull().default('Bookmarked Message'), // Add title column with default
-    createdAt: timestamp('createdAt').defaultNow().notNull(), // Timestamp for when bookmark was created
+    title: text('title').notNull().default('Untitled Snippet'), // Updated default title
+    text: text('text').notNull(), // Added text column
+    createdAt: timestamp('createdAt').defaultNow().notNull(), // Timestamp for when snippet was created
   },
   (table) => {
     return {
@@ -84,7 +85,8 @@ export const bookmark = pgTable(
   },
 );
 
-export type Bookmark = InferSelectModel<typeof bookmark>; // Export Bookmark type
+// Renamed exported type
+export type Snippet = InferSelectModel<typeof snippet>;
 
 export const document = pgTable(
   'Document',

@@ -22,7 +22,7 @@ interface BookmarkedMessage extends Omit<DBMessage, 'parts' | 'attachments'> {
 
 export function BookmarksContent() {
   const { data: bookmarks, error, isLoading } = useSWR<BookmarkedMessage[]>(
-    '/api/bookmarks', // Fetch from the new endpoint
+    '/api/snippets', // Use the snippets endpoint
     fetcher,
     { refreshInterval: 5000 }, // Optional: refresh bookmarks periodically
   );
@@ -45,7 +45,11 @@ export function BookmarksContent() {
     <ScrollArea className="h-full flex-grow">
       <div className="p-4 space-y-4">
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-semibold">Snippets</h2>
+          <Link href="/snippets" className="group">
+            <h2 className="text-lg font-semibold group-hover:text-primary transition-colors">
+              Snippets
+            </h2>
+          </Link>
           <TooltipProvider delayDuration={0}>
             <Tooltip>
               <TooltipTrigger asChild>

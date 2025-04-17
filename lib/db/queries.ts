@@ -25,8 +25,8 @@ import {
   message,
   type DBMessage,
   type Chat,
-  bookmark,
-  type Bookmark,
+  snippet,
+  type Snippet,
 } from './schema';
 import type { ArtifactKind } from '@/components/artifact';
 
@@ -83,7 +83,7 @@ export async function saveChat({
 
 export async function deleteChatById({ id }: { id: string }) {
   try {
-    await db.delete(bookmark).where(eq(bookmark.chatId, id));
+    await db.delete(snippet).where(eq(snippet.chatId, id));
     await db.delete(message).where(eq(message.chatId, id));
 
     return await db.delete(chat).where(eq(chat.id, id));
@@ -346,9 +346,9 @@ export async function deleteMessagesByChatIdAfterTimestamp({
 
     if (messageIds.length > 0) {
       await db
-        .delete(bookmark)
+        .delete(snippet)
         .where(
-          and(eq(bookmark.chatId, chatId), inArray(bookmark.messageId, messageIds)),
+          and(eq(snippet.chatId, chatId), inArray(snippet.messageId, messageIds)),
         );
 
       return await db
@@ -386,12 +386,12 @@ export async function getBookmarksByChatId({
 }: {
   chatId: string;
   userId: string;
-}): Promise<Array<Bookmark>> {
+}): Promise<Array<Snippet>> {
   try {
     return await db
       .select()
-      .from(bookmark)
-      .where(and(eq(bookmark.chatId, chatId), eq(bookmark.userId, userId)));
+      .from(snippet)
+      .where(and(eq(snippet.chatId, chatId), eq(snippet.userId, userId)));
   } catch (error) {
     console.error('Failed to get bookmarks by chat id from database', error);
     throw error;
@@ -410,7 +410,7 @@ export async function addBookmark({
   title: string;
 }) {
   try {
-    return await db.insert(bookmark).values({
+    return await db.insert(snippet).values({
       userId,
       chatId,
       messageId,
@@ -433,12 +433,12 @@ export async function removeBookmark({
 }) {
   try {
     return await db
-      .delete(bookmark)
+      .delete(snippet)
       .where(
         and(
-          eq(bookmark.userId, userId),
-          eq(bookmark.chatId, chatId),
-          eq(bookmark.messageId, messageId),
+          eq(snippet.userId, userId),
+          eq(snippet.chatId, chatId),
+          eq(snippet.messageId, messageId),
         ),
       );
   } catch (error) {
@@ -447,30 +447,101 @@ export async function removeBookmark({
   }
 }
 
-export async function getBookmarksByUserIdWithMessages({ 
+export async function getSnippetsByChatId({
+  chatId,
+  userId,
+}: {
+  chatId: string;
+  userId: string;
+}): Promise<Array<Snippet>> {
+  try {
+    return await db
+      .select()
+      .from(snippet)
+      .where(and(eq(snippet.chatId, chatId), eq(snippet.userId, userId)));
+  } catch (error) {
+    console.error('Failed to get snippets by chat id from database', error);
+    throw error;
+  }
+}
+
+export async function addSnippet({
+  userId,
+  chatId,
+  messageId,
+  title,
+  text,
+}: {
+  userId: string;
+  chatId: string;
+  messageId: string;
+  title: string;
+  text: string;
+}) {
+  try {
+    return await db.insert(snippet).values({
+      userId,
+      chatId,
+      messageId,
+      title,
+      text,
+      createdAt: new Date(),
+    });
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('duplicate key value violates unique constraint "Snippet_pkey"')) {
+      console.warn('Attempted to add duplicate snippet. Ignoring.');
+      return;
+    }
+    console.error('Failed to add snippet to database', error);
+    throw error;
+  }
+}
+
+export async function removeSnippet({
+  userId,
+  chatId,
+  messageId,
+}: {
+  userId: string;
+  chatId: string;
+  messageId: string;
+}) {
+  try {
+    return await db
+      .delete(snippet)
+      .where(
+        and(
+          eq(snippet.userId, userId),
+          eq(snippet.chatId, chatId),
+          eq(snippet.messageId, messageId),
+        ),
+      );
+  } catch (error) {
+    console.error('Failed to remove snippet from database', error);
+    throw error;
+  }
+}
+
+export async function getSnippetsByUserIdWithMessages({ 
   userId 
 }: { 
   userId: string 
 }) {
   try {
-    const results = await db
+    return await db
       .select({
-        bookmarkCreatedAt: bookmark.createdAt,
-        chatId: bookmark.chatId,
-        messageId: bookmark.messageId,
-        title: bookmark.title,
-        messageRole: message.role,
+        messageId: snippet.messageId,
+        title: snippet.title,
+        bookmarkCreatedAt: snippet.createdAt,
+        chatId: snippet.chatId,
         messageParts: message.parts,
-        messageCreatedAt: message.createdAt,
       })
-      .from(bookmark)
-      .innerJoin(message, eq(bookmark.messageId, message.id))
-      .where(eq(bookmark.userId, userId))
-      .orderBy(desc(bookmark.createdAt));
-
-    return results;
+      .from(snippet)
+      .innerJoin(message, eq(snippet.messageId, message.id))
+      .where(eq(snippet.userId, userId))
+      .orderBy(desc(snippet.createdAt));
   } catch (error) {
-    console.error('Failed to get bookmarks with messages by user id from database', error);
+    console.error('Failed to get snippets with messages from database', error);
     throw error;
   }
 }

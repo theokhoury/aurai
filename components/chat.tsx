@@ -6,7 +6,7 @@ import { useState, useEffect, FormEvent } from 'react';
 import useSWR, { useSWRConfig } from 'swr';
 import { ChatHeader } from '@/components/chat-header';
 import { fetcher, generateUUID } from '@/lib/utils';
-import type { Bookmark } from '@/lib/db/schema';
+import type { Snippet } from '@/lib/db/schema';
 import { Artifact } from './artifact';
 import { MultimodalInput } from './multimodal-input';
 import { Messages } from './messages';
@@ -67,9 +67,9 @@ export function Chat({
     },
   });
 
-  // Fetch bookmarks for this chat
-  const { data: bookmarks } = useSWR<Array<Bookmark>>(
-    messages.length >= 1 ? `/api/bookmark?chatId=${id}` : null,
+  // Fetch snippets for this chat to check which messages are bookmarked/snippeted
+  const { data: bookmarks } = useSWR<Array<Snippet>>(
+    messages.length >= 1 ? `/api/snippets?chatId=${id}` : null,
     fetcher,
   );
 
@@ -128,12 +128,14 @@ export function Chat({
       // Combine current input with bookmark text, adding a double newline separator if input exists
       const combinedContent = (currentInput ? `${currentInput}\n\n` : '') + combinedBookmarkText; // Input first, then snippets
 
-      // Append the combined message
+      // Append the combined message, storing original input for display
       append({
         role: 'user',
-        content: combinedContent,
-        // Pass mapped attachments
-        data: { attachments: serializableAttachments }
+        content: combinedContent, // Full content for AI
+        data: {
+          attachments: serializableAttachments,
+          displayContent: currentInput // Original input for UI rendering
+        }
       });
 
       // Clear relevant states after sending
@@ -143,10 +145,10 @@ export function Chat({
 
     } else if (input.trim().length > 0 || attachments.length > 0) {
       // No bookmarks selected, standard submission with input/attachments
+      // No need for displayContent here as input is the full content
       append({
         role: 'user',
         content: input,
-        // Pass mapped attachments
         data: { attachments: serializableAttachments }
       });
 

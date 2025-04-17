@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
 
 import { auth } from '@/app/(auth)/auth';
-import { getBookmarksByUserIdWithMessages } from '@/lib/db/queries';
+import { getSnippetsByUserIdWithMessages } from '@/lib/db/queries';
 
-// GET handler to fetch all bookmarks (with messages) for the logged-in user
+// GET handler to fetch all snippets (with messages) for the logged-in user
 export async function GET(request: Request) {
   const session = await auth();
   if (!session?.user?.id) {
@@ -11,14 +11,14 @@ export async function GET(request: Request) {
   }
 
   try {
-    const bookmarksWithMessages = await getBookmarksByUserIdWithMessages({
+    const snippetsWithMessages = await getSnippetsByUserIdWithMessages({
       userId: session.user.id,
     });
-    return NextResponse.json(bookmarksWithMessages);
+    return NextResponse.json(snippetsWithMessages);
   } catch (error) {
-    console.error('Error fetching user bookmarks:', error);
+    console.error('Error fetching user snippets:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch bookmarks' },
+      { error: 'Failed to fetch snippets' },
       { status: 500 },
     );
   }

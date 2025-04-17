@@ -122,7 +122,15 @@ const PurePreviewMessage = ({
                             message.role === 'user',
                         })}
                       >
-                        <Markdown>{part.text}</Markdown>
+                        <Markdown>{
+                          message.role === 'user' &&
+                          typeof message.data === 'object' &&
+                          message.data !== null &&
+                          'displayContent' in message.data &&
+                          typeof message.data.displayContent === 'string'
+                            ? message.data.displayContent
+                            : part.text
+                        }</Markdown>
                       </div>
                     </div>
                   );

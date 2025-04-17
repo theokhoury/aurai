@@ -2,6 +2,9 @@ import { Toaster } from 'sonner';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
+import { auth } from '@/app/(auth)/auth';
+import { AppSidebar } from '@/components/app-sidebar';
+import { SidebarProvider } from '@/components/ui/sidebar';
 
 import './globals.css';
 
@@ -52,6 +55,8 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await auth();
+
   return (
     <html
       lang="en"
@@ -76,8 +81,15 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <SidebarProvider defaultOpen={true}>
+            <div className="flex h-dvh w-full overflow-hidden">
+              <AppSidebar user={session?.user} />
+              <main className="flex-1 overflow-y-auto bg-background">
+                {children}
+              </main>
+            </div>
+          </SidebarProvider>
           <Toaster position="top-center" />
-          {children}
         </ThemeProvider>
       </body>
     </html>

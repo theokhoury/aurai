@@ -5,6 +5,7 @@ import {
   RedoIcon,
   SparklesIcon,
   UndoIcon,
+  Asset86Icon,
 } from '@/components/icons';
 import { SpreadsheetEditor } from '@/components/sheet-editor';
 import { parse, unparse } from 'papaparse';
@@ -92,7 +93,7 @@ export const sheetArtifact = new Artifact<'sheet', Metadata>({
   toolbar: [
     {
       description: 'Format and clean data',
-      icon: <SparklesIcon />,
+      icon: <Asset86Icon />,
       onClick: ({ appendMessage }) => {
         appendMessage({
           role: 'user',

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.54 160.54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #080a16;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1">
+    <g>
+      <path id="leaf_02" data-name="leaf 02" class="cls-1" d="M160.54,80.27h-80.27C35.94,80.27,0,116.21,0,160.54h0s80.27,0,80.27,0h0c44.33,0,80.27-35.94,80.27-80.27Z"/>
+      <path id="leaf_02-2" data-name="leaf 02" class="cls-1" d="M160.54,0h-80.27C35.94,0,0,35.94,0,80.27h0s80.27,0,80.27,0h0c44.33,0,80.27-35.94,80.27-80.27Z"/>
+    </g>
+  </g>
+</svg>

@@ -18,12 +18,12 @@ function PureChatHeader({
   chatId,
   selectedModelId,
   selectedVisibilityType,
-  isReadonly,
+  isReadonly = false,
 }: {
-  chatId: string;
-  selectedModelId: string;
-  selectedVisibilityType: VisibilityType;
-  isReadonly: boolean;
+  chatId?: string;
+  selectedModelId?: string;
+  selectedVisibilityType?: VisibilityType;
+  isReadonly?: boolean;
 }) {
   const router = useRouter();
   const { open } = useSidebar();
@@ -31,36 +31,34 @@ function PureChatHeader({
   const { width: windowWidth } = useWindowSize();
 
   return (
-    <header className="flex sticky top-0 bg-background py-1.5 items-center px-2 md:px-2 gap-2">
+    <header className="flex sticky top-0 bg-background py-1.5 items-center px-2 md:px-2 gap-2 border-b">
       <SidebarToggle />
 
-      {(!open || windowWidth < 768) && (
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Button
-              variant="outline"
-              className="order-2 md:order-1 md:px-2 px-2 md:h-fit ml-auto md:ml-0"
-              onClick={() => {
-                router.push('/');
-                router.refresh();
-              }}
-            >
-              <PlusIcon />
-              <span className="md:sr-only">New Chat</span>
-            </Button>
-          </TooltipTrigger>
-          <TooltipContent>New Chat</TooltipContent>
-        </Tooltip>
-      )}
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button
+            variant="outline"
+            className="px-2 md:h-fit"
+            onClick={() => {
+              router.push('/');
+              router.refresh();
+            }}
+          >
+            <PlusIcon />
+            <span className="md:sr-only">New Chat</span>
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>New Chat</TooltipContent>
+      </Tooltip>
 
-      {!isReadonly && (
+      {!isReadonly && selectedModelId && (
         <ModelSelector
           selectedModelId={selectedModelId}
           className="order-1 md:order-2"
         />
       )}
 
-      {!isReadonly && (
+      {!isReadonly && chatId && selectedVisibilityType && (
         <VisibilitySelector
           chatId={chatId}
           selectedVisibilityType={selectedVisibilityType}
@@ -82,5 +80,10 @@ function PureChatHeader({
 }
 
 export const ChatHeader = memo(PureChatHeader, (prevProps, nextProps) => {
-  return prevProps.selectedModelId === nextProps.selectedModelId;
+  return (
+    prevProps.selectedModelId === nextProps.selectedModelId &&
+    prevProps.chatId === nextProps.chatId &&
+    prevProps.selectedVisibilityType === nextProps.selectedVisibilityType &&
+    prevProps.isReadonly === nextProps.isReadonly
+  );
 });

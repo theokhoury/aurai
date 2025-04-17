@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.54 160.54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #080a16;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1">
+    <path id="rounded_stairs" data-name="rounded stairs" class="cls-1" d="M53.51,26.76h0c0,14.78,11.98,26.76,26.76,26.76h0c14.78,0,26.76,11.98,26.76,26.76h0c0,14.78,11.98,26.76,26.76,26.76h0c14.78,0,26.76,11.98,26.76,26.76h0c0,14.78-11.98,26.76-26.76,26.76H53.51c-29.55,0-53.51-23.96-53.51-53.51V26.76C0,11.98,11.98,0,26.76,0h0c14.78,0,26.76,11.98,26.76,26.76Z"/>
+  </g>
+</svg>

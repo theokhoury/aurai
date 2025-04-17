@@ -1,7 +1,14 @@
 import { memo } from 'react';
 
 import type { ArtifactKind } from './artifact';
-import { FileIcon, LoaderIcon, MessageIcon, PencilEditIcon } from './icons';
+import {
+  Asset124BIcon,
+  FileIcon,
+  LoaderIcon,
+  MessageIcon,
+  PencilEditIcon,
+  ShareIcon,
+} from './icons';
 import { toast } from 'sonner';
 import { useArtifact } from '@/hooks/use-artifact';
 
@@ -70,7 +77,7 @@ function PureDocumentToolResult({
     >
       <div className="text-muted-foreground mt-1">
         {type === 'create' ? (
-          <FileIcon />
+          <Asset124BIcon />
         ) : type === 'update' ? (
           <PencilEditIcon />
         ) : type === 'request-suggestions' ? (
@@ -130,7 +137,7 @@ function PureDocumentToolCall({
       <div className="flex flex-row gap-3 items-start">
         <div className="text-zinc-500 mt-1">
           {type === 'create' ? (
-            <FileIcon />
+            <Asset124BIcon />
           ) : type === 'update' ? (
             <PencilEditIcon />
           ) : type === 'request-suggestions' ? (

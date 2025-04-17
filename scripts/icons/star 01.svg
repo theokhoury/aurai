@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.49 160.06">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #080a16;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1">
+    <polygon id="star_01" data-name="star 01" class="cls-1" points="145.18 30.61 118.41 67.05 160.49 80.07 118.4 93.05 145.14 129.52 103.81 114.08 105 160.06 80.22 122.1 55.41 160.04 56.65 114.06 15.3 129.46 42.08 93.01 0 79.99 42.09 67.01 15.35 30.55 56.68 45.99 55.48 0 80.26 37.96 105.08 .02 103.84 46.01 145.18 30.61"/>
+  </g>
+</svg>

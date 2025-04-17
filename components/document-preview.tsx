@@ -9,7 +9,13 @@ import {
   useRef,
 } from 'react';
 import { ArtifactKind, UIArtifact } from './artifact';
-import { FileIcon, FullscreenIcon, ImageIcon, LoaderIcon } from './icons';
+import {
+  Asset124BIcon,
+  FileIcon,
+  FullscreenIcon,
+  ImageIcon,
+  LoaderIcon,
+} from './icons';
 import { cn, fetcher } from '@/lib/utils';
 import { Document } from '@/lib/db/schema';
 import { InlineDocumentSkeleton } from './document-skeleton';
@@ -218,7 +224,7 @@ const PureDocumentHeader = ({
         ) : kind === 'image' ? (
           <ImageIcon />
         ) : (
-          <FileIcon />
+          <Asset124BIcon />
         )}
       </div>
       <div className="-translate-y-1 sm:translate-y-0 font-medium">{title}</div>

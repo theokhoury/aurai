@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/sidebar';
 import Link from 'next/link';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
-import { HomeIcon, BookmarkIcon, HistoryIcon, SettingsIcon } from 'lucide-react';
+import { HomeIcon, FileIcon, ClockRewind, Asset161BIcon, Asset124BIcon } from '@/components/icons';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { BookmarksContent } from './bookmarks-content';
 import { SettingsContent } from './settings-content';
@@ -41,7 +41,7 @@ export function AppSidebar({ user }: { user: User | undefined }) {
 
   return (
     <Sidebar className="group-data-[side=left]:border-r-0 flex flex-col">
-      <div className="flex flex-row justify-center items-center gap-2 p-4 border-b">
+      <div className="flex flex-row justify-center items-center gap-2 px-4 py-1.5 border-b">
         <TooltipProvider delayDuration={0}>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -52,7 +52,7 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                 aria-label="Home"
                 onClick={() => setActiveSection('home')}
               >
-                <HomeIcon className="size-5" />
+                <HomeIcon size={20} />
               </Button>
             </TooltipTrigger>
             <TooltipContent side="right" sideOffset={5}>
@@ -68,7 +68,7 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                 aria-label="Snippets"
                 onClick={() => setActiveSection('bookmarks')}
               >
-                <BookmarkIcon className="size-5" />
+                <Asset124BIcon size={20} />
               </Button>
             </TooltipTrigger>
             <TooltipContent side="right" sideOffset={5}>
@@ -84,7 +84,7 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                 aria-label="History"
                 onClick={() => setActiveSection('history')}
               >
-                <HistoryIcon className="size-5" />
+                <ClockRewind size={20} />
               </Button>
             </TooltipTrigger>
             <TooltipContent side="right" sideOffset={5}>
@@ -100,7 +100,7 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                 aria-label="Settings"
                 onClick={() => setActiveSection('settings')}
               >
-                <SettingsIcon className="size-5" />
+                <Asset161BIcon size={20} />
               </Button>
             </TooltipTrigger>
             <TooltipContent side="right" sideOffset={5}>

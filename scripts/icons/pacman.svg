@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.47 160.47">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #080a16;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1">
+    <path id="pacman" class="cls-1" d="M80.24,0c44.31,0,80.24,35.92,80.24,80.24s-35.92,80.24-80.24,80.24S0,124.55,0,80.24h80.24V0Z"/>
+  </g>
+</svg>

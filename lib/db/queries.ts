@@ -380,73 +380,6 @@ export async function updateChatVisiblityById({
   }
 }
 
-export async function getBookmarksByChatId({
-  chatId,
-  userId,
-}: {
-  chatId: string;
-  userId: string;
-}): Promise<Array<Snippet>> {
-  try {
-    return await db
-      .select()
-      .from(snippet)
-      .where(and(eq(snippet.chatId, chatId), eq(snippet.userId, userId)));
-  } catch (error) {
-    console.error('Failed to get bookmarks by chat id from database', error);
-    throw error;
-  }
-}
-
-export async function addBookmark({
-  userId,
-  chatId,
-  messageId,
-  title,
-}: {
-  userId: string;
-  chatId: string;
-  messageId: string;
-  title: string;
-}) {
-  try {
-    return await db.insert(snippet).values({
-      userId,
-      chatId,
-      messageId,
-      title,
-    });
-  } catch (error) {
-    console.error('Failed to add bookmark in database', error);
-    throw error;
-  }
-}
-
-export async function removeBookmark({
-  userId,
-  chatId,
-  messageId,
-}: {
-  userId: string;
-  chatId: string;
-  messageId: string;
-}) {
-  try {
-    return await db
-      .delete(snippet)
-      .where(
-        and(
-          eq(snippet.userId, userId),
-          eq(snippet.chatId, chatId),
-          eq(snippet.messageId, messageId),
-        ),
-      );
-  } catch (error) {
-    console.error('Failed to remove bookmark from database', error);
-    throw error;
-  }
-}
-
 export async function getSnippetsByChatId({
   chatId,
   userId,
@@ -542,6 +475,41 @@ export async function getSnippetsByUserIdWithMessages({
       .orderBy(desc(snippet.createdAt));
   } catch (error) {
     console.error('Failed to get snippets with messages from database', error);
+    throw error;
+  }
+}
+
+export async function updateSnippet({
+  userId,
+  chatId,
+  messageId,
+  newTitle,
+  newText,
+}: {
+  userId: string;
+  chatId: string;
+  messageId: string;
+  newTitle?: string;
+  newText: string;
+}) {
+  try {
+    const valuesToUpdate: { text: string; title?: string } = { text: newText };
+    if (newTitle !== undefined && newTitle.trim() !== '') {
+      valuesToUpdate.title = newTitle;
+    }
+
+    return await db
+      .update(snippet)
+      .set(valuesToUpdate)
+      .where(
+        and(
+          eq(snippet.userId, userId),
+          eq(snippet.chatId, chatId),
+          eq(snippet.messageId, messageId),
+        ),
+      );
+  } catch (error) {
+    console.error('Failed to update snippet in database', error);
     throw error;
   }
 }

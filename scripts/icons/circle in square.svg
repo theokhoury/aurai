@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.54 160.54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #080a16;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1">
+    <path id="circle_in_square" data-name="circle in square" class="cls-1" d="M0,0v160.54h160.54V0H0ZM80.27,129.18c-27.01,0-48.91-21.9-48.91-48.91s21.9-48.91,48.91-48.91,48.91,21.9,48.91,48.91-21.9,48.91-48.91,48.91Z"/>
+  </g>
+</svg>

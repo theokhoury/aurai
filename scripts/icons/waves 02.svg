@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.55 160.54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #080a16;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1">
+    <path id="waves_02" data-name="waves 02" class="cls-1" d="M160.55,160.54H0V0h18.39c7.67.22,15.33-.54,23.11,7.25,13.98,13.97.42,27.53,14.4,41.49,13.97,13.98,27.52.42,41.49,14.4,13.98,13.97.42,27.52,14.4,41.49,13.97,13.98,27.53.42,41.49,14.4,7.89,7.89,7.01,15.64,7.26,23.41v18.09Z"/>
+  </g>
+</svg>

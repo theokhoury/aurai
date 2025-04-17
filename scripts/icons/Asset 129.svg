@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.54 160.54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #080a16;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1">
+    <g>
+      <path class="cls-1" d="M0,0v160.54h160.54V0H0ZM143.72,143.72H16.81V16.81h126.91v126.91Z"/>
+      <path class="cls-1" d="M126.91,33.63H33.63v93.28h93.28V33.63ZM110.1,110.1h-59.65v-59.65h59.65v59.65Z"/>
+      <rect class="cls-1" x="67.26" y="67.26" width="26.02" height="26.02"/>
+    </g>
+  </g>
+</svg>

@@ -7,6 +7,7 @@ import {
   removeSnippet,
   getSnippetsByChatId,
   getMessageById,
+  updateSnippet,
 } from '@/lib/db/queries';
 import { generateTitleFromAssistantMessage } from '@/lib/ai/actions/generate-title';
 
@@ -15,6 +16,14 @@ const snippetActionSchema = z.object({
   chatId: z.string().uuid(),
   messageId: z.string().uuid(),
   action: z.enum(['add', 'remove']),
+});
+
+// Schema for PATCH requests (update text and optionally title)
+const snippetUpdateSchema = z.object({
+  chatId: z.string().uuid(),
+  messageId: z.string().uuid(),
+  title: z.string().min(1).optional(), // Add optional title
+  text: z.string().min(1), 
 });
 
 // GET handler (updated logic)
@@ -101,4 +110,43 @@ export async function POST(request: Request) {
 
   // Should not be reached if action is valid
   return NextResponse.json({ error: 'Invalid action' }, { status: 400 });
+}
+
+// PATCH handler (updates snippet text and/or title)
+export async function PATCH(request: Request) {
+  const session = await auth();
+  if (!session?.user?.id) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  try {
+    const json = await request.json();
+    const parsed = snippetUpdateSchema.safeParse(json);
+
+    if (!parsed.success) {
+      return NextResponse.json({ error: parsed.error.format() }, { status: 400 });
+    }
+
+    // Include optional title in destructuring
+    const { chatId, messageId, title, text } = parsed.data;
+    const userId = session.user.id;
+
+    await updateSnippet({ 
+      userId,
+      chatId,
+      messageId,
+      newTitle: title, 
+      newText: text, 
+    });
+
+    // Consider returning the updated snippet if needed by the frontend
+    return NextResponse.json({ success: true, action: 'updated' });
+
+  } catch (error) {
+    console.error('Error processing snippet update:', error);
+    return NextResponse.json(
+      { error: 'Failed to update snippet' },
+      { status: 500 },
+    );
+  }
 } 

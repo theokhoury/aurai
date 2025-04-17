@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.54 160.54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #080a16;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1">
+    <g>
+      <path id="quadrant" class="cls-1" d="M0,80.27h0V0h80.27C80.27,44.33,44.33,80.27,0,80.27Z"/>
+      <path id="quadrant-2" data-name="quadrant" class="cls-1" d="M160.54,80.27h0V0s-80.27,0-80.27,0h0c0,44.33,35.94,80.27,80.27,80.27Z"/>
+      <path id="quadrant-3" data-name="quadrant" class="cls-1" d="M0,80.27H0v80.27h80.27C80.27,116.21,44.33,80.27,0,80.27Z"/>
+      <path id="quadrant-4" data-name="quadrant" class="cls-1" d="M160.54,80.27h0v80.27s-80.27,0-80.27,0h0c0-44.33,35.94-80.27,80.27-80.27Z"/>
+    </g>
+  </g>
+</svg>

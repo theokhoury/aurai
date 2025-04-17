@@ -1,3 +1,20 @@
+export const AuraIcon = ({ size = 16 }: { size?: number }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160 160"
+      fill="currentColor"
+      style={{ color: 'currentcolor' }}
+    >
+      <path
+        d="M160.6,80.31c0,8.51-10.78,15.13-13.16,22.81-2.47,7.96,2.44,19.92-2.17,26.54-4.66,6.69-17.09,5.48-23.49,10.35-6.34,4.82-9.05,17.58-16.66,20.16-7.34,2.49-16.68-6.08-24.82-6.08s-17.48,8.57-24.82,6.08c-7.61-2.58-10.33-15.34-16.66-20.16-6.4-4.87-18.83-3.66-23.49-10.35-4.61-6.62.3-18.58-2.17-26.54-2.38-7.68-13.16-14.3-13.16-22.81s10.78-15.13,13.16-22.81c2.47-7.96-2.44-19.92,2.17-26.54,4.66-6.69,17.09-5.48,23.49-10.35C45.14,15.79,47.85,3.04,55.47.45c7.34-2.49,16.68,6.08,24.82,6.08S97.77-2.04,105.11.45c7.61,2.58,10.33,15.34,16.66,20.16,6.4,4.87,18.83,3.66,23.49,10.35,4.61,6.62-.3,18.58,2.17,26.54s13.16,14.3,13.16,22.81h0Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
+
 export const BotIcon = () => {
   return (
     <svg
@@ -410,7 +427,7 @@ export const PencilEditIcon = ({ size = 16 }: { size?: number }) => {
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M11.75 0.189331L12.2803 0.719661L15.2803 3.71966L15.8107 4.24999L15.2803 4.78032L13.7374 6.32322C13.1911 6.8696 12.3733 6.97916 11.718 6.65188L9.54863 10.5568C8.71088 12.0648 7.12143 13 5.39639 13H0.75H0V12.25V10.4926C0 9.4981 0.395088 8.5442 1.09835 7.841L11.2197 0.719661L11.75 0.189331ZM11.75 2.31065L9.81066 4.24999L11.75 6.18933L13.6893 4.24999L11.75 2.31065ZM2.15901 11.9016L8.75 5.31065L10.6893 7.24999L4.09835 13.841C3.67639 14.2629 3.1041 14.5 2.50736 14.5H1.5V13.4926C1.5 12.8959 1.73705 12.3236 2.15901 11.9016ZM9 16H16V14.5H9V16Z"
+        d="M11.75 0.189331L12.2803 0.719661L15.2803 3.71966L15.8107 4.24999L15.2803 4.78032L5.15901 14.9016C4.45575 15.6049 3.50192 16 2.50736 16H0.75H0V15.25V13.4926C0 12.4981 0.395088 11.5442 1.09835 10.841L11.2197 0.719661L11.75 0.189331ZM11.75 2.31065L9.81066 4.24999L11.75 6.18933L13.6893 4.24999L11.75 2.31065ZM2.15901 11.9016L8.75 5.31065L10.6893 7.24999L4.09835 13.841C3.67639 14.2629 3.1041 14.5 2.50736 14.5H1.5V13.4926C1.5 12.8959 1.73705 12.3236 2.15901 11.9016ZM9 16H16V14.5H9V16Z"
         fill="currentColor"
       />
     </svg>
@@ -627,14 +644,13 @@ export const CrossIcon = ({ size = 16 }: { size?: number }) => (
   </svg>
 );
 
-export const CrossSmallIcon = ({ size = 16, className }: { size?: number, className?: string }) => (
+export const CrossSmallIcon = ({ size = 16 }: { size?: number }) => (
   <svg
     height={size}
     strokeLinejoin="round"
     viewBox="0 0 16 16"
     width={size}
     style={{ color: 'currentcolor' }}
-    className={className}
   >
     <path
       fillRule="evenodd"
@@ -776,6 +792,40 @@ export const CopyIcon = ({ size = 16 }: { size?: number }) => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const ThumbUpIcon = ({ size = 16 }: { size?: number }) => (
+  <svg
+    height={size}
+    strokeLinejoin="round"
+    viewBox="0 0 16 16"
+    width={size}
+    style={{ color: 'currentcolor' }}
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M6.89531 2.23972C6.72984 2.12153 6.5 2.23981 6.5 2.44315V5.25001C6.5 6.21651 5.7165 7.00001 4.75 7.00001H2.5V13.5H12.1884C12.762 13.5 13.262 13.1096 13.4011 12.5532L14.4011 8.55318C14.5984 7.76425 14.0017 7.00001 13.1884 7.00001H9.25H8.5V6.25001V3.51458C8.5 3.43384 8.46101 3.35807 8.39531 3.31114L6.89531 2.23972ZM5 2.44315C5 1.01975 6.6089 0.191779 7.76717 1.01912L9.26717 2.09054C9.72706 2.41904 10 2.94941 10 3.51458V5.50001H13.1884C14.9775 5.50001 16.2903 7.18133 15.8563 8.91698L14.8563 12.917C14.5503 14.1412 13.4503 15 12.1884 15H1.75H1V14.25V6.25001V5.50001H1.75H4.75C4.88807 5.50001 5 5.38808 5 5.25001V2.44315Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const ThumbDownIcon = ({ size = 16 }: { size?: number }) => (
+  <svg
+    height={size}
+    strokeLinejoin="round"
+    viewBox="0 0 16 16"
+    width={size}
+    style={{ color: 'currentcolor' }}
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M6.89531 13.7603C6.72984 13.8785 6.5 13.7602 6.5 13.5569V10.75C6.5 9.7835 5.7165 9 4.75 9H2.5V2.5H12.1884C12.762 2.5 13.262 2.89037 13.4011 3.44683L14.4011 7.44683C14.5984 8.23576 14.0017 9 13.1884 9H9.25H8.5V9.75V12.4854C8.5 12.5662 8.46101 12.6419 8.39531 12.6889L6.89531 13.7603ZM5 13.5569C5 14.9803 6.6089 15.8082 7.76717 14.9809L9.26717 13.9095C9.72706 13.581 10 13.0506 10 12.4854V10.5H13.1884C14.9775 10.5 16.2903 8.81868 15.8563 7.08303L14.8563 3.08303C14.5503 1.85882 13.4503 1 12.1884 1H1.75H1V1.75V9.75V10.5H1.75H4.75C4.88807 10.5 5 10.6119 5 10.75V13.5569Z"
       fill="currentColor"
     />
   </svg>
@@ -1136,6 +1186,9563 @@ export const WarningIcon = ({ size = 16 }: { size?: number }) => {
         d="M8.55846 0.5C9.13413 0.5 9.65902 0.829456 9.90929 1.34788L15.8073 13.5653C16.1279 14.2293 15.6441 15 14.9068 15H1.09316C0.355835 15 -0.127943 14.2293 0.192608 13.5653L6.09065 1.34787C6.34092 0.829454 6.86581 0.5 7.44148 0.5H8.55846ZM8.74997 4.75V5.5V8V8.75H7.24997V8V5.5V4.75H8.74997ZM7.99997 12C8.55226 12 8.99997 11.5523 8.99997 11C8.99997 10.4477 8.55226 10 7.99997 10C7.44769 10 6.99997 10.4477 6.99997 11C6.99997 11.5523 7.44769 12 7.99997 12Z"
         fill="currentColor"
       />
+    </svg>
+  );
+};
+
+export const Asset1Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M114,80.27h0L80.27,0l-33.73,80.27h0L0,0v80.27c0,44.33,35.93,80.27,80.27,80.27s80.27-35.94,80.27-80.27V0l-46.54,80.27Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset100Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="107.03 53.51 107.03 0 53.51 0 53.51 53.51 0 53.51 0 107.03 0 107.03 0 160.54 53.51 160.54 53.51 107.03 107.03 107.03 107.03 160.54 160.54 160.54 160.54 107.03 160.54 107.03 160.54 53.51 107.03 53.51"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset101Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.36 160.36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M105.31,58.39h55.06c-7.89-13.98-22.89-23.42-40.09-23.42-8.22,0-15.93,2.16-22.61,5.93L136.87,1.69c-15.47-4.3-32.75-.37-44.91,11.79-5.8,5.8-9.73,12.77-11.79,20.15-2.05-7.38-5.98-14.35-11.79-20.15C56.23,1.31,38.95-2.62,23.48,1.69l39.2,39.2c-6.67-3.77-14.38-5.92-22.59-5.92-17.2,0-32.2,9.44-40.09,23.42h54.47c-7.02,2.12-13.64,5.96-19.19,11.51-12.16,12.16-16.09,29.44-11.79,44.91l56.4-56.4,56.4,56.4c4.3-15.47.37-32.75-11.79-44.91-5.55-5.55-12.17-9.39-19.19-11.51Z"/> <polygon className="cls-1" points="79.88 58.4 54.61 160.36 105.33 160.36 79.88 58.4"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset102Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M6.59,116.28h0c-8.79-8.79-8.79-23.05,0-31.84l4.16-4.16-4.16-4.16c-8.79-8.79-8.79-23.05,0-31.84h0c8.79-8.79,23.05-8.79,31.84,0l4.16,4.16,31.84,31.84-31.84,31.84-4.16,4.16c-8.79,8.79-23.05,8.79-31.84,0Z"/> <path className="cls-1" d="M153.94,116.28h0c8.79-8.79,8.79-23.05,0-31.84l-4.16-4.16,4.16-4.16c8.79-8.79,8.79-23.05,0-31.84h0c-8.79-8.79-23.05-8.79-31.84,0l-4.16,4.16-31.84,31.84,31.84,31.84,4.16,4.16c8.79,8.79,23.05,8.79,31.84,0Z"/> <path className="cls-1" d="M44.26,6.59h0c8.79-8.79,23.05-8.79,31.84,0l4.16,4.16,4.16-4.16c8.79-8.79,23.05-8.79,31.84,0h0c8.79,8.79,8.79,23.05,0,31.84l-4.16,4.16-31.84,31.84-31.84-31.84-4.16-4.16c-8.79-8.79-8.79-23.05,0-31.84Z"/> <path className="cls-1" d="M44.26,153.94h0c8.79,8.79,23.05,8.79,31.84,0l4.16-4.16,4.16,4.16c8.79,8.79,23.05,8.79,31.84,0h0c8.79-8.79,8.79-23.05,0-31.84l-4.16-4.16-31.84-31.84-31.84,31.84-4.16,4.16c-8.79,8.79-8.79,23.05,0,31.84Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset103Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.61 160.61"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M31.75,31.75H0C0,14.22,14.22,0,31.75,0h0v31.75Z"/> <path className="cls-1" d="M160.61,160.61h-31.75c0-17.54,14.22-31.75,31.75-31.75h0v31.75Z"/> <path className="cls-1" d="M160.61,96.18h-31.75c0-17.54,14.22-31.75,31.75-31.75h0v31.75Z"/> <path className="cls-1" d="M96.18,96.18h-31.75c0-17.54,14.22-31.75,31.75-31.75h0v31.75Z"/> <path className="cls-1" d="M31.75,96.18H0c0-17.54,14.22-31.75,31.75-31.75h0v31.75Z"/> <path className="cls-1" d="M96.18,31.75h-31.75c0-17.54,14.22-31.75,31.75-31.75h0v31.75Z"/> <path className="cls-1" d="M160.61,31.75h-31.75c0-17.54,14.22-31.75,31.75-31.75h0v31.75Z"/> <path className="cls-1" d="M96.18,160.61h-31.75c0-17.54,14.22-31.75,31.75-31.75h0v31.75Z"/> <path className="cls-1" d="M31.75,160.61H0c0-17.54,14.22-31.75,31.75-31.75h0v31.75Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset104Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,0H0c0,31.42,18.07,58.61,44.37,71.79L0,160.54h160.54l-44.37-88.75c26.3-13.18,44.37-40.37,44.37-71.79Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset105Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 160.54 160.54 0 80.27 40.13 0 0 0 160.54 80.27 120.4 160.54 160.54"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset107Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.52 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M101.84,0v50.93h-50.92v50.93H0v58.69h160.52V0h-58.68ZM58.68,58.69h43.16v43.17h-43.16v-43.17ZM50.92,152.78H7.76v-43.17h43.16v43.17ZM101.84,152.78h-43.16v-43.17h43.16v43.17ZM152.76,152.78h-43.16v-43.17h43.16v43.17ZM152.76,101.85h-43.16v-43.17h43.16v43.17ZM109.6,50.93V7.76h43.16v43.17h-43.16Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset108Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,80.27C160.54,35.94,124.6,0,80.27,0h0C35.94,0,0,35.94,0,80.27h0c0,44.33,35.94,80.27,80.27,80.27s80.27-35.94,80.27-80.27h0ZM152.78,80.27c0,39.98-32.53,72.51-72.51,72.51S7.76,120.25,7.76,80.27h0s145.02,0,145.02,0h0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset110Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,0H0v160.54h160.54V0ZM7.76,50.93V7.76h145.02v43.17H7.76ZM7.76,101.85v-43.17h145.02v43.17H7.76ZM7.76,152.78v-43.16h145.02v43.16H7.76Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset111Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.41"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polygon className="cls-1" points="160.54 110.36 160.54 141.38 138.97 160.41 109.61 134.54 80.26 160.41 50.92 134.54 21.57 160.41 0 141.38 0 110.36 21.57 129.37 50.92 103.5 80.26 129.37 109.61 103.52 138.97 129.38 160.54 110.36"/> <polygon className="cls-1" points="160.54 58.6 160.54 89.64 138.97 108.65 109.61 82.78 80.26 108.65 50.92 82.78 21.57 108.65 0 89.64 0 58.6 21.57 77.62 50.92 51.76 80.26 77.62 109.61 51.76 138.97 77.62 160.54 58.6"/> <polygon className="cls-1" points="160.54 6.85 160.54 37.88 138.97 56.91 109.61 31.04 80.26 56.91 50.92 31.04 21.57 56.91 0 37.88 0 6.85 21.57 25.87 50.92 0 80.26 25.87 109.61 0 138.97 25.87 160.54 6.85"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset112Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 154.07 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M77.03,0h0c-8.91,0-15.54,8.22-13.66,16.93l13.66,63.34,13.66-63.34c1.88-8.71-4.76-16.93-13.66-16.93Z"/> <path className="cls-1" d="M29.85,15.33h0c-7.21,5.24-7.74,15.79-1.11,21.73l48.29,43.21-26.18-59.28c-3.6-8.15-13.8-10.9-21-5.66Z"/> <path className="cls-1" d="M.69,55.46c-2.75,8.47,3.01,17.32,11.88,18.23l64.47,6.58L21.01,47.7c-7.7-4.48-17.57-.71-20.32,7.76Z"/> <path className="cls-1" d="M.69,105.07h0c2.75,8.47,12.62,12.24,20.32,7.77l56.02-32.57-64.47,6.58c-8.86.9-14.63,9.75-11.88,18.23Z"/> <path className="cls-1" d="M29.85,145.21h0c7.21,5.24,17.41,2.49,21-5.66l26.18-59.28-48.29,43.21c-6.64,5.94-6.1,16.49,1.11,21.73Z"/> <path className="cls-1" d="M77.03,160.54h0c8.91,0,15.54-8.22,13.66-16.93l-13.66-63.34-13.66,63.34c-1.88,8.71,4.76,16.93,13.66,16.93Z"/> <path className="cls-1" d="M124.21,145.21c7.21-5.24,7.74-15.79,1.11-21.73l-48.29-43.21,26.18,59.28c3.6,8.15,13.8,10.9,21,5.66Z"/> <path className="cls-1" d="M141.5,86.85l-64.46-6.58,56.02,32.57c7.7,4.48,17.57.71,20.32-7.77h0c2.75-8.47-3.01-17.32-11.88-18.23Z"/> <path className="cls-1" d="M153.37,55.46c-2.75-8.47-12.62-12.24-20.32-7.76l-56.02,32.57,64.46-6.58c8.86-.9,14.63-9.75,11.88-18.23Z"/> <path className="cls-1" d="M124.21,15.33c-7.21-5.24-17.41-2.49-21,5.66l-26.18,59.28,48.29-43.21c6.64-5.94,6.1-16.49-1.11-21.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset113Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M131.04,23.6h29.5V0h-33.25l-47.02,47.03L33.25,0H0v23.6h29.5c15,0,27.16,12.16,27.16,27.16v59.01c0,15-12.16,27.16-27.16,27.16H0v23.6h33.25l47.02-47.02,47.02,47.02h33.25v-23.6h-29.5c-15,0-27.16-12.16-27.16-27.16v-59.01c0-15,12.16-27.16,27.16-27.16Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset114Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.53 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M0,0v160.54h160.53V0H0ZM7.76,152.78V13.24l139.52,139.53H7.76ZM13.24,7.76h139.52v139.54L13.24,7.76Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset115Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.53 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M160.53,160.54h-26.76c-16.37,0-31.59-10.36-37.02-25.2-1.73-4.75-2.2-9.25-2.62-13.22-.1-.92-.19-1.84-.31-2.75-.89-7.16-6.6-12.34-13.56-12.34s-12.67,5.18-13.56,12.32c-.12.93-.21,1.85-.31,2.77-.42,3.97-.89,8.46-2.61,13.2-5.35,14.62-20.91,25.22-37.02,25.22H0v-25.87h26.76c5.36,0,11.07-3.69,12.72-8.22.63-1.73.9-4.3,1.18-7.02.11-1.1.23-2.2.37-3.29,2.49-19.93,19.36-34.97,39.23-34.97s36.74,15.04,39.23,34.99c.14,1.08.25,2.18.37,3.28.29,2.72.55,5.3,1.19,7.04,1.65,4.51,7.36,8.2,12.72,8.2h26.76v25.87Z"/> <path className="cls-1" d="M160.53,79.37h-26.76c-16.37,0-31.59-10.36-37.02-25.2-1.73-4.75-2.2-9.25-2.62-13.22-.1-.92-.19-1.84-.31-2.75-.89-7.16-6.6-12.34-13.56-12.34s-12.67,5.18-13.56,12.32c-.12.93-.21,1.85-.31,2.77-.42,3.97-.89,8.46-2.61,13.2-5.35,14.62-20.91,25.22-37.02,25.22H0v-25.87h26.76c5.36,0,11.07-3.69,12.72-8.22.63-1.73.9-4.3,1.18-7.02.11-1.1.23-2.2.37-3.29C43.53,15.04,60.39,0,80.27,0s36.74,15.04,39.23,34.99c.14,1.08.25,2.18.37,3.28.29,2.72.55,5.3,1.19,7.04,1.65,4.51,7.36,8.2,12.72,8.2h26.76v25.87Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset116Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.55"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M69.68,121.15c0-6.57.44-12.77,1.2-18.21-3.31,4.38-7.39,9.08-12.03,13.72-15.38,15.38-31.21,24.51-35.34,20.37-4.14-4.14,4.98-19.96,20.37-35.35,4.64-4.64,9.33-8.7,13.71-12.02-5.45.76-11.63,1.19-18.2,1.19-21.76,0-39.4-4.73-39.4-10.58s17.64-10.59,39.4-10.59c6.57,0,12.78.44,18.22,1.2-4.4-3.3-9.09-7.39-13.74-12.03-15.39-15.39-24.51-31.21-20.37-35.35,4.13-4.14,19.96,4.99,35.34,20.37,4.64,4.64,8.72,9.34,12.03,13.72-.76-5.45-1.2-11.64-1.2-18.21,0-21.75,4.75-39.4,10.59-39.4s10.59,17.64,10.59,39.4c0,6.57-.44,12.77-1.2,18.21,3.31-4.38,7.39-9.08,12.03-13.72,15.38-15.38,31.21-24.51,35.34-20.37,4.14,4.14-4.98,19.96-20.37,35.35-4.64,4.64-9.34,8.73-13.74,12.03,5.45-.76,11.65-1.2,18.22-1.2,21.76,0,39.4,4.73,39.4,10.59s-17.64,10.58-39.4,10.58c-6.57,0-12.75-.43-18.2-1.19,4.38,3.31,9.07,7.37,13.71,12.02,15.39,15.39,24.51,31.21,20.37,35.35-4.13,4.14-19.96-4.99-35.34-20.37-4.64-4.64-8.72-9.34-12.03-13.72.76,5.45,1.2,11.64,1.2,18.21,0,21.76-4.75,39.4-10.59,39.4s-10.59-17.64-10.59-39.4Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset117Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,0H0s0,160.53,0,160.53h160.54s0-160.53,0-160.53ZM152.78,118.59l-17.7-93.12L41.95,7.76h110.82v110.83ZM76.39,84.15l63.65,60.5-81.35-42.8L15.89,20.5l60.5,63.65ZM20.5,15.89l81.35,42.8,42.8,81.35-60.5-63.65L20.5,15.89ZM109.61,50.93L28.7,12.47l98.62,20.75,20.75,98.62-38.45-80.91ZM50.93,109.61l80.91,38.45-98.62-20.75L12.47,28.7l38.45,80.91ZM7.76,41.95l17.7,93.12,93.12,17.7H7.76V41.95Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset118Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M80.27,0c-22.16,0-42.23,8.99-56.75,23.5C8.99,38.04,0,58.1,0,80.27c0,44.32,35.94,80.27,80.27,80.27s80.27-35.94,80.27-80.27V0h-80.27ZM99.19,99.19c-4.84,4.84-11.54,7.84-18.92,7.84-14.77,0-26.75-11.99-26.75-26.76,0-7.39,2.99-14.08,7.84-18.92,4.84-4.84,11.52-7.84,18.91-7.84s14.09,3,18.92,7.84c4.84,4.84,7.84,11.54,7.84,18.92s-3,14.07-7.84,18.92Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset119Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,120.4c0,22.17-17.97,40.13-40.13,40.13s-40.14-17.97-40.14-40.13c0,22.17-17.98,40.13-40.13,40.13S0,142.57,0,120.4s17.97-40.14,40.13-40.14C17.97,80.27,0,62.3,0,40.14S17.97,0,40.13,0s40.13,17.97,40.13,40.14C80.27,17.97,98.23,0,120.4,0s40.13,17.97,40.13,40.14-17.97,40.13-40.13,40.13c22.17,0,40.13,17.97,40.13,40.14Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset120Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.61 160.61"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.61,47.06v-13.82c-18.36,0-33.24-14.88-33.24-33.24h-13.81c0,18.36-14.89,33.24-33.26,33.24S47.06,18.36,47.06,0h-13.82c0,18.36-14.88,33.24-33.24,33.24v13.82c18.36,0,33.24,14.88,33.24,33.24S18.36,113.55,0,113.55v13.82c18.36,0,33.24,14.88,33.24,33.24h13.82c0-18.36,14.88-33.24,33.24-33.24s33.26,14.88,33.26,33.24h13.81c0-18.36,14.88-33.24,33.24-33.24v-13.82c-18.36,0-33.24-14.88-33.24-33.24s14.88-33.24,33.24-33.24ZM80.31,113.55c-18.36,0-33.24-14.88-33.24-33.24s14.88-33.24,33.24-33.24,33.26,14.88,33.26,33.24-14.89,33.24-33.26,33.24Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset121Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 158.24"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 75.24 97.27 75.24 154.27 47.79 150.91 40.8 93.9 68.25 133.35 18.78 127.28 13.95 87.84 63.41 101.91 1.73 94.35 0 80.27 61.68 66.19 0 58.62 1.73 72.7 63.41 33.26 13.95 27.19 18.78 66.64 68.25 9.63 40.8 6.27 47.79 63.27 75.24 0 75.24 0 83 63.27 83 6.27 110.45 9.63 117.44 66.64 89.99 27.19 139.46 33.26 144.3 72.7 94.83 58.62 156.51 66.19 158.24 80.27 96.56 94.35 158.24 101.91 156.51 87.84 94.83 127.28 144.3 133.35 139.46 93.9 89.99 150.91 117.44 154.27 110.45 97.27 83 160.54 83 160.54 75.24"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset122Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M38.19,0h0c21.09,0,38.19,17.1,38.19,38.19v122.33s-38.19,0-38.19,0c-21.09,0-38.19-17.1-38.19-38.19V38.19C0,17.1,17.1,0,38.19,0Z"/> <path className="cls-1" d="M84.14,122.33V0s38.2,0,38.2,0c21.1,0,38.2,17.1,38.2,38.2v84.13c0,21.1-17.1,38.2-38.2,38.2h0c-21.1,0-38.2-17.1-38.2-38.2Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset123Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.55 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M137.04,23.51C121.88,8.36,101.72,0,80.28,0,36.01,0,0,36.01,0,80.26v80.28h57v-80.28c0-12.83,10.45-23.27,23.28-23.27,6.21,0,12.05,2.42,16.45,6.82,4.4,4.4,6.82,10.24,6.82,16.45v80.28h57.01v-80.28c0-21.43-8.35-41.59-23.51-56.75ZM128.17,152.78h-16.86v-72.52c0-8.28-3.23-16.08-9.09-21.93-5.86-5.86-13.66-9.09-21.93-9.09-17.11,0-31.04,13.92-31.04,31.03v72.52h-16.85v-72.52c0-26.41,21.48-47.89,47.89-47.89,12.79,0,24.82,4.98,33.87,14.02,9.04,9.05,14.02,21.08,14.02,33.87v72.52ZM152.79,152.78h-16.86v-72.52c0-14.86-5.78-28.84-16.3-39.35-10.53-10.52-24.5-16.3-39.36-16.3-30.69,0-55.65,24.96-55.65,55.65v72.52H7.76v-72.52C7.76,40.29,40.29,7.76,80.28,7.76c19.37,0,37.58,7.54,51.28,21.24,13.7,13.7,21.24,31.91,21.24,51.27v72.52Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset124Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 160.54 152.58 160.54 152.58 138.42 126.49 138.42 126.49 112.33 100.4 112.33 100.4 86.23 74.31 86.23 74.31 60.14 48.21 60.14 48.21 34.05 22.12 34.05 22.12 7.95 0 7.95 0 0 30.07 0 30.07 26.09 56.16 26.09 56.16 52.19 82.26 52.19 82.26 78.28 108.35 78.28 108.35 104.37 134.44 104.37 134.44 130.47 160.54 130.47 160.54 160.54"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset125Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,156.66c0-.13,0-.27,0-.4V0H0v160.54h160.54v-3.88h0ZM152.78,107.94C137.27,60.67,99.84,23.26,52.57,7.76h100.21v100.18ZM7.76,41.55V7.82c79.03,2.03,142.94,65.94,144.97,144.96h-33.74c-2.01-60.43-50.8-109.22-111.23-111.23ZM111.2,152.78h-33.71c-1.96-37.56-32.17-67.77-69.73-69.73v-33.71c56.15,2.01,101.44,47.3,103.44,103.44ZM7.76,90.83c33.28,1.94,60.01,28.67,61.95,61.95H7.76v-61.95Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset126Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polygon className="cls-1" points="0 0 80.27 80.27 80.27 0 0 0"/> <polygon className="cls-1" points="80.27 80.27 160.54 0 160.54 80.27 80.27 80.27"/> <polygon className="cls-1" points="160.54 160.54 80.27 80.27 80.27 160.54 160.54 160.54"/> <polygon className="cls-1" points="80.27 80.27 0 160.54 0 80.27 80.27 80.27"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset127Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="74.45" width="11.64" height="40.14"/> <rect className="cls-1" x="44.35" y="8.06" width="11.64" height="40.14" transform="translate(-7.35 28.85) rotate(-30)"/> <rect className="cls-1" x="22.31" y="30.1" width="11.64" height="40.14" transform="translate(-29.38 49.45) rotate(-60)"/> <rect className="cls-1" y="74.45" width="40.14" height="11.64"/> <rect className="cls-1" x="8.07" y="104.55" width="40.14" height="11.64" transform="translate(-51.41 28.85) rotate(-30)"/> <rect className="cls-1" x="30.1" y="126.58" width="40.14" height="11.64" transform="translate(-89.58 109.66) rotate(-60)"/> <rect className="cls-1" x="74.45" y="120.4" width="11.64" height="40.14"/> <rect className="cls-1" x="104.55" y="112.34" width="11.64" height="40.14" transform="translate(-51.42 72.92) rotate(-30)"/> <rect className="cls-1" x="126.58" y="90.3" width="11.64" height="40.14" transform="translate(-29.38 169.85) rotate(-60)"/> <rect className="cls-1" x="120.4" y="74.45" width="40.14" height="11.64"/> <rect className="cls-1" x="112.34" y="44.35" width="40.14" height="11.64" transform="translate(-7.35 72.92) rotate(-30)"/> <rect className="cls-1" x="90.3" y="22.31" width="40.14" height="11.64" transform="translate(30.82 109.65) rotate(-60)"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset128Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.52,160.54H20.92c-11.54,0-20.92-9.38-20.92-20.92s9.38-20.92,20.92-20.92h118.7c1.55,0,2.82-1.26,2.82-2.82s-1.26-2.82-2.82-2.82H20.92c-11.54,0-20.92-9.38-20.92-20.92s9.38-20.92,20.92-20.92h118.7c1.55,0,2.82-1.26,2.82-2.82s-1.26-2.82-2.82-2.82H20.92c-11.54,0-20.92-9.38-20.92-20.92s9.38-20.92,20.92-20.92h118.7c1.55,0,2.82-1.26,2.82-2.82s-1.26-2.82-2.82-2.82H.02V0h139.59c11.54,0,20.92,9.38,20.92,20.92s-9.38,20.92-20.92,20.92H20.92c-1.55,0-2.82,1.26-2.82,2.82s1.26,2.82,2.82,2.82h118.7c11.54,0,20.92,9.38,20.92,20.92s-9.38,20.92-20.92,20.92H20.92c-1.55,0-2.82,1.26-2.82,2.82s1.26,2.82,2.82,2.82h118.7c11.54,0,20.92,9.38,20.92,20.92s-9.38,20.92-20.92,20.92H20.92c-1.55,0-2.82,1.26-2.82,2.82s1.26,2.82,2.82,2.82h139.6v18.1Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset129Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M0,0v160.54h160.54V0H0ZM143.72,143.72H16.81V16.81h126.91v126.91Z"/> <path className="cls-1" d="M126.91,33.63H33.63v93.28h93.28V33.63ZM110.1,110.1h-59.65v-59.65h59.65v59.65Z"/> <rect className="cls-1" x="67.26" y="67.26" width="26.02" height="26.02"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset130Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,160.54c-80.27,0-80.27-77.6-160.54-77.6V0c80.27,0,80.27,77.6,160.54,77.6v82.93Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset131Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="120.41" width="40.13" height="40.13"/> <rect className="cls-1" x="80.27" y="40.13" width="40.13" height="40.13"/> <rect className="cls-1" x="40.13" y="80.26" width="40.13" height="40.13"/> <rect className="cls-1" y="120.4" width="40.13" height="40.13"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset132Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,36.33V0h-36.33c-24.27,0-43.94,19.67-43.94,43.94C80.27,19.67,60.6,0,36.33,0H0v36.33c0,24.27,19.67,43.94,43.94,43.94C19.67,80.27,0,99.94,0,124.21v36.33h36.33c24.27,0,43.94-19.67,43.94-43.94,0,24.27,19.67,43.94,43.94,43.94h36.33v-36.33c0-24.27-19.67-43.94-43.94-43.94,24.27,0,43.94-19.67,43.94-43.94Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset133Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,55.12c-27.29,0-51.41,4.27-65.91,10.79,6.52-14.5,10.79-38.61,10.79-65.91h-50.3c0,27.3,4.27,51.41,10.8,65.91-14.5-6.52-38.62-10.79-65.91-10.79v50.3c27.29,0,51.41-4.27,65.91-10.8-6.53,14.5-10.8,38.62-10.8,65.91h50.3c0-27.29-4.27-51.41-10.79-65.91,14.5,6.53,38.62,10.8,65.91,10.8v-50.3Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset134Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.53 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M149.18,106.92c-15.86-12.72-31.02-21.98-43.34-26.65,12.32-4.68,27.48-13.94,43.34-26.65,14.02-11.24,15.26-32.12,2.55-44.82h0c-12.7-12.7-33.59-11.46-44.83,2.56-12.72,15.86-21.97,31.02-26.64,43.35-4.68-12.32-13.94-27.49-26.65-43.34C42.38-2.66,21.5-3.9,8.79,8.8h0C-3.91,21.51-2.67,42.39,11.35,53.63c15.86,12.71,31.03,21.97,43.35,26.64-12.33,4.67-27.5,13.93-43.35,26.64-14.02,11.24-15.26,32.12-2.56,44.82h0c12.7,12.7,33.58,11.46,44.82-2.55,12.72-15.86,21.98-31.02,26.65-43.34,4.67,12.33,13.93,27.5,26.64,43.35,11.24,14.02,32.12,15.26,44.82,2.56h0c12.7-12.7,11.46-33.58-2.55-44.82Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset135Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" width="53.52" height="53.51"/> <rect className="cls-1" x="107.03" width="53.51" height="53.51"/> <rect className="cls-1" x="53.52" y="53.51" width="53.51" height="53.52"/> <rect className="cls-1" y="107.03" width="53.52" height="53.51"/> <rect className="cls-1" x="107.03" y="107.03" width="53.51" height="53.51"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset136Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M58.28,160.52h0s21.99.01,21.99.01h0c0-44.33,35.94-80.28,80.26-80.28h.01v-21.99h-.01c-56.38,0-102.25,45.87-102.25,102.25ZM58.28,160.52h0s21.99.01,21.99.01h0c0-44.33,35.94-80.28,80.26-80.28h.01v-21.99h-.01c-56.38,0-102.25,45.87-102.25,102.25ZM29.75,160.52h0s20.77.01,20.77.01h0c0-60.67,49.35-110.02,110.01-110.02h.01v-20.77h-.01c-72.11,0-130.78,58.66-130.78,130.78ZM58.28,160.52h0s21.99.01,21.99.01h0c0-44.33,35.94-80.28,80.26-80.28h.01v-21.99h-.01c-56.38,0-102.25,45.87-102.25,102.25ZM29.75,160.52h0s20.77.01,20.77.01h0c0-60.67,49.35-110.02,110.01-110.02h.01v-20.77h-.01c-72.11,0-130.78,58.66-130.78,130.78ZM58.28,160.52h0s21.99.01,21.99.01h0c0-44.33,35.94-80.28,80.26-80.28h.01v-21.99h-.01c-56.38,0-102.25,45.87-102.25,102.25ZM0,160.52h0s21.99.01,21.99.01h0c0-76.41,62.14-138.55,138.54-138.55h.01V0h-.01C71.87,0,0,71.87,0,160.52ZM29.75,160.52h0s20.77.01,20.77.01h0c0-60.67,49.35-110.02,110.01-110.02h.01v-20.77h-.01c-72.11,0-130.78,58.66-130.78,130.78ZM58.28,160.52h0s21.99.01,21.99.01h0c0-44.33,35.94-80.28,80.26-80.28h.01v-21.99h-.01c-56.38,0-102.25,45.87-102.25,102.25ZM58.28,160.52h0s21.99.01,21.99.01h0c0-44.33,35.94-80.28,80.26-80.28h.01v-21.99h-.01c-56.38,0-102.25,45.87-102.25,102.25ZM58.28,160.52h0s21.99.01,21.99.01h0c0-44.33,35.94-80.28,80.26-80.28h.01v-21.99h-.01c-56.38,0-102.25,45.87-102.25,102.25Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset137Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,80.27c0-11.88-22.93-21.95-54.74-25.53L160.54,0H0l54.74,54.74C22.93,58.32,0,68.39,0,80.27s22.93,21.95,54.74,25.53L0,160.54h160.54l-54.74-54.74c31.81-3.58,54.74-13.65,54.74-25.53Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset138Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.55 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polygon className="cls-1" points="80.27 80.27 80.27 120.4 40.14 160.54 0 160.54 0 120.4 40.14 80.27 80.27 80.27"/> <polygon className="cls-1" points="80.27 0 80.27 40.13 40.14 80.27 0 80.27 0 40.13 40.14 0 80.27 0"/> <polygon className="cls-1" points="160.55 80.27 160.55 120.4 120.42 160.54 80.27 160.54 80.27 120.4 120.42 80.27 160.55 80.27"/> <polygon className="cls-1" points="160.55 0 160.55 40.13 120.42 80.27 80.27 80.27 80.27 40.13 120.42 0 160.55 0"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset139Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M80.28,0L0,80.26v80.26h80.28l80.26-80.26V0h-80.26ZM72.52,152.77H7.76v-64.74h64.76v64.74Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset14Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M137.03,23.51C121.87,8.35,101.71,0,80.27,0S38.67,8.35,23.51,23.51C8.35,38.67,0,58.83,0,80.27v80.27h46v-80.27c0-18.9,15.38-34.27,34.27-34.27s34.27,15.38,34.27,34.27v80.27h46v-80.27c0-21.44-8.35-41.6-23.51-56.76Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset140Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.52"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M160.54,80.26v80.26h-80.26c-22.17,0-40.14-17.96-40.14-40.13s17.98-40.13,40.14-40.13c0,22.15,17.96,40.13,40.13,40.13s40.13-17.98,40.13-40.13Z"/> <path className="cls-1" d="M120.41,40.13c0,22.15-17.98,40.13-40.13,40.13,0-22.17-17.98-40.13-40.14-40.13S0,58.1,0,80.26V0h80.27c22.15,0,40.13,17.96,40.13,40.13Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset141Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 153.04"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M83.58,2.06l21.95,44.47c.54,1.09,1.58,1.84,2.78,2.02l49.08,7.13c3.03.44,4.23,4.16,2.04,6.29l-35.51,34.62c-.87.85-1.27,2.07-1.06,3.26l8.38,48.88c.52,3.01-2.65,5.31-5.35,3.89l-43.89-23.08c-1.07-.56-2.36-.56-3.43,0l-43.89,23.08c-2.71,1.42-5.87-.88-5.35-3.89l8.38-48.88c.21-1.2-.19-2.42-1.06-3.26L1.12,61.97c-2.19-2.13-.98-5.85,2.04-6.29l49.08-7.13c1.2-.17,2.24-.93,2.78-2.02L76.96,2.06c1.35-2.74,5.26-2.74,6.62,0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset142Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.53 160.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M113.52,0H47.01L0,47.03v66.49l47.01,47.01h66.51l47.01-47.01V47.03L113.52,0ZM136.93,109.77c0,15-12.16,27.16-27.16,27.16h-59c-15,0-27.16-12.16-27.16-27.16v-59c0-15,12.16-27.16,27.16-27.16h59c15,0,27.16,12.16,27.16,27.16v59Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset143Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="152.78 105.73 152.78 147.29 85.76 80.27 152.77 13.26 152.77 54.8 160.53 54.8 160.53 0 105.73 0 105.73 7.76 147.3 7.76 80.28 74.78 13.26 7.77 54.8 7.77 54.8 0 0 0 0 54.81 7.76 54.81 7.76 13.24 74.79 80.27 7.77 147.29 7.77 105.74 0 105.74 0 160.54 54.81 160.54 54.81 152.78 13.25 152.78 80.28 85.76 147.29 152.77 105.74 152.77 105.74 160.53 160.54 160.53 160.54 105.73 152.78 105.73"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset144Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M118.56,0c-17.26,0-31.76,18.96-38.29,46.8C73.75,18.96,59.24,0,41.99,0,18.44,0,0,35.26,0,80.27s18.44,80.27,41.99,80.27c17.26,0,31.76-18.96,38.28-46.8,6.52,27.84,21.03,46.8,38.29,46.8,23.54,0,41.99-35.26,41.99-80.27S142.1,0,118.56,0ZM41.99,153.14c-18.75,0-34.58-33.37-34.58-72.87S23.24,7.4,41.99,7.4s34.58,33.37,34.58,72.87-15.84,72.87-34.58,72.87ZM118.56,153.14c-18.75,0-34.58-33.37-34.58-72.87S99.81,7.4,118.56,7.4s34.58,33.37,34.58,72.87-15.84,72.87-34.58,72.87Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset145Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M102.33,92.47c5.45-2.75,11.6-4.31,18.12-4.31,21.25,0,38.63,16.49,40.08,37.37-6.71-5.02-15.03-7.99-24.04-7.99-22.2,0-40.19,17.99-40.19,40.19,0,.94.03,1.89.1,2.82h-32.28c.06-.93.1-1.88.1-2.82,0-22.2-17.99-40.19-40.19-40.19-9.03,0-17.34,2.97-24.04,7.99,1.45-20.88,18.85-37.37,40.08-37.37,6.52,0,12.68,1.55,18.12,4.31-7.09-11.41-19.74-19.01-34.16-19.01-9.03,0-17.34,2.97-24.04,7.99,1.45-20.88,18.85-37.37,40.08-37.37,6.52,0,12.68,1.55,18.12,4.31-7.09-11.41-19.74-19.01-34.16-19.01-9.03,0-17.34,2.97-24.04,7.99C1.45,16.49,18.85,0,40.08,0s40.19,17.99,40.19,40.19C80.27,17.99,98.26,0,120.46,0s38.63,16.49,40.08,37.37c-6.71-5.02-15.03-7.99-24.04-7.99-14.42,0-27.07,7.61-34.16,19.01,5.45-2.75,11.6-4.31,18.12-4.31,21.25,0,38.63,16.49,40.08,37.37-6.71-5.02-15.03-7.99-24.04-7.99-14.42,0-27.07,7.61-34.16,19.01Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset146Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.55 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.55 160.54 120.4 120.4 80.27 160.54 40.13 120.4 0 160.54 0 0 40.13 40.13 80.27 0 120.4 40.13 160.54 0 160.55 160.54"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset147Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M0,0v160.54h160.54V0H0ZM150.38,7.76l-31.92,63.83L86.55,7.76h63.83ZM80.28,147.98l-33.86-67.7L80.28,12.56l33.84,67.71-33.84,67.7ZM73.99,7.76l-31.92,63.83L10.16,7.76h63.83ZM7.76,20.34l29.96,59.94-29.96,59.93V20.34ZM10.16,152.78l31.92-63.82,31.92,63.82H10.16ZM86.55,152.78l31.92-63.82,31.92,63.82h-63.83ZM152.78,140.2l-29.96-59.93,29.96-59.94v119.86Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset148Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M25.94,106.22C5.21,126.95-5.23,150.1,2.6,157.93c7.84,7.84,30.99-2.61,51.72-23.33,20.72-20.72,31.17-43.88,23.33-51.71-7.84-7.84-30.99,2.61-51.72,23.33Z"/> <path className="cls-1" d="M106.22,106.22c-20.72,20.72-31.17,43.88-23.33,51.71,7.84,7.84,30.99-2.61,51.71-23.33,20.72-20.72,31.17-43.88,23.33-51.71-7.84-7.84-30.99,2.61-51.71,23.33Z"/> <path className="cls-1" d="M25.94,25.94C5.21,46.66-5.23,69.82,2.6,77.65c7.84,7.84,30.99-2.61,51.72-23.33,20.72-20.72,31.17-43.88,23.33-51.72-7.84-7.84-30.99,2.61-51.72,23.33Z"/> <path className="cls-1" d="M134.6,54.32c20.72-20.72,31.17-43.88,23.33-51.72-7.84-7.84-30.99,2.61-51.71,23.33-20.72,20.72-31.17,43.88-23.33,51.72,7.84,7.84,30.99-2.61,51.71-23.33Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset149Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,0v80.27c-44.34,0-80.27,35.93-80.27,80.27H0v-80.27c44.32,0,80.27-35.94,80.27-80.27h80.27Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset150Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M63.25,153.22c6.54-4.62,11.64-11.12,14.49-18.73l14.29,14.29c.09.09.19.18.28.27.38.38.76.74,1.15,1.09.27.25.54.48.81.71.22.19.44.39.66.57.34.27.67.53,1.01.79.17.14.35.28.53.41.36.27.74.53,1.1.79.17.1.32.22.49.34.38.26.76.49,1.15.74.17.1.34.21.5.31.38.23.75.44,1.14.66.19.1.39.22.58.32.35.19.71.38,1.07.56.23.12.47.23.7.34.34.16.67.31,1,.45.28.13.56.25.83.36.3.12.59.23.91.35.31.13.63.25.96.36.26.1.53.18.8.27.36.13.72.25,1.09.35.23.08.48.14.71.21.4.12.79.22,1.19.32.23.05.45.1.67.16.41.09.83.19,1.24.27.23.04.47.08.69.12.41.08.83.16,1.24.22.26.04.53.06.79.09.38.05.76.1,1.15.14.35.04.7.05,1.05.08.3.03.59.05.91.06,1.32.06,2.65.06,3.97,0,.31-.01.62-.04.93-.06.34-.03.69-.04,1.02-.08.39-.04.79-.09,1.18-.14.25-.03.5-.06.75-.09.43-.06.85-.14,1.28-.22.22-.04.43-.08.65-.12.43-.08.85-.18,1.28-.28.21-.04.41-.09.63-.14.41-.1.82-.22,1.23-.34.22-.05.45-.12.67-.18.38-.12.75-.25,1.14-.38.25-.08.49-.16.75-.25.34-.13.67-.26,1.01-.39.28-.1.57-.22.84-.34.3-.12.59-.25.89-.38.31-.14.62-.28.93-.43.26-.12.52-.25.76-.38.34-.17.69-.34,1.01-.52.23-.13.44-.25.66-.38.36-.19.71-.4,1.06-.61.21-.12.4-.25.6-.38.36-.22.71-.44,1.06-.67.21-.13.4-.27.59-.41.34-.23.67-.47,1-.71.23-.17.45-.35.67-.52.28-.22.58-.45.87-.69.3-.23.58-.49.88-.75.19-.17.4-.34.61-.53.98-.89,1.93-1.82,2.82-2.82.18-.19.34-.39.5-.58.26-.3.53-.59.78-.91.23-.27.44-.56.66-.83.18-.23.36-.47.54-.71.23-.31.47-.63.69-.96.14-.22.3-.43.44-.63.22-.34.44-.69.66-1.02.13-.22.26-.41.39-.63.21-.34.4-.69.59-1.02.13-.23.26-.47.38-.7.18-.32.35-.65.5-.98.14-.26.27-.52.4-.79.14-.3.27-.6.4-.89.14-.31.27-.62.4-.93.12-.26.21-.53.31-.79.14-.36.28-.71.41-1.07.08-.23.16-.47.23-.69.13-.4.26-.8.39-1.2.05-.21.1-.4.17-.61.12-.43.25-.85.35-1.29.04-.18.08-.36.13-.54.1-.45.21-.92.3-1.37.04-.18.06-.36.09-.54.09-.45.17-.92.23-1.38.04-.19.05-.4.08-.61.06-.44.12-.88.17-1.32.03-.27.04-.53.05-.8.04-.38.06-.76.09-1.15.01-.45.03-.91.03-1.36.01-.21.01-.4.01-.61V40.13c0-22.17-17.97-40.13-40.13-40.13-8.6,0-16.57,2.7-23.1,7.32-6.53,4.62-11.63,11.12-14.49,18.73l-14.28-14.28c-.48-.48-.97-.94-1.47-1.4-.18-.17-.38-.32-.57-.49-.3-.26-.59-.53-.92-.79-.27-.22-.54-.43-.82-.65-.25-.18-.48-.38-.71-.56-.32-.23-.63-.45-.96-.67-.22-.16-.43-.3-.65-.45-.32-.22-.67-.43-1.01-.65-.21-.13-.43-.27-.65-.4-.34-.19-.66-.39-1-.58-.25-.13-.48-.27-.72-.4-.31-.17-.63-.32-.94-.48-.28-.14-.56-.28-.83-.41-.3-.13-.58-.26-.87-.39-.32-.14-.65-.28-.97-.41-.25-.1-.5-.21-.75-.3-.36-.14-.74-.28-1.11-.43-.21-.08-.43-.14-.63-.22-.41-.13-.84-.27-1.25-.4-.18-.05-.36-.1-.54-.16-.45-.13-.91-.25-1.36-.36-.16-.04-.32-.08-.48-.12-.48-.1-.96-.21-1.44-.31-.16-.03-.31-.05-.47-.08-.48-.09-.97-.18-1.45-.25-.17-.03-.34-.04-.5-.06-.48-.06-.96-.13-1.44-.17-.21-.03-.41-.04-.61-.05-.45-.04-.89-.08-1.35-.09-.27-.01-.54-.01-.81-.03-.38-.01-.75-.03-1.14-.03s-.78.01-1.16.03c-.26.01-.52.01-.78.03-.47.01-.92.05-1.37.09-.19.01-.39.03-.58.05-.49.04-.98.1-1.46.17-.16.03-.31.04-.47.06-.5.06-1.01.16-1.5.25-.14.03-.28.05-.43.08-.49.1-.98.21-1.47.32-.14.04-.28.06-.43.1-.48.12-.94.25-1.41.38-.17.05-.34.09-.49.14-.44.13-.87.27-1.31.41-.19.06-.39.13-.58.21-.4.14-.79.28-1.16.44-.23.09-.47.18-.7.27-.35.14-.69.3-1.03.45-.26.12-.53.23-.79.35-.31.14-.61.3-.91.45-.3.14-.58.3-.88.45-.27.14-.53.28-.79.44-.31.17-.62.35-.93.53-.25.16-.49.31-.74.47-.31.19-.62.39-.92.58-.26.17-.5.35-.75.53-.28.19-.57.39-.84.59-.3.22-.57.44-.85.66-.23.18-.47.36-.69.54-.39.31-.76.63-1.14.97-.12.1-.23.21-.35.31-1.01.91-1.97,1.86-2.87,2.86-.1.12-.21.25-.31.36-.32.38-.65.75-.97,1.13-.18.23-.36.47-.54.7-.22.27-.44.56-.65.84-.22.28-.41.57-.62.87-.17.23-.34.48-.5.72-.21.31-.4.63-.61.94-.14.23-.3.48-.44.71-.19.32-.38.63-.54.96-.16.25-.3.5-.44.76-.16.3-.31.61-.47.91-.14.3-.28.58-.43.87-.13.28-.25.56-.38.84-.14.32-.3.66-.43.98-.1.25-.19.49-.3.74-.14.38-.28.75-.41,1.13-.08.22-.16.43-.22.63-.14.41-.27.84-.4,1.25-.05.18-.1.36-.16.54-.13.45-.26.91-.36,1.36-.05.17-.08.34-.12.5-.12.47-.22.93-.31,1.41-.04.17-.06.34-.09.5-.09.47-.17.93-.25,1.41-.03.19-.04.39-.06.58-.06.44-.13.89-.17,1.35-.03.26-.04.52-.05.76-.04.4-.06.79-.09,1.19-.03.44-.03.89-.04,1.33,0,.21-.01.41-.01.63v80.27c0,22.17,17.97,40.13,40.14,40.13,8.6,0,16.58-2.7,23.11-7.32ZM17.24,63.03c-6.1-6.12-9.48-14.24-9.48-22.89s3.38-16.78,9.48-22.89c6.12-6.12,14.25-9.48,22.89-9.48s16.78,3.36,22.89,9.48l80.27,80.27c6.12,6.12,9.48,14.24,9.48,22.89s-3.36,16.78-9.48,22.89c-6.12,6.12-14.24,9.48-22.89,9.48s-16.78-3.36-22.89-9.48L17.24,63.03Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset151Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.35 160.35"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M100.35,78.87c13.01-7.15,21.85-20.99,21.85-36.85C122.2,18.85,103.35,0,80.17,0s-42.02,18.85-42.02,42.02c0,15.86,8.84,29.7,21.84,36.85C25.52,87.84,0,119.23,0,156.47v3.88h160.35v-3.88c0-37.24-25.52-68.63-59.99-77.6ZM45.9,42.02c0-18.9,15.37-34.27,34.27-34.27s34.27,15.38,34.27,34.27-15.38,34.27-34.27,34.27-34.27-15.37-34.27-34.27ZM7.85,152.6c2.02-38.14,33.69-68.55,72.32-68.55s70.3,30.41,72.32,68.55H7.85Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset152Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 68.8 107.95 68.8 145.14 31.62 128.92 15.4 91.74 52.59 91.74 0 68.8 0 68.8 52.59 31.62 15.4 15.4 31.62 52.59 68.8 0 68.8 0 91.74 52.59 91.74 15.4 128.92 31.62 145.14 68.8 107.95 68.8 160.54 91.74 160.54 91.74 107.95 128.92 145.14 145.14 128.92 107.95 91.74 160.54 91.74 160.54 68.8"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset153Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 68.8 91.74 68.8 91.74 0 68.8 0 68.8 68.8 0 68.8 0 91.74 68.8 91.74 68.8 160.54 91.74 160.54 91.74 91.74 160.54 91.74 160.54 68.8"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset154Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.52 160.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M53.52,160.53H0v-53.52s53.5,0,53.5,0v-53.52C53.5,23.95,77.46,0,107,0h53.52s0,53.52,0,53.52h-53.5s0,53.52,0,53.52c0,29.55-23.95,53.5-53.5,53.5Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset155Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 53.5 160.54 160.53 107.02 160.53 107.02 107.02 0 107.02 0 0 53.52 0 53.52 53.5 160.54 53.5"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset16Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 40.19 40.19"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M20.09,7.76c6.8,0,12.33,5.53,12.33,12.33s-5.53,12.34-12.33,12.34-12.33-5.53-12.33-12.34,5.53-12.33,12.33-12.33M20.09,0C9.02,0,0,9.01,0,20.09s9.02,20.1,20.09,20.1,20.09-9.01,20.09-20.1S31.17,0,20.09,0h0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset17Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 100.36 100.37"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M50.18,7.76c23.39,0,42.42,19.03,42.42,42.42s-19.03,42.42-42.42,42.42S7.76,73.57,7.76,50.18,26.79,7.76,50.18,7.76M50.18,0C22.51,0,0,22.51,0,50.18s22.51,50.18,50.18,50.18,50.18-22.51,50.18-50.18S77.85,0,50.18,0h0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset18Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M80.27,7.76c39.98,0,72.51,32.53,72.51,72.51s-32.53,72.51-72.51,72.51S7.76,120.25,7.76,80.27,40.29,7.76,80.27,7.76M80.27,0C35.94,0,0,35.94,0,80.27s35.94,80.27,80.27,80.27,80.27-35.94,80.27-80.27S124.6,0,80.27,0h0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset19Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.55 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M84.67,0H0v160.54h160.55V0h-75.88ZM76.44,7.76l-.04,136.35L8.23,7.76h68.21ZM7.76,152.78V24.19l64.3,128.59H7.76ZM84.16,152.78l.04-136.35,68.18,136.35h-68.21ZM88.55,7.76h64.24v128.49L88.55,7.76Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset2Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.55 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M0,0v160.54h160.55V0H0ZM152.82,50.93h-43.21V7.73h43.21v43.2ZM58.67,101.87v-43.21h43.21v43.21h-43.21ZM101.88,109.6v43.21h-43.21v-43.21h43.21ZM50.94,101.87H7.73v-43.21h43.21v43.21ZM58.67,50.93V7.73h43.21v43.2h-43.21ZM109.61,58.66h43.21v43.21h-43.21v-43.21ZM50.94,7.73v43.2H7.73V7.73h43.21ZM7.73,109.6h43.21v43.21H7.73v-43.21ZM109.61,152.81v-43.21h43.21v43.21h-43.21Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset21Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.52"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M80.24,0h0s80.3,0,80.3,0v80.3h0c-44.35,0-80.3-35.95-80.3-80.3Z"/> <path className="cls-1" d="M0,0h0s80.3,0,80.3,0v80.3h0C35.95,80.3,0,44.35,0,0Z"/> <path className="cls-1" d="M80.24,80.23h0s80.3,0,80.3,0v80.3h0c-44.35,0-80.3-35.95-80.3-80.3Z"/> <path className="cls-1" d="M0,80.23h0s80.3,0,80.3,0v80.3h0C35.95,160.52,0,124.57,0,80.23Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset22Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 22.93 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <rect className="cls-1" width="22.93" height="160.54"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset23Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 22.93 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <rect className="cls-1" width="22.93" height="160.54"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset24Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 22.93 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <rect className="cls-1" width="22.93" height="160.54"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset25Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 22.93 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <rect className="cls-1" width="22.93" height="160.54"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset29Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <circle className="cls-1" cx="80.27" cy="80.27" r="80.27"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset3Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 76.39 89.63 76.39 139.77 26.25 134.28 20.77 84.15 70.9 84.15 0 76.39 0 76.39 70.9 26.25 20.77 20.77 26.25 70.9 76.39 0 76.39 0 84.15 70.9 84.15 20.77 134.28 26.25 139.77 76.39 89.63 76.39 160.54 84.15 160.54 84.15 89.63 134.28 139.77 139.77 134.28 89.63 84.15 160.54 84.15 160.54 76.39"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset30Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.56 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M0,160.54c0-44.34,35.94-80.28,80.28-80.28s80.28,35.94,80.28,80.28H0Z"/> <path className="cls-1" d="M0,80.28C0,35.94,35.94,0,80.28,0s80.28,35.94,80.28,80.28H0Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset34Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M92.46,80.27c119.05,72.48,60.29,131.24-12.19,12.19-72.48,119.05-131.24,60.29-12.19-12.19C-50.97,7.79,7.79-50.97,80.27,68.08c72.48-119.05,131.24-60.29,12.19,12.19Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset36Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 152.72 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M152.68,105.1c-8.62,6.95-20.72,9.53-32.28,5.78-1.4-.45-2.8-.99-4.15-1.62,1.04,1.08,1.99,2.21,2.89,3.43,7.13,9.89,8.44,22.17,4.38,32.55-11.11.54-22.39-4.47-29.53-14.31-.9-1.22-1.67-2.48-2.39-3.75.18,1.45.27,2.94.27,4.47,0,12.19-6.19,22.89-15.53,28.89-9.3-6.1-15.49-16.8-15.49-28.89,0-1.53.09-3.02.27-4.47-.72,1.27-1.54,2.53-2.39,3.75-7.18,9.89-18.46,14.9-29.57,14.27-3.97-10.38-2.71-22.66,4.42-32.51.9-1.22,1.85-2.35,2.89-3.43-1.35.63-2.75,1.17-4.2,1.62-11.56,3.79-23.66,1.22-32.28-5.82,2.89-10.74,11.15-19.95,22.71-23.7,1.44-.45,2.89-.81,4.33-1.08-1.44-.27-2.89-.68-4.33-1.13C11.11,75.39,2.84,66.18.04,55.44c8.62-7,20.72-9.57,32.23-5.82,1.44.45,2.84,1.04,4.2,1.67-1.04-1.08-1.99-2.26-2.89-3.48-7.13-9.84-8.44-22.12-4.38-32.5,11.11-.59,22.39,4.42,29.53,14.27.86,1.22,1.67,2.48,2.39,3.79-.18-1.49-.27-2.98-.27-4.47,0-12.19,6.19-22.89,15.53-28.89,9.3,6.05,15.48,16.75,15.48,28.89,0,1.49-.09,2.98-.27,4.47.72-1.31,1.49-2.57,2.39-3.79,7.18-9.84,18.46-14.9,29.57-14.27,3.97,10.38,2.71,22.71-4.42,32.5-.9,1.22-1.85,2.39-2.89,3.48,1.35-.63,2.75-1.22,4.15-1.67,11.6-3.75,23.7-1.17,32.32,5.87-2.89,10.7-11.15,19.91-22.71,23.66-1.45.45-2.89.86-4.33,1.13,1.44.27,2.89.63,4.33,1.08,11.6,3.79,19.86,12.96,22.66,23.75Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset37Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M0,0v160.54h0s160.54,0,160.54,0V0H0ZM7.76,152.78v-68.53c36.91,1.95,66.58,31.62,68.53,68.53H7.76ZM76.29,76.39H7.76V7.86c36.91,1.95,66.58,31.62,68.53,68.53ZM76.39,84.15v38.09c-7.94-16.65-21.44-30.16-38.1-38.09h38.1ZM84.15,152.78v-68.53c36.9,1.95,66.57,31.61,68.53,68.53h-68.53ZM84.15,7.86c36.9,1.95,66.57,31.61,68.53,68.53h-68.53V7.86ZM76.39,7.76v38.09c-7.94-16.65-21.44-30.16-38.1-38.09h38.1ZM114.68,84.15h38.1v38.1c-7.94-16.66-21.44-30.16-38.1-38.1ZM114.68,7.76h38.09v38.09c-7.93-16.65-21.44-30.16-38.09-38.09Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset38Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <rect className="cls-1" x="23.51" y="23.51" width="113.52" height="113.52" transform="translate(-33.25 80.27) rotate(-45)"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset39Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.53 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M0,80.26h160.53v1.98c-1.05,43.42-36.58,78.3-80.25,78.3S0,124.6,0,80.26Z"/> <path className="cls-1" d="M28.71,28.7h103.11v1.27c-.67,27.89-23.49,50.29-51.55,50.29S28.72,57.18,28.71,28.7Z"/> <path className="cls-1" d="M51.58,0h57.39v.71c-.38,15.52-13.08,27.99-28.69,27.99S51.58,15.85,51.58,0Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset41Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,0h0s0,0,0,0H0s0,0,0,0v3.88c0,.09,0,.17,0,.26v152.37c0,.05,0,.1,0,.15v3.88h3.88c.08,0,.17,0,.25,0h152.38s.1,0,.15,0h3.88V0h0ZM80.27,55.65c-6.82-21.12-22.17-38.45-41.99-47.89h83.97c-19.81,9.44-35.16,26.76-41.98,47.89ZM152.67,7.87c-2,36.82-31.6,66.41-68.41,68.41,2-36.81,31.6-66.41,68.41-68.41ZM76.28,76.28C39.46,74.28,9.87,44.68,7.87,7.87c36.82,2,66.41,31.6,68.41,68.41ZM23.51,60.64c9.15,9.15,20.13,15.8,32.1,19.65-21.1,6.83-38.4,22.17-47.84,41.96V38.42c3.89,8.14,9.17,15.65,15.74,22.22ZM76.28,84.26c-2,36.82-31.6,66.41-68.41,68.41,2-36.82,31.6-66.41,68.41-68.41ZM80.27,104.89c6.82,21.12,22.17,38.44,41.97,47.88H38.3c19.8-9.44,35.14-26.76,41.97-47.88ZM84.26,84.26c36.82,2.01,66.41,31.6,68.41,68.41-36.82-2-66.41-31.6-68.41-68.41ZM104.89,80.27c21.12-6.83,38.45-22.18,47.88-41.99v83.97c-9.44-19.81-26.76-35.16-47.88-41.98Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset42Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M0,80.27h0V0h80.27C80.27,44.33,44.33,80.27,0,80.27Z"/> <path className="cls-1" d="M160.54,80.27h0V0s-80.27,0-80.27,0h0c0,44.33,35.94,80.27,80.27,80.27Z"/> <path className="cls-1" d="M0,80.27H0v80.27h80.27C80.27,116.21,44.33,80.27,0,80.27Z"/> <path className="cls-1" d="M160.54,80.27h0v80.27s-80.27,0-80.27,0h0c0-44.33,35.94-80.27,80.27-80.27Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset43Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.62 160.62"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.62,80.31c0,8.51-10.78,15.13-13.16,22.81-2.47,7.96,2.44,19.92-2.17,26.54-4.66,6.69-17.09,5.48-23.49,10.35-6.34,4.82-9.05,17.58-16.66,20.16-7.34,2.49-16.68-6.08-24.82-6.08s-17.48,8.57-24.82,6.08c-7.61-2.58-10.33-15.34-16.66-20.16-6.4-4.87-18.83-3.66-23.49-10.35-4.61-6.62.3-18.58-2.17-26.54-2.38-7.68-13.16-14.3-13.16-22.81s10.78-15.13,13.16-22.81c2.47-7.96-2.44-19.92,2.17-26.54,4.66-6.69,17.09-5.48,23.49-10.35C45.16,15.79,47.87,3.04,55.49.45c7.34-2.49,16.68,6.08,24.82,6.08S97.79-2.04,105.13.45c7.61,2.58,10.33,15.34,16.66,20.16,6.4,4.87,18.83,3.66,23.49,10.35,4.61,6.62-.3,18.58,2.17,26.54s13.16,14.3,13.16,22.81Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset44Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M136.08,80.27c14.42-6.68,24.46-21.28,24.46-38.19,0-23.2-18.87-42.07-42.07-42.07-16.91,0-31.52,10.04-38.19,24.46C73.59,10.04,58.99,0,42.07,0,18.87,0,0,18.87,0,42.07c0,16.91,10.04,31.52,24.46,38.19C10.04,86.95,0,101.55,0,118.46c0,23.2,18.87,42.07,42.07,42.07,16.91,0,31.52-10.04,38.2-24.46,6.68,14.42,21.28,24.46,38.19,24.46,23.2,0,42.07-18.87,42.07-42.07,0-16.91-10.04-31.52-24.46-38.2ZM118.46,7.76c18.92,0,34.32,15.39,34.32,34.32s-15.39,34.32-34.32,34.32-34.32-15.39-34.32-34.32S99.54,7.76,118.46,7.76ZM100.85,80.27c-9.06,4.2-16.39,11.52-20.58,20.58-4.2-9.06-11.52-16.39-20.58-20.58,9.06-4.2,16.39-11.52,20.58-20.58,4.2,9.06,11.52,16.39,20.58,20.58ZM7.76,42.07C7.76,23.15,23.15,7.76,42.07,7.76s34.32,15.39,34.32,34.32-15.39,34.32-34.32,34.32S7.76,61,7.76,42.07ZM42.07,152.78c-18.92,0-34.32-15.39-34.32-34.32s15.39-34.32,34.32-34.32,34.32,15.39,34.32,34.32-15.39,34.32-34.32,34.32ZM118.46,152.78c-18.92,0-34.32-15.39-34.32-34.32s15.39-34.32,34.32-34.32,34.32,15.39,34.32,34.32-15.39,34.32-34.32,34.32Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset45Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.55 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M84.16.09c-1.28-.06-2.57-.09-3.88-.09H0v160.54h80.28c1.31,0,2.6-.03,3.88-.09,20.62-.98,39.2-9.75,52.88-23.42,14.52-14.53,23.51-34.59,23.51-56.76C160.55,37.24,126.69,2.12,84.16.09ZM76.4,7.76v63.14L13.27,7.76h63.13ZM7.76,13.24l67.02,67.02L7.76,147.29V13.24ZM13.26,152.78l63.14-63.14v63.14H13.26ZM131.55,131.54c-12.7,12.69-29.5,20.19-47.39,21.13V7.86c38.52,2.03,68.63,33.77,68.63,72.41,0,19.36-7.54,37.57-21.24,51.27Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset47Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.6 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polygon className="cls-1" points="24.18 0 16.42 0 16.42 16.41 0 16.41 0 24.18 16.42 24.18 16.42 40.59 24.18 40.59 24.18 24.18 40.59 24.18 40.59 16.41 24.18 16.41 24.18 0"/> <polygon className="cls-1" points="84.18 0 76.42 0 76.42 16.41 60 16.41 60 24.18 76.42 24.18 76.42 40.59 84.18 40.59 84.18 24.18 100.59 24.18 100.59 16.41 84.18 16.41 84.18 0"/> <polygon className="cls-1" points="144.18 16.41 144.18 0 136.42 0 136.42 16.41 120 16.41 120 24.18 136.42 24.18 136.42 40.59 144.18 40.59 144.18 24.18 160.6 24.18 160.6 16.41 144.18 16.41"/> <polygon className="cls-1" points="24.18 59.97 16.42 59.97 16.42 76.39 0 76.39 0 84.15 16.42 84.15 16.42 100.57 24.18 100.57 24.18 84.15 40.59 84.15 40.59 76.39 24.18 76.39 24.18 59.97"/> <polygon className="cls-1" points="84.18 59.97 76.42 59.97 76.42 76.39 60 76.39 60 84.15 76.42 84.15 76.42 100.57 84.18 100.57 84.18 84.15 100.59 84.15 100.59 76.39 84.18 76.39 84.18 59.97"/> <polygon className="cls-1" points="144.18 59.97 136.42 59.97 136.42 76.39 120 76.39 120 84.15 136.42 84.15 136.42 100.57 144.18 100.57 144.18 84.15 160.6 84.15 160.6 76.39 144.18 76.39 144.18 59.97"/> <polygon className="cls-1" points="24.18 119.95 16.42 119.95 16.42 136.36 0 136.36 0 144.12 16.42 144.12 16.42 160.54 24.18 160.54 24.18 144.12 40.59 144.12 40.59 136.36 24.18 136.36 24.18 119.95"/> <polygon className="cls-1" points="84.18 119.95 76.42 119.95 76.42 136.36 60 136.36 60 144.12 76.42 144.12 76.42 160.54 84.18 160.54 84.18 144.12 100.59 144.12 100.59 136.36 84.18 136.36 84.18 119.95"/> <polygon className="cls-1" points="144.18 119.95 136.42 119.95 136.42 136.36 120 136.36 120 144.12 136.42 144.12 136.42 160.54 144.18 160.54 144.18 144.12 160.6 144.12 160.6 136.36 144.18 136.36 144.18 119.95"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset48Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <rect className="cls-1" x="0" width="160.54" height="160.54" rx="38.8" ry="38.8"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset51Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,80.27V0h-15.52v32.89C130.4,12.97,106.83,0,80.27,0H0v15.52h32.9C12.97,30.14,0,53.71,0,80.27v80.26h15.52v-32.89c14.62,19.93,38.19,32.9,64.75,32.9h80.26v-15.52h-32.9c19.93-14.62,32.9-38.19,32.9-64.75ZM15.52,80.27C15.52,44.57,44.57,15.52,80.27,15.52s64.75,29.05,64.75,64.75-29.05,64.75-64.75,64.75S15.52,115.97,15.52,80.27Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset52Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 144.23"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.5,70.96c-.05-.92-.17-1.82-.35-2.72-1.8-8.78-9.56-15.37-18.86-15.37s-17.07,6.59-18.86,15.37h-23.31c-.85-4.15-3.04-7.79-6.09-10.5h0s11.64-20.17,11.64-20.17c8.51,2.83,18.1-.59,22.76-8.65,4.65-8.06,2.82-18.09-3.89-24.02-.93-.83-1.95-1.56-3.06-2.22l-.17-.09-.04-.03c-1.11-.63-2.26-1.14-3.44-1.54-8.49-2.83-18.09.59-22.74,8.65-4.65,8.06-2.83,18.08,3.88,24.02l-11.64,20.16h0c-1.91-.63-3.95-.99-6.07-.99s-4.16.36-6.07.99h0s-11.65-20.2-11.65-20.2c6.7-5.95,8.53-15.97,3.88-24.02C61.75,1.58,52.16-1.85,43.65.98c-.81.27-1.62.61-2.39,1l-.16.08c-.34.17-.67.34-1,.53-.39.22-.76.45-1.12.7h-.01c-.72.49-1.4,1.02-2.03,1.58-6.7,5.95-8.53,15.97-3.88,24.02,4.65,8.06,14.25,11.48,22.74,8.65l11.66,20.21h0c-3.04,2.71-5.24,6.35-6.08,10.5h-23.26c-1.8-8.78-9.57-15.37-18.88-15.37S2.19,59.46.39,68.24c-.26,1.25-.39,2.55-.39,3.88s.13,2.62.39,3.88c1.8,8.77,9.57,15.37,18.86,15.37s17.08-6.61,18.88-15.37h23.26c.85,4.14,3.04,7.78,6.08,10.49h0s-11.66,20.21-11.66,20.21c-8.5-2.83-18.09.59-22.74,8.65-4.65,8.06-2.82,18.08,3.88,24.02.62.54,1.29,1.07,2,1.55h.03s.01.03.01.03c.36.25.74.48,1.12.7.25.14.5.28.76.4l.13.08h.01l.09.05.16.08c.78.39,1.58.72,2.39,1,8.51,2.83,18.1-.59,22.76-8.65,4.65-8.06,2.82-18.08-3.88-24.02l11.65-20.18h0c1.91.62,3.94.98,6.06.98s4.16-.36,6.07-.99v.02s11.63,20.15,11.63,20.15c-6.71,5.95-8.53,15.97-3.88,24.02,4.65,8.06,14.25,11.48,22.74,8.65,1.18-.4,2.33-.91,3.44-1.54l.04-.03.17-.09c1.11-.66,2.13-1.4,3.06-2.22,6.71-5.93,8.55-15.97,3.89-24.02-4.65-8.06-14.25-11.48-22.76-8.65l-11.64-20.15v-.02c3.04-2.71,5.23-6.35,6.08-10.5h23.31c1.8,8.77,9.57,15.37,18.86,15.37s17.07-6.61,18.86-15.37c.18-.89.3-1.8.35-2.72.03-.39.04-.78.04-1.16s-.01-.78-.04-1.16Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset53Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.52 160.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.52,58.68V0h0S0,0,0,0H0s0,0,0,0v58.68h25.46v43.16H0v58.68h0s160.52,0,160.52,0h0s0,0,0,0v-58.68h-25.46v-43.16h25.46ZM58.68,7.76h43.16v43.16h-43.16V7.76ZM109.6,7.76h43.16v43.16h-43.16V7.76ZM7.76,50.92V7.76h43.16v43.16H7.76ZM33.22,58.68h43.16v43.16h-43.16v-43.16ZM101.84,152.76h-43.16v-43.16h43.16v43.16ZM50.92,109.6v43.16H7.76v-43.16h43.16ZM152.76,109.6v43.16h-43.16v-43.16h43.16ZM127.3,101.84h-43.16v-43.16h43.16v43.16Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset54Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.55"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,160.55h-80.27c0-44.34-35.94-80.27-80.27-80.27V0c88.66,0,160.54,71.89,160.54,160.55Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset55Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.57 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.57,108.06h-.02v-44.87l.02-.02h-.02V0H.02v63.15h-.02s.02.03.02.03v44.86h-.02s.02.03.02.03v44.86h-.02s.02.03.02.03v7.57h160.54v-7.57l.02-.02h-.02v-44.87l.02-.02ZM152.79,101.95l-68.8-54.04V12.89l68.8,54.04v35.02ZM84,102.67l63.79,50.11h-63.79v-50.11ZM76.24,152.78H12.78l63.46-49.84v49.84ZM152.79,57.06L90.03,7.76h62.77v49.3ZM7.78,7.76h62.77L7.78,57.06V7.76ZM7.78,66.93L76.24,13.16v35.02L7.78,101.95v-35.02ZM7.78,111.82l68.46-53.77v35.02L7.78,146.84v-35.02ZM84,92.8v-35.02l68.8,54.04v35.02l-68.8-54.04Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset56Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="80.27" cy="40.13" r="40.13"/> <polygon className="cls-1" points="0 160.54 160.54 160.54 80.27 80.27 0 160.54"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset58Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.53 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M80.27,80.27c0,44.33,35.93,80.27,80.26,80.27,0-44.33-35.93-80.27-80.26-80.27Z"/> <path className="cls-1" d="M160.53,0c-44.33,0-80.26,35.93-80.26,80.27,44.33,0,80.26-35.93,80.26-80.27Z"/> <path className="cls-1" d="M0,160.54c44.33,0,80.27-35.94,80.27-80.27C35.93,80.27,0,116.2,0,160.54Z"/> <path className="cls-1" d="M0,0c0,44.33,35.93,80.27,80.27,80.27C80.27,35.93,44.33,0,0,0Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset59Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M160.54,160.54c0-44.33-35.94-80.27-80.27-80.27S0,116.21,0,160.54h160.54Z"/> <path className="cls-1" d="M160.54,0c0,44.33-35.94,80.27-80.27,80.27S0,44.33,0,0h160.54Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset61Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.44 160.44"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polygon className="cls-1" points="160.44 113.43 160.44 160.44 113.41 160.44 160.44 113.43"/> <polygon className="cls-1" points="160.44 48.59 160.44 81.01 81.02 160.44 48.6 160.44 160.44 48.59"/> <polygon className="cls-1" points="160.44 0 160.44 16.18 16.18 160.44 0 160.44 0 144.2 144.2 0 160.44 0"/> <polygon className="cls-1" points="111.8 0 0 111.78 0 79.37 79.38 0 111.8 0"/> <polygon className="cls-1" points="46.96 0 0 46.97 0 0 46.96 0"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset66Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.55"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="152.78 80.25 152.78 147.3 13.27 7.78 80.27 7.76 80.27 0 0 .03 0 80.3 7.76 80.3 7.76 13.24 147.28 152.78 80.27 152.79 80.27 160.55 160.54 160.53 160.54 80.25 152.78 80.25"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset67Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,160.54h-80.27C35.94,160.54,0,124.6,0,80.27h0C0,35.94,35.94,0,80.27,0h0c44.33,0,80.27,35.94,80.27,80.27v80.27Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset68Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.49 160.49"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.49,0h-80.18s0,0-.01,0,0,0-.01,0H0v160.49h160.49V0ZM80.31,7.76c38.66,0,70.35,30.44,72.37,68.61H7.91C9.94,38.2,41.62,7.76,80.28,7.76h.02ZM152.68,84.12c-2.02,38.17-33.71,68.61-72.38,68.61S9.94,122.3,7.91,84.12h144.76ZM152.73,7.76v37.93c-7.93-16.59-21.39-30.02-37.99-37.93h37.99ZM45.85,7.76C29.17,15.7,15.67,29.22,7.76,45.91V7.76h38.09ZM7.76,152.73v-38.15c7.91,16.69,21.41,30.21,38.09,38.15H7.76ZM114.74,152.73c16.6-7.9,30.06-21.34,37.99-37.93v37.93h-37.99Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset69Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polygon className="cls-1" points="0 160.54 40.13 79.97 80.27 160.54 0 160.54"/> <polygon className="cls-1" points="80.27 160.54 120.4 79.97 160.54 160.54 80.27 160.54"/> <polygon className="cls-1" points="0 80.57 40.13 0 80.27 80.57 0 80.57"/> <polygon className="cls-1" points="80.27 80.57 120.4 0 160.54 80.57 80.27 80.57"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset70Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,160.54H0v-80.27C0,35.94,35.94,0,80.27,0h0c44.33,0,80.27,35.94,80.27,80.27v80.27Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset73Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="80.27" cy="80.27" r="17.15"/> <circle className="cls-1" cx="17.15" cy="17.15" r="17.15"/> <circle className="cls-1" cx="80.27" cy="17.15" r="17.15"/> <circle className="cls-1" cx="143.38" cy="17.15" r="17.15"/> <circle className="cls-1" cx="17.15" cy="80.27" r="17.15"/> <circle className="cls-1" cx="143.38" cy="80.27" r="17.15"/> <circle className="cls-1" cx="17.15" cy="143.38" r="17.15"/> <circle className="cls-1" cx="80.27" cy="143.38" r="17.15"/> <circle className="cls-1" cx="143.38" cy="143.38" r="17.15"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset74Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.44 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polygon className="cls-1" points="80.27 160.54 0 160.54 0 0 80.27 160.54"/> <polygon className="cls-1" points="160.44 160.54 80.17 160.54 80.17 0 160.44 160.54"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset75Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.52 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M0,34.45C0,15.46,15.46,0,34.45,0s34.45,15.46,34.45,34.45v91.62c0,1.86.46,3.7,1.33,5.31,1.97,3.73,5.81,6.06,10.03,6.06s8.07-2.32,10.04-6.07c.86-1.6,1.32-3.44,1.32-5.3V34.45C91.62,15.46,107.07,0,126.07,0s34.45,15.46,34.45,34.45v126.08h-23.09V34.45c0-6.26-5.09-11.36-11.36-11.36s-11.36,5.09-11.36,11.36v91.62c0,1.52-.1,3.04-.3,4.51-2.24,17.08-16.92,29.95-34.15,29.95s-31.91-12.87-34.15-29.94c-.2-1.48-.3-3-.3-4.52V34.45c0-6.26-5.09-11.36-11.36-11.36s-11.36,5.09-11.36,11.36v126.08H0V34.45Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset78Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.47 160.47"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M80.23,79.57c0-14.48,26.22-34.15,26.22-53.36,0-14.48-11.73-26.21-26.21-26.21h-.14c-14.42.08-26.07,11.78-26.07,26.21,0,18.38,24.01,37.19,26.07,51.47.09.64.14,1.27.14,1.89Z"/> <path className="cls-1" d="M80.09,82.79c-2.06,14.27-26.07,33.08-26.07,51.47,0,14.43,11.65,26.14,26.07,26.21h.15c14.48,0,26.21-11.74,26.21-26.21,0-19.21-26.21-38.89-26.22-53.36,0,.62-.05,1.25-.14,1.89Z"/> <path className="cls-1" d="M134.26,54.02c-18.38,0-37.19,24.01-51.47,26.07-.64.1-1.27.14-1.89.14,14.48,0,34.16,26.22,53.36,26.22,14.48,0,26.21-11.73,26.21-26.22v-.14c-.08-14.42-11.78-26.07-26.21-26.07Z"/> <path className="cls-1" d="M77.68,80.09c-14.27-2.06-33.09-26.07-51.47-26.07C11.78,54.02.08,65.68,0,80.09v.14c0,14.48,11.74,26.21,26.21,26.21,19.21,0,38.89-26.21,53.37-26.21-.63,0-1.26-.05-1.89-.14Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset81Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M0,0v160.54h160.54V0H0ZM7.76,152.78v-68.63h68.63v68.63H7.76ZM152.78,152.78h-68.63v-68.63h68.63v68.63ZM84.15,76.39H7.76V7.76h145.02v68.63h-68.63Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset82Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M0,80.26v-40.13c22.17,0,40.13-17.97,40.13-40.13h40.14c0,44.33-35.94,80.26-80.27,80.26Z"/> <path className="cls-1" d="M160.54,80.26v-40.13c-22.17,0-40.13-17.97-40.13-40.13h-40.14c0,44.33,35.94,80.26,80.27,80.26Z"/> <path className="cls-1" d="M0,160.53v-40.13c22.17,0,40.13-17.97,40.13-40.13h40.14c0,44.33-35.94,80.26-80.27,80.26Z"/> <path className="cls-1" d="M160.54,160.53v-40.13c-22.17,0-40.13-17.97-40.13-40.13h-40.14c0,44.33,35.94,80.26,80.27,80.26Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset83Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.53 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.53,160.54h-19.4c0-16.78-13.65-30.43-30.43-30.43H29.77c-16.41,0-29.77-13.35-29.77-29.77s13.35-29.77,29.77-29.77h101c5.72,0,10.37-4.65,10.37-10.37s-4.65-10.37-10.37-10.37H49.84C22.36,49.84,0,27.48,0,0h19.4c0,16.78,13.65,30.43,30.43,30.43h80.93c16.41,0,29.77,13.35,29.77,29.77s-13.35,29.77-29.77,29.77H29.77c-5.72,0-10.37,4.65-10.37,10.37s4.65,10.37,10.37,10.37h80.93c27.48,0,49.83,22.36,49.83,49.84Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset85Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.53 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.53,53.52v53.5h-53.5v53.52h-53.52C53.5,130.98,29.55,107.02,0,107.02h0v-53.5h53.5V0h53.52c0,29.56,23.95,53.52,53.5,53.52h0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset86Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M160.54,80.27h-80.27C35.94,80.27,0,116.21,0,160.54h0s80.27,0,80.27,0h0c44.33,0,80.27-35.94,80.27-80.27Z"/> <path className="cls-1" d="M160.54,0h-80.27C35.94,0,0,35.94,0,80.27h0s80.27,0,80.27,0h0c44.33,0,80.27-35.94,80.27-80.27Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset87Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polygon className="cls-1" points="0 160.54 0 107.02 53.51 160.54 0 160.54"/> <polygon className="cls-1" points="107.03 160.54 107.03 107.02 160.54 160.54 107.03 160.54"/> <polygon className="cls-1" points="53.51 160.54 53.51 107.02 107.03 160.54 53.51 160.54"/> <polygon className="cls-1" points="0 107.02 0 53.51 53.51 107.02 0 107.02"/> <polygon className="cls-1" points="107.03 107.02 107.03 53.51 160.54 107.02 107.03 107.02"/> <polygon className="cls-1" points="53.51 107.02 53.51 53.51 107.03 107.02 53.51 107.02"/> <polygon className="cls-1" points="0 53.51 0 0 53.51 53.51 0 53.51"/> <polygon className="cls-1" points="53.51 53.51 53.51 0 107.03 53.51 53.51 53.51"/> <polygon className="cls-1" points="107.03 53.51 107.03 0 160.54 53.51 107.03 53.51"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset88Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.62 160.6"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M120.46,0c-22.18,0-40.15,17.97-40.15,40.15C80.31,17.97,62.33,0,40.15,0S0,17.97,0,40.15v80.3c0,22.18,17.99,40.15,40.15,40.15s40.16-17.97,40.16-40.15c0,22.18,17.97,40.15,40.15,40.15s40.15-17.97,40.15-40.15V40.15c0-22.18-17.99-40.15-40.15-40.15ZM40.16,7.76c17.86,0,32.39,14.53,32.39,32.39s-14.53,32.39-32.39,32.39S7.76,58.01,7.76,40.15,22.29,7.76,40.16,7.76ZM120.46,152.84c-17.87,0-32.39-14.53-32.39-32.39s14.52-32.39,32.39-32.39,32.39,14.53,32.39,32.39-14.53,32.39-32.39,32.39Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset89Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.36 160.36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polygon className="cls-1" points="0 160.36 160.36 120.27 160.36 160.36 0 160.36"/> <polygon className="cls-1" points="0 120.27 160.36 80.18 160.36 120.27 0 120.27"/> <polygon className="cls-1" points="0 80.18 160.36 40.09 160.36 80.18 0 80.18"/> <polygon className="cls-1" points="0 40.09 160.36 0 160.36 40.09 0 40.09"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset90Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polygon className="cls-1" points="160.54 53.51 80.27 0 0 53.51 160.54 53.51"/> <polygon className="cls-1" points="160.54 107.03 80.27 53.51 0 107.03 160.54 107.03"/> <polygon className="cls-1" points="160.54 160.54 80.27 107.03 0 160.54 160.54 160.54"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset94Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M81.87,0H0v160.53h160.54V0h-78.67ZM7.76,7.76h63.14L7.76,70.9V7.76ZM80.26,9.37l70.9,70.9-70.9,70.9L9.36,80.26,80.26,9.37ZM7.76,152.76v-63.14l63.12,63.14H7.76ZM152.78,152.76h-63.14l63.14-63.14v63.14ZM89.63,7.76h63.15v63.14L89.63,7.76Z"/> <path className="cls-1" d="M113.4,80.26l-33.14-33.14-33.13,33.14,33.13,33.14,33.14-33.14ZM80.26,58.1l22.17,22.16-22.17,22.16-22.16-22.16,22.16-22.16Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset95Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.52"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M156.66,0H0v160.52h160.54V0h-3.88ZM84.14,80.25c0-38.68,30.45-70.38,68.64-72.4v144.81c-38.19-2.02-68.64-33.73-68.64-72.41ZM122.27,7.75c-19.82,9.44-35.18,26.76-42,47.89-6.83-21.13-22.18-38.45-42-47.89h84ZM76.39,80.25c0,38.68-30.45,70.39-68.64,72.41V7.86c38.19,2.02,68.64,33.72,68.64,72.4ZM38.26,152.77c19.82-9.44,35.18-26.76,42-47.9,6.83,21.13,22.18,38.46,42.01,47.9H38.26Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset96Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M107.02,58.1v-4.58h26.76c14.78,0,26.76-11.98,26.76-26.76h0c0-14.78-11.98-26.76-26.76-26.76h-.01c-34.95,0-64.66,22.35-75.67,53.52h-4.57v-26.76C53.52,11.99,41.54,0,26.76,0S0,11.99,0,26.76h0c0,34.96,22.34,64.67,53.51,75.68v4.57h-26.75C11.99,107.02,0,119,0,133.78H0c0,14.78,11.98,26.76,26.76,26.76h0c34.94,0,64.65-22.34,75.67-53.51h4.59v26.75c0,14.78,11.98,26.76,26.76,26.76s26.76-11.98,26.76-26.76h0c0-34.95-22.35-64.66-53.52-75.67Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset98Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M131.2,0c-10.89,0-20.4,5.96-25.46,14.79-5.06-8.83-14.58-14.79-25.46-14.79s-20.4,5.96-25.46,14.79C49.74,5.96,40.23,0,29.34,0,13.16,0,0,13.16,0,29.34v131.2h160.54V29.34c0-16.18-13.16-29.34-29.34-29.34ZM50.93,152.78H7.76V29.34c0-11.9,9.68-21.58,21.58-21.58s21.58,9.68,21.58,21.58v123.44ZM101.85,152.78h-43.17V29.34c0-11.9,9.68-21.58,21.58-21.58s21.58,9.68,21.58,21.58v123.44ZM152.78,152.78h-43.17V29.34c0-11.9,9.68-21.58,21.58-21.58s21.58,9.68,21.58,21.58v123.44Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset99Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.73 160.71"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M137.19,23.54C122.65,9,102.55,0,80.36,0,35.98,0,0,35.98,0,80.36v80.36h160.73v-80.36c0-22.18-9-42.28-23.54-56.82ZM80.36,152.82c-40.01,0-72.45-32.44-72.45-72.46S40.35,7.91,80.36,7.91s72.46,32.44,72.46,72.45-32.44,72.46-72.46,72.46Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const AbstractShapeIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,0v160.54H0L113.75,46.79C71.85,88.69,0,59.14,0,0h160.54Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Arrow02Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 68.52 160.54 160.54 80.27 92.02 0 160.54 0 68.51 80.11 .13 80.27 0 80.42 .13 160.54 68.52"/> </g>
+    </svg>
+  );
+};
+
+
+export const BirdIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,160.54c0-44.33-35.94-80.27-80.27-80.27C80.27,35.94,44.33,0,0,0v160.54h160.54Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const CakeIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M133.78,107.03c14.78,0,26.76,11.98,26.76,26.75s-11.98,26.76-26.76,26.76-26.76-11.98-26.76-26.76c0,14.78-11.98,26.76-26.76,26.76s-26.76-11.98-26.76-26.76c0,14.78-11.98,26.76-26.76,26.76S0,148.56,0,133.78s11.98-26.75,26.76-26.75c-14.78,0-26.76-11.98-26.76-26.76s11.98-26.76,26.76-26.76C11.98,53.51,0,41.53,0,26.76S11.98,0,26.76,0s26.76,11.98,26.76,26.76c0-14.78,11.98-26.76,26.76-26.76s26.76,11.98,26.76,26.76c0-14.78,11.98-26.76,26.76-26.76s26.76,11.98,26.76,26.76-11.98,26.75-26.76,26.75c14.78,0,26.76,11.98,26.76,26.76s-11.98,26.76-26.76,26.76Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Circle02Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.53 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M80.26,0C35.93,0,0,35.93,0,80.27s35.93,80.27,80.26,80.27,80.27-35.93,80.27-80.27S124.61,0,80.26,0ZM80.26,97.7c-9.61,0-17.43-7.79-17.43-17.43s7.82-17.43,17.43-17.43,17.43,7.82,17.43,17.43-7.79,17.43-17.43,17.43Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const CircleInSquareIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M0,0v160.54h160.54V0H0ZM80.27,129.18c-27.01,0-48.91-21.9-48.91-48.91s21.9-48.91,48.91-48.91,48.91,21.9,48.91,48.91-21.9,48.91-48.91,48.91Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Clover01Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M150.8,56.82h0c-12.98-12.98-34.04-12.98-47.02,0,12.98-12.98,12.98-34.04,0-47.02h0C97.29,3.31,88.79.06,80.29.06l-.02-.06-.02.06c-8.5,0-17.01,3.25-23.49,9.74h0c-12.98,12.98-12.98,34.04,0,47.02-12.98-12.98-34.04-12.98-47.02,0h0c-12.98,12.98-12.98,34.04,0,47.02h0c12.98,12.98,34.04,12.98,47.02,0l22.35-22.35-9.79,33.03-10.95,46.02h43.8l-10.95-46.02-9.79-33.03,22.35,22.35c12.98,12.98,34.04,12.98,47.02,0h0c12.98-12.98,12.98-34.04,0-47.02Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const EarsIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 160.54 0 160.54 0 0 80.27 80.27 160.54 0 160.54 160.54"/> </g>
+    </svg>
+  );
+};
+
+
+export const Edge01Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.65 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.65,0v160.54h-46.09v-64.79c0-18.91-15.33-34.24-34.24-34.24s-34.24,15.33-34.24,34.24v64.79H0V0h160.65Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const FatFlakeIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 62.18 123.95 62.18 149.82 36.3 124.23 10.72 98.36 36.59 98.36 0 62.18 0 62.18 36.59 36.3 10.72 10.72 36.3 36.59 62.18 0 62.18 0 98.36 36.59 98.36 10.72 124.23 36.3 149.82 62.18 123.95 62.18 160.54 98.36 160.54 98.36 123.95 124.23 149.82 149.82 124.23 123.95 98.36 160.54 98.36 160.54 62.18"/> </g>
+    </svg>
+  );
+};
+
+
+export const Flower02Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 155.69"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M125.03,97.35c4.13,2.14,7.83,5.24,10.75,9.25,10.04,13.81,6.98,33.15-6.84,43.18-13.81,10.04-33.15,6.98-43.18-6.84-2.92-4.02-4.72-8.51-5.48-13.1-.76,4.59-2.56,9.08-5.48,13.1-10.04,13.82-29.37,16.88-43.18,6.84-13.82-10.04-16.88-29.37-6.84-43.18,2.92-4.02,6.62-7.11,10.75-9.25-4.59.69-9.42.36-14.14-1.18C5.13,90.9-3.75,73.45,1.52,57.21c5.28-16.24,22.72-25.13,38.96-19.85,4.72,1.53,8.81,4.09,12.11,7.35-2.07-4.15-3.24-8.83-3.24-13.79C49.35,13.84,63.19,0,80.27,0s30.92,13.84,30.92,30.92c0,4.96-1.17,9.64-3.24,13.79,3.31-3.26,7.4-5.81,12.11-7.35,16.24-5.28,33.68,3.61,38.96,19.85,5.27,16.24-3.61,33.68-19.85,38.96-4.72,1.53-9.54,1.87-14.14,1.18Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Flower05Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M159.57,59.83h0c-3.52-11.01-15.43-16.44-25.62-11.69l-38.99,18.2,4.11-44.91C100.12,9.89,91.34-.07,80.17,0h0c-11.17.08-19.82,10.16-18.61,21.69l4.63,44.15-39.85-17.95c-10.25-4.62-22.08.98-25.46,12.03-3.38,11.05,3.19,22.72,14.12,25.09l41.86,9.08-28.74,33.81c-7.39,8.69-5.92,22.11,3.16,28.87,9.08,6.76,21.79,3.88,27.33-6.18l21.23-38.53,22.09,38.85c5.68,9.99,18.42,12.69,27.41,5.81,8.99-6.88,10.28-20.32,2.77-28.91l-28.73-32.9,42.39-9.8c10.9-2.52,17.3-14.27,13.78-25.28Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Flower06Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 142.5"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,71.25c0-10.76-14.11-20.24-35.54-25.82,5.88-21.36,4.73-38.31-4.59-43.69-9.32-5.38-24.58,2.1-40.13,17.87C64.72,3.83,49.45-3.65,40.13,1.73c-9.32,5.38-10.47,22.34-4.59,43.69C14.11,51.01,0,60.49,0,71.25s14.11,20.24,35.54,25.82c-5.88,21.36-4.73,38.31,4.59,43.69,9.32,5.38,24.58-2.1,40.13-17.87,15.55,15.77,30.82,23.25,40.13,17.87,9.32-5.38,10.47-22.34,4.59-43.69,21.44-5.58,35.54-15.06,35.54-25.82Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const GrassIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 0 111.28 94.69 80.27 0 49.26 94.69 0 0 0 160.54 80.27 160.54 160.54 160.54 160.54 0"/> </g>
+    </svg>
+  );
+};
+
+
+export const HeartIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.55 140.28"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M148.12,12.43h0c-16.57-16.57-43.43-16.57-60,0l-7.85,7.85-7.85-7.85C55.86-4.14,29-4.14,12.43,12.43h0c-16.57,16.57-16.57,43.43,0,60l7.85,7.85,60,60,60-60,7.85-7.85c16.57-16.57,16.57-43.43,0-60Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const HouseIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,50.82v109.72h-57.8v-35.29c0-6.18-2.51-11.78-6.58-15.83-4.07-4.05-9.69-6.56-15.89-6.56-12.41,0-22.47,10.03-22.47,22.39v35.29H0V50.82L80.27,0l80.27,50.82Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Leaf01Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,160.54h0C71.88,160.54,0,88.66,0,0h0s0,0,0,0c88.66,0,160.54,71.88,160.54,160.54h0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Lightning03Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="91.31 71.68 160.54 0 30.06 49.6 69.23 88.86 0 160.54 130.48 110.94 91.31 71.68"/> </g>
+    </svg>
+  );
+};
+
+
+export const Lightning04Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="122.22 77.11 122.22 38.8 83.42 38.8 83.42 0 0 0 0 83.42 38.8 83.42 38.8 122.22 77.11 122.22 77.11 160.54 160.54 160.54 160.54 77.11 122.22 77.11"/> </g>
+    </svg>
+  );
+};
+
+
+export const MeteorIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M14.75,145.78h0c-23.66-23.66-18.09-63.38,11.16-79.63L160.54,0l-66.16,134.63c-16.25,29.25-55.97,34.81-79.63,11.16Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const MoonIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 146.2 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M146.2,80.28c0,22.15-8.98,42.22-23.51,56.75-14.53,14.53-34.6,23.51-56.77,23.51-27.3,0-51.43-13.63-65.92-34.45,8.2,5.06,17.86,7.98,28.2,7.98,29.71,0,53.79-24.08,53.79-53.8S57.91,26.47,28.2,26.47c-10.34,0-20,2.91-28.2,7.98,2.73-3.92,5.79-7.57,9.16-10.94C23.69,8.98,43.76,0,65.92,0s42.23,8.98,56.77,23.51c14.53,14.53,23.51,34.6,23.51,56.77Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const PacmanIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.47 160.47"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M80.24,0c44.31,0,80.24,35.92,80.24,80.24s-35.92,80.24-80.24,80.24S0,124.55,0,80.24h80.24V0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const PeanutIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M102.07,75.93c-7.96-3.73-14.26-10.63-17.78-18.69-5.73-13.09-2.71-27.57-10.94-39.67C65.92,6.67,53.34,0,40.14,0,29.06,0,19.02,4.49,11.76,11.76,4.49,19.02,0,29.06,0,40.14c0,13.2,6.67,25.78,17.58,33.2,12.1,8.23,26.58,5.22,39.67,10.94,8.05,3.52,14.96,9.82,18.69,17.78,6.19,13.2,2.82,28.4,11.19,40.78,7.41,10.97,20.03,17.69,33.27,17.69,11.08,0,21.12-4.49,28.38-11.76,7.26-7.26,11.76-17.3,11.76-28.38,0-13.24-6.72-25.86-17.69-33.27-12.38-8.37-27.58-5-40.78-11.19Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const PillIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M10.97,96.59L96.59,10.97c14.63-14.63,38.35-14.63,52.98,0h0c14.63,14.63,14.63,38.35,0,52.98l-85.62,85.62c-14.63,14.63-38.35,14.63-52.98,0h0c-14.63-14.63-14.63-38.35,0-52.98Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const QuadrantIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M0,160.54h0V0h160.54C160.54,88.66,88.66,160.54,0,160.54Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const RampIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M0,0h78.68c0,44.33,35.94,80.27,80.27,80.27h1.58v80.27H0V0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const RingIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M137.03,23.51C121.87,8.35,101.71,0,80.27,0S38.67,8.35,23.51,23.51C8.35,38.67,0,58.83,0,80.27s8.35,41.6,23.51,56.76c15.16,15.16,35.32,23.51,56.76,23.51s41.6-8.35,56.76-23.51c15.16-15.16,23.51-35.32,23.51-56.76s-8.35-41.6-23.51-56.76ZM80.27,130.4c-27.64,0-50.13-22.49-50.13-50.13s22.49-50.13,50.13-50.13,50.13,22.49,50.13,50.13-22.49,50.13-50.13,50.13Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const RoundedStairsIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M53.51,26.76h0c0,14.78,11.98,26.76,26.76,26.76h0c14.78,0,26.76,11.98,26.76,26.76h0c0,14.78,11.98,26.76,26.76,26.76h0c14.78,0,26.76,11.98,26.76,26.76h0c0,14.78-11.98,26.76-26.76,26.76H53.51c-29.55,0-53.51-23.96-53.51-53.51V26.76C0,11.98,11.98,0,26.76,0h0c14.78,0,26.76,11.98,26.76,26.76Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const SquareRoundedCornerIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,160.54H0v-88.34C0,32.32,32.32,0,72.19,0h88.34v160.54Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Stairs01Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.59 160.59"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="107.06 0 107.06 53.53 53.53 53.53 53.53 107.06 0 107.06 0 160.59 107.06 160.59 160.59 160.59 160.59 0 107.06 0"/> </g>
+    </svg>
+  );
+};
+
+
+export const Stairs02Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 0 160.54 107.02 107.03 107.02 107.03 160.54 0 160.54 0 107.02 53.51 107.02 53.51 53.51 107.03 53.51 107.03 0 160.54 0"/> </g>
+    </svg>
+  );
+};
+
+
+export const Star01Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.49 160.06"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="145.18 30.61 118.41 67.05 160.49 80.07 118.4 93.05 145.14 129.52 103.81 114.08 105 160.06 80.22 122.1 55.41 160.04 56.65 114.06 15.3 129.46 42.08 93.01 0 79.99 42.09 67.01 15.35 30.55 56.68 45.99 55.48 0 80.26 37.96 105.08 .02 103.84 46.01 145.18 30.61"/> </g>
+    </svg>
+  );
+};
+
+
+export const Star02Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.57 160.57"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.57,80.28c-56.98,12.87-67.41,23.31-80.28,80.28C67.41,103.59,56.98,93.16,0,80.28,56.98,67.41,67.41,56.98,80.28,0c12.87,56.98,23.31,67.41,80.28,80.28Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Star03Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.55 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.55 47.44 113.44 47.44 113.44 0 80.44 41.81 47.44 0 47.44 47.1 0 47.1 41.82 80.1 0 113.1 47.1 113.1 47.1 160.54 67.61 134.55 74.85 125.38 80.1 118.73 80.23 118.89 85.7 125.81 113.12 160.54 113.12 113.44 160.55 113.44 118.73 80.44 160.55 47.44"/> </g>
+    </svg>
+  );
+};
+
+
+export const SunIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M132.54,108.5l-4.46-28.25h32.47l-23.35-16.98-23.13-16.82,22.96-22.96-28.52,4.51-28.25,4.46V0l-16.98,23.35-16.82,23.13-22.96-22.96,4.51,28.52,4.46,28.25H0l23.35,16.98,23.13,16.82-22.96,22.96,28.52-4.51,28.25-4.46v32.47l16.98-23.35,16.82-23.13,22.96,22.96-4.51-28.52ZM127.71,80.25h.05l-.05.05s0-.01,0-.02c0,0,0-.02,0-.02ZM113.83,46.74s-.02-.02-.03-.03l.03-.03v.06ZM80.29,32.83s-.01,0-.02,0c0,0-.02,0-.02,0v-.05l.05.05ZM46.74,46.71s-.02.02-.03.03l-.03-.03h.06ZM32.83,80.25s0,.01,0,.02c0,0,0,.02,0,.02h-.05l.05-.05ZM46.71,113.8s.02.02.03.03l-.03.03v-.06ZM80.25,127.71s.01,0,.02,0c0,0,.02,0,.02,0v.05l-.05-.05ZM113.8,113.83s.02-.02.03-.03l.03.03h-.06Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const TreeElispsisIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,80.27c0-13.44-29.22-24.58-67.47-26.64,38.25-2.06,67.47-13.2,67.47-26.64C160.54,12.08,124.6,0,80.27,0S0,12.08,0,26.99c0,13.44,29.22,24.58,67.47,26.64C29.22,55.69,0,66.83,0,80.27s29.22,24.58,67.47,26.64C29.22,108.97,0,120.12,0,133.55c0,14.9,35.94,26.99,80.27,26.99s80.27-12.08,80.27-26.99c0-13.44-29.22-24.58-67.47-26.64,38.25-2.06,67.47-13.2,67.47-26.64Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Triangle01Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="160.54 160.54 0 160.54 0 0 160.54 160.54"/> </g>
+    </svg>
+  );
+};
+
+
+export const Triangle02Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polygon className="cls-1" points="80.27 0 120.4 80.27 160.54 160.54 80.27 160.54 0 160.54 40.13 80.27 80.27 0"/> </g>
+    </svg>
+  );
+};
+
+
+export const TubeIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.49 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M0,160.54v-72.93h62.47c13.6,0,25.1-11.71,25.1-25.57V0h72.93v62.03c0,54.32-43.98,98.5-98.03,98.5H0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Tulip01Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.54 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.54,0c-44.33,0-80.27,35.94-80.27,80.27C80.27,35.94,44.33,0,0,0v80.27h0c0,44.33,35.94,80.27,80.27,80.27h0c44.33,0,80.27-35.94,80.27-80.27h0V0h0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Waves02Icon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 160.55 160.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M160.55,160.54H0V0h18.39c7.67.22,15.33-.54,23.11,7.25,13.98,13.97.42,27.53,14.4,41.49,13.97,13.98,27.52.42,41.49,14.4,13.98,13.97.42,27.52,14.4,41.49,13.97,13.98,27.53.42,41.49,14.4,7.89,7.89,7.01,15.64,7.26,23.41v18.09Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset100AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M39,57H9c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c6.63,0,12,5.37,12,12h0c0,3.31-2.69,6-6,6Z"/> </g> <g> <path className="cls-1" d="M42,3c6.63,0,12,5.37,12,12s-5.37,12-12,12"/> <path className="cls-1" d="M51,39c6.63,0,12,5.37,12,12h0c0,3.31-2.69,6-6,6h-3"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset100BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.84 66.91"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M37.42,52.89c-1.47,0-2.85-.57-3.88-1.61l-11.18-11.17c-.98-.98-.98-2.56,0-3.54s2.56-.98,3.54,0l11.18,11.18c.24.24.46.24.7,0l11.18-11.18c.98-.98,2.56-.98,3.54,0s.98,2.56,0,3.54l-11.18,11.18c-1.04,1.04-2.42,1.61-3.88,1.61Z"/> <path d="M37.42,52.89c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v47.89c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M63.63,66.91H11.21c-6.18,0-11.21-5.03-11.21-11.21v-9.36c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v9.36c0,3.43,2.79,6.21,6.21,6.21h52.42c3.43,0,6.21-2.79,6.21-6.21v-9.36c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v9.36c0,6.18-5.03,11.21-11.21,11.21Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset101AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M39,57H9c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c6.63,0,12,5.37,12,12h0c0,3.31-2.69,6-6,6Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset101BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.99 68.45"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M67.05,68.45H5.95c-3.28,0-5.95-2.67-5.95-5.95V18.47c0-3.46,2.82-6.28,6.28-6.28h60.43c3.46,0,6.28,2.82,6.28,6.28v44.03c0,3.28-2.67,5.95-5.95,5.95ZM6.28,17.19c-.71,0-1.28.57-1.28,1.28v44.03c0,.52.43.95.95.95h61.1c.52,0,.95-.43.95-.95V18.47c0-.71-.57-1.28-1.28-1.28H6.28Z"/> <path d="M36.5,55.4c-8.31,0-15.08-6.76-15.08-15.08s6.76-15.08,15.08-15.08,15.08,6.76,15.08,15.08-6.76,15.08-15.08,15.08ZM36.5,30.24c-5.56,0-10.08,4.52-10.08,10.08s4.52,10.08,10.08,10.08,10.08-4.52,10.08-10.08-4.52-10.08-10.08-10.08Z"/> <path d="M52.9,17.19H20.09c-.83,0-1.61-.41-2.07-1.1-.46-.69-.56-1.56-.25-2.33l3.39-8.4c1.31-3.25,4.42-5.35,7.93-5.35h14.81c3.5,0,6.62,2.1,7.93,5.35l3.39,8.4c.31.77.22,1.65-.25,2.33-.46.69-1.24,1.1-2.07,1.1ZM23.8,12.19h25.4l-2.01-4.97c-.54-1.35-1.84-2.22-3.29-2.22h-14.81c-1.46,0-2.75.87-3.29,2.22l-2.01,4.97Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset102AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 1383 114"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M114,57c0,31.48-25.52,57-57,57S0,88.48,0,57,25.52,0,57,0s57,25.52,57,57"/> <path d="M1101,57c0,31.48-25.52,57-57,57s-57-25.52-57-57S1012.52,0,1044,0s57,25.52,57,57"/> <path d="M960,57c0,31.48-25.52,57-57,57s-57-25.52-57-57S871.52,0,903,0s57,25.52,57,57"/> <path d="M1383,57c0,31.48-25.52,57-57,57s-57-25.52-57-57S1294.52,0,1326,0s57,25.52,57,57"/> <path d="M1242,57c0,31.48-25.52,57-57,57s-57-25.52-57-57S1153.52,0,1185,0s57,25.52,57,57"/> <path d="M819,57c0,31.48-25.52,57-57,57s-57-25.52-57-57S730.52,0,762,0s57,25.52,57,57"/> <path d="M678,57c0,31.48-25.52,57-57,57s-57-25.52-57-57S589.52,0,621,0s57,25.52,57,57"/> <path d="M537,57c0,31.48-25.52,57-57,57s-57-25.52-57-57S448.52,0,480,0s57,25.52,57,57"/> <path d="M396,57c0,31.48-25.52,57-57,57s-57-25.52-57-57S307.52,0,339,0s57,25.52,57,57"/> <path d="M255,57c0,31.48-25.52,57-57,57s-57-25.52-57-57S166.52,0,198,0s57,25.52,57,57"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset102BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66.74 69.83"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M37.73,69.83c-1.12,0-2.22-.41-3.11-1.2l-8.75-7.79c-1-.89-1.57-2.17-1.57-3.51v-16.32L2.86,17.87C-.06,14.72-.81,10.32.91,6.38,2.63,2.44,6.37,0,10.66,0h45.42c4.29,0,8.03,2.44,9.75,6.38,1.72,3.93.97,8.34-1.94,11.49h0l-21.44,23.14v24.11c0,1.88-1.06,3.52-2.78,4.29-.63.28-1.29.42-1.94.42ZM29.31,57.19l8.14,7.25v-23.55c0-1.19.44-2.32,1.25-3.19l21.52-23.23c1.57-1.69,1.95-3.97,1.03-6.09-.92-2.12-2.86-3.38-5.17-3.38H10.66c-2.31,0-4.24,1.26-5.17,3.38s-.54,4.39,1.03,6.09l21.53,23.23c.81.87,1.25,2.01,1.25,3.19v16.3ZM62.05,16.17h0,0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset103AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 56.25 56.25"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M32.4,38.77c-6.15-3.62-11.29-8.77-14.92-14.92-.68-1.16-.44-2.64.51-3.59l4.29-4.29c.97-.97,1.16-2.48.45-3.66l-3.84-6.4c-2.01-3.35-6.63-3.92-9.39-1.16l-4.72,4.72c-1.17,1.17-1.86,2.79-1.76,4.45,1.29,21.12,18.19,38.02,39.32,39.32,1.66.1,3.27-.59,4.45-1.76l4.72-4.72c2.76-2.76,2.19-7.38-1.16-9.39l-6.4-3.84c-1.18-.71-2.69-.52-3.66.45l-4.29,4.29c-.95.95-2.43,1.19-3.59.51Z"/> <g> <line className="cls-1" x1="50.93" y1="5.32" x2="35.93" y2="20.32"/> <polyline className="cls-1" points="35.93 5.32 35.93 20.32 50.93 20.32"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset103BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 65.84 73.84"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M7.12,73.84c-1.22,0-2.45-.32-3.56-.97-2.23-1.29-3.56-3.59-3.56-6.17V7.14C0,4.56,1.33,2.25,3.56.97,5.79-.32,8.46-.32,10.69.97l51.59,29.78h0c2.23,1.29,3.56,3.59,3.56,6.17,0,2.58-1.33,4.88-3.56,6.17l-51.59,29.78c-1.12.64-2.34.97-3.56.97ZM7.14,5c-.49,0-.88.18-1.07.29-.32.18-1.06.73-1.06,1.84v59.57c0,1.11.74,1.66,1.06,1.84.32.18,1.17.55,2.12,0l51.59-29.78c.96-.55,1.06-1.47,1.06-1.84,0-.37-.1-1.29-1.06-1.84L8.19,5.3c-.38-.22-.73-.29-1.05-.29Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset104AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 56.93 56.93"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M32.4,39.45c-6.15-3.62-11.29-8.77-14.92-14.92-.68-1.16-.44-2.64.51-3.59l4.29-4.29c.97-.97,1.16-2.48.45-3.66l-3.84-6.4c-2.01-3.35-6.63-3.92-9.39-1.16l-4.72,4.72c-1.17,1.17-1.86,2.79-1.76,4.45,1.29,21.12,18.19,38.02,39.32,39.32,1.66.1,3.27-.59,4.45-1.76l4.72-4.72c2.76-2.76,2.19-7.38-1.16-9.39l-6.4-3.84c-1.18-.71-2.69-.52-3.66.45l-4.29,4.29c-.95.95-2.43,1.19-3.59.51Z"/> <g> <line className="cls-1" x1="53.93" y1="3" x2="36.19" y2="20.75"/> <line className="cls-1" x1="53.93" y1="20.75" x2="36.19" y2="3"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset104BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.93 72.29"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M11.93,48.08c-6.58,0-11.93-5.35-11.93-11.93s5.35-11.93,11.93-11.93,11.93,5.35,11.93,11.93-5.35,11.93-11.93,11.93ZM11.93,29.21c-3.82,0-6.93,3.11-6.93,6.93s3.11,6.93,6.93,6.93,6.93-3.11,6.93-6.93-3.11-6.93-6.93-6.93Z"/> <path d="M60,23.86c-6.58,0-11.93-5.35-11.93-11.93S53.42,0,60,0s11.93,5.35,11.93,11.93-5.35,11.93-11.93,11.93ZM60,5c-3.82,0-6.93,3.11-6.93,6.93s3.11,6.93,6.93,6.93,6.93-3.11,6.93-6.93-3.11-6.93-6.93-6.93Z"/> <path d="M60,72.29c-6.58,0-11.93-5.35-11.93-11.93s5.35-11.93,11.93-11.93,11.93,5.35,11.93,11.93-5.35,11.93-11.93,11.93ZM60,53.43c-3.82,0-6.93,3.11-6.93,6.93s3.11,6.93,6.93,6.93,6.93-3.11,6.93-6.93-3.11-6.93-6.93-6.93Z"/> <path d="M20.35,34.41c-.91,0-1.79-.5-2.23-1.38-.62-1.23-.12-2.74,1.11-3.36l31.23-15.73c1.24-.62,2.74-.13,3.36,1.11s.12,2.74-1.11,3.36l-31.23,15.73c-.36.18-.75.27-1.12.27Z"/> <path d="M51.57,58.62c-.38,0-.76-.09-1.12-.27l-31.23-15.73c-1.23-.62-1.73-2.12-1.11-3.36.62-1.23,2.12-1.73,3.36-1.11l31.23,15.73c1.23.62,1.73,2.12,1.11,3.36-.44.87-1.32,1.38-2.23,1.38Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset105AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 51"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M26.32,9.95l-1.63-4.9c-.41-1.22-1.55-2.05-2.85-2.05h-12.84c-3.31,0-6,2.69-6,6v33c0,3.31,2.69,6,6,6h42c3.31,0,6-2.69,6-6v-24c0-3.31-2.69-6-6-6h-21.84c-1.29,0-2.44-.83-2.85-2.05Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset105BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.55 71.56"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M35.78,71.56C16.05,71.56,0,55.51,0,35.78S16.05,0,35.78,0s35.78,16.05,35.78,35.78-16.05,35.78-35.78,35.78ZM35.78,5c-16.97,0-30.78,13.81-30.78,30.78s13.81,30.78,30.78,30.78,30.78-13.81,30.78-30.78S52.75,5,35.78,5Z"/> <path d="M58.83,62.27c-.68,0-1.35-.27-1.85-.81l-7.65-8.36c-1.28-1.4-1.98-3.21-1.98-5.1v-7.16c0-1.41-1.15-2.56-2.56-2.56h-8.92c-3.73,0-6.94-2.78-7.48-6.47-.29-2.01.22-4.01,1.43-5.63s3-2.67,5.01-2.95l.33-.05c1.29-.18,2.24-1.3,2.21-2.6l-.02-.86c-.05-2.06.71-4,2.14-5.47,1.43-1.47,3.36-2.28,5.41-2.28h1.8c.89,0,1.74-.48,2.2-1.24l2.59-4.31c.71-1.18,2.25-1.57,3.43-.86,1.18.71,1.57,2.25.86,3.43l-2.59,4.31c-1.36,2.26-3.84,3.67-6.48,3.67h-1.8c-.7,0-1.35.27-1.83.77-.49.5-.74,1.16-.73,1.85l.02.86c.1,3.85-2.7,7.16-6.52,7.69l-.33.05c-.68.09-1.28.45-1.69,1s-.58,1.23-.49,1.91c.18,1.25,1.27,2.19,2.53,2.19h8.92c4.17,0,7.56,3.39,7.56,7.56v7.16c0,.64.24,1.25.67,1.73l7.65,8.36c.93,1.02.86,2.6-.16,3.53-.48.44-1.08.66-1.69.66Z"/> <path d="M35.78,71.56c-.89,0-1.76-.48-2.21-1.32l-3.91-7.32c-.88-1.65-1.35-3.51-1.35-5.38v-.64c0-3.54-2.88-6.42-6.42-6.42-4.67,0-8.83-2.8-10.58-7.13l-.45-1.11c-.37-.91-.96-1.74-1.7-2.4l-7.97-7.04c-1.03-.92-1.13-2.5-.22-3.53.92-1.03,2.5-1.13,3.53-.22l7.97,7.04c1.32,1.17,2.36,2.64,3.02,4.27l.45,1.11c.99,2.43,3.32,4.01,5.95,4.01,6.29,0,11.42,5.12,11.42,11.42v.64c0,1.05.26,2.1.76,3.03l3.91,7.32c.65,1.22.19,2.73-1.03,3.38-.38.2-.78.3-1.18.3Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset106AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M45,24v27c0,3.31-2.69,6-6,6H9c-3.31,0-6-2.69-6-6V9c0-3.31,2.69-6,6-6h15"/> <path className="cls-1" d="M30,24h15L24,3v15c0,3.31,2.69,6,6,6Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset106BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.56 71.56"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M35.78,71.56c-11.39,0-22.21-5.5-28.93-14.72-.81-1.12-.57-2.68.55-3.49,1.11-.81,2.68-.57,3.49.55,5.78,7.93,15.09,12.67,24.89,12.67,16.97,0,30.78-13.81,30.78-30.78,0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,19.73-16.05,35.78-35.78,35.78Z"/> <path d="M2.5,38.28c-1.38,0-2.5-1.12-2.5-2.5C0,16.05,16.05,0,35.78,0c11.4,0,22.21,5.5,28.93,14.72.81,1.12.57,2.68-.55,3.49-1.12.81-2.68.57-3.49-.55-5.78-7.93-15.09-12.67-24.89-12.67-16.97,0-30.78,13.81-30.78,30.78,0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M8.87,71.56c-1.38,0-2.5-1.12-2.5-2.5v-13.7c0-1.38,1.12-2.5,2.5-2.5h13.7c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5h-11.2v11.2c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M62.69,18.7h-13.7c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.2V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v13.7c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset107AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="12"/> <path className="cls-1" d="M42,18v16.8c0,3.98,3.22,7.2,7.2,7.2h0c3.26,0,6.17-2.18,6.97-5.34.78-3.06,1.03-6.34.66-9.72-1.38-12.56-11.72-22.69-24.31-23.83C15.63,1.58,1.58,15.63,3.11,32.52c1.14,12.58,11.27,22.93,23.83,24.31,5.44.6,10.59-.42,15.05-2.64"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset107BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 76.67 58.9"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M20.24,58.9c-1.01,0-2.02-.17-3-.51-2.29-.8-4.12-2.44-5.17-4.62L1.63,32.2c-1.06-2.06-1.63-4.47-1.63-6.9,0-4.17,1.62-8.08,4.57-11,2.93-2.93,6.83-4.55,10.98-4.55h37.09c1.38,0,2.5,1.12,2.5,2.5v26.1c0,1.38-1.12,2.5-2.5,2.5h-26.67l2.43,5.01c1.07,2.19,1.21,4.67.41,6.96-.8,2.29-2.44,4.12-4.62,5.17-1.25.61-2.6.91-3.95.91ZM15.55,14.75c-2.81,0-5.46,1.1-7.45,3.09-2,1.98-3.09,4.62-3.09,7.45,0,1.64.38,3.26,1.11,4.67l10.47,21.63c.47.98,1.29,1.71,2.31,2.07,1.03.36,2.14.29,3.13-.18.98-.47,1.72-1.29,2.07-2.31.36-1.03.29-2.14-.18-3.13l-4.17-8.6c-.38-.78-.33-1.69.13-2.42.46-.73,1.26-1.17,2.12-1.17h28.16V14.75H15.55Z"/> <path d="M52.63,50.6c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v45.6c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M74.17,27.8h-10.41c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h10.41c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M63.76,17.61c-.81,0-1.6-.39-2.08-1.12-.76-1.15-.45-2.7.7-3.47l7.36-4.89c1.15-.76,2.7-.45,3.47.7.76,1.15.45,2.7-.7,3.47l-7.36,4.89c-.42.28-.91.42-1.38.42Z"/> <path d="M71.12,42.88c-.48,0-.96-.13-1.38-.42l-7.36-4.89c-1.15-.76-1.46-2.32-.7-3.47.76-1.15,2.32-1.46,3.47-.7l7.36,4.89c1.15.76,1.46,2.32.7,3.47-.48.72-1.28,1.12-2.08,1.12Z"/> <path d="M21.98,40.85H7.19c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h14.79c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset108AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66 48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M21,24c0-6.63,5.37-12,12-12s12,5.37,12,12-5.37,12-12,12-12-5.37-12-12Z"/> <path className="cls-1" d="M63,24c-5.99,12.46-15.81,21-30.01,21S8.99,36.46,3,24C8.99,11.54,18.81,3,33.01,3s24,8.54,29.99,21Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset108BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 87.99 71.56"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M85.49,71.56H12.57c-6.93,0-12.57-5.64-12.57-12.57V2.5C0,1.12,1.12,0,2.5,0s2.5,1.12,2.5,2.5v56.49c0,4.17,3.39,7.57,7.57,7.57h72.92c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M17.6,60.46c-1.38,0-2.5-1.12-2.5-2.5v-19.31c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v19.31c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M32.7,60.46c-1.38,0-2.5-1.12-2.5-2.5v-28.62c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v28.62c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M47.79,60.46c-1.38,0-2.5-1.12-2.5-2.5v-19.31c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v19.31c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M62.89,60.46c-1.38,0-2.5-1.12-2.5-2.5v-28.62c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v28.62c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M47.79,25.24h0c-.66,0-1.3-.26-1.77-.73l-13.33-13.33-13.33,13.33c-.98.98-2.56.98-3.54,0-.98-.98-.98-2.56,0-3.54l15.02-15.02c.46-.51,1.13-.81,1.85-.81s1.35.29,1.82.78l13.28,13.28L66.26.73c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-20.24,20.24c-.47.47-1.1.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset109AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M17.78,42h-5.78c-4.97,0-9-4.03-9-9s4.03-9,9-9c.22,0,.43.05.65.07-.42-1.45-.65-2.98-.65-4.57,0-9.11,7.39-16.5,16.5-16.5,8.61,0,15.67,6.6,16.42,15.01.03,0,.05,0,.08,0,6.63,0,12,5.37,12,12s-5.37,12-12,12h-3"/> <g> <polyline className="cls-1" points="39 33 30 24 21 33"/> <line className="cls-1" x1="30" y1="51" x2="30" y2="24"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset109BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.83 81.14"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M69.33,39.49c-1.38,0-2.5-1.12-2.5-2.5v-10.16h-10.16c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h10.64c2.49,0,4.51,2.03,4.51,4.52v10.64c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M17.55,59.72c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l17.87-17.87c2.62-2.62,6.88-2.62,9.49,0l3.49,3.49c.67.67,1.75.67,2.42,0l17.92-17.92c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-17.92,17.92c-2.62,2.62-6.88,2.62-9.49,0l-3.49-3.49c-.67-.67-1.75-.67-2.42,0l-17.87,17.87c-.49.49-1.13.73-1.77.73Z"/> </g> <path d="M69.33,81.14H16.7c-9.21,0-16.7-7.49-16.7-16.7V2.5C0,1.12,1.12,0,2.5,0s2.5,1.12,2.5,2.5v61.94c0,6.45,5.25,11.7,11.7,11.7h52.63c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset10AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M45,48h6c3.31,0,6-2.69,6-6h0c0-3.31-2.69-6-6-6h0c-1.66,0-3-1.34-3-3v-12c0-9.94-8.06-18-18-18h0c-9.94,0-18,8.06-18,18v12c0,1.66-1.34,3-3,3h0c-3.31,0-6,2.69-6,6h0c0,3.31,2.69,6,6,6h6"/> <g> <line className="cls-1" x1="39" y1="39" x2="21" y2="57"/> <line className="cls-1" x1="39" y1="57" x2="21" y2="39"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset10BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 81.61 74.23"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M65,19.25h-14.25c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.75V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v14.25c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M37.11,74.23C16.65,74.23,0,57.58,0,37.11S16.57.08,36.97,0h.18c11.77.05,22.92,5.75,29.86,15.27.81,1.12.57,2.68-.55,3.49-1.12.81-2.68.57-3.49-.55-6.02-8.26-15.71-13.2-25.92-13.22-17.68.03-32.06,14.42-32.06,32.11s14.41,32.11,32.11,32.11c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> <path d="M37.25,39.61c-1.38,0-2.5-1.12-2.5-2.5v-17.08c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v17.08c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M37.25,39.61h-12.12c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h12.12c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <g> <path d="M47.91,64.24c-1.24,0-2.23-1.11-2.02-2.33.62-3.64,2.73-7.08,6.47-11.26,3.53-3.97,4.45-5.21,4.45-8.33,0-2.36-.57-4.22-3.06-4.22-1.99,0-2.89,1.28-3.22,3.44-.15.95-.93,1.68-1.9,1.68h-.68c-1.15,0-2.09-1.02-1.9-2.16.61-3.66,2.82-6.72,7.83-6.72,5.57,0,7.71,3.41,7.71,8.11,0,3.69-1.04,5.64-4.88,9.69-3.03,3.23-5.03,6-5.64,8.07h9.39c1.06,0,1.91.86,1.91,1.91v.19c0,1.06-.86,1.91-1.91,1.91h-12.55Z"/> <path d="M72.5,62.33v-5.04c0-.19-.16-.35-.35-.35h-8.23c-1.06,0-1.91-.86-1.91-1.91v-1.49c0-.29.06-.57.19-.83l8.13-16.85c.34-.7,1.05-1.15,1.83-1.15h2.64c1.12,0,2.03.91,2.03,2.03v15.94c0,.24.2.44.44.44h2.44c1.06,0,1.91.86,1.91,1.91h0c0,1.06-.86,1.91-1.91,1.91h-2.44c-.24,0-.44.2-.44.44v4.95c0,1.06-.86,1.91-1.91,1.91h-.49c-1.06,0-1.91-.86-1.91-1.91ZM71.97,41.91l-5.35,10.71c-.12.23.05.51.31.51h5.22c.19,0,.35-.15.35-.35l.13-10.71c0-.37-.5-.49-.66-.16Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset110AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 45"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M45,42c6.63,0,12-5.37,12-12s-5.37-12-12-12c-.03,0-.05,0-.08,0-.76-8.41-7.82-15.01-16.42-15.01-9.11,0-16.5,7.39-16.5,16.5,0,1.59.24,3.11.65,4.57-.22-.02-.43-.07-.65-.07-4.97,0-9,4.03-9,9s4.03,9,9,9h33Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset110BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 59.44 58.97"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M56.94,58.97H12.57c-6.93,0-12.57-5.64-12.57-12.57V2.5C0,1.12,1.12,0,2.5,0s2.5,1.12,2.5,2.5v43.9c0,4.17,3.39,7.57,7.57,7.57h44.37c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M17.6,47.87c-1.38,0-2.5-1.12-2.5-2.5v-19.31c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v19.31c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M32.7,47.88c-1.38,0-2.5-1.12-2.5-2.5v-14.31c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v14.31c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M47.79,47.87c-1.38,0-2.5-1.12-2.5-2.5V13.18c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v32.19c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset111AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M53.5,3.09L5.12,15.27c-2.67.67-2.88,4.39-.3,5.35l25.15,9.4,9.4,25.14c.97,2.58,4.68,2.37,5.35-.3L56.91,6.5c.52-2.06-1.35-3.93-3.41-3.41Z"/> <line className="cls-1" x1="29.97" y1="30.03" x2="56.13" y2="3.87"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset111BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 62.52 66.32"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M54.67,66.32H7.85c-4.33,0-7.85-3.52-7.85-7.85V26.03c0-4.33,3.52-7.85,7.85-7.85h46.82c4.33,0,7.85,3.52,7.85,7.85v32.44c0,4.33-3.52,7.85-7.85,7.85ZM7.85,23.18c-1.57,0-2.85,1.28-2.85,2.85v32.44c0,1.57,1.28,2.85,2.85,2.85h46.82c1.57,0,2.85-1.28,2.85-2.85V26.03c0-1.57-1.28-2.85-2.85-2.85H7.85Z"/> <path d="M49.44,23.18H13.08c-1.38,0-2.5-1.12-2.5-2.5v-10.29C10.58,4.66,15.24,0,20.96,0h20.59c5.73,0,10.39,4.66,10.39,10.39v10.29c0,1.38-1.12,2.5-2.5,2.5ZM15.58,18.18h31.36v-7.79c0-2.97-2.42-5.39-5.39-5.39h-20.59c-2.97,0-5.39,2.42-5.39,5.39v7.79Z"/> <path d="M31.26,49.88c-1.38,0-2.5-1.12-2.5-2.5v-10.27c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v10.27c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset112AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M26.25,33.75h0c-4.97-4.97-4.97-13.04,0-18.01l9.01-9.01c4.97-4.97,13.04-4.97,18.01,0h0c4.97,4.97,4.97,13.04,0,18.01l-6,6"/> <path className="cls-1" d="M33.75,26.25h0c4.97,4.97,4.97,13.04,0,18.01l-9.01,9.01c-4.97,4.97-13.04,4.97-18.01,0h0c-4.97-4.97-4.97-13.04,0-18.01l4.5-4.5"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset112BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 65.71 71.97"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M51.66,58.68H14.06c-4.39,0-8.44-1.99-11.12-5.46-2.68-3.47-3.58-7.9-2.47-12.14l5.26-20.13C8.95,8.61,20.11,0,32.86,0s23.9,8.61,27.13,20.95l5.26,20.13c1.11,4.24.21,8.67-2.47,12.14s-6.73,5.46-11.12,5.46ZM32.86,5c-10.47,0-19.64,7.08-22.29,17.21l-5.26,20.13c-.71,2.73-.13,5.58,1.59,7.82,1.73,2.24,4.34,3.52,7.16,3.52h37.6c2.83,0,5.44-1.28,7.16-3.52s2.31-5.09,1.59-7.82l-5.26-20.13c-2.65-10.13-11.82-17.21-22.29-17.21Z"/> <path d="M32.86,71.97c-8.7,0-15.78-7.08-15.78-15.78,0-1.38,1.12-2.5,2.5-2.5h26.57c1.38,0,2.5,1.12,2.5,2.5,0,8.7-7.08,15.78-15.78,15.78ZM22.36,58.68c1.13,4.74,5.41,8.28,10.49,8.28s9.36-3.54,10.49-8.28h-20.98Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset113AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 50.99 54.94"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M44.62,33.1L12.62,51.1c-4.3,2.42-9.62-.69-9.62-5.62V9.46C3,4.53,8.32,1.42,12.62,3.84l32.01,18.01c4.39,2.47,4.39,8.78,0,11.25Z"/> <polyline className="cls-1" points="47.99 48.47 47.99 27.47 47.99 6.47"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset113BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 70.55 60.96"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M35.28,38.55c-1.65,0-3.31-.37-4.85-1.11L3.23,24.41c-2-.96-3.23-2.92-3.23-5.14s1.24-4.18,3.23-5.14L30.43,1.11h0c3.08-1.47,6.61-1.47,9.69,0l27.2,13.03c2,.96,3.24,2.92,3.24,5.14s-1.24,4.18-3.23,5.14l-27.2,13.03c-1.54.74-3.19,1.11-4.85,1.11ZM32.59,5.62L5.4,18.65c-.33.16-.4.43-.4.63s.07.47.4.63l27.2,13.03c1.71.82,3.66.82,5.37,0l27.2-13.03c.33-.16.4-.43.4-.63s-.07-.47-.4-.63l-27.19-13.03c-1.71-.82-3.66-.82-5.37,0Z"/> <path d="M45.03,60.96h-19.51c-7.55,0-13.7-6.14-13.7-13.7v-20.31c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v20.31c0,4.79,3.9,8.7,8.7,8.7h19.51c4.79,0,8.7-3.9,8.7-8.7v-20.31c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v20.31c0,7.55-6.14,13.7-13.7,13.7Z"/> <path d="M68.05,50.89c-1.38,0-2.5-1.12-2.5-2.5v-29.12c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v29.12c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset114AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 50.99 54.94"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M6.37,33.1l32.01,18.01c4.3,2.42,9.62-.69,9.62-5.62V9.46c0-4.94-5.32-8.04-9.62-5.62L6.37,21.85c-4.39,2.47-4.39,8.78,0,11.25Z"/> <polyline className="cls-1" points="3 48.47 3 27.47 3 6.47"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset114BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 80.61 72.38"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M33.19,65.57H9.93c-5.48,0-9.93-4.46-9.93-9.93V17.58C0,12.11,4.46,7.65,9.93,7.65h54.34c5.48,0,9.93,4.46,9.93,9.93v5.27c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5v-5.27c0-2.72-2.21-4.93-4.93-4.93H9.93c-2.72,0-4.93,2.21-4.93,4.93v38.05c0,2.72,2.21,4.93,4.93,4.93h23.26c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M71.71,25.35H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h69.21c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <g> <path d="M48.9,12.65c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v7.65c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M25.31,12.65c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v7.65c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> <g> <path d="M59.56,72.38c-11.61,0-21.05-9.44-21.05-21.05s9.44-21.05,21.05-21.05,21.05,9.44,21.05,21.05-9.44,21.05-21.05,21.05ZM59.56,35.28c-8.85,0-16.05,7.2-16.05,16.05s7.2,16.05,16.05,16.05,16.05-7.2,16.05-16.05-7.2-16.05-16.05-16.05Z"/> <path d="M59.56,53.83c-1.38,0-2.5-1.12-2.5-2.5v-7.68c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v7.68c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M62.77,57.04c-.64,0-1.28-.24-1.77-.73l-3.21-3.21c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l3.21,3.21c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset115AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66.4 48.84"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M27.06,29.65l27.4,15.41c4,2.25,8.94-.64,8.94-5.23V9.01c0-4.59-4.94-7.48-8.94-5.23l-27.4,15.41c-4.08,2.29-4.08,8.17,0,10.46Z"/> <path className="cls-1" d="M33.9,3.53L6.06,19.19c-4.08,2.29-4.08,8.17,0,10.46l27.84,15.66"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset115BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 58.96 71.61"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M19.28,45.79c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l20.4-20.4c.98-.98,2.56-.98,3.54,0s.98,2.56,0,3.54l-20.4,20.4c-.49.49-1.13.73-1.77.73Z"/> <path d="M39.68,45.79c-.64,0-1.28-.24-1.77-.73l-20.4-20.4c-.98-.98-.98-2.56,0-3.54s2.56-.98,3.54,0l20.4,20.4c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> <path d="M29.48,71.61c-1.85,0-3.7-.53-5.31-1.6h0C20.13,67.33,0,53.56,0,44.88V13.46C0,8.78,15.62,0,29.48,0s29.48,8.78,29.48,13.46v31.43c0,8.68-20.13,22.45-24.17,25.12-1.61,1.07-3.46,1.6-5.31,1.6ZM5,13.97v30.91c0,3.16,8.2,11.86,21.93,20.95h0c1.55,1.03,3.55,1.03,5.1,0,13.73-9.09,21.93-17.79,21.93-20.95V13.97c-1.73-2.08-12.25-8.97-24.48-8.97S6.73,11.89,5,13.97Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset116AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66.4 48.84"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M39.34,19.19L11.94,3.78c-4-2.25-8.94.64-8.94,5.23v30.82c0,4.59,4.94,7.48,8.94,5.23l27.4-15.41c4.08-2.29,4.08-8.17,0-10.46Z"/> <path className="cls-1" d="M32.5,45.31l27.84-15.66c4.08-2.29,4.08-8.17,0-10.46L32.5,3.53"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset116BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 58.96 71.61"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M27.4,45.66c-.64,0-1.28-.24-1.77-.73l-8.25-8.25c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l6.48,6.48,14.72-14.72c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-16.49,16.49c-.49.49-1.13.73-1.77.73Z"/> <path d="M29.48,71.61c-1.85,0-3.7-.53-5.31-1.6h0C20.13,67.33,0,53.57,0,44.88V13.46C0,8.78,15.62,0,29.48,0s29.48,8.78,29.48,13.46v31.43c0,8.68-20.13,22.45-24.17,25.12-1.61,1.07-3.46,1.6-5.31,1.6ZM5,13.98v30.91c0,3.16,8.2,11.86,21.93,20.95,0,0,0,0,0,0,1.55,1.02,3.55,1.03,5.1,0,13.73-9.09,21.93-17.79,21.93-20.95V13.98c-1.73-2.09-12.25-8.98-24.48-8.98S6.73,11.89,5,13.98Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset117AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="15" cy="30" r="12"/> <circle className="cls-1" cx="48" cy="12" r="9"/> <circle className="cls-1" cx="48" cy="48" r="9"/> <line className="cls-1" x1="25.06" y1="36.53" x2="39.96" y2="43.98"/> <line className="cls-1" x1="39.96" y1="16.02" x2="25.06" y2="23.47"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset117BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 62.79 70.27"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M60.29,14.93h-22.19c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h22.19c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M10.89,21.79c-.64,0-1.28-.24-1.77-.73L.73,12.66c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l6.63,6.63L25.91.73c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54L12.66,21.05c-.49.49-1.13.73-1.77.73Z"/> <path d="M60.29,39.16h-22.19c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h22.19c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M10.89,46.03c-.64,0-1.28-.24-1.77-.73L.73,36.9c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l6.63,6.63,15.02-15.02c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-16.79,16.79c-.49.49-1.13.73-1.77.73Z"/> <path d="M60.29,63.4h-22.19c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h22.19c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M10.89,70.27c-.64,0-1.28-.24-1.77-.73L.73,61.14c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l6.63,6.63,15.02-15.02c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-16.79,16.79c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset118AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54.51 54.51"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M18,51.51H3s0-15,0-15L34.76,4.76c2.34-2.34,6.14-2.34,8.49,0l6.51,6.51c2.34,2.34,2.34,6.14,0,8.49l-31.76,31.76Z"/> <line className="cls-1" x1="33" y1="51.51" x2="51" y2="51.51"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset118BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 58.84 77.73"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M47.63,77.73H11.21c-6.18,0-11.21-5.02-11.21-11.19V11.21C0,5.03,5.03,0,11.21,0h15.04c2.54,0,4.96.55,7.18,1.64,1.69.75,3.32,1.88,4.75,3.31l15.7,15.67c1.4,1.4,2.53,3.02,3.36,4.83,1.04,2.18,1.59,4.64,1.59,7.11v33.96c0,6.18-5.03,11.21-11.21,11.21ZM11.21,5c-3.43,0-6.21,2.79-6.21,6.21v55.33c0,3.41,2.79,6.19,6.21,6.19h36.41c3.43,0,6.21-2.79,6.21-6.21v-33.96c0-1.73-.39-3.45-1.12-4.99-.59-1.27-1.4-2.44-2.37-3.41l-15.7-15.67c-1-1-2.12-1.78-3.33-2.32-1.62-.79-3.29-1.17-5.07-1.17h-15.04Z"/> <path d="M54.98,29h-22.64c-1.38,0-2.5-1.12-2.5-2.5V3.88c0-.85.43-1.64,1.14-2.1s1.61-.53,2.38-.19c1.77.79,3.39,1.92,4.83,3.35l15.7,15.68c1.4,1.4,2.53,3.02,3.36,4.82.36.77.3,1.68-.16,2.4-.46.72-1.25,1.15-2.11,1.15ZM34.84,24h15.35l-15.35-15.32v15.32Z"/> <path d="M25.22,60.77c-.64,0-1.28-.24-1.77-.73l-8.39-8.39c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l6.63,6.63,15.02-15.02c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-16.79,16.79c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset119AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 51"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <line className="cls-1" x1="12" y1="10.5" x2="3" y2="10.5"/> <line className="cls-1" x1="57" y1="10.5" x2="39" y2="10.5"/> <circle className="cls-1" cx="19.5" cy="10.5" r="7.5"/> </g> <g> <line className="cls-1" x1="48" y1="40.5" x2="57" y2="40.5"/> <line className="cls-1" x1="3" y1="40.5" x2="21" y2="40.5"/> <circle className="cls-1" cx="40.5" cy="40.5" r="7.5"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset119BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.86 76.01"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M65.58,76.01H6.28c-3.46,0-6.28-2.82-6.28-6.28V15.25c0-3.46,2.82-6.28,6.28-6.28h59.3c3.46,0,6.28,2.82,6.28,6.28v54.48c0,3.46-2.82,6.28-6.28,6.28ZM6.28,13.97c-.71,0-1.28.57-1.28,1.28v54.48c0,.71.57,1.28,1.28,1.28h59.3c.71,0,1.28-.57,1.28-1.28V15.25c0-.71-.57-1.28-1.28-1.28H6.28Z"/> <path d="M69.36,28.86H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h66.86c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <g> <path d="M47.33,13.97c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v8.97c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M24.53,13.97c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v8.97c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> <path d="M31.73,59.49c-.64,0-1.28-.24-1.77-.73l-8.39-8.39c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l6.63,6.63,15.02-15.02c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-16.79,16.79c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset11AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 62.85 59.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path className="cls-1" d="M30,11.76h-15c-6.63,0-12,5.37-12,12v12c0,6.63,5.37,12,12,12h15l10.13,8.1c1.96,1.57,4.87.17,4.87-2.34V6.01c0-2.52-2.91-3.91-4.87-2.34l-10.13,8.1Z"/> <line className="cls-1" x1="30" y1="11.76" x2="30" y2="35.76"/> </g> <path className="cls-1" d="M55.5,19.26c5.8,5.8,5.8,15.2,0,21"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset11BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.38 63.9"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M60.02,63.9H12.36c-6.82,0-12.36-5.54-12.36-12.36V11.69c0-.94.53-1.81,1.37-2.23s1.85-.34,2.61.22l13.68,10.09L34.31.81c.95-1.08,2.81-1.08,3.76,0l16.65,18.96,13.68-10.09c.76-.56,1.77-.64,2.61-.22.84.42,1.37,1.29,1.37,2.23v39.85c0,6.82-5.54,12.36-12.36,12.36ZM5,16.64v34.9c0,4.06,3.3,7.36,7.36,7.36h47.66c4.06,0,7.36-3.3,7.36-7.36V16.64l-11.54,8.51c-1.04.77-2.51.62-3.36-.36L36.19,6.25l-16.29,18.54c-.86.98-2.32,1.13-3.36.36l-11.54-8.51Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset120AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path className="cls-1" d="M40.5,24H13.5c-5.8,0-10.5-4.7-10.5-10.5h0C3,7.7,7.7,3,13.5,3h27"/> <circle className="cls-1" cx="40.5" cy="13.5" r="10.5"/> </g> <g> <path className="cls-1" d="M13.5,36h27c5.8,0,10.5,4.7,10.5,10.5h0c0,5.8-4.7,10.5-10.5,10.5H13.5"/> <circle className="cls-1" cx="13.5" cy="46.5" r="10.5"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset120BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 62.79 63.4"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M60.29,14.93h-22.19c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h22.19c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M60.29,63.4H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h57.79c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M10.89,21.79c-.64,0-1.28-.24-1.77-.73L.73,12.66c-.98-.98-.98-2.56,0-3.54s2.56-.98,3.54,0l6.63,6.63L25.91.73c.98-.98,2.56-.98,3.54,0s.98,2.56,0,3.54L12.66,21.05c-.49.49-1.13.73-1.77.73Z"/> <path d="M60.29,39.17h-22.19c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h22.19c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M10.89,46.03c-.64,0-1.28-.24-1.77-.73L.73,36.9c-.98-.98-.98-2.56,0-3.54s2.56-.98,3.54,0l6.63,6.63,15.02-15.02c.98-.98,2.56-.98,3.54,0s.98,2.56,0,3.54l-16.79,16.79c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset121AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 30"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M45,27H15c-6.63,0-12-5.37-12-12h0c0-6.63,5.37-12,12-12h30"/> <circle className="cls-1" cx="45" cy="15" r="12"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset121BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 62.79 63.4"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M60.29,14.93h-22.19c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h22.19c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M60.29,39.16H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h57.79c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M60.29,63.4H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h57.79c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> <path d="M10.89,21.79c-.64,0-1.28-.24-1.77-.73L.73,12.66c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l6.63,6.63L25.91.73c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54L12.66,21.05c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset122AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M40.5,39c-10.77,0-19.5-8.73-19.5-19.5,0-6.95,3.65-13.04,9.13-16.49-.04,0-.09,0-.13,0C15.09,3,3,15.09,3,30s12.09,27,27,27,27-12.09,27-27c0-.04,0-.09,0-.13-3.45,5.48-9.54,9.13-16.49,9.13Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset122BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 57.52 40.01"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M20.01,40.01c-.64,0-1.28-.24-1.77-.73L.73,21.77c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l15.74,15.74L53.25.73c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54L21.77,39.28c-.49.49-1.13.73-1.77.73Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset123AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="12"/> <line className="cls-1" x1="30" y1="3" x2="30" y2="6"/> <line className="cls-1" x1="49.09" y1="10.91" x2="46.97" y2="13.03"/> <line className="cls-1" x1="57" y1="30" x2="54" y2="30"/> <line className="cls-1" x1="49.09" y1="49.09" x2="46.97" y2="46.97"/> <line className="cls-1" x1="30" y1="57" x2="30" y2="54"/> <line className="cls-1" x1="10.91" y1="49.09" x2="13.03" y2="46.97"/> <line className="cls-1" x1="3" y1="30" x2="6" y2="30"/> <line className="cls-1" x1="10.91" y1="10.91" x2="13.03" y2="13.03"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset123BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.02 74.02"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M67.74,74.02H6.28c-3.46,0-6.28-2.82-6.28-6.28V6.28C0,2.82,2.82,0,6.28,0h61.46c3.46,0,6.28,2.82,6.28,6.28v61.46c0,3.46-2.82,6.28-6.28,6.28ZM6.28,5c-.71,0-1.28.57-1.28,1.28v61.46c0,.71.57,1.28,1.28,1.28h61.46c.71,0,1.28-.57,1.28-1.28V6.28c0-.71-.57-1.28-1.28-1.28H6.28Z"/> <path d="M30.62,52.29c-.64,0-1.28-.24-1.77-.73l-12.78-12.78c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l11.01,11.01,23.8-23.8c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-25.56,25.56c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset124AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <line className="cls-1" x1="30" y1="3" x2="30" y2="15"/> <line className="cls-1" x1="49.09" y1="10.91" x2="40.61" y2="19.39"/> <line className="cls-1" x1="57" y1="30" x2="45" y2="30"/> <line className="cls-1" x1="49.09" y1="49.09" x2="40.61" y2="40.61"/> <line className="cls-1" x1="30" y1="57" x2="30" y2="45"/> <line className="cls-1" x1="10.91" y1="49.09" x2="19.39" y2="40.61"/> <line className="cls-1" x1="3" y1="30" x2="15" y2="30"/> <line className="cls-1" x1="10.91" y1="10.91" x2="19.39" y2="19.39"/> <line className="cls-1" x1="30" y1="3" x2="30" y2="15"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset124BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.04 71.71"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M37.02,39.19c-2,0-4-.45-5.82-1.34L2.66,23.87C1.02,23.06,0,21.42,0,19.6c0-1.83,1.02-3.47,2.66-4.27L31.2,1.34h0c3.64-1.79,7.99-1.79,11.64,0l28.54,13.98c1.64.81,2.66,2.44,2.66,4.27,0,1.83-1.02,3.47-2.66,4.27l-28.54,13.98c-1.82.89-3.82,1.34-5.82,1.34ZM5.31,19.59l28.09,13.77c2.27,1.11,4.97,1.11,7.24,0l28.09-13.77-28.09-13.77c-2.27-1.11-4.97-1.11-7.24,0L5.31,19.59Z"/> <path d="M37.01,71.71c-1.99,0-3.97-.45-5.81-1.35L1.67,55.88c-1.24-.61-1.75-2.11-1.14-3.35.61-1.24,2.1-1.75,3.35-1.14l29.53,14.48c2.29,1.12,4.94,1.12,7.26,0l29.52-14.47c1.24-.61,2.74-.09,3.35,1.14.61,1.24.1,2.74-1.14,3.35l-29.53,14.48c-1.86.9-3.85,1.35-5.84,1.35Z"/> <path d="M37.01,55.46c-1.99,0-3.97-.45-5.81-1.35L1.67,39.63c-1.24-.61-1.75-2.11-1.14-3.35.61-1.24,2.1-1.75,3.35-1.14l29.53,14.48c2.29,1.12,4.94,1.12,7.26,0l29.52-14.47c1.24-.61,2.74-.1,3.35,1.14.61,1.24.1,2.74-1.14,3.35l-29.53,14.48c-1.86.9-3.85,1.35-5.84,1.35Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset125AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <g> <line className="cls-1" x1="39" y1="21" x2="21" y2="39"/> <line className="cls-1" x1="39" y1="39" x2="21" y2="21"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset125BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.97 66.71"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M36.02,47.23c-1.22,0-2.44-.46-3.37-1.39l-8.44-8.44c-.98-.98-.98-2.56,0-3.54s2.56-.98,3.54,0l8.27,8.27,8.27-8.27c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-8.44,8.44c-.93.93-2.15,1.39-3.37,1.39Z"/> <path d="M36.02,47.24c-1.38,0-2.5-1.12-2.5-2.5v-23.47c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v23.47c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> <path d="M35.98,66.71c-3,0-5.81-1.17-7.93-3.29l-4.84-4.84c-1.17-1.17-2.73-1.82-4.39-1.82h-7.6c-6.18,0-11.21-5.03-11.21-11.21V11.21C0,5.03,5.03,0,11.21,0h49.54c6.18,0,11.21,5.03,11.21,11.21v34.34c0,6.18-5.03,11.21-11.21,11.21h-7.6c-1.66,0-3.22.65-4.39,1.82l-4.84,4.84c-2.12,2.12-4.93,3.29-7.93,3.29ZM11.21,5c-3.43,0-6.21,2.79-6.21,6.21v34.34c0,3.43,2.79,6.21,6.21,6.21h7.6c3,0,5.81,1.17,7.93,3.29l4.84,4.84c1.17,1.17,2.73,1.82,4.39,1.82s3.22-.65,4.39-1.82l4.84-4.84c2.12-2.12,4.93-3.29,7.93-3.29h7.6c3.43,0,6.21-2.79,6.21-6.21V11.21c0-3.43-2.79-6.21-6.21-6.21H11.21Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset126AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M56.63,25.5c.25,1.46.37,2.97.37,4.5,0,14.91-12.09,27-27,27S3,44.91,3,30,15.09,3,30,3c5.07,0,9.81,1.4,13.86,3.82"/> <polyline className="cls-1" points="51 15 30 36 18 24"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset126BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.97 66.71"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M35.98,66.71c-2.87,0-5.74-1.09-7.93-3.28l-4.84-4.84c-1.17-1.17-2.73-1.82-4.39-1.82h-7.6c-6.18,0-11.21-5.03-11.21-11.21V11.21C0,5.03,5.03,0,11.21,0h49.54c6.18,0,11.21,5.03,11.21,11.21v34.34c0,6.18-5.03,11.21-11.21,11.21h-7.6c-1.66,0-3.22.65-4.39,1.82l-4.84,4.84c-2.19,2.19-5.06,3.28-7.93,3.28ZM11.21,5c-3.43,0-6.21,2.79-6.21,6.21v34.34c0,3.43,2.79,6.21,6.21,6.21h7.6c3,0,5.81,1.17,7.93,3.28l4.84,4.84c2.42,2.42,6.36,2.42,8.79,0l4.84-4.84c2.12-2.12,4.93-3.28,7.93-3.28h7.6c3.43,0,6.21-2.79,6.21-6.21V11.21c0-3.43-2.79-6.21-6.21-6.21H11.21Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset127AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <polyline className="cls-1" points="15 18 3 30 15 42"/> <line className="cls-1" x1="39" y1="30" x2="3" y2="30"/> </g> <path className="cls-1" d="M21,51c0,3.31,2.69,6,6,6h18c3.31,0,6-2.69,6-6V9c0-3.31-2.69-6-6-6h-18c-3.31,0-6,2.69-6,6"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset127BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.97 66.71"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M34.92,18.98h-13.53c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h13.53c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M50.57,30.88h-29.17c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h29.17c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M50.57,42.79h-29.17c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h29.17c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> <path d="M35.98,66.71c-3,0-5.81-1.17-7.93-3.29l-4.84-4.84c-1.17-1.17-2.73-1.82-4.39-1.82h-7.6c-6.18,0-11.21-5.03-11.21-11.21V11.21C0,5.03,5.03,0,11.21,0h49.54c6.18,0,11.21,5.03,11.21,11.21v34.34c0,6.18-5.03,11.21-11.21,11.21h-7.6c-1.66,0-3.22.65-4.39,1.82l-4.84,4.84c-2.12,2.12-4.93,3.29-7.93,3.29ZM11.21,5c-3.43,0-6.21,2.79-6.21,6.21v34.34c0,3.43,2.79,6.21,6.21,6.21h7.6c3,0,5.81,1.17,7.93,3.29l4.84,4.84c1.17,1.17,2.73,1.82,4.39,1.82s3.22-.65,4.39-1.82l4.84-4.84c2.12-2.12,4.93-3.29,7.93-3.29h7.6c3.43,0,6.21-2.79,6.21-6.21V11.21c0-3.43-2.79-6.21-6.21-6.21H11.21Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset128AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <polyline className="cls-1" points="42 27 30 39 18 27"/> <line className="cls-1" x1="30" y1="3" x2="30" y2="39"/> </g> <path className="cls-1" d="M9,21c-3.31,0-6,2.69-6,6v18c0,3.31,2.69,6,6,6h42c3.31,0,6-2.69,6-6v-18c0-3.31-2.69-6-6-6"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset128BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.97 71.97"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M69.47,71.97H17.03c-9.39,0-17.03-7.64-17.03-17.02V17.02C0,7.64,7.64,0,17.03,0h37.92c9.39,0,17.03,7.64,17.03,17.02v52.44c0,1.38-1.12,2.5-2.5,2.5ZM17.03,5c-6.63,0-12.03,5.39-12.03,12.02v37.92c0,6.63,5.39,12.02,12.03,12.02h49.94V17.02c0-6.63-5.39-12.02-12.03-12.02H17.03Z"/> <g> <path d="M35.09,26.58h-11.37c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.37c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M48.24,38.48h-24.51c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h24.51c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M48.24,50.39h-24.51c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h24.51c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset129AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M45,15v36c0,3.31-2.69,6-6,6H15c-3.31,0-6-2.69-6-6V15"/> <path className="cls-1" d="M18,15v-6c0-3.31,2.69-6,6-6h6c3.31,0,6,2.69,6,6v6"/> <line className="cls-1" x1="3" y1="15" x2="51" y2="15"/> <line className="cls-1" x1="21" y1="30" x2="21" y2="45"/> <line className="cls-1" x1="33" y1="30" x2="33" y2="45"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset129BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.99 70.33"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M67.04,70.33H5.95c-3.28,0-5.95-2.67-5.95-5.95V20.35c0-3.46,2.82-6.28,6.28-6.28h60.43c3.46,0,6.28,2.82,6.28,6.28v44.03c0,3.28-2.67,5.95-5.95,5.95ZM6.28,19.07c-.71,0-1.28.57-1.28,1.28v44.03c0,.52.42.95.95.95h61.1c.52,0,.95-.43.95-.95V20.35c0-.71-.57-1.28-1.28-1.28H6.28Z"/> <path d="M50.57,19.07c-1.38,0-2.5-1.12-2.5-2.5,0-6.38-5.19-11.57-11.57-11.57s-11.57,5.19-11.57,11.57c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5C19.92,7.43,27.36,0,36.5,0s16.57,7.43,16.57,16.57c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M70.49,41.29H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h67.99c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M36.5,47.86c-1.38,0-2.5-1.12-2.5-2.5v-6.57c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v6.57c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset12AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 63.32 59.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path className="cls-1" d="M45,8.76v-2.76c0-2.52-2.91-3.91-4.87-2.34l-10.13,8.1h-15c-6.63,0-12,5.37-12,12v12c0,6.63,5.37,12,12,12h15l10.13,8.1c1.96,1.57,4.87.17,4.87-2.34v-2.76"/> <line className="cls-1" x1="30" y1="11.76" x2="30" y2="35.76"/> </g> <g> <line className="cls-1" x1="60.32" y1="20.76" x2="42.32" y2="38.76"/> <line className="cls-1" x1="60.32" y1="38.76" x2="42.32" y2="20.76"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset12BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66.41 76.7"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M33.21,76.7c-8.43,0-15.29-6.86-15.29-15.29,0-13.19,13.17-23.9,13.73-24.35.91-.73,2.21-.73,3.13,0,.56.45,13.73,11.17,13.73,24.35,0,8.43-6.86,15.29-15.29,15.29ZM33.21,42.36c-3.22,3.05-10.29,10.7-10.29,19.06,0,5.67,4.62,10.29,10.29,10.29s10.29-4.62,10.29-10.29c0-8.36-7.07-16.01-10.29-19.06Z"/> <path d="M33.21,76.69C14.9,76.69,0,61.8,0,43.49c0-7.94,2.83-15.6,7.98-21.57.54-.63,1.36-.94,2.18-.85.82.09,1.54.59,1.93,1.32,1.47,2.8,3.33,5.34,5.53,7.58,2.23-2.56,2.61-5.72,3.08-9.56.74-6.08,1.66-13.64,11.11-19.98.61-.41,1.36-.53,2.06-.33s1.29.69,1.59,1.35c2.74,5.82,7.83,9.54,13.23,13.48,8.3,6.05,17.71,12.92,17.71,28.57,0,18.31-14.9,33.21-33.21,33.21ZM9.63,28.02c-3,4.55-4.63,9.93-4.63,15.47,0,15.55,12.65,28.21,28.21,28.21s28.21-12.65,28.21-28.21c0-13.11-7.6-18.66-15.66-24.53-4.91-3.58-9.97-7.27-13.36-12.73-5.49,4.61-6.09,9.57-6.73,14.78-.62,5.07-1.25,10.31-6.54,14.36-.95.73-2.28.68-3.18-.11-2.42-2.15-4.54-4.57-6.31-7.25Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset130AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="3 24 3 3 24 3"/> <polyline className="cls-1" points="51 30 51 51 30 51"/> <line className="cls-1" x1="3" y1="3" x2="51" y2="51"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset130BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.72 50.74"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M15.38,38.62c-.66,0-1.31-.26-1.77-.73-.47-.47-.73-1.11-.73-1.77s.26-1.3.73-1.77c.58-.58,1.44-.84,2.25-.68.16.03.32.08.47.14.15.07.3.14.43.23.14.09.27.2.38.31.47.47.74,1.11.74,1.77s-.27,1.3-.74,1.77c-.11.12-.24.22-.38.31-.13.09-.28.17-.43.23-.15.06-.31.11-.47.14-.16.04-.32.05-.48.05Z"/> <path d="M66.77,50.74H5.95c-3.28,0-5.95-2.67-5.95-5.95V6.28C0,2.82,2.82,0,6.28,0h60.16c3.46,0,6.28,2.82,6.28,6.28v38.51c0,3.28-2.67,5.95-5.95,5.95ZM6.28,5c-.71,0-1.28.57-1.28,1.28v38.51c0,.52.43.95.95.95h60.82c.52,0,.95-.43.95-.95V6.28c0-.71-.57-1.28-1.28-1.28H6.28Z"/> <path d="M70.22,19.93H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h67.72c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset131AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="51 24 51 3 30 3"/> <polyline className="cls-1" points="3 30 3 51 24 51"/> <line className="cls-1" x1="51" y1="3" x2="3" y2="51"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset131BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 67.74 67.74"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M2.5,67.74c-.66,0-1.3-.26-1.77-.73-.49-.49-.76-1.17-.73-1.87l.37-8.93c.03-.63.29-1.22.73-1.67L53.14,2.5h0c3.33-3.34,8.76-3.34,12.1,0,3.34,3.33,3.34,8.76,0,12.1L13.2,66.64c-.44.44-1.04.7-1.66.73l-8.93.37s-.07,0-.1,0ZM5.33,57.39l-.22,5.24,5.24-.22L61.7,11.06c1.39-1.39,1.39-3.64,0-5.03-1.39-1.38-3.64-1.38-5.03,0L5.33,57.39Z"/> <path d="M57.85,20.95c-.64,0-1.28-.24-1.77-.73l-8.56-8.56c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l8.56,8.56c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset132AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 69.57"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path className="cls-1" d="M49.09,15.7c-10.54-10.54-27.64-10.54-38.18,0-7.24,7.24-9.51,17.56-6.81,26.74"/> <polyline className="cls-1" points="36.4 18.14 49.09 15.7 46.65 3"/> </g> <g> <path className="cls-1" d="M10.91,53.88c10.54,10.54,27.64,10.54,38.18,0,7.19-7.19,9.48-17.44,6.86-26.57"/> <polyline className="cls-1" points="23.6 51.43 10.91 53.88 13.35 66.57"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset132BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 77.03 77.03"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M70.75,77.03H6.28c-3.46,0-6.28-2.82-6.28-6.28V6.28C0,2.82,2.82,0,6.28,0h64.47c3.46,0,6.28,2.82,6.28,6.28v64.47c0,3.46-2.82,6.28-6.28,6.28ZM6.28,5c-.71,0-1.28.57-1.28,1.28v64.47c0,.71.57,1.28,1.28,1.28h64.47c.71,0,1.28-.57,1.28-1.28V6.28c0-.71-.57-1.28-1.28-1.28H6.28Z"/> <path d="M65.81,77.02H11.22C5.04,77.02,0,71.99,0,65.81v-22.36c0-.66.26-1.3.73-1.77l11.48-11.48c3.73-3.73,9.82-3.73,13.58,0l15.13,15.15c.85.85,2.04,1.34,3.26,1.34s2.39-.48,3.26-1.34c3.77-3.73,9.86-3.73,13.59,0l15.26,15.26c.47.47.73,1.1.73,1.77v3.43c0,6.18-5.03,11.21-11.21,11.21ZM5.01,44.49v21.33c0,3.43,2.79,6.21,6.21,6.21h54.59c3.43,0,6.21-2.79,6.21-6.21v-2.4l-14.53-14.53c-1.79-1.79-4.71-1.79-6.52,0-1.8,1.8-4.22,2.8-6.79,2.8s-5.01-1.02-6.79-2.81l-15.12-15.15c-1.8-1.79-4.72-1.79-6.51,0l-10.75,10.75Z"/> <path d="M46.87,33.76c-5.91,0-10.72-4.81-10.72-10.72s4.81-10.72,10.72-10.72,10.72,4.81,10.72,10.72-4.81,10.72-10.72,10.72ZM46.87,17.33c-3.15,0-5.72,2.56-5.72,5.72s2.56,5.72,5.72,5.72,5.72-2.56,5.72-5.72-2.56-5.72-5.72-5.72Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset133AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 64.79"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M49.09,15.7c-10.54-10.54-27.64-10.54-38.18,0C.36,26.24.36,43.33,10.91,53.88s27.64,10.54,38.18,0c7.22-7.22,9.5-17.52,6.83-26.67"/> <polyline className="cls-1" points="36.4 18.14 49.09 15.7 46.65 3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset133BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 69.64 40.89"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M50.87,40.89c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l15.09-15.09c.6-.6.6-1.58,0-2.18l-15.09-15.09c-.98-.98-.98-2.56,0-3.54s2.56-.98,3.54,0l15.09,15.09c2.55,2.55,2.55,6.7,0,9.25l-15.09,15.09c-.49.49-1.13.73-1.77.73Z"/> <path d="M67.14,22.94H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h64.64c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset134AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 64.79"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M10.91,15.7c10.54-10.54,27.64-10.54,38.18,0s10.54,27.64,0,38.18c-10.54,10.54-27.64,10.54-38.18,0-7.22-7.22-9.5-17.52-6.83-26.67"/> <polyline className="cls-1" points="23.6 18.14 10.91 15.7 13.35 3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset134BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 37.45 40.88"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M18.68,40.88c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l15.09-15.09c.6-.6.6-1.58,0-2.18l-15.09-15.09c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l15.09,15.09c2.55,2.55,2.55,6.7,0,9.25l-15.09,15.09c-.49.49-1.13.73-1.77.73Z"/> <path d="M34.95,22.94H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h32.45c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset135AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 64.79 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="34.79 15 34.79 30 43.79 30"/> <g> <path className="cls-1" d="M15.7,49.09c-10.54-10.54-10.54-27.64,0-38.18C26.24.36,43.33.36,53.88,10.91s10.54,27.64,0,38.18c-7.22,7.22-17.52,9.5-26.67,6.83"/> <polyline className="cls-1" points="18.14 36.4 15.7 49.09 3 46.65"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset135BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 37.45 40.89"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M18.77,40.89c-.64,0-1.28-.24-1.77-.73L1.92,25.07c-2.55-2.55-2.55-6.7,0-9.25L17,.73c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-15.09,15.09c-.6.6-.6,1.58,0,2.18l15.09,15.09c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> <path d="M34.95,22.94H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h32.45c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset136AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <polyline className="cls-1" points="34.5 42 22.5 30 34.5 18"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset136BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 78.04 78.04"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M57.42,78.04c-2.24,0-4.42-.88-6.05-2.51l-11.8-11.8c-.65-.65-1.54-.97-2.45-.88l-17.75,1.71c-1.61.15-3.19-.41-4.33-1.55-1.14-1.14-1.71-2.72-1.55-4.33l1.71-17.75c.09-.91-.23-1.8-.88-2.45L2.51,26.68h0C.27,24.44-.55,21.16.37,18.13c.92-3.03,3.42-5.29,6.53-5.91L67.82.16c2.81-.56,5.69.32,7.72,2.34s2.9,4.91,2.34,7.72l-12.06,60.92c-.62,3.11-2.88,5.61-5.91,6.53-.82.25-1.66.37-2.5.37ZM37.42,57.84c2.13,0,4.17.84,5.69,2.36l11.8,11.8c.95.95,2.27,1.28,3.55.89,1.28-.39,2.2-1.4,2.46-2.71l12.06-60.92c.23-1.19-.12-2.36-.97-3.21-.85-.85-2.02-1.21-3.21-.98L7.87,17.13c-1.31.26-2.33,1.18-2.72,2.46s-.06,2.61.89,3.55l11.8,11.8c1.71,1.71,2.55,4.06,2.32,6.47l-1.71,17.75c-.01.15.05.26.11.32.06.06.17.12.32.11l17.75-1.71c.26-.03.52-.04.78-.04Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset137AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <polyline className="cls-1" points="25.5 18 37.5 30 25.5 42"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset137BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 64.98 69.43"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M5.35,69.43c-.69,0-1.38-.13-2.05-.41-2-.83-3.3-2.77-3.3-4.94V11.21C0,5.03,5.03,0,11.21,0h42.55c6.18,0,11.21,5.03,11.21,11.21v52.87c0,2.17-1.29,4.11-3.3,4.94-2,.83-4.29.38-5.82-1.16l-23.13-23.13c-.17-.17-.32-.17-.49,0l-23.13,23.13c-1.02,1.02-2.38,1.57-3.77,1.57ZM11.21,5c-3.43,0-6.21,2.79-6.21,6.21v52.87c0,.07,0,.23.21.32.21.09.32-.02.37-.07l23.13-23.13c1.01-1.01,2.35-1.57,3.78-1.57s2.77.56,3.78,1.57l23.13,23.13c.05.05.16.16.37.07.21-.09.21-.25.21-.32V11.21c0-3.43-2.79-6.21-6.21-6.21H11.21Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset138AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 63"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M45,24c0,18-21,36-21,36,0,0-21-18-21-36C3,12.4,12.4,3,24,3s21,9.4,21,21Z"/> <circle className="cls-1" cx="24" cy="24" r="9"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset138BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 52.83 73.29"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M37.9,73.29H14.92c-8.23,0-14.92-6.69-14.92-14.92V14.94C0,6.7,6.7,0,14.94,0h16.34c1.75,0,3.42.38,4.95,1.13,1.15.51,2.27,1.29,3.26,2.27l9.95,9.93c.96.96,1.74,2.08,2.31,3.32.71,1.5,1.09,3.2,1.09,4.89v36.8c0,8.24-6.7,14.94-14.94,14.94ZM14.94,5c-5.48,0-9.94,4.46-9.94,9.94v43.43c0,5.47,4.45,9.92,9.92,9.92h22.98c5.48,0,9.94-4.46,9.94-9.94V21.55c0-.96-.21-1.92-.62-2.77-.33-.72-.78-1.37-1.32-1.91l-9.95-9.93c-.55-.56-1.17-.99-1.84-1.28-.93-.45-1.86-.66-2.84-.66H14.94Z"/> <path d="M49.47,20.21h-14.34c-1.38,0-2.5-1.12-2.5-2.5V3.38c0-.85.43-1.64,1.14-2.1.71-.46,1.61-.53,2.38-.19,1.22.55,2.35,1.32,3.33,2.31l9.95,9.93c.96.96,1.74,2.08,2.31,3.32.36.77.3,1.68-.16,2.4-.46.72-1.25,1.15-2.11,1.15ZM37.63,15.21h6.59l-6.59-6.58v6.58Z"/> <path d="M26.42,32.66h-10.28c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h10.28c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M38.7,45.4h-22.56c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h22.56c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M38.7,58.53c-2.14,0-3.28-.24-4.28-.45-.87-.19-1.62-.35-3.24-.35s-2.37.16-3.24.35c-1,.21-2.14.45-4.28.45s-3.28-.24-4.28-.46c-.87-.18-1.62-.34-3.24-.34-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5c2.14,0,3.28.24,4.28.46.87.18,1.62.34,3.24.34s2.37-.16,3.24-.34c1-.21,2.14-.46,4.28-.46s3.28.24,4.28.46c.87.18,1.62.34,3.24.34,1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset139AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66 66"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="33" cy="24" r="9"/> <path className="cls-1" d="M15,57v-3c0-6.63,5.37-12,12-12h12c6.63,0,12,5.37,12,12v3"/> </g> <circle className="cls-1" cx="33" cy="33" r="30"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset139BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 58.84 77.73"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M47.63,77.73H11.21c-6.18,0-11.21-5.02-11.21-11.19V11.21C0,5.03,5.03,0,11.21,0h15.04c2.54,0,4.96.55,7.18,1.64,1.7.75,3.32,1.88,4.75,3.31l15.7,15.67c1.4,1.4,2.53,3.02,3.36,4.83,1.04,2.18,1.59,4.64,1.59,7.11v33.96c0,6.18-5.03,11.21-11.21,11.21ZM11.21,5c-3.43,0-6.21,2.79-6.21,6.21v55.33c0,3.41,2.79,6.19,6.21,6.19h36.41c3.43,0,6.21-2.79,6.21-6.21v-33.96c0-1.73-.39-3.45-1.12-4.99-.59-1.27-1.4-2.44-2.37-3.41l-15.7-15.67c-1-1-2.12-1.78-3.33-2.32-1.62-.79-3.29-1.17-5.07-1.17h-15.04Z"/> <path d="M54.98,29h-22.64c-1.38,0-2.5-1.12-2.5-2.5V3.88c0-.85.43-1.64,1.14-2.1s1.61-.53,2.38-.19c1.77.79,3.39,1.92,4.83,3.35l15.7,15.68c1.4,1.4,2.53,3.02,3.36,4.82.36.77.3,1.68-.16,2.4-.46.72-1.25,1.15-2.11,1.15ZM34.84,24h15.35l-15.35-15.32v15.32Z"/> <path d="M34.42,43.97h-16.23c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h16.23c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M40.65,58.95h-22.46c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h22.46c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset13AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 59.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M30,11.76h-15c-6.63,0-12,5.37-12,12v12c0,6.63,5.37,12,12,12h15l10.13,8.1c1.96,1.57,4.87.17,4.87-2.34V6.01c0-2.52-2.91-3.91-4.87-2.34l-10.13,8.1Z"/> <line className="cls-1" x1="30" y1="11.76" x2="30" y2="35.76"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset13BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 78.75 78.75"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M27.08,78.75H2.5c-1.38,0-2.5-1.12-2.5-2.5v-24.58c0-1.38,1.12-2.5,2.5-2.5h24.58c1.38,0,2.5,1.12,2.5,2.5v24.58c0,1.38-1.12,2.5-2.5,2.5ZM5,73.75h19.58v-19.58H5v19.58Z"/> <path d="M51.66,78.75h-24.58c-1.38,0-2.5-1.12-2.5-2.5v-24.58c0-1.38,1.12-2.5,2.5-2.5h24.58c1.38,0,2.5,1.12,2.5,2.5v24.58c0,1.38-1.12,2.5-2.5,2.5ZM29.58,73.75h19.58v-19.58h-19.58v19.58Z"/> <path d="M76.25,78.75h-24.58c-1.38,0-2.5-1.12-2.5-2.5v-24.58c0-1.38,1.12-2.5,2.5-2.5h24.58c1.38,0,2.5,1.12,2.5,2.5v24.58c0,1.38-1.12,2.5-2.5,2.5ZM54.16,73.75h19.58v-19.58h-19.58v19.58Z"/> <path d="M76.25,54.16h-24.58c-1.38,0-2.5-1.12-2.5-2.5v-24.58c0-1.38,1.12-2.5,2.5-2.5h24.58c1.38,0,2.5,1.12,2.5,2.5v24.58c0,1.38-1.12,2.5-2.5,2.5ZM54.16,49.16h19.58v-19.58h-19.58v19.58Z"/> <path d="M76.25,29.58h-24.58c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5h24.58c1.38,0,2.5,1.12,2.5,2.5v24.58c0,1.38-1.12,2.5-2.5,2.5ZM54.16,24.58h19.58V5h-19.58v19.58Z"/> <path d="M51.66,54.16h-24.58c-1.38,0-2.5-1.12-2.5-2.5v-24.58c0-1.38,1.12-2.5,2.5-2.5h24.58c1.38,0,2.5,1.12,2.5,2.5v24.58c0,1.38-1.12,2.5-2.5,2.5ZM29.58,49.16h19.58v-19.58h-19.58v19.58Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset140AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 69"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M21,57h-12c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h12"/> </g> <g> <rect className="cls-1" x="33" y="48" width="24" height="18" rx="3" ry="3"/> <path className="cls-1" d="M39,48v-6c0-3.31,2.69-6,6-6h0c3.31,0,6,2.69,6,6v6"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset140BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 49.92 49.92"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M2.5,49.92c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54L45.65.73c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54L4.27,49.19c-.49.49-1.13.73-1.77.73Z"/> <path d="M47.42,49.92c-.64,0-1.28-.24-1.77-.73L.73,4.27C-.24,3.29-.24,1.71.73.73,1.71-.24,3.29-.24,4.27.73l44.92,44.92c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset141AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 69"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M24,57h-15c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h9"/> </g> <path className="cls-1" d="M47.49,60.51l-5.49,5.49-5.49-5.49c-2.25-2.25-3.51-5.3-3.51-8.49v-7.03l9-6,9,6v7.03c0,3.18-1.26,6.23-3.51,8.49Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset141BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 68.54 74.57"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M48.98,74.57H7.06c-2.14,0-4.14-.96-5.49-2.63-1.36-1.7-1.88-3.9-1.4-6.04,2.86-12.95,14.57-22.35,27.85-22.35h0c13.28,0,24.99,9.4,27.85,22.35.47,2.14-.04,4.34-1.4,6.04-1.34,1.67-3.34,2.63-5.49,2.63ZM28.02,48.55c-10.95,0-20.61,7.75-22.97,18.43-.14.65,0,1.32.42,1.83.23.28.74.76,1.59.76h41.92c.85,0,1.36-.48,1.59-.76.41-.51.56-1.18.42-1.83-2.36-10.68-12.01-18.43-22.97-18.43Z"/> <path d="M28.02,36.77c-10.14,0-18.39-8.25-18.39-18.39S17.88,0,28.02,0s18.39,8.25,18.39,18.39-8.25,18.39-18.39,18.39ZM28.02,5c-7.38,0-13.39,6-13.39,13.39s6,13.39,13.39,13.39,13.39-6,13.39-13.39-6-13.39-13.39-13.39Z"/> <path d="M66.04,41.02h-17.43c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h17.43c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M57.33,49.73c-1.38,0-2.5-1.12-2.5-2.5v-17.42c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v17.42c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset142AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M39,57H9c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c6.63,0,12,5.37,12,12h0c0,3.31-2.69,6-6,6Z"/> </g> <g> <path className="cls-1" d="M42,3c6.63,0,12,5.37,12,12s-5.37,12-12,12"/> <path className="cls-1" d="M51,39c6.63,0,12,5.37,12,12h0c0,3.31-2.69,6-6,6h-3"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset142BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 70.23 70.51"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M50.81,55.72H4.9c-2.7,0-4.9-2.2-4.9-4.9V4.9C0,2.2,2.2,0,4.9,0h45.91c2.7,0,4.9,2.2,4.9,4.9v45.91c0,2.7-2.2,4.9-4.9,4.9ZM5,50.72h45.72V5H5v45.72Z"/> <path d="M62.19,70.51H17.02c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h45.18c1.68,0,3.04-1.36,3.04-3.04V17.29c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v45.18c0,4.43-3.61,8.04-8.04,8.04Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset143AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <line className="cls-1" x1="45" y1="36.12" x2="45" y2="48"/> <line className="cls-1" x1="45" y1="57" x2="45" y2="57"/> </g> <g> <path className="cls-1" d="M34.48,49.37c-.66.56-1.34,1.09-2.05,1.6l-8.44,6.03-8.44-6.03c-7.88-5.63-12.56-14.72-12.56-24.41v-14.56L24,3l21,9v12"/> <line className="cls-1" x1="24" y1="3" x2="24" y2="42"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset143BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.36 74.36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M14.59,74.36H4.9c-2.7,0-4.9-2.2-4.9-4.9v-21.06c0-2.7,2.2-4.9,4.9-4.9h9.69c2.7,0,4.9,2.2,4.9,4.9v21.06c0,2.7-2.2,4.9-4.9,4.9ZM5,69.36h9.5v-20.87H5v20.87Z"/> <path d="M69.45,74.36H32c-2.7,0-4.9-2.2-4.9-4.9v-21.06c0-2.7,2.2-4.9,4.9-4.9h37.45c2.7,0,4.9,2.2,4.9,4.9v21.06c0,2.7-2.2,4.9-4.9,4.9ZM32.09,69.36h37.26v-20.87h-37.26v20.87Z"/> <path d="M69.45,30.87h-9.69c-2.7,0-4.9-2.2-4.9-4.9V4.9c0-2.7,2.2-4.9,4.9-4.9h9.69c2.7,0,4.9,2.2,4.9,4.9v21.06c0,2.7-2.2,4.9-4.9,4.9ZM59.86,25.87h9.5V5h-9.5v20.87Z"/> <path d="M42.36,30.87H4.9c-2.7,0-4.9-2.2-4.9-4.9V4.9C0,2.2,2.2,0,4.9,0h37.46c2.7,0,4.9,2.2,4.9,4.9v21.06c0,2.7-2.2,4.9-4.9,4.9ZM5,25.87h37.26V5H5v20.87Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset144AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 56.25 56.25"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M32.4,38.77c-6.15-3.62-11.29-8.77-14.92-14.92-.68-1.16-.44-2.64.51-3.59l4.29-4.29c.97-.97,1.16-2.48.45-3.66l-3.84-6.4c-2.01-3.35-6.63-3.92-9.39-1.16l-4.72,4.72c-1.17,1.17-1.86,2.79-1.76,4.45,1.29,21.12,18.19,38.02,39.32,39.32,1.66.1,3.27-.59,4.45-1.76l4.72-4.72c2.76-2.76,2.19-7.38-1.16-9.39l-6.4-3.84c-1.18-.71-2.69-.52-3.66.45l-4.29,4.29c-.95.95-2.43,1.19-3.59.51Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset144BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.36 74.36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M25.97,30.87H4.9c-2.7,0-4.9-2.2-4.9-4.9V4.9C0,2.2,2.2,0,4.9,0h21.06c2.7,0,4.9,2.2,4.9,4.9v21.06c0,2.7-2.2,4.9-4.9,4.9ZM5,25.87h20.87V5H5v20.87Z"/> <path d="M25.97,74.36H4.9c-2.7,0-4.9-2.2-4.9-4.9v-21.06c0-2.7,2.2-4.9,4.9-4.9h21.06c2.7,0,4.9,2.2,4.9,4.9v21.06c0,2.7-2.2,4.9-4.9,4.9ZM5,69.36h20.87v-20.87H5v20.87Z"/> <path d="M69.45,74.36h-21.06c-2.7,0-4.9-2.2-4.9-4.9v-21.06c0-2.7,2.2-4.9,4.9-4.9h21.06c2.7,0,4.9,2.2,4.9,4.9v21.06c0,2.7-2.2,4.9-4.9,4.9ZM48.49,69.36h20.87v-20.87h-20.87v20.87Z"/> <g> <path d="M71.86,17.94h-25.87c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h25.87c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M58.92,30.87c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v25.87c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset145AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60.97 61.23"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M26.74,3.32C15.8,4.98,6.83,13.51,4.56,24.34c-1.27,6.08-.42,11.86,1.86,16.84l-3.33,13.31c-.55,2.2,1.44,4.19,3.64,3.64l13.49-3.37c3.78,1.64,7.99,2.46,12.43,2.19,13.92-.86,25.17-12.72,25.32-26.67.17-16.43-14.34-29.52-31.23-26.96Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset145BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 80.95 82.99"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M59.22,51.49h-25.7c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h25.7c4.94,0,8.96-4.02,8.96-8.96,0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,7.7-6.26,13.96-13.96,13.96Z"/> <path d="M49.69,20.27h-31.92c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h31.92c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M67.48,65.87h-35.38c-9.28,0-16.83-7.55-16.83-16.83v-31.27c0-7.04-5.73-12.77-12.77-12.77-1.38,0-2.5-1.12-2.5-2.5S1.12,0,2.5,0c9.8,0,17.77,7.97,17.77,17.77v31.27c0,6.52,5.31,11.83,11.83,11.83h35.38c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M29.14,82.99c-3.91,0-7.09-3.18-7.09-7.09s3.18-7.09,7.09-7.09,7.09,3.18,7.09,7.09-3.18,7.09-7.09,7.09ZM29.14,73.81c-1.15,0-2.09.94-2.09,2.09s.94,2.09,2.09,2.09,2.09-.94,2.09-2.09-.94-2.09-2.09-2.09Z"/> <path d="M58.99,82.99c-3.91,0-7.09-3.18-7.09-7.09s3.18-7.09,7.09-7.09,7.09,3.18,7.09,7.09-3.18,7.09-7.09,7.09ZM58.99,73.81c-1.15,0-2.09.94-2.09,2.09s.94,2.09,2.09,2.09,2.09-.94,2.09-2.09-.94-2.09-2.09-2.09Z"/> <g> <path d="M78.45,20.27h-15.54c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h15.54c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M70.68,28.04c-1.38,0-2.5-1.12-2.5-2.5v-15.54c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v15.54c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset146AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M45,48h6c3.31,0,6-2.69,6-6h0c0-3.31-2.69-6-6-6h0c-1.66,0-3-1.34-3-3v-12c0-9.94-8.06-18-18-18h0c-9.94,0-18,8.06-18,18v12c0,1.66-1.34,3-3,3h0c-3.31,0-6,2.69-6,6h0c0,3.31,2.69,6,6,6h6"/> <g> <line className="cls-1" x1="39" y1="39" x2="21" y2="57"/> <line className="cls-1" x1="39" y1="57" x2="21" y2="39"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset146BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 58.84 77.73"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M47.63,77.73H11.21c-6.18,0-11.21-5.02-11.21-11.19V11.21C0,5.03,5.03,0,11.21,0h15.04c2.54,0,4.96.55,7.18,1.64,1.7.75,3.32,1.88,4.75,3.31l15.7,15.67c1.4,1.4,2.53,3.02,3.36,4.82,1.04,2.18,1.59,4.65,1.59,7.11v33.96c0,6.18-5.03,11.21-11.21,11.21ZM11.21,5c-3.43,0-6.21,2.79-6.21,6.21v55.33c0,3.41,2.79,6.19,6.21,6.19h36.41c3.43,0,6.21-2.79,6.21-6.21v-33.96c0-1.73-.39-3.45-1.12-4.99-.59-1.27-1.4-2.44-2.37-3.41l-15.7-15.67c-1-1-2.12-1.78-3.33-2.32-1.62-.79-3.29-1.17-5.07-1.17h-15.04Z"/> <path d="M54.98,29h-22.64c-1.38,0-2.5-1.12-2.5-2.5V3.88c0-.85.43-1.64,1.14-2.1s1.61-.53,2.38-.19c1.77.79,3.39,1.92,4.83,3.35l15.7,15.68c1.4,1.4,2.53,3.02,3.36,4.82.36.77.3,1.68-.16,2.4-.46.72-1.25,1.15-2.11,1.15ZM34.84,24h15.35l-15.35-15.32v15.32Z"/> <path d="M36.55,49.8h-16.87c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h16.87c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M28.11,58.24c-1.38,0-2.5-1.12-2.5-2.5v-16.87c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v16.87c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset147AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 62.85 59.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path className="cls-1" d="M30,11.76h-15c-6.63,0-12,5.37-12,12v12c0,6.63,5.37,12,12,12h15l10.13,8.1c1.96,1.57,4.87.17,4.87-2.34V6.01c0-2.52-2.91-3.91-4.87-2.34l-10.13,8.1Z"/> <line className="cls-1" x1="30" y1="11.76" x2="30" y2="35.76"/> </g> <path className="cls-1" d="M55.5,19.26c5.8,5.8,5.8,15.2,0,21"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset147BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.55 71.56"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M35.78,71.56C16.05,71.56,0,55.51,0,35.78S16.05,0,35.78,0s35.78,16.05,35.78,35.78-16.05,35.78-35.78,35.78ZM35.78,5c-16.97,0-30.78,13.81-30.78,30.78s13.81,30.78,30.78,30.78,30.78-13.81,30.78-30.78S52.75,5,35.78,5Z"/> <path d="M35.78,49.78c-1.38,0-2.5-1.12-2.5-2.5v-23.01c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v23.01c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M47.28,38.28h-23.01c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h23.01c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset148AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 63.32 59.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path className="cls-1" d="M45,8.76v-2.76c0-2.52-2.91-3.91-4.87-2.34l-10.13,8.1h-15c-6.63,0-12,5.37-12,12v12c0,6.63,5.37,12,12,12h15l10.13,8.1c1.96,1.57,4.87.17,4.87-2.34v-2.76"/> <line className="cls-1" x1="30" y1="11.76" x2="30" y2="35.76"/> </g> <g> <line className="cls-1" x1="60.32" y1="20.76" x2="42.32" y2="38.76"/> <line className="cls-1" x1="60.32" y1="38.76" x2="42.32" y2="20.76"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset148BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.56 71.55"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M52.61,46.02c2.44,1.74,2.06,5.47-.67,6.7-6.33,2.85-14.02,1.67-19.21-3.54l-10.36-10.36c-5.19-5.19-6.37-12.88-3.53-19.2,1.23-2.74,4.96-3.12,6.7-.68l2.89,4.05c.86,1.21.91,2.77.24,4.1-1.35,2.7-.9,6.07,1.35,8.32l6.12,6.12c2.25,2.25,5.62,2.7,8.32,1.35,1.33-.66,2.89-.62,4.1.24l4.05,2.89Z"/> <path d="M35.78,71.55C16.05,71.55,0,55.5,0,35.78S16.05,0,35.78,0s35.78,16.05,35.78,35.78-16.05,35.78-35.78,35.78ZM35.78,5c-16.97,0-30.78,13.81-30.78,30.78s13.81,30.78,30.78,30.78,30.78-13.81,30.78-30.78S52.75,5,35.78,5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset149AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 59.53"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M30,11.76h-15c-6.63,0-12,5.37-12,12v12c0,6.63,5.37,12,12,12h15l10.13,8.1c1.96,1.57,4.87.17,4.87-2.34V6.01c0-2.52-2.91-3.91-4.87-2.34l-10.13,8.1Z"/> <line className="cls-1" x1="30" y1="11.76" x2="30" y2="35.76"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset149BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.56 71.56"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M35.78,71.56C16.05,71.56,0,55.51,0,35.78S16.05,0,35.78,0s35.78,16.05,35.78,35.78-16.05,35.78-35.78,35.78ZM35.78,5c-16.97,0-30.78,13.81-30.78,30.78s13.81,30.78,30.78,30.78,30.78-13.81,30.78-30.78S52.75,5,35.78,5Z"/> <g> <path d="M35.78,42.45c-1.38,0-2.5-1.12-2.5-2.5v-18.76c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v18.76c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M35.78,52.87c-.66,0-1.31-.27-1.77-.74-.47-.46-.73-1.11-.73-1.76s.26-1.31.73-1.77c.11-.12.24-.22.38-.31.13-.09.28-.17.43-.23.15-.06.31-.11.47-.14.81-.17,1.67.1,2.25.68.47.46.74,1.11.74,1.77s-.27,1.3-.74,1.76c-.46.47-1.11.74-1.76.74Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset14AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66 48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M21,24c0-6.63,5.37-12,12-12s12,5.37,12,12-5.37,12-12,12-12-5.37-12-12Z"/> <path className="cls-1" d="M63,24c-5.99,12.46-15.81,21-30.01,21S8.99,36.46,3,24C8.99,11.54,18.81,3,33.01,3s24,8.54,29.99,21Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset14BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 77.08 66.5"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M74.58,66.5c-1.38,0-2.5-1.12-2.5-2.5,0-11.01-8.95-19.98-19.95-19.98h-20.34v9.96c0,1-.6,1.91-1.52,2.3-.92.39-1.99.2-2.71-.5L.77,30.04c-.49-.47-.77-1.12-.77-1.8s.28-1.33.77-1.8L27.55.7c.72-.69,1.79-.89,2.71-.5.92.39,1.52,1.3,1.52,2.3v9.96h15.27c16.56,0,30.02,13.47,30.02,30.02v21.51c0,1.38-1.12,2.5-2.5,2.5ZM29.29,39.02h22.84c8.15,0,15.4,3.93,19.95,9.99v-6.53c0-13.8-11.23-25.02-25.02-25.02h-17.77c-1.38,0-2.5-1.12-2.5-2.5v-6.59L6.11,28.24l20.68,19.87v-6.59c0-1.38,1.12-2.5,2.5-2.5Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset150AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 63"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M48,33v-12c0-9.94-8.06-18-18-18h0c-9.94,0-18,8.06-18,18v12c0,1.66-1.34,3-3,3h0c-3.31,0-6,2.69-6,6h0c0,3.31,2.69,6,6,6h42c3.31,0,6-2.69,6-6h0c0-3.31-2.69-6-6-6h0c-1.66,0-3-1.34-3-3Z"/> <path className="cls-1" d="M21,48v3c0,4.97,4.03,9,9,9s9-4.03,9-9v-3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset150BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 64.16 53.48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M61.66,5H15.24c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h46.42c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M2.5,5c-.16,0-.33-.02-.49-.05-.16-.03-.32-.08-.47-.14s-.29-.14-.43-.23c-.13-.09-.26-.2-.38-.31-.46-.47-.73-1.11-.73-1.77S.27,1.2.73.73c.12-.11.25-.22.38-.31.14-.09.28-.17.43-.23s.31-.11.47-.14c.81-.16,1.68.1,2.26.68.46.47.73,1.11.73,1.77s-.27,1.3-.73,1.77c-.47.46-1.11.73-1.77.73Z"/> </g> <g> <path d="M61.66,29.24H15.24c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h46.42c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M2.5,29.24c-.66,0-1.3-.27-1.77-.73-.46-.47-.73-1.11-.73-1.77,0-.16.02-.33.05-.49.03-.16.08-.32.14-.47.07-.15.14-.29.23-.43.09-.14.2-.26.31-.38.93-.93,2.61-.93,3.54,0,.11.12.22.24.31.38.09.14.17.28.23.43.06.15.11.31.14.47.03.16.05.33.05.49,0,.66-.27,1.3-.73,1.77-.47.46-1.11.73-1.77.73Z"/> </g> <g> <path d="M61.66,53.48H15.24c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h46.42c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M2.5,53.48c-.66,0-1.3-.27-1.77-.73-.46-.47-.73-1.11-.73-1.77,0-.16.02-.33.05-.49.03-.16.08-.32.14-.47s.14-.29.23-.43c.09-.14.2-.26.31-.38.12-.11.24-.22.38-.31.14-.09.28-.17.43-.23s.31-.11.47-.14c.82-.16,1.68.1,2.26.68.11.12.22.24.31.38.09.14.17.28.23.43s.11.31.14.47c.03.16.05.33.05.49,0,.66-.27,1.3-.73,1.77-.47.46-1.11.73-1.77.73Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset151AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="3" y="9" width="54" height="48" rx="6" ry="6"/> <line className="cls-1" x1="3" y1="24" x2="57" y2="24"/> <line className="cls-1" x1="18" y1="12" x2="18" y2="3"/> <line className="cls-1" x1="42" y1="12" x2="42" y2="3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset151BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.56 71.56"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M35.78,71.56C16.05,71.56,0,55.51,0,35.78S16.05,0,35.78,0s35.78,16.05,35.78,35.78-16.05,35.78-35.78,35.78ZM35.78,5c-16.97,0-30.78,13.81-30.78,30.78s13.81,30.78,30.78,30.78,30.78-13.81,30.78-30.78S52.75,5,35.78,5Z"/> <g> <path d="M35.78,52.86c-1.38,0-2.5-1.12-2.5-2.5v-18.76c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v18.76c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M35.78,23.7c-.66,0-1.3-.27-1.77-.74-.11-.11-.22-.24-.31-.38-.09-.13-.17-.28-.23-.43-.06-.15-.11-.31-.14-.46-.04-.17-.05-.33-.05-.49,0-.17,0-.33.05-.49.03-.16.08-.32.14-.47.06-.15.14-.3.23-.43.09-.14.2-.27.31-.38.12-.12.24-.22.38-.31.14-.09.28-.17.43-.23.15-.07.31-.11.47-.15.81-.16,1.68.11,2.26.69.11.11.22.24.31.38.09.13.16.28.23.43.06.15.11.31.14.47.03.16.05.32.05.49,0,.16-.02.32-.05.49-.03.15-.08.31-.14.46-.07.15-.14.3-.23.43-.09.14-.2.27-.31.38-.12.12-.25.22-.38.31-.14.09-.28.17-.44.23-.15.07-.3.12-.46.15-.17.03-.33.05-.49.05Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset152AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="15" y="3" width="18" height="30" rx="6" ry="6"/> <path className="cls-1" d="M45,24v3c0,9.94-8.06,18-18,18h-6c-9.94,0-18-8.06-18-18v-3"/> <line className="cls-1" x1="39" y1="57" x2="9" y2="57"/> <line className="cls-1" x1="24" y1="45" x2="24" y2="57"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset152BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 61.42 72.1"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M58.92,17.6H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h56.42c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M47.51,72.1H13.91c-3.44,0-6.24-2.8-6.24-6.24V15.1c0-1.38,1.12-2.5,2.5-2.5h41.08c1.38,0,2.5,1.12,2.5,2.5v50.76c0,3.44-2.8,6.24-6.24,6.24ZM12.67,17.6v48.26c0,.69.56,1.24,1.24,1.24h33.6c.69,0,1.24-.56,1.24-1.24V17.6H12.67Z"/> <path d="M44.68,17.6h-27.94c-1.38,0-2.5-1.12-2.5-2.5v-7.13c0-4.39,3.57-7.97,7.97-7.97h17.01c4.39,0,7.97,3.57,7.97,7.97v7.13c0,1.38-1.12,2.5-2.5,2.5ZM19.24,12.6h22.94v-4.63c0-1.64-1.33-2.97-2.97-2.97h-17.01c-1.64,0-2.97,1.33-2.97,2.97v4.63Z"/> <path d="M37.56,52.9c-1.38,0-2.5-1.12-2.5-2.5v-16.09c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v16.09c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M23.86,52.9c-1.38,0-2.5-1.12-2.5-2.5v-16.09c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v16.09c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset153AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="57 39 57 57 3 57 3 3 21 3"/> <g> <polyline className="cls-1" points="39 3 57 3 57 21"/> <line className="cls-1" x1="57" y1="3" x2="36" y2="24"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset153BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 65.09 62.54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M16.49,62.54c-1.36,0-2.7-.42-3.85-1.26-2.04-1.48-3.04-3.94-2.61-6.42l2.34-13.66c.09-.51-.08-1.03-.45-1.39L1.99,30.14c-1.8-1.76-2.44-4.34-1.66-6.73.78-2.4,2.81-4.11,5.3-4.47l13.71-1.99c.51-.07.95-.4,1.18-.86l6.13-12.42c1.12-2.26,3.37-3.66,5.89-3.66s4.77,1.4,5.89,3.66h0l6.13,12.42c.23.46.67.78,1.18.86l13.71,1.99c2.49.36,4.52,2.08,5.3,4.47.78,2.4.14,4.97-1.66,6.73l-9.92,9.67c-.37.36-.54.88-.45,1.39l2.34,13.65c.43,2.48-.58,4.94-2.61,6.42-2.04,1.48-4.69,1.67-6.92.5l-12.26-6.45c-.46-.24-1-.24-1.46,0l-12.26,6.45c-.97.51-2.02.76-3.06.76ZM32.54,5c-.29,0-1.02.08-1.41.87l-6.13,12.42c-.96,1.94-2.81,3.28-4.95,3.59l-13.71,1.99c-.87.13-1.17.79-1.27,1.07-.09.28-.23.99.4,1.61l9.92,9.67c1.55,1.51,2.25,3.68,1.89,5.81l-2.34,13.66c-.15.87.39,1.36.62,1.53.24.17.87.53,1.65.12l12.26-6.45c1.91-1.01,4.2-1.01,6.11,0l12.26,6.45c.78.41,1.42.05,1.65-.12.24-.17.77-.67.62-1.53l-2.34-13.66c-.36-2.13.34-4.3,1.89-5.81l9.92-9.67c.63-.61.49-1.33.4-1.61-.09-.28-.4-.94-1.27-1.07l-13.71-1.99c-2.14-.31-3.99-1.65-4.95-3.59l-6.13-12.43c-.39-.79-1.11-.87-1.41-.87Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset154AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <rect className="cls-1" x="3" y="3" width="48" height="48" rx="6" ry="6"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset154BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 62.42 69.29"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M30.78,69.29c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l27.03-27.03c.89-.89,1.39-2.08,1.39-3.35s-.49-2.46-1.39-3.35L29.01,4.27c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l27.03,27.03c1.84,1.84,2.85,4.28,2.85,6.88s-1.01,5.05-2.85,6.88l-27.03,27.03c-.49.49-1.13.73-1.77.73Z"/> <path d="M2.5,69.29c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l27.03-27.03c.89-.89,1.39-2.08,1.39-3.35s-.49-2.46-1.39-3.35L.73,4.27C-.24,3.29-.24,1.71.73.73,1.71-.24,3.29-.24,4.27.73l27.03,27.03c3.8,3.8,3.8,9.97,0,13.77l-27.03,27.03c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset155AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="3" y="3" width="18" height="48" rx="3" ry="3"/> <rect className="cls-1" x="33" y="3" width="18" height="48" rx="3" ry="3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset155BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 51.53 69.29"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M19.89,69.29c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l27.03-27.03c.89-.89,1.39-2.08,1.39-3.35s-.49-2.46-1.39-3.35L18.12,4.27c-.98-.98-.98-2.56,0-3.54s2.56-.98,3.54,0l27.03,27.03c3.8,3.8,3.8,9.97,0,13.77l-27.03,27.03c-.49.49-1.13.73-1.77.73Z"/> <path d="M2.5,57.53c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l17.14-17.14c.81-.82.81-2.14,0-2.96L.73,16.03c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l17.14,17.14c2.76,2.76,2.76,7.26,0,10.03L4.27,56.8c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset156AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 50.92 54.94"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M44.63,21.85L12.62,3.84c-4.3-2.42-9.62.69-9.62,5.63v36.02c0,4.94,5.32,8.05,9.62,5.63l32.02-18.01c4.39-2.47,4.39-8.78,0-11.25Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset156BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 40.89 21.27"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M20.44,21.27c-1.67,0-3.35-.64-4.62-1.91L.73,4.27C-.24,3.29-.24,1.71.73.73,1.71-.24,3.29-.24,4.27.73l15.09,15.09c.6.6,1.58.6,2.18,0L36.62.73c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-15.09,15.09c-1.27,1.27-2.95,1.91-4.62,1.91Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset157AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 61.32 59.93"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M48.93,40.33l6.71,1.53,2.67-11.7-6.73-1.54c-.15-2.28-.65-4.45-1.46-6.47l5.38-4.29-7.48-9.38-5.38,4.29c-1.81-1.26-3.82-2.24-5.98-2.89V3h-12v6.88c-2.16.64-4.18,1.63-5.98,2.89l-5.38-4.29-7.48,9.38,5.38,4.29c-.82,2.02-1.31,4.2-1.46,6.47l-6.73,1.54,2.67,11.7,6.71-1.53c1.1,1.94,2.51,3.69,4.15,5.18l-2.99,6.22,10.81,5.21,2.99-6.22c1.08.17,2.18.29,3.32.29s2.23-.11,3.32-.29l2.99,6.22,10.81-5.21-2.99-6.22c1.64-1.49,3.05-3.24,4.15-5.18Z"/> <circle className="cls-1" cx="30.66" cy="30" r="9"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset157BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 34.14 69.29"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M31.64,69.29c-.64,0-1.28-.24-1.77-.73L2.85,41.53c-3.8-3.8-3.8-9.97,0-13.77L29.88.73c.98-.98,2.56-.98,3.54,0s.98,2.56,0,3.54L6.38,31.3c-.89.89-1.39,2.08-1.39,3.35s.49,2.46,1.39,3.35l27.03,27.03c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset158AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="3" y="3" width="54" height="42" rx="6" ry="6"/> <path className="cls-1" d="M4.99,4.55l20.73,21.1c2.35,2.39,6.21,2.39,8.56,0L55,4.55"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset158BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.99 68.99"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M62.09,68.99H10.91c-6.01,0-10.91-4.89-10.91-10.91V23.12c0-3.46,2.82-6.28,6.28-6.28h60.43c3.46,0,6.28,2.82,6.28,6.28v34.96c0,6.01-4.89,10.91-10.91,10.91ZM6.28,21.84c-.71,0-1.28.57-1.28,1.28v34.96c0,3.26,2.65,5.91,5.91,5.91h51.18c3.26,0,5.91-2.65,5.91-5.91V23.12c0-.71-.57-1.28-1.28-1.28H6.28Z"/> <path d="M50.57,30.47c-1.38,0-2.5-1.12-2.5-2.5v-11.4c0-6.38-5.19-11.57-11.57-11.57s-11.57,5.19-11.57,11.57v11.4c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5v-11.4C19.92,7.43,27.36,0,36.5,0s16.57,7.43,16.57,16.57v11.4c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset159AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 57.17"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M3,9v27c0,3.31,2.69,6,6,6h12l6.43,10.71c1.17,1.94,3.98,1.94,5.14,0l6.43-10.71h12c3.31,0,6-2.69,6-6V9c0-3.31-2.69-6-6-6H9c-3.31,0-6,2.69-6,6Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset159BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 86.14 76.01"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M79.86,76.01H6.28c-3.46,0-6.28-2.82-6.28-6.28V15.25c0-3.46,2.82-6.28,6.28-6.28h73.58c3.46,0,6.28,2.82,6.28,6.28v54.48c0,3.46-2.82,6.28-6.28,6.28ZM6.28,13.97c-.71,0-1.28.57-1.28,1.28v54.48c0,.71.57,1.28,1.28,1.28h73.58c.71,0,1.28-.57,1.28-1.28V15.25c0-.71-.57-1.28-1.28-1.28H6.28Z"/> <g> <circle cx="27.46" cy="45.84" r="4.59"/> <circle cx="43.07" cy="45.84" r="4.59"/> <circle cx="58.68" cy="45.84" r="4.59"/> </g> <path d="M83.64,28.86H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h81.14c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <g> <path d="M56.9,13.97c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v8.97c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M29.24,13.97c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v8.97c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset15AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 63"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M48,33v-12c0-9.94-8.06-18-18-18h0c-9.94,0-18,8.06-18,18v12c0,1.66-1.34,3-3,3h0c-3.31,0-6,2.69-6,6h0c0,3.31,2.69,6,6,6h42c3.31,0,6-2.69,6-6h0c0-3.31-2.69-6-6-6h0c-1.66,0-3-1.34-3-3Z"/> <path className="cls-1" d="M21,48v3c0,4.97,4.03,9,9,9s9-4.03,9-9v-3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset15BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 57.58 77.64"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M55.08,77.64c-1.38,0-2.5-1.12-2.5-2.5,0-3.46-2.81-6.28-6.26-6.28s-6.26,2.82-6.26,6.28c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5c0-3.46-2.82-6.28-6.28-6.28-1.67,0-3.24.66-4.43,1.85-1.18,1.18-1.83,2.75-1.83,4.43,0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5c0-3.46-2.81-6.28-6.26-6.28s-6.26,2.82-6.26,6.28c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5V14.3C0,6.42,6.42,0,14.3,0h28.98c7.89,0,14.3,6.42,14.3,14.3v60.83c0,1.38-1.12,2.5-2.5,2.5ZM28.78,63.86c3.54,0,6.71,1.64,8.78,4.2,2.07-2.56,5.23-4.2,8.76-4.2,2.31,0,4.47.7,6.26,1.91V14.3c0-5.13-4.17-9.3-9.3-9.3H14.3c-5.13,0-9.3,4.17-9.3,9.3v51.46c1.79-1.21,3.95-1.91,6.26-1.91,3.53,0,6.69,1.64,8.76,4.2.25-.31.51-.6.8-.88,2.14-2.14,4.97-3.31,7.97-3.31Z"/> <path d="M40.16,30.79H15.78c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h24.38c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M34.68,43.67H15.78c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h18.9c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset160AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 63"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="3" y="24" width="42" height="36" rx="6" ry="6"/> <path className="cls-1" d="M12,24v-9c0-6.63,5.37-12,12-12h0c5.58,0,10.27,3.81,11.61,8.97"/> <g> <circle className="cls-1" cx="24" cy="39" r="3"/> <line className="cls-1" x1="24" y1="42" x2="24" y2="48"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset160BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.36 74.36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M25.97,30.87H4.9c-2.7,0-4.9-2.2-4.9-4.9V4.9C0,2.2,2.2,0,4.9,0h21.06c2.7,0,4.9,2.2,4.9,4.9v21.06c0,2.7-2.2,4.9-4.9,4.9ZM5,25.87h20.87V5H5v20.87Z"/> <path d="M69.45,30.87h-21.06c-2.7,0-4.9-2.2-4.9-4.9V4.9c0-2.7,2.2-4.9,4.9-4.9h21.06c2.7,0,4.9,2.2,4.9,4.9v21.06c0,2.7-2.2,4.9-4.9,4.9ZM48.49,25.87h20.87V5h-20.87v20.87Z"/> <path d="M25.97,74.36H4.9c-2.7,0-4.9-2.2-4.9-4.9v-21.06c0-2.7,2.2-4.9,4.9-4.9h21.06c2.7,0,4.9,2.2,4.9,4.9v21.06c0,2.7-2.2,4.9-4.9,4.9ZM5,69.36h20.87v-20.87H5v20.87Z"/> <path d="M69.45,74.36h-21.06c-2.7,0-4.9-2.2-4.9-4.9v-21.06c0-2.7,2.2-4.9,4.9-4.9h21.06c2.7,0,4.9,2.2,4.9,4.9v21.06c0,2.7-2.2,4.9-4.9,4.9ZM48.49,69.36h20.87v-20.87h-20.87v20.87Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset161AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 63"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="3" y="24" width="42" height="36" rx="6" ry="6"/> <path className="cls-1" d="M12,24v-9c0-6.63,5.37-12,12-12h0c6.63,0,12,5.37,12,12v9"/> <g> <circle className="cls-1" cx="24" cy="39" r="3"/> <line className="cls-1" x1="24" y1="42" x2="24" y2="48"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset161BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 65.26 63.34"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M32.64,21.16c-5.83,0-10.58-4.75-10.58-10.58S26.8,0,32.64,0s10.58,4.75,10.58,10.58-4.75,10.58-10.58,10.58ZM32.64,5c-3.08,0-5.58,2.5-5.58,5.58s2.5,5.58,5.58,5.58,5.58-2.5,5.58-5.58-2.5-5.58-5.58-5.58Z"/> <path d="M46.82,42.25c-5.83,0-10.58-4.75-10.58-10.58s4.75-10.58,10.58-10.58,10.58,4.75,10.58,10.58-4.75,10.58-10.58,10.58ZM46.82,26.09c-3.08,0-5.58,2.5-5.58,5.58s2.5,5.58,5.58,5.58,5.58-2.5,5.58-5.58-2.5-5.58-5.58-5.58Z"/> <path d="M62.76,13.09h-22.04c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h22.04c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M24.56,13.09H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h22.06c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M62.76,34.18h-7.86c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h7.86c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M38.74,34.18H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h36.24c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M18.46,63.34c-5.83,0-10.58-4.75-10.58-10.58s4.75-10.58,10.58-10.58,10.58,4.75,10.58,10.58-4.75,10.58-10.58,10.58ZM18.46,47.18c-3.08,0-5.58,2.5-5.58,5.58s2.5,5.58,5.58,5.58,5.58-2.5,5.58-5.58-2.5-5.58-5.58-5.58Z"/> <path d="M10.38,55.25H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h7.88c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M62.76,55.25H26.54c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h36.21c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset162AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="57 36 42 51 33 42"/> <g> <path className="cls-1" d="M28.93,53.48l-4.93,3.52-8.44-6.03c-7.88-5.63-12.56-14.72-12.56-24.41v-14.56L24,3l21,9v14.56c0,2.15-.23,4.27-.68,6.33"/> <line className="cls-1" x1="24" y1="3" x2="24" y2="32.89"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset162BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 65.26 47.18"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M62.76,5H2.5c-1.38,0-2.5-1.12-2.5-2.5S1.12,0,2.5,0h60.26c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M62.76,26.09H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h60.26c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M62.76,47.18H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h60.26c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset163AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M32.44,50.97l-8.44,6.03-8.44-6.03c-7.88-5.63-12.56-14.72-12.56-24.41v-14.56L24,3l21,9v14.56c0,9.69-4.68,18.78-12.56,24.41Z"/> <line className="cls-1" x1="24" y1="3" x2="24" y2="42"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset163BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 75.87 74.57"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M48.98,74.57H7.06c-2.14,0-4.14-.96-5.49-2.63-1.36-1.7-1.88-3.9-1.4-6.04,2.86-12.95,14.57-22.35,27.85-22.35s24.99,9.4,27.85,22.35c.47,2.14-.04,4.34-1.4,6.04-1.34,1.67-3.34,2.63-5.49,2.63ZM28.02,48.55c-10.95,0-20.61,7.75-22.97,18.43-.14.65,0,1.32.42,1.83.23.28.74.76,1.59.76h41.92c.85,0,1.36-.48,1.59-.76.41-.51.56-1.18.42-1.83-2.36-10.68-12.02-18.43-22.97-18.43Z"/> <path d="M28.02,36.77c-10.14,0-18.39-8.25-18.39-18.39S17.88,0,28.02,0s18.39,8.25,18.39,18.39-8.25,18.39-18.39,18.39ZM28.02,5c-7.38,0-13.39,6-13.39,13.39s6,13.39,13.39,13.39,13.39-6,13.39-13.39-6-13.39-13.39-13.39Z"/> <path d="M61.39,54.03c-1.26,0-2.52-.48-3.48-1.44l-8.81-8.81c-2.91-2.91-2.91-7.64,0-10.55,2.91-2.91,7.64-2.91,10.55,0l1.74,1.74,1.74-1.74c2.91-2.91,7.64-2.91,10.55,0h0c2.91,2.91,2.91,7.64,0,10.55l-8.81,8.81c-.96.96-2.22,1.44-3.48,1.44ZM54.37,36.04c-.63,0-1.26.24-1.74.72-.96.96-.96,2.52,0,3.48l8.76,8.76,8.76-8.76c.96-.96.96-2.52,0-3.48s-2.52-.96-3.48,0l-3.51,3.51c-.94.94-2.6.94-3.54,0l-3.51-3.51c-.48-.48-1.11-.72-1.74-.72Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset164AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 42 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="21" cy="21" r="18"/> <line className="cls-1" x1="21" y1="39" x2="21" y2="57"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset164BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 81.09 62.15"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M40.54,62.15c-2.61,0-5.22-.99-7.2-2.98L5.34,31.17C-1.78,24.05-1.78,12.47,5.34,5.35,8.79,1.9,13.37,0,18.25,0s9.46,1.9,12.91,5.35l9.38,9.38,9.38-9.38c3.45-3.45,8.03-5.35,12.91-5.35s9.46,1.9,12.91,5.35h0c3.45,3.45,5.35,8.03,5.35,12.91s-1.9,9.46-5.35,12.91l-28,28c-1.99,1.99-4.6,2.98-7.2,2.98ZM18.25,5c-3.54,0-6.87,1.38-9.38,3.88-2.5,2.5-3.88,5.83-3.88,9.38s1.38,6.87,3.88,9.38l28,28c2.02,2.02,5.31,2.02,7.34,0l28-28c2.5-2.5,3.88-5.83,3.88-9.38s-1.38-6.87-3.88-9.38c-2.5-2.5-5.83-3.88-9.38-3.88s-6.87,1.38-9.38,3.88l-11.15,11.14c-.47.47-1.1.73-1.77.73h0c-.66,0-1.3-.26-1.77-.73l-11.14-11.14c-2.5-2.5-5.83-3.88-9.38-3.88Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset165AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <line className="cls-1" x1="30" y1="39" x2="30" y2="51"/> <line className="cls-1" x1="30" y1="3" x2="30" y2="27"/> <line className="cls-1" x1="24" y1="39" x2="36" y2="39"/> </g> <g> <line className="cls-1" x1="9" y1="27" x2="9" y2="51"/> <line className="cls-1" x1="9" y1="3" x2="9" y2="15"/> <line className="cls-1" x1="3" y1="15" x2="15" y2="15"/> </g> <g> <line className="cls-1" x1="51" y1="27" x2="51" y2="51"/> <line className="cls-1" x1="51" y1="3" x2="51" y2="14.43"/> <line className="cls-1" x1="45" y1="15" x2="57" y2="15"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset165BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 77.75 77.73"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M45.17,77.73H11.21c-6.18,0-11.21-5.03-11.21-11.21V11.19C0,5.02,5.03,0,11.21,0h38.68c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5H11.21c-3.43,0-6.21,2.78-6.21,6.19v55.33c0,3.43,2.79,6.21,6.21,6.21h33.96c1.77,0,3.45-.38,4.99-1.13,1.29-.58,2.41-1.36,3.41-2.36l15.7-15.68c.96-.96,1.78-2.13,2.36-3.38.74-1.56,1.13-3.29,1.13-5.02v-17.34c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v17.34c0,2.46-.55,4.93-1.6,7.14-.82,1.78-1.95,3.4-3.35,4.8l-15.7,15.68c-1.43,1.43-3.06,2.56-4.83,3.35-2.15,1.05-4.56,1.6-7.1,1.6Z"/> <path d="M51.26,76.35c-.48,0-.95-.14-1.36-.4-.71-.46-1.14-1.25-1.14-2.1v-22.61c0-1.38,1.12-2.5,2.5-2.5h22.64c.85,0,1.65.43,2.11,1.15.46.72.52,1.62.16,2.4-.83,1.8-1.96,3.42-3.36,4.82l-15.7,15.68c-1.43,1.43-3.06,2.56-4.83,3.35-.33.15-.67.22-1.02.22ZM53.76,53.73v15.32l15.35-15.32h-15.35Z"/> <path d="M22.57,56.02c-.66,0-1.3-.26-1.77-.73-.49-.49-.76-1.17-.73-1.87l.37-8.93c.03-.63.29-1.22.73-1.67L57.38,6.61h0c3.34-3.33,8.76-3.34,12.1,0,3.34,3.33,3.34,8.76,0,12.1l-36.21,36.21c-.44.44-1.04.7-1.67.73l-8.93.37s-.07,0-.1,0ZM25.4,45.67l-.21,5.24,5.24-.22L65.94,15.17c1.39-1.39,1.39-3.64,0-5.03-1.38-1.38-3.64-1.38-5.03,0L25.4,45.67Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset166AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 12"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="27" cy="6" r="3"/> <circle className="cls-1" cx="48" cy="6" r="3"/> <circle className="cls-1" cx="6" cy="6" r="3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset166BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 73.18 82.99"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M59.22,51.49h-25.7c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h25.7c4.94,0,8.96-4.02,8.96-8.96v-17.27H17.77c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h52.91c1.38,0,2.5,1.12,2.5,2.5v19.77c0,7.7-6.26,13.96-13.96,13.96Z"/> <path d="M67.48,65.87h-35.38c-9.28,0-16.83-7.55-16.83-16.83v-31.27c0-7.04-5.73-12.77-12.77-12.77-1.38,0-2.5-1.12-2.5-2.5S1.12,0,2.5,0c9.8,0,17.77,7.97,17.77,17.77v31.27c0,6.52,5.31,11.83,11.83,11.83h35.38c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M29.14,82.99c-3.91,0-7.09-3.18-7.09-7.09s3.18-7.09,7.09-7.09,7.09,3.18,7.09,7.09-3.18,7.09-7.09,7.09ZM29.14,73.81c-1.15,0-2.09.94-2.09,2.09s.94,2.09,2.09,2.09,2.09-.94,2.09-2.09-.94-2.09-2.09-2.09Z"/> <path d="M58.99,82.99c-3.91,0-7.09-3.18-7.09-7.09s3.18-7.09,7.09-7.09,7.09,3.18,7.09,7.09-3.18,7.09-7.09,7.09ZM58.99,73.81c-1.15,0-2.09.94-2.09,2.09s.94,2.09,2.09,2.09,2.09-.94,2.09-2.09-.94-2.09-2.09-2.09Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset167AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 12 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="6" cy="27" r="3"/> <circle className="cls-1" cx="6" cy="6" r="3"/> <circle className="cls-1" cx="6" cy="48" r="3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset167BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 75.39 75.39"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M37.69,75.39C16.91,75.39,0,58.48,0,37.69S16.91,0,37.69,0s37.69,16.91,37.69,37.69-16.91,37.7-37.69,37.7ZM37.69,5C19.67,5,5,19.67,5,37.69s14.67,32.7,32.69,32.7,32.69-14.67,32.69-32.7S55.72,5,37.69,5Z"/> <path d="M37.69,75.39c-10.16,0-15.65-19.42-15.65-37.7S27.53,0,37.69,0s15.65,19.42,15.65,37.69-5.48,37.7-15.65,37.7ZM37.69,5c-4.45,0-10.65,12.44-10.65,32.69s6.2,32.7,10.65,32.7,10.65-12.44,10.65-32.7S42.14,5,37.69,5Z"/> <path d="M37.69,53.34C19.42,53.34,0,47.86,0,37.69s19.42-15.65,37.69-15.65,37.69,5.48,37.69,15.65-19.42,15.65-37.69,15.65ZM37.69,27.05c-20.26,0-32.69,6.2-32.69,10.65s12.44,10.65,32.69,10.65,32.69-6.2,32.69-10.65-12.44-10.65-32.69-10.65Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset168AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <line className="cls-1" x1="3" y1="24" x2="51" y2="24"/> <line className="cls-1" x1="3" y1="3" x2="51" y2="3"/> <line className="cls-1" x1="3" y1="45" x2="51" y2="45"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset168BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 56.75 61.51"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M28.38,43.12c-6.82,0-12.36-5.54-12.36-12.36s5.54-12.36,12.36-12.36,12.36,5.54,12.36,12.36-5.54,12.36-12.36,12.36ZM28.38,23.4c-4.06,0-7.36,3.3-7.36,7.36s3.3,7.36,7.36,7.36,7.36-3.3,7.36-7.36-3.3-7.36-7.36-7.36Z"/> <path d="M30.51,61.51h-4.28c-1.99,0-3.79-1.18-4.6-3l-2.37-5.37c-2.08-.84-3.99-1.94-5.72-3.28l-5.86.6c-1.98.22-3.9-.76-4.89-2.48l-2.14-3.7c-.99-1.72-.88-3.87.3-5.48l3.45-4.72c-.16-1.16-.24-2.27-.24-3.33s.08-2.17.23-3.28l-3.45-4.77c-1.17-1.61-1.29-3.76-.3-5.48l2.14-3.7c1-1.72,2.92-2.7,4.89-2.48l5.83.63c1.76-1.37,3.67-2.47,5.7-3.3l2.41-5.38c.8-1.82,2.61-3,4.6-3h4.28c1.99,0,3.79,1.18,4.6,3l2.37,5.37c2.08.84,3.99,1.94,5.72,3.28l5.86-.6c1.98-.22,3.9.76,4.89,2.48l2.14,3.7c.99,1.72.88,3.87-.3,5.48l-3.45,4.72c.16,1.16.24,2.27.24,3.33s-.08,2.17-.23,3.27l3.45,4.77c1.18,1.61,1.29,3.76.3,5.48l-2.14,3.7c-.99,1.72-2.91,2.7-4.89,2.48l-5.82-.63c-1.76,1.37-3.67,2.47-5.7,3.3l-2.41,5.38c-.8,1.82-2.61,3-4.6,3ZM13.52,44.83c1.11,0,2.19.38,3.1,1.08,1.37,1.06,2.88,1.93,4.5,2.59,1.24.5,2.21,1.44,2.73,2.62l2.37,5.37h4.3s2.39-5.37,2.39-5.37c.52-1.19,1.49-2.12,2.73-2.62,1.62-.66,3.13-1.53,4.5-2.59,1.06-.82,2.35-1.19,3.64-1.05l5.83.63,2.16-3.71-3.45-4.74c-.77-1.06-1.1-2.37-.91-3.7.12-.88.19-1.75.19-2.58s-.06-1.7-.19-2.58c-.19-1.33.14-2.65.91-3.7l3.45-4.72-2.14-3.73-5.85.62c-1.29.14-2.58-.23-3.64-1.05-1.37-1.06-2.88-1.93-4.5-2.59-1.24-.5-2.21-1.44-2.73-2.62l-2.37-5.37h-4.3s-2.39,5.37-2.39,5.37c-.52,1.19-1.49,2.12-2.73,2.62-1.62.66-3.13,1.53-4.5,2.59-1.06.82-2.35,1.19-3.64,1.05l-5.83-.63-2.16,3.71,3.45,4.74c.77,1.06,1.1,2.37.91,3.71-.12.88-.19,1.75-.19,2.58s.06,1.7.19,2.58c.19,1.33-.14,2.65-.91,3.7l-3.45,4.72,2.14,3.73,5.85-.62c.18-.02.35-.03.53-.03Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset169AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="3" y="3" width="18" height="18" rx="3" ry="3"/> <rect className="cls-1" x="33" y="3" width="18" height="18" rx="3" ry="3"/> <rect className="cls-1" x="3" y="33" width="18" height="18" rx="3" ry="3"/> <rect className="cls-1" x="33" y="33" width="18" height="18" rx="3" ry="3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset169BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 70.4 75.18"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M57.6,75.18h-7.54c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h7.54c4.3,0,7.8-3.51,7.8-7.83v-30.94c0-1.53-.66-2.97-1.82-3.95L38.53,6.23c-1.94-1.64-4.75-1.64-6.68,0L6.81,27.46c-1.15.98-1.81,2.42-1.81,3.95v30.94c0,4.32,3.51,7.83,7.83,7.83h7.52c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5h-7.52c-7.07,0-12.83-5.75-12.83-12.83v-30.94c0-3,1.3-5.82,3.58-7.76L28.61,2.42c3.81-3.23,9.34-3.23,13.15,0l25.06,21.23c2.28,1.94,3.58,4.77,3.58,7.76v30.94c0,7.07-5.74,12.83-12.8,12.83Z"/> <circle cx="35.2" cy="44.47" r="6.29"/> <path d="M35.2,72.36c-5.59,0-17.78-14-17.78-27.89,0-9.8,7.98-17.78,17.78-17.78s17.78,7.98,17.78,17.78c0,13.89-12.19,27.89-17.78,27.89ZM35.27,67.36h0,0ZM35.2,31.69c-7.05,0-12.78,5.73-12.78,12.78,0,11.38,10.15,22.3,12.78,22.88,2.63-.58,12.78-11.5,12.78-22.88,0-7.05-5.73-12.78-12.78-12.78Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset16AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="3" y="9" width="54" height="48" rx="6" ry="6"/> <line className="cls-1" x1="3" y1="24" x2="57" y2="24"/> <line className="cls-1" x1="18" y1="12" x2="18" y2="3"/> <line className="cls-1" x1="42" y1="12" x2="42" y2="3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset16BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 70.41 75.16"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M57.59,75.16H12.82c-7.07,0-12.82-5.75-12.82-12.82v-30.94c0-2.99,1.31-5.82,3.59-7.75L28.62,2.42c3.81-3.23,9.34-3.23,13.15,0l25.05,21.23c2.28,1.94,3.59,4.76,3.59,7.76v30.94c0,7.07-5.75,12.82-12.82,12.82ZM35.19,5c-1.19,0-2.37.41-3.34,1.23L6.82,27.46c-1.16.98-1.82,2.42-1.82,3.94v30.94c0,4.31,3.51,7.82,7.82,7.82h44.77c4.31,0,7.82-3.51,7.82-7.82v-30.94c0-1.52-.67-2.96-1.83-3.94L38.54,6.24c-.97-.82-2.15-1.23-3.34-1.23Z"/> <path d="M44.65,56.95h-18.89c-1.38,0-2.5-1.12-2.5-2.5v-18.89c0-1.38,1.12-2.5,2.5-2.5h18.89c1.38,0,2.5,1.12,2.5,2.5v18.89c0,1.38-1.12,2.5-2.5,2.5ZM28.26,51.95h13.89v-13.89h-13.89v13.89Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset170AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <line className="cls-1" x1="42" y1="30" x2="18" y2="30"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset170BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60.87 79.36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M30.44,42.8c-6.82,0-12.36-5.54-12.36-12.36s5.54-12.36,12.36-12.36,12.36,5.54,12.36,12.36-5.54,12.36-12.36,12.36ZM30.44,23.08c-4.06,0-7.36,3.3-7.36,7.36s3.3,7.36,7.36,7.36,7.36-3.3,7.36-7.36-3.3-7.36-7.36-7.36Z"/> <path d="M30.44,79.36C21.12,79.36,0,54.29,0,30.44,0,13.65,13.65,0,30.44,0s30.44,13.65,30.44,30.44c0,23.85-21.12,48.92-30.44,48.92ZM30.44,5c-14.03,0-25.44,11.41-25.44,25.44,0,23.11,20.75,43.92,25.44,43.92s25.44-20.81,25.44-43.92c0-14.03-11.41-25.44-25.44-25.44Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset171AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <g> <line className="cls-1" x1="30" y1="18" x2="30" y2="42"/> <line className="cls-1" x1="42" y1="30" x2="18" y2="30"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset171BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 68.82 68.82"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M28.18,56.35C12.64,56.35,0,43.71,0,28.18S12.64,0,28.18,0s28.18,12.64,28.18,28.18-12.64,28.18-28.18,28.18ZM28.18,5C15.4,5,5,15.4,5,28.18s10.4,23.18,23.18,23.18,23.18-10.4,23.18-23.18S40.96,5,28.18,5Z"/> <path d="M66.32,68.82c-.64,0-1.28-.24-1.77-.73l-19.99-19.99c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l19.99,19.99c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset172AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 6"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <line className="cls-1" x1="51" y1="3" x2="3" y2="3"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset172BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 69.35 69.35"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M50.63,69.35c-8.48,0-16.86-3.3-23.06-9.51l-18.07-18.07C.01,32.3-2.67,17.71,2.82,5.49,4.2,2.41,7.02.38,10.37.05c3.35-.33,6.5,1.1,8.45,3.83l5.04,7.06c1.99,2.79,2.23,6.52.62,9.72-1.94,3.88-1.19,8.55,1.89,11.63l10.67,10.67c3.07,3.07,7.75,3.83,11.63,1.89,3.21-1.61,6.93-1.37,9.72.62l7.07,5.05c2.73,1.95,4.16,5.1,3.83,8.44-.33,3.35-2.36,6.17-5.43,7.56-4.23,1.91-8.75,2.83-13.24,2.83ZM11.3,5c-.14,0-.29,0-.44.02-1.55.15-2.85,1.09-3.48,2.51-4.64,10.35-2.37,22.69,5.65,30.7l18.07,18.07c8.03,8.04,20.37,10.31,30.72,5.65,1.42-.64,2.36-1.94,2.51-3.49.15-1.54-.51-2.99-1.76-3.88h0l-7.07-5.05c-1.28-.91-3.03-1-4.58-.22-5.81,2.91-12.8,1.78-17.4-2.82l-10.67-10.67c-4.6-4.6-5.73-11.59-2.82-17.4.77-1.55.69-3.3-.22-4.58l-5.04-7.06c-.81-1.14-2.08-1.78-3.45-1.78Z"/> <path d="M48.35,37.19c-1.38,0-2.5-1.12-2.5-2.5,0-6.17-5.02-11.19-11.19-11.19-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5c8.93,0,16.19,7.26,16.19,16.19,0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M61.28,37.19c-1.38,0-2.5-1.12-2.5-2.5,0-13.3-10.82-24.12-24.12-24.12-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5c16.05,0,29.12,13.06,29.12,29.12,0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset173AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 42 42"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <line className="cls-1" x1="39" y1="3" x2="3" y2="39"/> <line className="cls-1" x1="39" y1="39" x2="3" y2="3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset173BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 86.14 67.04"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M79.86,67.04H6.28c-3.46,0-6.28-2.82-6.28-6.28V6.28C0,2.82,2.82,0,6.28,0h73.58c3.46,0,6.28,2.82,6.28,6.28v54.48c0,3.46-2.82,6.28-6.28,6.28ZM6.28,5c-.71,0-1.28.57-1.28,1.28v54.48c0,.71.57,1.28,1.28,1.28h73.58c.71,0,1.28-.57,1.28-1.28V6.28c0-.71-.57-1.28-1.28-1.28H6.28Z"/> <path d="M43.07,37.15c-2.61,0-5.22-.92-7.34-2.76L3.67,6.75c-1.05-.9-1.16-2.48-.26-3.53.9-1.05,2.48-1.16,3.53-.26l32.07,27.64c2.35,2.04,5.77,2.05,8.13.02L79.23,2.99c1.05-.9,2.63-.78,3.53.26.9,1.05.78,2.62-.26,3.53l-32.11,27.64c-2.12,1.82-4.72,2.73-7.31,2.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset174AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <line className="cls-1" x1="27" y1="3" x2="27" y2="51"/> <line className="cls-1" x1="51" y1="27" x2="3" y2="27"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset174BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 80.56 70.32"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M54.02,70.32h-27.48c-1.67,0-3.22-.75-4.27-2.04-1.06-1.32-1.46-3.03-1.09-4.69,1.96-8.88,9.99-15.33,19.1-15.33s17.14,6.45,19.1,15.33c.37,1.66-.03,3.37-1.09,4.69-1.04,1.3-2.6,2.04-4.27,2.04ZM40.28,53.27c-6.78,0-12.76,4.8-14.21,11.4-.05.24.04.4.1.48.09.12.22.18.37.18h27.48c.15,0,.28-.06.37-.18.06-.08.16-.24.1-.48-1.46-6.61-7.44-11.4-14.21-11.4Z"/> <path d="M40.28,42.93c-5.83,0-10.58-4.75-10.58-10.58s4.75-10.58,10.58-10.58,10.58,4.75,10.58,10.58-4.75,10.58-10.58,10.58ZM40.28,26.77c-3.08,0-5.58,2.5-5.58,5.58s2.5,5.58,5.58,5.58,5.58-2.5,5.58-5.58-2.5-5.58-5.58-5.58Z"/> <path d="M75.07,48.55h-15.93c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h15.93c.15,0,.28-.06.37-.18.06-.08.16-.24.1-.48-1.46-6.61-7.44-11.4-14.21-11.4-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5c9.11,0,17.14,6.45,19.1,15.33.37,1.66-.03,3.37-1.09,4.69-1.04,1.3-2.6,2.05-4.27,2.05Z"/> <path d="M61.33,21.16c-5.83,0-10.58-4.75-10.58-10.58S55.5,0,61.33,0s10.58,4.75,10.58,10.58-4.75,10.58-10.58,10.58ZM61.33,5c-3.08,0-5.58,2.5-5.58,5.58s2.5,5.58,5.58,5.58,5.58-2.5,5.58-5.58-2.5-5.58-5.58-5.58Z"/> <path d="M21.42,48.55H5.49c-1.67,0-3.22-.75-4.27-2.05-1.06-1.32-1.46-3.03-1.09-4.69,1.96-8.88,9.99-15.33,19.1-15.33,1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5c-6.78,0-12.76,4.8-14.21,11.4-.05.24.04.4.1.48.09.12.22.18.37.18h15.93c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M19.23,21.16c-5.83,0-10.58-4.75-10.58-10.58S13.4,0,19.23,0s10.58,4.75,10.58,10.58-4.75,10.58-10.58,10.58ZM19.23,5c-3.08,0-5.58,2.5-5.58,5.58s2.5,5.58,5.58,5.58,5.58-2.5,5.58-5.58-2.5-5.58-5.58-5.58Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset175AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 56.46"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M25.41,3.46L4.41,16.58c-.88.55-1.41,1.51-1.41,2.54v28.34c0,3.31,2.69,6,6,6h12v-15h12v15h12c3.31,0,6-2.69,6-6v-28.34c0-1.03-.53-2-1.41-2.54L28.59,3.46c-.97-.61-2.21-.61-3.18,0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset175BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 79.81 73.43"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M41.45,73.43H6.32c-1.92,0-3.71-.86-4.91-2.35-1.22-1.52-1.68-3.49-1.26-5.4,2.44-11.04,12.42-19.05,23.74-19.05s21.3,8.01,23.74,19.05c.42,1.91-.04,3.88-1.26,5.4-1.2,1.5-2.99,2.35-4.91,2.35ZM23.89,51.63c-8.99,0-16.92,6.36-18.85,15.12-.09.43,0,.86.27,1.19.15.18.47.49,1.02.49h35.13c.54,0,.87-.3,1.02-.49.27-.33.37-.77.27-1.19-1.93-8.76-9.86-15.12-18.85-15.12Z"/> <path d="M23.89,38.42c-7.07,0-12.83-5.76-12.83-12.83s5.76-12.83,12.83-12.83,12.83,5.76,12.83,12.83-5.76,12.83-12.83,12.83ZM23.89,17.76c-4.32,0-7.83,3.51-7.83,7.83s3.51,7.83,7.83,7.83,7.83-3.51,7.83-7.83-3.51-7.83-7.83-7.83Z"/> <path d="M73.49,60.68h-18.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h18.5c.54,0,.87-.3,1.02-.49.27-.33.37-.77.27-1.2-1.93-8.76-9.86-15.12-18.85-15.12-5.17,0-10.03,2.02-13.68,5.68-.97.98-2.56.98-3.54,0-.98-.97-.98-2.56,0-3.54,4.59-4.61,10.71-7.16,17.22-7.16,11.32,0,21.3,8.01,23.74,19.05.42,1.92-.04,3.88-1.26,5.4-1.2,1.5-2.99,2.35-4.91,2.35Z"/> <path d="M55.92,25.66c-7.07,0-12.83-5.76-12.83-12.83S48.85,0,55.92,0s12.83,5.76,12.83,12.83-5.76,12.83-12.83,12.83ZM55.92,5c-4.32,0-7.83,3.51-7.83,7.83s3.51,7.83,7.83,7.83,7.83-3.51,7.83-7.83-3.51-7.83-7.83-7.83Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset176AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <path className="cls-1" d="M52.71,15.39c-6.42,3.53-14.25,5.61-22.71,5.61s-16.26-2.07-22.66-5.58"/> <path className="cls-1" d="M7.3,44.61c6.41-3.53,14.25-5.61,22.7-5.61s16.26,2.07,22.66,5.58"/> <line className="cls-1" x1="30" y1="3" x2="30" y2="57"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset176BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 56.04 74.57"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M48.98,74.57H7.06c-2.14,0-4.14-.96-5.49-2.63-1.36-1.7-1.88-3.9-1.4-6.04,2.86-12.95,14.57-22.35,27.85-22.35h0c13.28,0,24.99,9.4,27.85,22.35.47,2.14-.04,4.34-1.4,6.04-1.34,1.67-3.34,2.63-5.49,2.63ZM28.02,48.55c-10.95,0-20.61,7.75-22.97,18.43-.14.65,0,1.32.42,1.83.23.28.74.76,1.59.76h41.92c.85,0,1.36-.48,1.59-.76.41-.51.56-1.18.42-1.83-2.36-10.68-12.02-18.43-22.97-18.43Z"/> <path d="M28.02,36.77c-10.14,0-18.39-8.25-18.39-18.39S17.88,0,28.02,0s18.39,8.25,18.39,18.39-8.25,18.39-18.39,18.39ZM28.02,5c-7.38,0-13.39,6-13.39,13.39s6,13.39,13.39,13.39,13.39-6,13.39-13.39-6-13.39-13.39-13.39Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset177AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 50.6 63"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <line className="cls-1" x1="3" y1="3" x2="3" y2="60"/> <path className="cls-1" d="M3,3h41.59c2.54,0,3.93,2.97,2.3,4.92l-10.9,13.08,10.9,13.08c1.63,1.95.24,4.92-2.3,4.92H3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset177BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 79.34 74.48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M73.03,74.48h-16.26c-3.48,0-6.31-2.83-6.31-6.31v-24.28c0-.72-.59-1.31-1.31-1.31h-18.95c-.72,0-1.31.59-1.31,1.31v24.28c0,3.48-2.83,6.31-6.31,6.31H6.31c-3.48,0-6.31-2.83-6.31-6.31v-32.82c0-3.3,1.44-6.42,3.96-8.55L32.41,2.67c4.2-3.56,10.3-3.56,14.5,0l28.47,24.13c2.52,2.13,3.96,5.25,3.96,8.55v32.81c0,3.48-2.83,6.31-6.31,6.31ZM30.2,37.57h18.95c3.48,0,6.31,2.83,6.31,6.31v24.28c0,.72.59,1.31,1.31,1.31h16.26c.72,0,1.31-.59,1.31-1.31v-32.81c0-1.83-.8-3.56-2.2-4.74L43.68,6.48c-2.33-1.97-5.71-1.97-8.04,0L7.19,30.61c-1.4,1.18-2.19,2.91-2.19,4.74v32.82c0,.72.59,1.31,1.31,1.31h16.26c.72,0,1.31-.59,1.31-1.31v-24.28c0-3.48,2.83-6.31,6.31-6.31Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset178AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="21 3 21 21 3 21"/> <polyline className="cls-1" points="57 21 39 21 39 3"/> <polyline className="cls-1" points="39 57 39 39 57 39"/> <polyline className="cls-1" points="3 39 21 39 21 57"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset179AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="3 21 3 3 21 3"/> <polyline className="cls-1" points="39 3 57 3 57 21"/> <polyline className="cls-1" points="57 39 57 57 39 57"/> <polyline className="cls-1" points="21 57 3 57 3 39"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset17AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M17.78,42h-5.78c-4.97,0-9-4.03-9-9s4.03-9,9-9c.22,0,.43.05.65.07-.42-1.45-.65-2.98-.65-4.57,0-9.11,7.39-16.5,16.5-16.5,8.61,0,15.67,6.6,16.42,15.01.03,0,.05,0,.08,0,6.63,0,12,5.37,12,12s-5.37,12-12,12h-3"/> <g> <polyline className="cls-1" points="39 33 30 24 21 33"/> <line className="cls-1" x1="30" y1="51" x2="30" y2="24"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset17BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 70.41 75.16"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M29.96,56.5c-.64,0-1.28-.24-1.77-.73l-10.48-10.48c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l8.71,8.71,19.19-19.19c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-20.96,20.96c-.49.49-1.13.73-1.77.73Z"/> <path d="M57.59,75.16H12.82c-7.07,0-12.82-5.75-12.82-12.82v-30.94c0-2.99,1.31-5.82,3.59-7.75L28.62,2.42c3.81-3.23,9.34-3.23,13.15,0l25.05,21.23c2.28,1.94,3.59,4.76,3.59,7.76v30.94c0,7.07-5.75,12.82-12.82,12.82ZM35.2,5c-1.19,0-2.37.41-3.34,1.23L6.82,27.46c-1.16.98-1.82,2.42-1.82,3.94v30.94c0,4.31,3.51,7.82,7.82,7.82h44.77c4.31,0,7.82-3.51,7.82-7.82v-30.94c0-1.52-.67-2.96-1.83-3.94L38.54,6.24c-.97-.82-2.15-1.23-3.34-1.23Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset180AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="24 45 3 24 24 3"/> <line className="cls-1" x1="3" y1="24" x2="51" y2="24"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset181AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 55.5 36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polyline className="cls-1" points="52.5 3 22.5 33 3 13.5"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset182AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="30 3 51 24 30 45"/> <line className="cls-1" x1="51" y1="24" x2="3" y2="24"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset183AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 51 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="48 51 24 27 48 3"/> <polyline className="cls-1" points="27 51 3 27 27 3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset184AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 51 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="3 3 27 27 3 51"/> <polyline className="cls-1" points="24 3 48 27 24 51"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset185AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 30 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polyline className="cls-1" points="27 51 3 27 27 3"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset186AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 30 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polyline className="cls-1" points="3 3 27 27 3 51"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset187AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 57 57"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M15,25.5c0-5.8,4.7-10.5,10.5-10.5"/> <g> <circle className="cls-1" cx="25.5" cy="25.5" r="22.5" transform="translate(-2.02 2.19) rotate(-4.73)"/> <line className="cls-1" x1="42" y1="42" x2="54" y2="54"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset188AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 59.87 54.25"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <line className="cls-1" x1="29.94" y1="18" x2="29.94" y2="30"/> <line className="cls-1" x1="29.94" y1="42" x2="29.94" y2="42"/> </g> <path className="cls-1" d="M24.74,6L3.81,42.25c-2.31,4,.58,9,5.2,9h41.86c4.62,0,7.51-5,5.2-9L35.13,6c-2.31-4-8.08-4-10.39,0Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset189AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <polyline className="cls-1" points="30 15 30 30 39 30"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset18AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 45"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M45,42c6.63,0,12-5.37,12-12s-5.37-12-12-12c-.03,0-.05,0-.08,0-.76-8.41-7.82-15.01-16.42-15.01-9.11,0-16.5,7.39-16.5,16.5,0,1.59.24,3.11.65,4.57-.22-.02-.43-.07-.65-.07-4.97,0-9,4.03-9,9s4.03,9,9,9h33Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset18BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.92 85.2"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M45.77,73.49H14.49c-7.99,0-14.49-6.5-14.49-14.49v-24.2c0-2.49,2.03-4.52,4.52-4.52h51.21c2.5,0,4.52,2.03,4.52,4.52v24.2c0,7.99-6.5,14.49-14.49,14.49ZM5,35.29v23.72c0,5.23,4.25,9.49,9.49,9.49h31.29c5.23,0,9.49-4.25,9.49-9.49v-23.72H5Z"/> <path d="M62.02,63.43h-10.41c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h10.41c2.7,0,4.89-2.19,4.89-4.89s-2.19-4.89-4.89-4.89h-4.25c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h4.25c5.46,0,9.89,4.44,9.89,9.89s-4.44,9.89-9.89,9.89Z"/> <g> <path d="M30.13,26.13c-.69,0-.96-1.13-1.41-1.59s-1.59-.72-1.59-1.41c0-5.03,1-5.03,1-10.07s-1-5.03-1-10.07c0-.69,1.13-.96,1.59-1.41s.72-1.59,1.41-1.59.96,1.13,1.41,1.59,1.59.72,1.59,1.41c0,5.03-1,5.03-1,10.07s1,5.03,1,10.07c0,.69-1.13.96-1.59,1.41s-.72,1.59-1.41,1.59Z"/> <path d="M17.19,24.69c-.69,0-.96-1.13-1.41-1.59s-1.59-.72-1.59-1.41c0-2.47,1-2.47,1-4.93s-1-2.47-1-4.93c0-.69,1.13-.96,1.59-1.41s.72-1.59,1.41-1.59.96,1.13,1.41,1.59,1.59.72,1.59,1.41c0,2.47-1,2.47-1,4.93s1,2.47,1,4.93c0,.69-1.13.96-1.59,1.41s-.72,1.59-1.41,1.59Z"/> <path d="M43.07,24.69c-.69,0-.96-1.13-1.41-1.59s-1.59-.72-1.59-1.41c0-2.47,1-2.47,1-4.93s-1-2.47-1-4.93c0-.69,1.13-.96,1.59-1.41s.72-1.59,1.41-1.59.96,1.13,1.41,1.59,1.59.72,1.59,1.41c0,2.47-1,2.47-1,4.93s1,2.47,1,4.93c0,.69-1.13.96-1.59,1.41s-.72,1.59-1.41,1.59Z"/> </g> <path d="M55.86,85.2H4.4c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h51.46c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset190AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <g> <line className="cls-1" x1="30" y1="45" x2="30" y2="27"/> <line className="cls-1" x1="30" y1="15" x2="30" y2="15"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset191AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <g> <path className="cls-1" d="M22.5,22.5c0-4.79,4.49-8.53,9.5-7.24,2.53.65,4.59,2.72,5.24,5.24.99,3.83-.97,7.36-4.1,8.81-2,.93-3.15,3.07-3.15,5.27v1.42"/> <line className="cls-1" x1="30" y1="45" x2="30" y2="45"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset192AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <g> <line className="cls-1" x1="30" y1="15" x2="30" y2="33"/> <line className="cls-1" x1="30" y1="45" x2="30" y2="45"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset193AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <line className="cls-1" x1="10.91" y1="49.09" x2="49.09" y2="10.91"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset194AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 57.18"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M40.26,53.61l-16.26-11.61-16.26,11.61c-1.99,1.42-4.74,0-4.74-2.44V9c0-3.31,2.69-6,6-6h30c3.31,0,6,2.69,6,6v42.17c0,2.44-2.76,3.86-4.74,2.44Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset195AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 59.8 57.22"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M32.91,4.82l6.71,12.85,14.33,2.36c2.72.45,3.8,3.78,1.86,5.74l-10.18,10.26,2.17,14.27c.41,2.72-2.4,4.77-4.87,3.55l-13.03-6.47-13.03,6.47c-2.46,1.22-5.28-.83-4.87-3.55l2.17-14.27L3.99,25.77c-1.94-1.96-.86-5.29,1.86-5.74l14.33-2.36,6.71-12.85c1.27-2.43,4.75-2.43,6.02,0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset196AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 57"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M3.14,19.5C2.07,11.65,7.11,3.9,15.01,3.08c5.96-.62,11.24,2.62,13.63,7.52.57,1.17,2.15,1.17,2.72,0,2.39-4.9,7.67-8.14,13.63-7.52,7.9.82,12.94,8.57,11.87,16.42-2.51,18.31-26.86,34.5-26.86,34.5,0,0-24.35-16.19-26.86-34.5Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset197AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 64.51"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M24,57h-15c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c4.03,0,7.59,1.99,9.77,5.03"/> </g> <polyline className="cls-1" points="57 48 43.52 61.51 36.01 53.99"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset198AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 57.02 69"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M24,57h-15c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c1.04,0,2.04.13,3,.38"/> </g> <g> <line className="cls-1" x1="54" y1="57" x2="36" y2="57"/> <polyline className="cls-1" points="45 48 54.02 56.98 45 66"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset199AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 57 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M24,57h-15c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c4.97,0,9.23,3.02,11.05,7.32"/> </g> <line className="cls-1" x1="54" y1="57" x2="36" y2="57"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset19AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M53.5,3.09L5.12,15.27c-2.67.67-2.88,4.39-.3,5.35l25.15,9.4,9.4,25.14c.97,2.58,4.68,2.37,5.35-.3L56.91,6.5c.52-2.06-1.35-3.93-3.41-3.41Z"/> <line className="cls-1" x1="29.97" y1="30.03" x2="56.13" y2="3.87"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset19BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 58 84.7"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M29,58C13.01,58,0,44.99,0,29S13.01,0,29,0s29,13.01,29,29-13.01,29-29,29ZM29,5C15.77,5,5,15.77,5,29s10.77,24,24,24,24-10.77,24-24S42.23,5,29,5Z"/> <path d="M13.39,84.7c-.38,0-.77-.09-1.13-.27-.84-.43-1.37-1.29-1.37-2.23v-30.54c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v25.59l11.63-8.57c.88-.65,2.08-.65,2.97,0l11.63,8.57v-25.59c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v30.54c0,.94-.53,1.81-1.37,2.23-.84.42-1.85.34-2.61-.22l-14.13-10.41-14.13,10.41c-.44.32-.96.49-1.48.49Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset200AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54.36 66.36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M30,57H9c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c2.62,0,5.05.84,7.03,2.27"/> </g> <g> <line className="cls-1" x1="51.36" y1="50.64" x2="38.64" y2="63.36"/> <line className="cls-1" x1="51.36" y1="63.36" x2="38.64" y2="50.64"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset201AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 57 69"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M24,57h-15c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c1.54,0,3.01.29,4.36.82"/> </g> <g> <line className="cls-1" x1="45" y1="48" x2="45" y2="66"/> <line className="cls-1" x1="54" y1="57" x2="36" y2="57"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset202AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M39,57H9c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c6.63,0,12,5.37,12,12h0c0,3.31-2.69,6-6,6Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset20AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M26.25,33.75h0c-4.97-4.97-4.97-13.04,0-18.01l9.01-9.01c4.97-4.97,13.04-4.97,18.01,0h0c4.97,4.97,4.97,13.04,0,18.01l-6.01,6"/> <path className="cls-1" d="M33.75,26.25h0c4.97,4.97,4.97,13.04,0,18.01l-9.01,9.01c-4.97,4.97-13.04,4.97-18.01,0h0c-4.97-4.97-4.97-13.04,0-18.01l4.5-4.5"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset20BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.51 73.61"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M34.54,73.61h-10.01c-.85,0-1.64-.43-2.1-1.14s-.53-1.61-.19-2.38l11.3-25.38h-12.65l-4.61,7.69c-.45.75-1.27,1.21-2.14,1.21H2.5c-.85,0-1.64-.43-2.1-1.14-.46-.71-.53-1.61-.19-2.38l5.93-13.29L.22,23.5c-.34-.77-.27-1.67.19-2.38s1.25-1.14,2.1-1.14h11.64c.88,0,1.69.46,2.15,1.22l4.6,7.7h12.66L22.25,3.52c-.34-.77-.27-1.67.19-2.38s1.25-1.14,2.1-1.14h10.01c.88,0,1.69.46,2.14,1.22l16.58,27.68h11.34c4.36,0,7.91,3.55,7.91,7.91s-3.55,7.91-7.91,7.91h-11.34l-16.58,27.68c-.45.75-1.27,1.22-2.14,1.22ZM28.38,68.61h4.75l16.58-27.68c.45-.75,1.27-1.22,2.14-1.22h12.76c1.6,0,2.91-1.3,2.91-2.91s-1.31-2.91-2.91-2.91h-12.76c-.88,0-1.69-.46-2.14-1.22L33.13,5h-4.75l11.3,25.38c.34.77.27,1.67-.19,2.38s-1.25,1.14-2.1,1.14h-17.93c-.88,0-1.69-.46-2.15-1.22l-4.6-7.7h-6.37l4.82,10.81c.29.65.29,1.39,0,2.04l-4.81,10.79h6.37l4.61-7.69c.45-.75,1.27-1.21,2.14-1.21h17.92c.85,0,1.64.43,2.1,1.14s.53,1.61.19,2.38l-11.3,25.38Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset21AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="15" y="3" width="18" height="30" rx="6" ry="6"/> <path className="cls-1" d="M45,24v3c0,9.94-8.06,18-18,18h-6c-9.94,0-18-8.06-18-18v-3"/> <line className="cls-1" x1="39" y1="57" x2="9" y2="57"/> <line className="cls-1" x1="24" y1="45" x2="24" y2="57"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset21BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 77.86 69.91"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M38.93,69.91c-.75,0-1.45-.33-1.93-.91L.57,24.91c-.7-.85-.76-2.06-.15-2.98L14.34,1.11c.46-.69,1.24-1.11,2.08-1.11h45.03c.83,0,1.61.42,2.08,1.11l13.91,20.82c.61.92.55,2.13-.15,2.98l-36.43,44.1c-.48.58-1.18.91-1.93.91ZM5.61,23.16l33.32,40.33,33.32-40.33-12.14-18.16H17.75L5.61,23.16Z"/> <path d="M38.93,69.91c-1.12,0-2.1-.74-2.4-1.81l-12.6-44.1c-.12-.41-.13-.84-.03-1.25L28.71,1.94c.26-1.13,1.27-1.94,2.44-1.94h15.57c1.16,0,2.17.8,2.44,1.94l4.81,20.82c.1.41.08.84-.03,1.25l-12.6,44.1c-.31,1.07-1.29,1.81-2.4,1.81ZM28.91,23.25l10.02,35.06,10.02-35.06-4.22-18.25h-11.6l-4.22,18.25Z"/> <path d="M75.36,25.82H2.5C1.12,25.82,0,24.7,0,23.32s1.12-2.5,2.5-2.5h72.86c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset22AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="57 39 57 57 3 57 3 3 21 3"/> <g> <polyline className="cls-1" points="39 3 57 3 57 21"/> <line className="cls-1" x1="57" y1="3" x2="36" y2="24"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset22BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 70.84 70.84"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M2.5,70.84c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54L44.79,22.51c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54L4.27,70.1c-.49.49-1.13.73-1.77.73Z"/> <path d="M36.66,62.25c-15.48,0-28.07-12.59-28.07-28.08,0-14.01,10.58-24.75,27.6-28.03L67.86.04c.81-.16,1.65.1,2.24.69.59.59.84,1.43.69,2.24l-6.1,31.67c-3.28,17.03-14.02,27.6-28.03,27.6ZM65.18,5.65l-28.05,5.4c-11.38,2.19-23.55,9.42-23.55,23.12,0,12.72,10.35,23.08,23.07,23.08,13.7,0,20.93-12.16,23.12-23.55l5.4-28.05Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset23AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 50.99 54.94"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M44.62,33.1L12.62,51.1c-4.3,2.42-9.62-.69-9.62-5.62V9.46C3,4.53,8.32,1.42,12.62,3.84l32.01,18.01c4.39,2.47,4.39,8.78,0,11.25Z"/> <polyline className="cls-1" points="47.99 48.47 47.99 27.47 47.99 6.47"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset23BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 65.26 71.49"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M58.59,71.49H6.66c-3.67,0-6.66-2.99-6.66-6.66V6.66C0,2.99,2.99,0,6.66,0h51.93c3.67,0,6.66,2.99,6.66,6.66v58.16c0,3.67-2.99,6.66-6.66,6.66ZM6.66,5c-.92,0-1.66.75-1.66,1.66v58.16c0,.92.75,1.66,1.66,1.66h51.93c.92,0,1.66-.75,1.66-1.66V6.66c0-.92-.75-1.66-1.66-1.66H6.66Z"/> <path d="M50.26,28.14H14.99c-1.7,0-3.08-1.38-3.08-3.08v-10.35c0-1.7,1.38-3.08,3.08-3.08h35.27c1.7,0,3.08,1.38,3.08,3.08v10.35c0,1.7-1.38,3.08-3.08,3.08ZM16.91,23.14h31.43v-6.5h-31.43v6.5Z"/> <path d="M17.36,43.62c-.66,0-1.3-.27-1.77-.73-.47-.47-.73-1.11-.73-1.77s.26-1.3.73-1.77c.11-.11.24-.22.38-.31s.28-.17.43-.23c.15-.06.31-.11.47-.14.32-.07.65-.07.98,0,.16.03.31.08.47.14.15.06.29.14.43.23.13.09.26.2.38.31.46.47.73,1.11.73,1.77s-.27,1.3-.74,1.77c-.11.11-.24.22-.37.31-.14.09-.28.17-.43.23-.16.06-.31.11-.47.14-.16.03-.33.05-.49.05Z"/> <path d="M17.36,55.74c-.66,0-1.3-.27-1.77-.73-.11-.12-.22-.25-.31-.38-.09-.14-.17-.28-.23-.44-.06-.15-.11-.3-.14-.46-.04-.16-.05-.33-.05-.49,0-.66.26-1.3.73-1.77.58-.58,1.44-.85,2.26-.68.16.03.31.08.47.14.15.06.29.14.43.23.13.09.26.2.38.31.46.47.73,1.11.73,1.77,0,.16-.02.33-.05.49-.03.16-.08.31-.14.46-.06.16-.14.3-.23.44-.09.13-.2.26-.32.38-.11.11-.24.22-.37.31-.14.09-.28.16-.43.23-.16.06-.31.11-.47.14-.16.03-.33.05-.49.05Z"/> <path d="M31.74,43.62c-.17,0-.33-.02-.49-.05-.16-.03-.32-.08-.47-.14-.15-.07-.29-.14-.43-.23s-.27-.2-.38-.31c-.11-.12-.22-.25-.31-.38-.09-.14-.17-.28-.23-.43-.06-.15-.11-.31-.14-.47-.04-.16-.05-.33-.05-.49,0-.66.26-1.3.73-1.77.11-.11.24-.22.38-.31.13-.09.28-.17.43-.23.15-.06.31-.11.47-.14.81-.17,1.67.1,2.25.68.47.47.74,1.11.74,1.77,0,.16-.02.33-.05.49s-.08.32-.14.47c-.07.15-.14.29-.23.43-.09.13-.2.26-.32.38-.46.46-1.11.73-1.76.73Z"/> <path d="M46.12,43.62c-.17,0-.33-.02-.49-.05-.16-.03-.32-.08-.47-.14-.15-.06-.3-.14-.43-.23-.14-.09-.27-.2-.38-.31-.47-.47-.73-1.11-.73-1.77,0-.16.01-.33.05-.49.03-.16.08-.32.14-.47.06-.15.14-.29.23-.43.09-.13.19-.26.31-.38.92-.93,2.6-.93,3.54,0,.11.12.22.25.31.38.09.14.16.28.23.43.06.15.11.31.14.47.03.16.05.33.05.49,0,.66-.27,1.3-.74,1.77-.11.11-.24.22-.38.31-.13.09-.28.17-.43.23-.15.06-.31.11-.47.14-.16.03-.32.05-.48.05Z"/> <path d="M46.12,55.74h-14.38c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h14.38c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset24AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 50.99 54.94"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M6.37,33.1l32.01,18.01c4.3,2.42,9.62-.69,9.62-5.62V9.46c0-4.94-5.32-8.04-9.62-5.62L6.37,21.85c-4.39,2.47-4.39,8.78,0,11.25Z"/> <polyline className="cls-1" points="3 48.47 3 27.47 3 6.47"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset24BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 69.67 57.31"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M28.25,23.76h-14.05c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h14.05c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M21.22,30.79c-1.38,0-2.5-1.12-2.5-2.5v-14.05c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v14.05c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> <path d="M49.73,18.92c-.66,0-1.3-.27-1.77-.74-.12-.11-.22-.24-.31-.38-.09-.13-.17-.28-.23-.43-.06-.15-.11-.31-.14-.47-.04-.16-.05-.32-.05-.48,0-.17.01-.33.05-.49.03-.16.08-.32.14-.47.06-.15.14-.3.23-.43.09-.14.19-.27.31-.38.11-.12.24-.22.38-.31.13-.09.28-.17.43-.23.15-.07.31-.11.47-.15.81-.16,1.67.11,2.26.69.11.11.22.24.31.38.09.13.16.28.23.43.06.15.11.31.14.47.03.16.05.32.05.49,0,.16-.02.32-.05.48-.03.16-.08.32-.14.47-.07.15-.14.3-.23.43-.1.14-.2.27-.32.38-.46.47-1.1.74-1.76.74Z"/> <g> <path d="M43.87,27.35c-.65,0-1.3-.26-1.76-.73-.47-.46-.74-1.11-.74-1.77,0-.16.02-.32.05-.48.03-.16.08-.32.14-.47.07-.15.14-.3.23-.43.09-.14.2-.27.32-.38.11-.12.24-.22.38-.32.13-.09.28-.16.43-.23.15-.06.3-.11.46-.14.81-.17,1.68.1,2.26.69.12.11.22.24.31.38.09.13.17.28.23.43s.11.31.14.47c.04.16.05.32.05.48,0,.66-.26,1.31-.73,1.77-.47.47-1.11.73-1.77.73Z"/> <path d="M55.58,27.35c-.16,0-.33-.01-.49-.05-.16-.03-.31-.08-.46-.14-.16-.06-.3-.14-.44-.23-.13-.09-.26-.19-.38-.31-.46-.46-.73-1.11-.73-1.77s.27-1.3.73-1.76c.12-.12.25-.22.38-.32.14-.09.28-.16.44-.23.15-.06.3-.11.46-.14.82-.17,1.68.1,2.26.69.47.46.73,1.11.73,1.76s-.26,1.31-.73,1.77c-.47.47-1.11.73-1.77.73Z"/> </g> <path d="M57.18,57.31c-4.8,0-8.79-5.24-10.94-14.37-.28-1.2-1.42-2.06-2.71-2.06h-17.38c-1.29,0-2.43.87-2.71,2.06-2.15,9.13-6.14,14.37-10.94,14.37C4.29,57.31,0,42.9,0,28.66S4.29,0,12.5,0h44.68c8.2,0,12.5,14.42,12.5,28.66s-4.29,28.66-12.5,28.66ZM26.15,35.88h17.38c3.64,0,6.76,2.43,7.58,5.92,1.63,6.9,4.29,10.52,6.07,10.52,3.06,0,7.5-9.22,7.5-23.66s-4.44-23.66-7.5-23.66H12.5c-3.06,0-7.5,9.22-7.5,23.66s4.44,23.66,7.5,23.66c1.79,0,4.45-3.61,6.07-10.52.82-3.48,3.94-5.92,7.58-5.92Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset25AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <rect className="cls-1" x="3" y="3" width="48" height="48" rx="6" ry="6"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset25BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 57.86 72.71"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M49.83,72.71H8.02c-4.42,0-8.02-3.6-8.02-8.02V30.56c0-4.42,3.6-8.02,8.02-8.02h41.81c4.42,0,8.03,3.6,8.03,8.02v34.13c0,4.42-3.6,8.02-8.03,8.02ZM8.02,27.53c-1.67,0-3.02,1.36-3.02,3.02v34.13c0,1.67,1.36,3.02,3.02,3.02h41.81c1.67,0,3.03-1.36,3.03-3.02V30.56c0-1.67-1.36-3.02-3.03-3.02H8.02Z"/> <path d="M8.83,29.15c-1.38,0-2.5-1.12-2.5-2.5v-4.05C6.33,10.14,16.47,0,28.93,0c6.77,0,13.13,3,17.44,8.22.88,1.06.73,2.64-.34,3.52-1.06.88-2.64.73-3.52-.34-3.36-4.07-8.31-6.41-13.58-6.41-9.71,0-17.6,7.9-17.6,17.6v4.05c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M28.93,54.37c-1.38,0-2.5-1.12-2.5-2.5v-8.49c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v8.49c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset26AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="3" y="3" width="18" height="48" rx="3" ry="3"/> <rect className="cls-1" x="33" y="3" width="18" height="48" rx="3" ry="3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset26BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.82 74.81"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M37.4,21.62c-.66,0-1.3-.26-1.77-.73-.11-.11-.22-.24-.31-.38-.09-.14-.17-.28-.23-.43-.06-.15-.11-.31-.14-.47-.04-.16-.05-.32-.05-.49,0-.16,0-.32.05-.49.03-.16.08-.31.14-.46.06-.15.14-.3.23-.43.09-.14.2-.27.31-.38.93-.94,2.61-.94,3.54,0,.11.11.22.24.31.38.09.13.16.28.23.43.06.15.11.3.14.46.03.17.05.33.05.49,0,.17-.02.33-.05.49-.03.16-.08.32-.14.47-.07.15-.14.29-.23.43-.09.14-.2.27-.31.38-.12.12-.25.22-.38.31-.14.09-.28.17-.44.23-.15.06-.3.11-.46.14-.16.04-.33.05-.49.05Z"/> <path d="M24.47,26.98c-.66,0-1.3-.27-1.76-.73s-.74-1.12-.74-1.77.27-1.31.74-1.77c.58-.58,1.44-.85,2.25-.68.16.03.32.08.47.14.15.06.3.14.43.23.14.09.27.19.38.31.47.46.73,1.11.73,1.77,0,.16,0,.32-.05.49-.03.15-.08.31-.14.46-.06.15-.14.3-.23.44-.09.13-.19.26-.31.38-.11.11-.24.21-.38.31-.13.09-.28.16-.43.22-.15.07-.31.11-.47.15-.16.03-.32.05-.49.05Z"/> <path d="M19.12,39.9c-.66,0-1.3-.27-1.77-.73-.11-.12-.22-.24-.31-.38-.09-.14-.16-.28-.23-.43-.06-.15-.11-.31-.14-.47s-.05-.33-.05-.49c0-.66.27-1.3.73-1.77.58-.58,1.45-.85,2.26-.68.16.03.32.08.47.14.15.06.29.14.43.23.14.09.26.2.38.31.11.12.22.25.31.38.09.14.17.28.23.43.06.15.11.31.14.47s.05.33.05.49-.02.33-.05.49-.08.32-.14.47c-.06.15-.14.29-.23.43-.09.14-.2.26-.31.38-.12.12-.24.22-.38.31-.14.09-.28.17-.43.23-.15.06-.31.11-.47.14s-.32.05-.49.05Z"/> <path d="M24.48,52.83c-.17,0-.33-.02-.49-.05s-.32-.08-.47-.15c-.15-.06-.3-.14-.43-.23-.14-.09-.27-.19-.38-.31-.12-.11-.22-.24-.31-.38-.09-.13-.17-.28-.23-.43-.07-.15-.11-.31-.15-.47-.03-.16-.04-.32-.04-.48,0-.17,0-.33.04-.49.04-.16.08-.32.15-.47.06-.15.14-.3.23-.43.09-.14.19-.27.31-.38.11-.12.24-.22.38-.31.13-.09.28-.17.43-.23.15-.07.31-.11.47-.15.32-.06.65-.06.97,0,.16.04.32.08.47.15.15.06.3.14.43.23.14.09.27.19.38.31.12.11.22.24.31.38.09.13.17.28.23.43.07.15.11.31.15.47.03.16.05.32.05.49,0,.65-.27,1.3-.74,1.76-.11.12-.24.22-.38.31-.13.09-.28.17-.43.23-.15.07-.31.12-.47.15s-.32.05-.48.05Z"/> <path d="M50.32,26.98c-.66,0-1.3-.27-1.77-.73-.46-.47-.73-1.12-.73-1.77s.27-1.31.73-1.77c.12-.12.25-.22.38-.31.14-.09.29-.17.44-.23.15-.06.3-.11.46-.14.33-.07.66-.07.98,0,.16.03.32.08.47.14.15.06.3.14.43.23.14.09.27.19.38.31.47.46.73,1.11.73,1.77s-.26,1.3-.73,1.77c-.11.11-.24.21-.38.31-.13.09-.28.16-.43.22-.15.07-.31.11-.47.15-.16.03-.32.05-.49.05Z"/> <path d="M37.39,74.81c-9.99,0-19.36-3.87-26.44-10.94-14.6-14.6-14.6-38.34,0-52.94,14.6-14.58,38.34-14.58,52.91,0,7.22,7.22,11.12,16.83,10.96,27.05-.04,2.39-1.18,4.55-3.13,5.92-2.04,1.43-4.68,1.79-7.08.96-5.66-1.95-11.8-.54-16.03,3.7-4.24,4.24-5.66,10.38-3.71,16.05.82,2.39.46,5.04-.96,7.07-1.37,1.95-3.53,3.09-5.92,3.13-.2,0-.4,0-.6,0ZM37.41,5c-8.3,0-16.61,3.16-22.93,9.47-12.64,12.64-12.64,33.22,0,45.87,6.14,6.12,14.26,9.48,22.91,9.48.17,0,.34,0,.52,0,1.05-.02,1.65-.64,1.9-1,.51-.72.63-1.68.33-2.57-2.57-7.48-.7-15.61,4.9-21.21,5.58-5.6,13.71-7.48,21.2-4.9.89.31,1.85.19,2.58-.32.37-.26.99-.85,1-1.9h0c.13-8.85-3.24-17.18-9.5-23.43-6.31-6.31-14.61-9.47-22.91-9.47Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset27AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66.4 48.84"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M27.06,29.65l27.4,15.41c4,2.25,8.94-.64,8.94-5.23V9.01c0-4.59-4.94-7.48-8.94-5.23l-27.4,15.41c-4.08,2.29-4.08,8.17,0,10.46Z"/> <path className="cls-1" d="M33.9,3.53L6.06,19.19c-4.08,2.29-4.08,8.17,0,10.46l27.84,15.66"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset27BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.78 72.78"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M63.52,33.39c-1.99,0-3.85-.77-5.26-2.18l-16.69-16.69c-2.9-2.9-2.9-7.62,0-10.51l1.84-1.84c2.9-2.9,7.62-2.9,10.51,0l16.69,16.69c2.9,2.9,2.9,7.62,0,10.51l-1.84,1.84c-1.4,1.4-3.27,2.18-5.26,2.18ZM48.66,5c-.62,0-1.25.24-1.72.71l-1.84,1.84c-.95.95-.95,2.49,0,3.44l16.69,16.69c.92.92,2.52.92,3.44,0l1.84-1.84c.95-.95.95-2.49,0-3.44L50.38,5.71c-.48-.47-1.1-.71-1.72-.71Z"/> <path d="M45.66,38.44c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l8.66-8.66-5.28-5.28-8.66,8.66c-.98.98-2.56.98-3.54,0-.98-.98-.98-2.56,0-3.54l10.43-10.43c.94-.94,2.6-.94,3.54,0l8.82,8.82c.47.47.73,1.1.73,1.77s-.26,1.3-.73,1.77l-10.43,10.43c-.49.49-1.13.73-1.77.73Z"/> <path d="M38.39,60.57c-.64,0-1.28-.24-1.77-.73l-23.67-23.67c-.98-.98-.98-2.56,0-3.54l5.33-5.33c6.14-6.14,16.13-6.14,22.27,0l4.93,4.93c6.14,6.14,6.14,16.13,0,22.27t0,0l-5.33,5.33c-.49.49-1.13.73-1.77.73ZM18.25,34.4l20.13,20.13,3.57-3.57c4.19-4.19,4.19-11.01,0-15.2l-4.93-4.93c-4.19-4.19-11.01-4.19-15.2,0l-3.57,3.57ZM43.72,52.73h0,0Z"/> <path d="M2.5,72.78c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l24.05-24.05c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-24.05,24.05c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset28AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66.4 48.84"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M39.34,19.19L11.94,3.78c-4-2.25-8.94.64-8.94,5.23v30.82c0,4.59,4.94,7.48,8.94,5.23l27.4-15.41c4.08-2.29,4.08-8.17,0-10.46Z"/> <path className="cls-1" d="M32.5,45.31l27.84-15.66c4.08-2.29,4.08-8.17,0-10.46L32.5,3.53"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset28BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.37 76.86"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M15.28,75.94H4.1c-2.26,0-4.1-1.84-4.1-4.1V4.1C0,1.84,1.84,0,4.1,0h11.17c2.26,0,4.1,1.84,4.1,4.1v67.73c0,2.26-1.84,4.1-4.1,4.1ZM5,70.94h9.38V5H5v65.94Z"/> <path d="M16.88,60.33H2.5c-1.38,0-2.5-1.12-2.5-2.5V18.11c0-1.38,1.12-2.5,2.5-2.5h14.38c1.38,0,2.5,1.12,2.5,2.5v39.71c0,1.38-1.12,2.5-2.5,2.5ZM5,55.33h9.38V20.61H5v34.71Z"/> <g> <path d="M29.65,75.94h-11.17c-2.26,0-4.1-1.84-4.1-4.1V4.1c0-2.26,1.84-4.1,4.1-4.1h11.17c2.26,0,4.1,1.84,4.1,4.1v67.73c0,2.26-1.84,4.1-4.1,4.1ZM19.38,70.94h9.38V5h-9.38v65.94Z"/> <path d="M31.26,60.33h-14.38c-1.38,0-2.5-1.12-2.5-2.5V18.11c0-1.38,1.12-2.5,2.5-2.5h14.38c1.38,0,2.5,1.12,2.5,2.5v39.71c0,1.38-1.12,2.5-2.5,2.5ZM19.38,55.33h9.38V20.61h-9.38v34.71Z"/> </g> <g> <path d="M59.93,76.86c-.53,0-1.07-.11-1.58-.32-1.01-.42-1.8-1.21-2.22-2.22L30.32,11.7c-.86-2.09.14-4.49,2.23-5.36l10.33-4.26c1.02-.42,2.13-.42,3.14,0,1.01.42,1.8,1.21,2.22,2.22l25.82,62.62c.42,1.01.42,2.13,0,3.14-.42,1.01-1.21,1.8-2.22,2.22h0l-10.33,4.26c-.5.21-1.03.31-1.56.31ZM35.29,10.62l25.13,60.96,8.67-3.57L43.96,7.05l-8.67,3.58ZM70.87,69.98h0,0ZM69.92,67.67s0,0,0,0h0Z"/> <path d="M53.11,62.91c-.33,0-.65-.06-.96-.19-.61-.25-1.1-.74-1.35-1.36l-15.14-36.72c-.25-.61-.25-1.3,0-1.91.25-.61.74-1.1,1.36-1.35l13.29-5.48c1.28-.52,2.74.08,3.26,1.36l15.14,36.71c.25.61.25,1.3,0,1.91-.25.61-.74,1.1-1.36,1.35l-13.29,5.48c-.31.13-.63.19-.95.19ZM41.24,25.06l13.23,32.09,8.67-3.58-13.23-32.09-8.67,3.58Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset29AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 50.92 54.94"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M44.63,21.85L12.62,3.84c-4.3-2.42-9.62.69-9.62,5.63v36.02c0,4.94,5.32,8.05,9.62,5.63l32.02-18.01c4.39-2.47,4.39-8.78,0-11.25Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset29BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 69.43 70"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M17.11,31.79c-.17,0-.33-.02-.49-.05-.16-.04-.32-.08-.47-.15-.15-.06-.3-.14-.43-.23-.14-.09-.27-.19-.38-.31-.12-.11-.22-.24-.31-.38-.09-.13-.17-.28-.23-.43-.06-.15-.11-.31-.14-.47-.04-.16-.05-.32-.05-.48,0-.17,0-.33.05-.49.03-.16.07-.32.14-.47.06-.15.14-.3.23-.43.09-.14.19-.27.31-.38.11-.12.24-.22.38-.31.13-.09.28-.17.43-.23.15-.07.31-.11.47-.15.32-.06.65-.06.97,0,.16.04.32.08.47.15.15.06.3.14.43.23.14.09.27.19.38.31.47.46.74,1.11.74,1.77,0,.16-.02.32-.05.48-.03.16-.08.32-.15.47-.06.15-.14.3-.22.43-.1.14-.2.27-.32.38-.11.12-.24.22-.38.31-.13.09-.28.17-.43.23-.15.07-.31.11-.47.15-.16.03-.32.05-.48.05Z"/> <path d="M33.22,70c-3.45,0-6.9-1.31-9.53-3.94L3.95,46.32C1.26,43.63-.17,39.91.02,36.11l.76-15.07c.22-4.39,3.7-7.87,8.09-8.09l15.06-.76h0c3.79-.19,7.52,1.24,10.21,3.93l19.74,19.74c5.26,5.26,5.26,13.81,0,19.06l-11.13,11.13c-2.63,2.63-6.08,3.94-9.53,3.94ZM24.19,17.19l-15.06.76c-1.82.09-3.26,1.53-3.35,3.35l-.76,15.07c-.12,2.39.78,4.73,2.47,6.42l19.74,19.74c1.6,1.6,3.73,2.48,6,2.48s4.4-.88,6-2.48l11.13-11.13c3.31-3.31,3.31-8.69,0-11.99l-19.74-19.74c-1.69-1.69-4.04-2.61-6.42-2.47h0Z"/> <path d="M65,45.92c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54.77-.77,1.2-1.8,1.2-2.89,0-1.09-.43-2.12-1.2-2.89L33.88,6.55c-1.06-1.06-2.51-1.62-4.02-1.55l-16.78.85c-1.38.06-2.55-.99-2.62-2.37-.07-1.38.99-2.55,2.37-2.62L29.6.01c2.91-.15,5.75.95,7.81,3l29.35,29.32c1.72,1.71,2.66,4,2.66,6.42,0,2.43-.94,4.71-2.66,6.42-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset2AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 56.25 56.25"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M32.4,38.77c-6.15-3.62-11.29-8.77-14.92-14.92-.68-1.16-.44-2.64.51-3.59l4.29-4.29c.97-.97,1.16-2.48.45-3.66l-3.84-6.4c-2.01-3.35-6.63-3.92-9.39-1.16l-4.72,4.72c-1.17,1.17-1.86,2.79-1.76,4.45,1.29,21.12,18.19,38.02,39.32,39.32,1.66.1,3.27-.59,4.45-1.76l4.72-4.72c2.76-2.76,2.19-7.38-1.16-9.39l-6.4-3.84c-1.18-.71-2.69-.52-3.66.45l-4.29,4.29c-.95.95-2.43,1.19-3.59.51Z"/> <g> <line className="cls-1" x1="50.93" y1="5.32" x2="35.93" y2="20.32"/> <polyline className="cls-1" points="35.93 5.32 35.93 20.32 50.93 20.32"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset2BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.11 82.75"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M47.73,60.87h-24.41c-6.54,0-11.85-5.32-11.85-11.85V11.85C11.47,5.32,16.79,0,23.32,0h24.41c6.53,0,11.85,5.32,11.85,11.85v37.17c0,6.53-5.32,11.85-11.85,11.85ZM23.32,5c-3.78,0-6.85,3.07-6.85,6.85v37.17c0,3.78,3.07,6.85,6.85,6.85h24.41c3.78,0,6.85-3.07,6.85-6.85V11.85c0-3.78-3.07-6.85-6.85-6.85h-24.41Z"/> <path d="M35.55,72.4C15.95,72.4,0,56.45,0,36.85c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,16.85,13.71,30.55,30.55,30.55s30.55-13.71,30.55-30.55c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,19.6-15.95,35.55-35.55,35.55Z"/> <path d="M25.38,26.56h-11.41c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.41c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M25.38,39.32h-11.41c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.41c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M57.08,26.56h-11.41c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.41c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M57.08,39.32h-11.41c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.41c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> <path d="M35.55,82.75c-1.38,0-2.5-1.12-2.5-2.5v-10.35c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v10.35c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset30AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 61.32 59.93"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M48.93,40.33l6.71,1.53,2.67-11.7-6.73-1.54c-.15-2.28-.65-4.45-1.46-6.47l5.38-4.29-7.48-9.38-5.38,4.29c-1.81-1.26-3.82-2.24-5.98-2.89V3h-12v6.88c-2.16.64-4.18,1.63-5.98,2.89l-5.38-4.29-7.48,9.38,5.38,4.29c-.82,2.02-1.31,4.2-1.46,6.47l-6.73,1.54,2.67,11.7,6.71-1.53c1.1,1.94,2.51,3.69,4.15,5.18l-2.99,6.22,10.81,5.21,2.99-6.22c1.08.17,2.18.29,3.32.29s2.23-.11,3.32-.29l2.99,6.22,10.81-5.21-2.99-6.22c1.64-1.49,3.05-3.24,4.15-5.18Z"/> <circle className="cls-1" cx="30.66" cy="30" r="9"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset30BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 58.56 73.44"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M33.17,61.66H12.87c-7.1,0-12.87-5.78-12.87-12.88V12.89C0,5.78,5.78,0,12.89,0h14.54c1.54,0,3,.33,4.36,1,1,.45,1.99,1.13,2.86,2l8.42,8.4c.85.85,1.53,1.83,2.04,2.92.62,1.31.96,2.8.96,4.3v30.15c0,7.11-5.78,12.89-12.89,12.89ZM12.89,5c-4.35,0-7.89,3.54-7.89,7.89v35.89c0,4.34,3.53,7.88,7.87,7.88h20.3c4.35,0,7.89-3.54,7.89-7.89v-30.15c0-.75-.17-1.51-.49-2.18-.26-.57-.62-1.08-1.04-1.51l-8.42-8.4c-.44-.44-.92-.77-1.44-1.01-.74-.36-1.47-.53-2.24-.53h-14.54Z"/> <path d="M42.83,17.86h-12.14c-1.38,0-2.5-1.12-2.5-2.5V3.24c0-.85.43-1.64,1.14-2.1.71-.46,1.61-.53,2.38-.19,1.08.48,2.07,1.17,2.94,2.03l8.42,8.4c.85.85,1.53,1.83,2.04,2.92.36.77.3,1.68-.16,2.4-.46.72-1.25,1.15-2.11,1.15ZM33.19,12.86h4.26l-4.26-4.26v4.26Z"/> </g> <path d="M36.81,73.44h-19.58c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h19.58c9.23,0,16.75-7.51,16.75-16.75v-27.05c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v27.05c0,11.99-9.76,21.75-21.75,21.75Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset31AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="15" cy="30" r="12"/> <circle className="cls-1" cx="48" cy="12" r="9"/> <circle className="cls-1" cx="48" cy="48" r="9"/> <line className="cls-1" x1="25.06" y1="36.53" x2="39.96" y2="43.98"/> <line className="cls-1" x1="39.96" y1="16.02" x2="25.06" y2="23.47"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset31BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 58.97 71.12"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M45.27,71.12H13.69c-7.55,0-13.69-6.14-13.69-13.68V13.71C0,6.15,6.15,0,13.7,0h16.99c2.23,0,4.36.48,6.31,1.44,1.48.66,2.91,1.65,4.17,2.91l13.45,13.43c1.23,1.23,2.22,2.66,2.95,4.24.91,1.91,1.4,4.08,1.4,6.24v29.16c0,7.56-6.15,13.71-13.71,13.71ZM13.7,5c-4.8,0-8.7,3.91-8.7,8.71v43.74c0,4.79,3.9,8.68,8.69,8.68h31.58c4.8,0,8.71-3.91,8.71-8.71v-29.16c0-1.43-.32-2.85-.92-4.12-.49-1.06-1.16-2.03-1.96-2.82l-13.45-13.43c-.83-.83-1.75-1.47-2.75-1.92-1.34-.65-2.73-.97-4.2-.97H13.7Z"/> <path d="M55.31,25.56h-19.4c-1.38,0-2.5-1.12-2.5-2.5V3.68c0-.85.43-1.64,1.14-2.1.71-.46,1.61-.53,2.38-.19,1.56.7,2.98,1.69,4.24,2.94l13.45,13.43c1.23,1.23,2.22,2.65,2.95,4.24.36.77.3,1.68-.16,2.4s-1.25,1.15-2.11,1.15ZM38.41,20.56h11.93l-11.93-11.91v11.91Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset32AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54.51 54.51"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M18,51.51H3s0-15,0-15L34.76,4.76c2.34-2.34,6.14-2.34,8.49,0l6.51,6.51c2.34,2.34,2.34,6.14,0,8.49l-31.76,31.76Z"/> <line className="cls-1" x1="33" y1="51.51" x2="51" y2="51.51"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset32BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 55.14 72.74"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M44.53,72.74H10.62c-5.85,0-10.62-4.75-10.62-10.59V10.62C0,4.76,4.76,0,10.62,0h14.01c2.39,0,4.67.52,6.76,1.54,1.59.71,3.12,1.77,4.47,3.12l14.62,14.6c1.32,1.32,2.38,2.85,3.17,4.54.97,2.05,1.5,4.37,1.5,6.69v31.62c0,5.85-4.76,10.62-10.62,10.62ZM10.62,5c-3.1,0-5.62,2.52-5.62,5.62v51.53c0,3.08,2.52,5.59,5.62,5.59h33.91c3.1,0,5.62-2.52,5.62-5.62v-31.62c0-1.58-.35-3.16-1.02-4.57-.54-1.17-1.29-2.24-2.17-3.13l-14.62-14.6c-.92-.92-1.94-1.63-3.05-2.13-1.49-.72-3.02-1.07-4.65-1.07h-14.01Z"/> <path d="M51.38,27.35h-21.08c-1.38,0-2.5-1.12-2.5-2.5V3.79c0-.85.43-1.64,1.14-2.1.71-.46,1.61-.53,2.38-.19,1.67.75,3.2,1.81,4.55,3.16l14.62,14.6c1.32,1.32,2.38,2.84,3.17,4.54.36.77.3,1.68-.16,2.4s-1.25,1.15-2.11,1.15ZM32.79,22.35h13.71l-13.71-13.69v13.69Z"/> </g> <path d="M37.79,59.45h-20.43c-2.95,0-5.35-2.4-5.35-5.35v-7.44c0-2.95,2.4-5.35,5.35-5.35h20.43c2.95,0,5.35,2.4,5.35,5.35v7.44c0,2.95-2.4,5.35-5.35,5.35ZM17.35,46.31c-.19,0-.35.16-.35.35v7.44c0,.19.16.35.35.35h20.43c.19,0,.35-.16.35-.35v-7.44c0-.19-.16-.35-.35-.35h-20.43Z"/> <path d="M18.74,31.65h-6.3c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h6.3c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M18.74,20.56h-6.3c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h6.3c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset33AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="3" y="3" width="54" height="42" rx="6" ry="6"/> <path className="cls-1" d="M4.99,4.55l20.73,21.1c2.35,2.39,6.21,2.39,8.56,0L55,4.55"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset33BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60.07 71.37"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M35.71,19.99c-.42,0-.85-.11-1.25-.33-1.2-.69-1.61-2.22-.92-3.42l5.44-9.42c.32-.55.11-1.03,0-1.21-.1-.18-.42-.61-1.05-.61h-15.82c-.63,0-.94.42-1.05.61-.11.18-.32.66,0,1.21l5.44,9.42c.69,1.2.28,2.72-.92,3.42-1.19.69-2.72.28-3.42-.92l-5.44-9.42c-1.12-1.94-1.12-4.27,0-6.21,1.12-1.95,3.13-3.11,5.38-3.11h15.82c2.25,0,4.26,1.16,5.38,3.11,1.12,1.94,1.12,4.27,0,6.21l-5.44,9.42c-.46.8-1.3,1.25-2.17,1.25Z"/> <path d="M22.53,50.76c1.1,0,2.09.68,2.46,1.71.61,1.69,2.05,2.85,4.92,2.85s4.77-1.34,4.77-4.01c0-2.51-1.39-3.83-5.77-5.37-6.55-2.23-9.28-4.28-9.28-8.8s3.99-7.55,10.01-7.55c4.94,0,7.75,1.45,9.1,3.74,1,1.7-.39,3.84-2.36,3.84h0c-1.1,0-2.04-.71-2.47-1.72-.57-1.34-1.86-2.31-4.35-2.31-2.96,0-4.27,1.46-4.27,3.66s1.49,3.41,6.24,5.04c6.46,2.18,8.88,4.69,8.88,8.96,0,4.86-3.42,8.07-10.73,8.05-5.3,0-8.29-1.64-9.68-4.24-.93-1.74.39-3.86,2.37-3.86h.15ZM27.72,30.33v-1.62c0-1.21.98-2.2,2.2-2.2h0c1.21,0,2.2.98,2.2,2.2v1.62h-4.39ZM27.72,59.86v-1.87h4.39v1.87c0,1.21-.98,2.2-2.2,2.2h0c-1.21,0-2.2-.98-2.2-2.2Z"/> <path d="M39.78,71.37h-19.5c-6.84,0-12.59-2.42-16.19-6.83C.34,59.95-.86,53.7.61,46.46,3.7,31.2,15.83,14.74,30.03,14.74s26.33,16.47,29.43,31.72c1.47,7.24.26,13.49-3.49,18.08-3.6,4.4-9.35,6.83-16.19,6.83ZM30.03,19.74c-10.25,0-21.48,12.69-24.53,27.71-1.16,5.72-.31,10.53,2.46,13.92,2.67,3.27,6.93,4.99,12.32,4.99h19.5c5.39,0,9.65-1.73,12.32-4.99,2.77-3.39,3.62-8.2,2.46-13.92-3.05-15.02-14.28-27.71-24.53-27.71Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset34AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 57.17"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M3,9v27c0,3.31,2.69,6,6,6h12l6.43,10.71c1.17,1.94,3.98,1.94,5.14,0l6.43-10.71h12c3.31,0,6-2.69,6-6V9c0-3.31-2.69-6-6-6H9c-3.31,0-6,2.69-6,6Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset34BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 65.36 67.4"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M32.68,67.4c-2.66,0-5.31-.82-7.58-2.47-1.36-.99-2.96-1.51-4.64-1.51-5.6,0-10.53-3.58-12.27-8.91-.52-1.6-1.51-2.96-2.87-3.95-4.53-3.29-6.42-9.09-4.68-14.42.52-1.6.52-3.28,0-4.88-1.73-5.33.15-11.13,4.68-14.42,1.36-.99,2.35-2.35,2.87-3.95,1.73-5.33,6.66-8.91,12.27-8.91,1.68,0,3.28-.52,4.64-1.51,4.54-3.29,10.63-3.29,15.16,0h0c1.36.99,2.96,1.51,4.64,1.51,5.61,0,10.54,3.58,12.27,8.91.52,1.6,1.51,2.96,2.87,3.95,4.53,3.29,6.42,9.09,4.69,14.42-.52,1.6-.52,3.28,0,4.88,1.73,5.33-.15,11.13-4.69,14.42-1.36.99-2.35,2.35-2.87,3.95-1.73,5.33-6.66,8.91-12.27,8.91-1.68,0-3.28.52-4.64,1.51-2.27,1.65-4.92,2.47-7.58,2.47ZM32.68,5c-1.63,0-3.25.5-4.64,1.51-2.22,1.61-4.84,2.46-7.58,2.46-3.43,0-6.45,2.19-7.51,5.46-.85,2.61-2.47,4.84-4.69,6.45-2.78,2.02-3.93,5.56-2.87,8.83.85,2.61.85,5.36,0,7.97-1.06,3.26.09,6.81,2.87,8.83,2.22,1.61,3.84,3.84,4.69,6.45,1.06,3.26,4.08,5.46,7.51,5.46,2.74,0,5.36.85,7.58,2.46,2.78,2.02,6.51,2.02,9.28,0,2.22-1.61,4.84-2.46,7.58-2.46,3.43,0,6.45-2.19,7.51-5.46.85-2.61,2.47-4.84,4.68-6.45,2.78-2.02,3.93-5.56,2.87-8.83-.85-2.61-.85-5.36,0-7.97,1.06-3.26-.09-6.81-2.87-8.83-2.22-1.61-3.84-3.84-4.68-6.45-1.06-3.26-4.08-5.46-7.51-5.46-2.74,0-5.36-.85-7.58-2.46h0c-1.39-1.01-3.01-1.51-4.64-1.51Z"/> <g> <path d="M23.8,27.32c-.17,0-.33-.02-.49-.05-.16-.03-.32-.08-.47-.14-.15-.07-.3-.14-.43-.24-.14-.09-.27-.19-.38-.31-.12-.11-.22-.24-.31-.38-.09-.13-.17-.28-.24-.43-.06-.15-.11-.31-.14-.46-.03-.17-.05-.33-.05-.49,0-.17.02-.33.05-.49.03-.16.08-.32.14-.47.07-.15.15-.3.24-.43.09-.14.19-.27.31-.38.11-.12.24-.22.38-.31.13-.09.28-.17.43-.23.15-.06.31-.11.47-.14.32-.07.65-.07.97,0,.16.03.32.08.47.14.15.06.3.14.43.23.14.09.27.19.38.31.12.11.22.24.31.38.09.13.17.28.23.43.07.15.11.31.15.47.03.16.05.32.05.49,0,.16-.02.32-.05.49-.04.15-.08.31-.15.46-.06.15-.14.3-.23.43-.09.14-.19.27-.31.38-.11.12-.24.22-.38.31-.13.1-.28.17-.43.24-.15.06-.31.11-.47.14-.16.03-.32.05-.48.05Z"/> <path d="M41.56,45.08c-.16,0-.33-.01-.49-.04-.16-.04-.31-.08-.46-.15-.16-.06-.3-.14-.44-.23-.13-.09-.26-.19-.38-.31-.46-.46-.73-1.11-.73-1.76s.27-1.3.73-1.77c.12-.12.25-.22.38-.31.14-.09.28-.17.44-.23.15-.07.3-.11.46-.15.82-.16,1.68.11,2.26.69.47.47.73,1.11.73,1.77s-.26,1.3-.73,1.76c-.46.47-1.11.73-1.77.73Z"/> <path d="M23.79,45.08c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l17.77-17.77c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-17.77,17.77c-.49.49-1.13.73-1.77.73Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset35AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 63"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="3" y="24" width="42" height="36" rx="6" ry="6"/> <path className="cls-1" d="M12,24v-9c0-6.63,5.37-12,12-12h0c5.58,0,10.27,3.81,11.61,8.97"/> <g> <circle className="cls-1" cx="24" cy="39" r="3"/> <line className="cls-1" x1="24" y1="42" x2="24" y2="48"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset35BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 69.15 72.55"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M49.77,72.55H10.59c-5.84,0-10.59-4.74-10.59-10.57V10.59C0,4.75,4.75,0,10.59,0h19.33c2.39,0,4.66.52,6.75,1.54,1.59.71,3.12,1.77,4.46,3.11l14.58,14.56c1.31,1.31,2.38,2.84,3.16,4.53.58,1.25.03,2.74-1.22,3.32-1.25.58-2.74.03-3.32-1.22-.53-1.14-1.27-2.21-2.15-3.09l-14.58-14.56c-.91-.91-1.94-1.63-3.04-2.12-1.48-.72-3.01-1.07-4.63-1.07H10.59c-3.08,0-5.59,2.51-5.59,5.59v51.38c0,3.07,2.51,5.57,5.59,5.57h39.18c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M56.6,27.29h-21.02c-1.38,0-2.5-1.12-2.5-2.5V3.78c0-.85.43-1.64,1.14-2.1.71-.46,1.61-.53,2.38-.19,1.66.74,3.19,1.8,4.54,3.15l14.58,14.56c1.31,1.31,2.38,2.84,3.16,4.53.36.77.3,1.68-.16,2.4-.46.72-1.25,1.15-2.11,1.15ZM38.08,22.29h13.64l-13.64-13.62v13.62Z"/> <path d="M51.26,56.03c1.1,0,2.09.68,2.46,1.71.61,1.69,2.05,2.85,4.92,2.85s4.77-1.34,4.77-4.01c0-2.51-1.39-3.83-5.77-5.37-6.55-2.23-9.28-4.28-9.28-8.8s3.99-7.55,10.01-7.55c4.94,0,7.75,1.45,9.1,3.74,1,1.7-.39,3.84-2.36,3.84h0c-1.1,0-2.04-.71-2.47-1.72-.57-1.34-1.86-2.31-4.35-2.31-2.96,0-4.27,1.46-4.27,3.66s1.49,3.41,6.24,5.04c6.46,2.18,8.88,4.69,8.88,8.96,0,4.86-3.42,8.07-10.73,8.05-5.3,0-8.29-1.64-9.68-4.24-.93-1.74.39-3.86,2.37-3.86h.15ZM56.44,35.6v-1.62c0-1.21.98-2.2,2.2-2.2h0c1.21,0,2.2.98,2.2,2.2v1.62h-4.39ZM56.44,65.13v-1.87h4.39v1.87c0,1.21-.98,2.2-2.2,2.2h0c-1.21,0-2.2-.98-2.2-2.2Z"/> <path d="M22.64,20.92h-9.17c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h9.17c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M22.64,33.11h-9.17c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h9.17c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M36.34,60.08h-15.82c-5.27,0-9.55-4.29-9.55-9.55s4.29-9.55,9.55-9.55h15.82c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5h-15.82c-2.51,0-4.55,2.04-4.55,4.55s2.04,4.55,4.55,4.55h15.82c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset36AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 63"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="3" y="24" width="42" height="36" rx="6" ry="6"/> <path className="cls-1" d="M12,24v-9c0-6.63,5.37-12,12-12h0c6.63,0,12,5.37,12,12v9"/> <g> <circle className="cls-1" cx="24" cy="39" r="3"/> <line className="cls-1" x1="24" y1="42" x2="24" y2="48"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset36BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.2 67.24"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M49.03,42.28h-25.87c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h25.87c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M36.1,55.22c-1.38,0-2.5-1.12-2.5-2.5v-25.87c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v25.87c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> <path d="M64.17,67.24H8.02c-4.42,0-8.02-3.6-8.02-8.02V20.35c0-4.42,3.6-8.02,8.02-8.02h56.15c4.42,0,8.02,3.6,8.02,8.02v38.87c0,4.42-3.6,8.02-8.02,8.02ZM8.02,17.33c-1.67,0-3.02,1.36-3.02,3.02v38.87c0,1.67,1.36,3.02,3.02,3.02h56.15c1.67,0,3.02-1.36,3.02-3.02V20.35c0-1.67-1.36-3.02-3.02-3.02H8.02Z"/> <path d="M48.42,17.33h-24.65c-1.38,0-2.5-1.12-2.5-2.5,0-8.17,6.65-14.83,14.83-14.83s14.83,6.65,14.83,14.83c0,1.38-1.12,2.5-2.5,2.5ZM26.6,12.33h19.01c-1.11-4.21-4.95-7.33-9.5-7.33s-8.39,3.11-9.5,7.33Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset37AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="57 36 42 51 33 42"/> <g> <path className="cls-1" d="M28.93,53.48l-4.93,3.52-8.44-6.03c-7.88-5.63-12.56-14.72-12.56-24.41v-14.56L24,3l21,9v14.56c0,2.15-.23,4.27-.68,6.33"/> <line className="cls-1" x1="24" y1="3" x2="24" y2="32.89"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset37BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 75.73 74.44"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M67.71,74.44H8.03c-4.42,0-8.03-3.6-8.03-8.02V8.02C0,3.6,3.6,0,8.03,0h59.68c4.42,0,8.02,3.6,8.02,8.02v58.39c0,4.42-3.6,8.02-8.02,8.02ZM8.03,5c-1.67,0-3.03,1.36-3.03,3.02v58.39c0,1.67,1.36,3.02,3.03,3.02h59.68c1.67,0,3.02-1.36,3.02-3.02V8.02c0-1.67-1.36-3.02-3.02-3.02H8.03Z"/> <path d="M57.96,74.44H17.77c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5h40.19c1.38,0,2.5,1.12,2.5,2.5v69.44c0,1.38-1.12,2.5-2.5,2.5ZM20.27,69.44h35.19V5H20.27v64.44Z"/> <path d="M73.23,39.72H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h70.73c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M17.77,28.15H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h15.27c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M17.77,16.57H4.81c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h12.96c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M17.77,51.29H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h15.27c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M17.77,62.87H4.81c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h12.96c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M73.23,28.15h-15.27c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h15.27c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M70.93,16.57h-12.96c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h12.96c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M73.23,51.29h-15.27c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h15.27c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M70.93,62.87h-12.96c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h12.96c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset38AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M32.44,50.97l-8.44,6.03-8.44-6.03c-7.88-5.63-12.56-14.72-12.56-24.41v-14.56L24,3l21,9v14.56c0,9.69-4.68,18.78-12.56,24.41Z"/> <line className="cls-1" x1="24" y1="3" x2="24" y2="42"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset38BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 77.31 80.05"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M16.74,80.05H2.5c-1.38,0-2.5-1.12-2.5-2.5v-32.04c0-1.38,1.12-2.5,2.5-2.5h14.24c1.38,0,2.5,1.12,2.5,2.5v32.04c0,1.38-1.12,2.5-2.5,2.5ZM5,75.05h9.24v-27.04H5v27.04Z"/> <path d="M45.77,80.05h-14.24c-1.38,0-2.5-1.12-2.5-2.5V29.62c0-1.38,1.12-2.5,2.5-2.5h14.24c1.38,0,2.5,1.12,2.5,2.5v47.93c0,1.38-1.12,2.5-2.5,2.5ZM34.03,75.05h9.24v-42.93h-9.24v42.93Z"/> <path d="M74.81,80.05h-14.24c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5h14.24c1.38,0,2.5,1.12,2.5,2.5v75.05c0,1.38-1.12,2.5-2.5,2.5ZM63.06,75.05h9.24V5h-9.24v70.05Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset39AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 42 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="21" cy="21" r="18"/> <line className="cls-1" x1="21" y1="39" x2="21" y2="57"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset39BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 77.5 75.84"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M2.5,75.84c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54L62.41,9.89c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54L4.27,75.11c-.49.49-1.13.73-1.77.73Z"/> <path d="M49.22,41.32c-3.93,0-7.62-1.53-10.4-4.31-5.73-5.73-5.73-15.06,0-20.79L53.78,1.27c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-14.96,14.96c-3.78,3.78-3.78,9.94,0,13.72,1.83,1.83,4.27,2.84,6.86,2.84s5.03-1.01,6.86-2.84l14.96-14.96c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-14.96,14.96c-2.78,2.78-6.47,4.31-10.4,4.31Z"/> <path d="M75,72.18c-.64,0-1.28-.24-1.77-.73l-15.5-15.52h-12.06c-1.95,0-3.95-.24-5.95-.71-1.34-.32-2.17-1.67-1.86-3.01.32-1.34,1.66-2.17,3.01-1.86,1.62.38,3.23.58,4.79.58h13.09c.66,0,1.3.26,1.77.73l16.23,16.25c.98.98.97,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> <path d="M20.37,39.92c-.64,0-1.28-.24-1.77-.73l-12.53-12.53C2.61,23.2.7,18.59.7,13.7S2.61,4.19,6.07.73c.98-.98,2.56-.98,3.54,0l19.82,19.82c.98.98.98,2.56,0,3.54-.98.98-2.56.98-3.54,0L8.01,6.2c-1.5,2.19-2.3,4.78-2.3,7.5,0,3.56,1.39,6.91,3.9,9.43l12.53,12.53c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset3AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 56.93 56.93"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M32.4,39.45c-6.15-3.62-11.29-8.77-14.92-14.92-.68-1.16-.44-2.64.51-3.59l4.29-4.29c.97-.97,1.16-2.48.45-3.66l-3.84-6.4c-2.01-3.35-6.63-3.92-9.39-1.16l-4.72,4.72c-1.17,1.17-1.86,2.79-1.76,4.45,1.29,21.12,18.19,38.02,39.32,39.32,1.66.1,3.27-.59,4.45-1.76l4.72-4.72c2.76-2.76,2.19-7.38-1.16-9.39l-6.4-3.84c-1.18-.71-2.69-.52-3.66.45l-4.29,4.29c-.95.95-2.43,1.19-3.59.51Z"/> <g> <line className="cls-1" x1="53.93" y1="3" x2="36.19" y2="20.75"/> <line className="cls-1" x1="53.93" y1="20.75" x2="36.19" y2="3"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset3BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 77.33 69.3"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M16.34,15.71c-.16,0-.33-.02-.49-.05-.16-.03-.32-.08-.47-.14-.15-.06-.29-.14-.43-.23-.14-.09-.27-.2-.38-.31-.46-.47-.73-1.11-.73-1.77,0-.16.02-.33.05-.49.03-.16.08-.31.14-.46.06-.16.14-.3.23-.44.09-.13.19-.26.31-.38.58-.58,1.44-.85,2.26-.68.16.03.31.08.46.14.16.07.3.14.44.23.13.09.26.2.38.31.11.12.22.25.31.38.09.14.16.28.23.44.06.15.11.3.14.46.03.16.05.33.05.49,0,.66-.27,1.3-.73,1.77-.47.46-1.11.73-1.77.73Z"/> <path d="M29.29,15.71c-.17,0-.33-.02-.49-.05-.16-.03-.32-.08-.47-.14s-.3-.14-.43-.23c-.14-.09-.27-.2-.38-.31-.47-.47-.73-1.11-.73-1.77,0-.16.01-.33.05-.49.03-.16.08-.31.14-.46.06-.16.14-.3.23-.44.09-.13.19-.26.31-.38.11-.11.24-.22.38-.31.13-.09.28-.16.43-.23.15-.06.31-.11.47-.14.32-.07.65-.07.98,0,.15.03.31.08.46.14.15.07.3.14.44.23.13.09.26.2.38.31.11.12.22.25.31.38.09.14.16.28.22.44.07.15.12.3.15.46.03.16.05.33.05.49,0,.66-.27,1.3-.74,1.77-.46.46-1.1.73-1.76.73Z"/> <path d="M70.18,26.43H7.15c-3.94,0-7.15-3.21-7.15-7.15V7.15C0,3.21,3.21,0,7.15,0h63.04c3.94,0,7.15,3.21,7.15,7.15v12.13c0,3.94-3.21,7.15-7.15,7.15ZM7.15,5c-1.18,0-2.15.96-2.15,2.15v12.13c0,1.18.96,2.15,2.15,2.15h63.04c1.18,0,2.15-.96,2.15-2.15V7.15c0-1.19-.96-2.15-2.15-2.15H7.15Z"/> <path d="M16.34,37.15c-.66,0-1.3-.27-1.77-.74-.46-.46-.73-1.11-.73-1.77,0-.16.01-.32.05-.48.03-.17.08-.32.14-.47.06-.15.14-.3.23-.44.09-.13.2-.26.31-.37.93-.93,2.6-.94,3.54,0,.11.11.22.24.31.37.09.14.16.29.23.44.06.15.11.3.14.47.03.16.05.32.05.48,0,.66-.27,1.31-.73,1.77-.47.47-1.11.74-1.77.74Z"/> <path d="M29.29,37.15c-.17,0-.33-.02-.49-.05-.16-.04-.32-.08-.47-.15-.15-.06-.3-.14-.43-.23-.14-.09-.27-.19-.38-.31-.47-.46-.73-1.11-.73-1.77,0-.16.01-.32.05-.48.03-.17.08-.32.14-.47.06-.15.14-.3.23-.44.09-.13.19-.26.31-.37.93-.94,2.6-.93,3.53,0,.12.11.22.24.31.37.09.14.17.29.23.44.07.15.12.3.15.47.03.16.05.32.05.48,0,.66-.27,1.31-.74,1.77-.46.47-1.11.74-1.76.74Z"/> <path d="M70.18,47.86H7.15c-3.94,0-7.15-3.21-7.15-7.15v-12.13c0-3.94,3.21-7.15,7.15-7.15h63.04c3.94,0,7.15,3.21,7.15,7.15v12.13c0,3.94-3.21,7.15-7.15,7.15ZM7.15,26.43c-1.18,0-2.15.96-2.15,2.15v12.13c0,1.18.96,2.15,2.15,2.15h63.04c1.18,0,2.15-.96,2.15-2.15v-12.13c0-1.18-.96-2.15-2.15-2.15H7.15Z"/> <path d="M16.34,58.58c-.16,0-.33-.02-.49-.05-.16-.04-.32-.08-.47-.15-.15-.06-.29-.14-.43-.23-.14-.09-.26-.19-.38-.31-.11-.11-.22-.24-.31-.38-.09-.13-.17-.28-.23-.43-.06-.15-.11-.31-.14-.47-.03-.16-.05-.32-.05-.48,0-.17.02-.33.05-.49.03-.16.08-.32.14-.47.06-.15.14-.3.23-.43.09-.14.19-.27.31-.38.11-.12.24-.22.38-.31.14-.09.28-.17.43-.23.15-.07.31-.11.47-.15.81-.16,1.67.11,2.26.69.11.11.22.24.31.38.09.13.16.28.23.43.06.15.11.31.14.47.03.16.05.32.05.49,0,.16-.02.32-.05.48-.03.16-.08.32-.14.47-.07.15-.14.3-.23.43-.09.14-.2.27-.31.38-.47.47-1.12.74-1.77.74Z"/> <path d="M29.29,58.58c-.17,0-.33-.02-.49-.05-.16-.04-.32-.08-.47-.15-.15-.06-.3-.14-.43-.23-.14-.09-.27-.19-.38-.31-.12-.11-.22-.24-.31-.38-.09-.13-.17-.28-.23-.43-.06-.15-.11-.31-.14-.47-.04-.16-.05-.32-.05-.48,0-.17.01-.33.05-.49.03-.16.08-.32.14-.47.06-.15.14-.3.23-.43.09-.14.19-.27.31-.38.11-.12.24-.22.38-.31.13-.09.28-.17.43-.23.15-.07.31-.11.47-.15.32-.06.65-.06.97,0,.16.04.32.08.47.15.15.06.3.14.43.23.14.09.27.19.38.31.12.11.22.24.31.38.09.13.17.28.23.43.07.15.11.31.15.47.03.16.05.32.05.49,0,.16-.02.32-.05.48-.04.16-.08.32-.15.47-.06.15-.14.3-.23.43-.09.14-.19.27-.31.38-.11.12-.24.22-.38.31-.13.09-.28.17-.43.23-.15.07-.31.11-.47.15-.16.03-.32.05-.48.05Z"/> <path d="M70.18,69.3H7.15c-3.94,0-7.15-3.21-7.15-7.15v-12.13c0-3.94,3.21-7.15,7.15-7.15h63.04c3.94,0,7.15,3.21,7.15,7.15v12.13c0,3.94-3.21,7.15-7.15,7.15ZM7.15,47.86c-1.18,0-2.15.96-2.15,2.15v12.13c0,1.18.96,2.15,2.15,2.15h63.04c1.18,0,2.15-.96,2.15-2.15v-12.13c0-1.18-.96-2.15-2.15-2.15H7.15Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset40AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 51"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <line className="cls-1" x1="12" y1="10.5" x2="3" y2="10.5"/> <line className="cls-1" x1="57" y1="10.5" x2="39" y2="10.5"/> <circle className="cls-1" cx="19.5" cy="10.5" r="7.5"/> </g> <g> <line className="cls-1" x1="48" y1="40.5" x2="57" y2="40.5"/> <line className="cls-1" x1="3" y1="40.5" x2="21" y2="40.5"/> <circle className="cls-1" cx="40.5" cy="40.5" r="7.5"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset40BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 75.52 61.66"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M38.6,61.66c-.66,0-1.3-.26-1.77-.73-.49-.49-.76-1.17-.73-1.87l.37-8.93c.03-.63.29-1.22.73-1.67l23.73-23.73c3.33-3.34,8.76-3.34,12.1,0,3.33,3.33,3.33,8.76,0,12.1l-23.73,23.73c-.44.44-1.04.7-1.67.73l-8.93.37s-.07,0-.1,0ZM47.52,58.79h0,0ZM41.42,51.31l-.21,5.24,5.24-.22,23.04-23.04c1.39-1.39,1.39-3.64,0-5.03-1.39-1.38-3.64-1.39-5.03,0l-23.04,23.04Z"/> <path d="M23,61.66h-13.07c-5.48,0-9.93-4.46-9.93-9.93V9.93C0,4.46,4.46,0,9.93,0h49.73c5.48,0,9.93,4.46,9.93,9.93v5.27c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5v-5.27c0-2.72-2.21-4.93-4.93-4.93H9.93c-2.72,0-4.93,2.21-4.93,4.93v41.79c0,2.72,2.21,4.93,4.93,4.93h13.07c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M55.81,17.7h-14.8c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h14.8c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M15.46,35.4c1.1,0,2.09.68,2.46,1.71.61,1.69,2.05,2.85,4.92,2.85s4.77-1.34,4.77-4.01c0-2.51-1.39-3.83-5.77-5.37-6.55-2.23-9.28-4.28-9.28-8.8s3.99-7.55,10.01-7.55c4.94,0,7.75,1.45,9.1,3.74,1,1.7-.39,3.84-2.36,3.84h0c-1.1,0-2.04-.71-2.47-1.72-.57-1.34-1.86-2.31-4.35-2.31-2.96,0-4.27,1.46-4.27,3.66s1.49,3.41,6.24,5.04c6.46,2.18,8.88,4.69,8.88,8.96,0,4.86-3.42,8.07-10.73,8.05-5.3,0-8.29-1.64-9.68-4.24-.93-1.74.39-3.86,2.37-3.86h.15ZM20.65,14.97v-1.62c0-1.21.98-2.2,2.2-2.2h0c1.21,0,2.2.98,2.2,2.2v1.62h-4.39ZM20.65,44.5v-1.87h4.39v1.87c0,1.21-.98,2.2-2.2,2.2h0c-1.21,0-2.2-.98-2.2-2.2Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset41AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path className="cls-1" d="M40.5,24H13.5c-5.8,0-10.5-4.7-10.5-10.5h0C3,7.7,7.7,3,13.5,3h27"/> <circle className="cls-1" cx="40.5" cy="13.5" r="10.5"/> </g> <g> <path className="cls-1" d="M13.5,36h27c5.8,0,10.5,4.7,10.5,10.5h0c0,5.8-4.7,10.5-10.5,10.5H13.5"/> <circle className="cls-1" cx="13.5" cy="46.5" r="10.5"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset41BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 75.08 75.1"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M48.73,60.04h-22.38c-1.5,0-2.9-.67-3.84-1.84-.95-1.18-1.31-2.72-.98-4.21,1.64-7.44,8.37-12.85,16.01-12.85s14.36,5.4,16.01,12.85c.33,1.49-.03,3.02-.98,4.21-.94,1.17-2.34,1.84-3.84,1.84ZM37.54,46.15c-5.31,0-9.98,3.75-11.12,8.92l22.31-.03c-1.21-5.14-5.89-8.89-11.19-8.89Z"/> <path d="M37.54,35.4c-5.17,0-9.37-4.21-9.37-9.37s4.2-9.37,9.37-9.37,9.37,4.21,9.37,9.37-4.2,9.37-9.37,9.37ZM37.54,21.65c-2.41,0-4.37,1.96-4.37,4.37s1.96,4.37,4.37,4.37,4.37-1.96,4.37-4.37-1.96-4.37-4.37-4.37Z"/> <path d="M26.43,75.1h-11.2c-8.4,0-15.23-6.84-15.23-15.25v-11.2c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v11.2c0,5.65,4.59,10.25,10.23,10.25h11.2c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M72.58,28.93c-1.38,0-2.5-1.12-2.5-2.5v-11.18c0-5.65-4.59-10.25-10.23-10.25h-11.2c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.2c8.4,0,15.23,6.84,15.23,15.25v11.18c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M59.85,75.1h-11.2c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.2c5.64,0,10.23-4.6,10.23-10.25v-11.2c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v11.2c0,8.41-6.83,15.25-15.23,15.25Z"/> <path d="M2.5,28.93c-1.38,0-2.5-1.12-2.5-2.5v-11.18C0,6.84,6.83,0,15.23,0h11.2c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5h-11.2c-5.64,0-10.23,4.6-10.23,10.25v11.18c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset42AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 30"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M45,27H15c-6.63,0-12-5.37-12-12h0c0-6.63,5.37-12,12-12h30"/> <circle className="cls-1" cx="45" cy="15" r="12"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset42BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 68.27 70.46"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M48.48,57.72h-20.96c-1.45,0-2.81-.65-3.72-1.78-.92-1.15-1.27-2.63-.95-4.07,1.55-7.04,7.92-12.16,15.15-12.16h0c7.22,0,13.59,5.11,15.15,12.16.32,1.44-.03,2.93-.95,4.07-.91,1.13-2.26,1.78-3.72,1.78ZM27.79,52.72h20.42c-1.14-4.65-5.39-8.01-10.21-8.01s-9.08,3.35-10.21,8.01Z"/> <path d="M38,34.64c-4.93,0-8.94-4.01-8.94-8.94s4.01-8.94,8.94-8.94,8.94,4.01,8.94,8.94-4.01,8.94-8.94,8.94ZM38,21.77c-2.17,0-3.94,1.77-3.94,3.94s1.77,3.94,3.94,3.94,3.94-1.77,3.94-3.94-1.77-3.94-3.94-3.94Z"/> <path d="M60.24,70.46H15.76c-4.42,0-8.02-3.6-8.02-8.02V8.02C7.74,3.6,11.34,0,15.76,0h44.48c4.42,0,8.02,3.6,8.02,8.02v54.41c0,4.42-3.6,8.02-8.02,8.02ZM15.76,5c-1.67,0-3.02,1.36-3.02,3.02v54.41c0,1.67,1.36,3.02,3.02,3.02h44.48c1.67,0,3.02-1.36,3.02-3.02V8.02c0-1.67-1.36-3.02-3.02-3.02H15.76Z"/> <path d="M10.24,17.74H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h7.74c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M10.24,57.72H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h7.74c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M10.24,44.39H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h7.74c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M10.24,31.07H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h7.74c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset43AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <line className="cls-1" x1="30" y1="39" x2="30" y2="51"/> <line className="cls-1" x1="30" y1="3" x2="30" y2="27"/> <line className="cls-1" x1="24" y1="39" x2="36" y2="39"/> </g> <g> <line className="cls-1" x1="9" y1="27" x2="9" y2="51"/> <line className="cls-1" x1="9" y1="3" x2="9" y2="15"/> <line className="cls-1" x1="3" y1="15" x2="15" y2="15"/> </g> <g> <line className="cls-1" x1="51" y1="27" x2="51" y2="51"/> <line className="cls-1" x1="51" y1="3" x2="51" y2="14.43"/> <line className="cls-1" x1="45" y1="15" x2="57" y2="15"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset43BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 75.52 70.75"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M38.6,70.75c-.66,0-1.3-.26-1.77-.73-.49-.49-.76-1.17-.73-1.87l.37-8.93c.03-.63.29-1.22.73-1.67l23.73-23.73h0c3.34-3.33,8.76-3.34,12.1,0,3.34,3.33,3.34,8.76,0,12.1l-23.73,23.73c-.44.44-1.04.7-1.66.73l-8.93.37s-.07,0-.1,0ZM41.42,60.4l-.22,5.24,5.24-.22,23.04-23.04c1.39-1.39,1.39-3.64,0-5.03-1.39-1.38-3.64-1.39-5.03,0l-23.04,23.04Z"/> <path d="M23,70.75h-13.07c-5.48,0-9.93-4.46-9.93-9.93V17.58C0,12.11,4.46,7.65,9.93,7.65h49.73c5.48,0,9.93,4.46,9.93,9.93v5.27c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5v-5.27c0-2.72-2.21-4.93-4.93-4.93H9.93c-2.72,0-4.93,2.21-4.93,4.93v43.24c0,2.72,2.21,4.93,4.93,4.93h13.07c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M67.1,25.35H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h64.6c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <g> <path d="M46.6,12.65c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v7.65c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M23,12.65c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v7.65c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> <path d="M37.52,42.61H15.54c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h21.98c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M26.53,56.17h-10.99c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h10.99c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset44AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 12"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="27" cy="6" r="3"/> <circle className="cls-1" cx="48" cy="6" r="3"/> <circle className="cls-1" cx="6" cy="6" r="3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset44BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.55 67.36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M51.97,67.36H19.6c-.43,0-.85-.11-1.22-.32C7.05,60.72,0,48.73,0,35.76,0,16.04,16.05,0,35.79,0s35.76,16.04,35.76,35.76c0,12.96-7.04,24.94-18.36,31.28-.37.21-.79.32-1.22.32ZM20.27,62.36h31.04c9.42-5.52,15.25-15.66,15.25-26.59,0-16.96-13.8-30.76-30.76-30.76S5,18.8,5,35.76c0,10.94,5.83,21.07,15.27,26.59Z"/> <path d="M21.84,54.75c-.57,0-1.14-.19-1.61-.59-5.43-4.57-8.54-11.28-8.54-18.39,0-13.28,10.81-24.08,24.1-24.08,1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5c-10.53,0-19.1,8.56-19.1,19.08,0,5.64,2.47,10.95,6.76,14.57,1.06.89,1.19,2.47.3,3.52-.49.59-1.2.89-1.91.89Z"/> <path d="M49.74,54.75c-.71,0-1.42-.3-1.91-.89-.89-1.06-.75-2.63.3-3.52,4.3-3.62,6.76-8.93,6.76-14.57,0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,7.12-3.11,13.82-8.54,18.39-.47.39-1.04.59-1.61.59Z"/> <path d="M34.58,41.6c-3.22,0-5.84-2.62-5.84-5.84s2.62-5.84,5.84-5.84,5.84,2.62,5.84,5.84-2.62,5.84-5.84,5.84ZM34.58,34.93c-.46,0-.84.38-.84.84s.38.84.84.84.84-.38.84-.84-.38-.84-.84-.84Z"/> <path d="M34.58,38.26c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l14.12-14.12c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-14.12,14.12c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset45AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 12 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="6" cy="27" r="3"/> <circle className="cls-1" cx="6" cy="6" r="3"/> <circle className="cls-1" cx="6" cy="48" r="3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset45BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 65.36 67.4"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M30.62,45.61c-.66,0-1.3-.26-1.77-.73l-9.41-9.41c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l7.64,7.64,17.05-17.05c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-18.82,18.82c-.47.47-1.1.73-1.77.73Z"/> <path d="M32.68,67.4c-2.66,0-5.31-.82-7.58-2.47-1.36-.99-2.96-1.51-4.64-1.51-5.6,0-10.53-3.58-12.27-8.91-.52-1.6-1.51-2.96-2.87-3.95-4.53-3.29-6.42-9.09-4.68-14.42.52-1.6.52-3.28,0-4.88-1.73-5.33.15-11.12,4.69-14.42,1.36-.99,2.35-2.35,2.87-3.95,1.73-5.33,6.66-8.91,12.27-8.91,1.68,0,3.28-.52,4.64-1.51,4.53-3.29,10.63-3.29,15.16,0h0c1.36.99,2.96,1.51,4.64,1.51,5.6,0,10.53,3.58,12.27,8.91.52,1.6,1.51,2.96,2.87,3.95,4.53,3.29,6.42,9.09,4.69,14.42-.52,1.6-.52,3.28,0,4.88,1.73,5.33-.15,11.12-4.69,14.42-1.36.99-2.35,2.35-2.87,3.95-1.73,5.33-6.66,8.91-12.27,8.91-1.68,0-3.28.52-4.64,1.51-2.27,1.65-4.92,2.47-7.58,2.47ZM32.68,5c-1.63,0-3.25.5-4.64,1.51-2.22,1.61-4.84,2.46-7.58,2.46-3.43,0-6.45,2.19-7.51,5.46-.85,2.61-2.47,4.84-4.68,6.45-2.78,2.02-3.93,5.57-2.87,8.83.85,2.61.85,5.36,0,7.97-1.06,3.26.09,6.81,2.87,8.83,2.22,1.61,3.84,3.84,4.69,6.45,1.06,3.26,4.08,5.46,7.51,5.46,2.74,0,5.36.85,7.58,2.46,2.78,2.02,6.51,2.02,9.28,0,2.22-1.61,4.84-2.46,7.58-2.46,3.43,0,6.45-2.19,7.51-5.46.85-2.61,2.47-4.84,4.68-6.45,2.78-2.02,3.93-5.57,2.87-8.83-.85-2.61-.85-5.36,0-7.97,1.06-3.26-.09-6.81-2.87-8.83-2.22-1.61-3.84-3.84-4.69-6.45-1.06-3.26-4.08-5.46-7.51-5.46-2.74,0-5.36-.85-7.58-2.46h0c-1.39-1.01-3.01-1.51-4.64-1.51Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset46AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <line className="cls-1" x1="3" y1="24" x2="51" y2="24"/> <line className="cls-1" x1="3" y1="3" x2="51" y2="3"/> <line className="cls-1" x1="3" y1="45" x2="51" y2="45"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset46BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 75.57 70.8"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M32.35,64.71c-1.12,0-2.11-.75-2.41-1.83l-6.08-22.03L1.83,34.76c-1.08-.3-1.83-1.29-1.83-2.41s.75-2.11,1.83-2.41l22.03-6.08L29.94,1.83c.3-1.08,1.29-1.83,2.41-1.83s2.11.75,2.41,1.83l6.08,22.03,22.03,6.08c1.08.3,1.83,1.29,1.83,2.41s-.75,2.11-1.83,2.41l-22.03,6.08-6.08,22.03c-.3,1.08-1.29,1.83-2.41,1.83ZM11.89,32.35l14.67,4.05c.85.23,1.51.9,1.74,1.74l4.05,14.67,4.05-14.67c.23-.85.9-1.51,1.74-1.74l14.67-4.05-14.67-4.05c-.85-.23-1.51-.9-1.74-1.74l-4.05-14.67-4.05,14.67c-.23.85-.9,1.51-1.74,1.74l-14.67,4.05Z"/> <path d="M62.21,70.8c-1.12,0-2.11-.75-2.41-1.83l-1.97-7.15-7.15-1.97c-1.08-.3-1.83-1.29-1.83-2.41s.75-2.11,1.83-2.41l7.15-1.97,1.97-7.15c.3-1.08,1.29-1.83,2.41-1.83s2.11.75,2.41,1.83l1.97,7.15,7.15,1.97c1.08.3,1.83,1.29,1.83,2.41s-.75,2.11-1.83,2.41l-7.15,1.97-1.97,7.15c-.3,1.08-1.29,1.83-2.41,1.83ZM60.71,57.44c.7.25,1.25.8,1.5,1.5.25-.7.8-1.25,1.5-1.5-.7-.25-1.25-.8-1.5-1.5-.25.7-.8,1.25-1.5,1.5Z"/> <path d="M62.21,15.86c-1.12,0-2.11-.75-2.41-1.83l-.8-2.89-2.89-.8c-1.08-.3-1.83-1.29-1.83-2.41s.75-2.11,1.83-2.41l2.89-.8.8-2.89c.3-1.08,1.29-1.83,2.41-1.83s2.11.75,2.41,1.83l.8,2.89,2.89.8c1.08.3,1.83,1.29,1.83,2.41s-.75,2.11-1.83,2.41l-2.89.8-.8,2.89c-.3,1.08-1.29,1.83-2.41,1.83Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset47AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <rect className="cls-1" x="3" y="3" width="18" height="18" rx="3" ry="3"/> <rect className="cls-1" x="33" y="3" width="18" height="18" rx="3" ry="3"/> <rect className="cls-1" x="3" y="33" width="18" height="18" rx="3" ry="3"/> <rect className="cls-1" x="33" y="33" width="18" height="18" rx="3" ry="3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset47BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.17 74.17"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M37.08,74.17C16.64,74.17,0,57.53,0,37.08S16.64,0,37.08,0s37.08,16.64,37.08,37.08-16.64,37.08-37.08,37.08ZM37.08,5C19.39,5,5,19.39,5,37.08s14.39,32.08,32.08,32.08,32.08-14.39,32.08-32.08S54.77,5,37.08,5Z"/> <path d="M37.08,22.18c-1.38,0-2.5-1.12-2.5-2.5v-5.22c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v5.22c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M24.78,27.28c-.64,0-1.28-.24-1.77-.73l-3.69-3.69c-.98-.98-.98-2.56,0-3.54.97-.98,2.56-.98,3.54,0l3.69,3.69c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> <path d="M19.68,39.58h-5.2c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h5.2c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M21.09,55.58c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l3.7-3.7c.97-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-3.7,3.7c-.49.49-1.13.73-1.77.73Z"/> <path d="M37.08,62.2c-1.38,0-2.5-1.12-2.5-2.5v-5.22c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v5.22c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M53.08,55.58c-.64,0-1.28-.24-1.77-.73l-3.7-3.7c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l3.7,3.7c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> <path d="M59.69,39.58h-5.2c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h5.2c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M49.39,27.28c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l3.69-3.69c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-3.69,3.69c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset48AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M40.5,39c-10.77,0-19.5-8.73-19.5-19.5,0-6.95,3.65-13.04,9.13-16.49-.04,0-.09,0-.13,0C15.09,3,3,15.09,3,30s12.09,27,27,27,27-12.09,27-27c0-.04,0-.09,0-.13-3.45,5.48-9.54,9.13-16.49,9.13Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset48BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.76 74.76"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M37.37,13.05c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v8.05c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M23.96,16.65c-.86,0-1.7-.45-2.17-1.25l-4.02-6.97c-.69-1.2-.28-2.72.92-3.42,1.19-.69,2.72-.28,3.42.92l4.02,6.97c.69,1.2.28,2.72-.92,3.42-.39.23-.82.33-1.25.33Z"/> <path d="M14.14,26.47c-.42,0-.85-.11-1.25-.33l-6.97-4.02c-1.2-.69-1.61-2.22-.92-3.42.69-1.2,2.22-1.6,3.42-.92l6.97,4.02c1.2.69,1.61,2.22.92,3.42-.46.8-1.3,1.25-2.17,1.25Z"/> <path d="M10.55,39.89H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h8.05c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M7.18,57.33c-.86,0-1.7-.45-2.17-1.25-.69-1.2-.28-2.72.92-3.42l6.97-4.02c1.19-.69,2.72-.28,3.42.92.69,1.2.28,2.72-.92,3.42l-6.97,4.02c-.39.23-.82.33-1.25.33Z"/> <path d="M19.95,70.09c-.42,0-.85-.11-1.25-.33-1.2-.69-1.61-2.22-.92-3.42l4.02-6.97c.69-1.2,2.22-1.6,3.42-.92,1.2.69,1.61,2.22.92,3.42l-4.02,6.97c-.46.8-1.3,1.25-2.17,1.25Z"/> <path d="M37.39,74.76c-1.38,0-2.5-1.12-2.5-2.5v-8.05c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v8.05c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M54.83,70.09c-.86,0-1.7-.45-2.17-1.25l-4.02-6.97c-.69-1.2-.28-2.72.92-3.42,1.19-.69,2.72-.28,3.42.92l4.02,6.97c.69,1.2.28,2.72-.92,3.42-.39.23-.82.33-1.25.33Z"/> <path d="M67.59,57.31c-.42,0-.85-.11-1.25-.33l-6.97-4.02c-1.2-.69-1.61-2.22-.92-3.42.69-1.2,2.22-1.6,3.42-.92l6.97,4.02c1.2.69,1.61,2.22.92,3.42-.46.8-1.3,1.25-2.17,1.25Z"/> <path d="M72.26,39.87h-8.05c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h8.05c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M60.62,26.46c-.86,0-1.7-.45-2.17-1.25-.69-1.2-.28-2.72.92-3.42l6.97-4.02c1.19-.69,2.72-.28,3.42.92.69,1.2.28,2.72-.92,3.42l-6.97,4.02c-.39.23-.82.33-1.25.33Z"/> <path d="M50.79,16.64c-.42,0-.85-.11-1.25-.33-1.2-.69-1.61-2.22-.92-3.42l4.02-6.97c.69-1.2,2.22-1.61,3.42-.92,1.2.69,1.61,2.22.92,3.42l-4.02,6.97c-.46.8-1.3,1.25-2.17,1.25Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset49AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="12"/> <line className="cls-1" x1="30" y1="3" x2="30" y2="6"/> <line className="cls-1" x1="49.09" y1="10.91" x2="46.97" y2="13.03"/> <line className="cls-1" x1="57" y1="30" x2="54" y2="30"/> <line className="cls-1" x1="49.09" y1="49.09" x2="46.97" y2="46.97"/> <line className="cls-1" x1="30" y1="57" x2="30" y2="54"/> <line className="cls-1" x1="10.91" y1="49.09" x2="13.03" y2="46.97"/> <line className="cls-1" x1="3" y1="30" x2="6" y2="30"/> <line className="cls-1" x1="10.91" y1="10.91" x2="13.03" y2="13.03"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset49BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 75.1 75.13"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M37.55,53.9c-9.01,0-16.33-7.33-16.33-16.33s7.33-16.33,16.33-16.33,16.33,7.33,16.33,16.33-7.33,16.33-16.33,16.33ZM37.55,26.24c-6.25,0-11.33,5.08-11.33,11.33s5.08,11.33,11.33,11.33,11.33-5.08,11.33-11.33-5.08-11.33-11.33-11.33Z"/> <path d="M37.54,13.09c-1.38,0-2.5-1.12-2.5-2.5V2.5c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v8.09c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M18.48,21c-.64,0-1.28-.24-1.77-.73l-5.72-5.72c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l5.72,5.72c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> <path d="M10.57,40.06H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h8.07c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M12.76,64.87c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l5.74-5.74c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-5.74,5.74c-.49.49-1.13.73-1.77.73Z"/> <path d="M37.54,75.13c-1.38,0-2.5-1.12-2.5-2.5v-8.09c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v8.09c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M62.34,64.87c-.64,0-1.28-.24-1.77-.73l-5.74-5.74c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l5.74,5.74c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> <path d="M72.6,40.06h-8.07c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h8.07c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M56.63,21c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l5.72-5.72c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-5.72,5.72c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset4AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <line className="cls-1" x1="45" y1="36.12" x2="45" y2="48"/> <line className="cls-1" x1="45" y1="57" x2="45" y2="57"/> </g> <g> <path className="cls-1" d="M34.49,49.37c-.66.56-1.34,1.09-2.05,1.6l-8.44,6.03-8.44-6.03c-7.88-5.63-12.56-14.72-12.56-24.41v-14.56L24,3l21,9v12"/> <line className="cls-1" x1="24" y1="3" x2="24" y2="42"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset4BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 79.32 70.7"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M26.2,70.7c-1.75,0-3.55-.73-5.25-3-4.89-6.52-5.42-17.77-1.22-26.17,3.86-7.71,10.94-11.96,19.94-11.96s16.08,4.25,19.93,11.96c4.2,8.4,3.68,19.65-1.22,26.17-3.38,4.5-7.11,2.94-10.11,1.69-2.27-.95-4.84-2.02-8.61-2.02s-6.34,1.08-8.61,2.02c-1.48.62-3.15,1.31-4.86,1.31ZM39.66,34.56c-8.98,0-13.37,5-15.46,9.2-3.36,6.71-3.03,15.91.74,20.94.98,1.31,1.05,1.38,4.18.08,2.43-1.02,5.77-2.41,10.54-2.41s8.1,1.39,10.54,2.41c3.14,1.31,3.2,1.24,4.18-.08,3.77-5.03,4.1-14.23.74-20.94-2.1-4.2-6.48-9.2-15.46-9.2Z"/> <path d="M29.67,22.26c-3.95,0-7.93-3.64-9.52-9-1.05-3.55-.82-7.2.64-9.76.97-1.72,2.4-2.86,4.14-3.3,4.4-1.13,9.28,2.73,11.08,8.8h0c1.05,3.55.82,7.2-.64,9.76-.97,1.72-2.4,2.86-4.14,3.31-.52.13-1.04.2-1.56.2ZM26.48,5c-.11,0-.21.01-.31.04-.4.1-.74.41-1.03.92-.62,1.09-.99,3.2-.19,5.88,1.12,3.79,3.74,5.73,5.04,5.38.4-.1.75-.41,1.04-.93.61-1.09.99-3.2.19-5.88h0c-1.04-3.51-3.36-5.42-4.73-5.42Z"/> <path d="M13.45,35.37c-.66,0-1.33-.07-2.02-.21-2.52-.52-5.06-1.96-7.15-4.05C-.39,26.43-1.38,20.11,2.02,16.71c3.41-3.4,9.72-2.41,14.39,2.25h0c4.67,4.67,5.65,10.99,2.25,14.39-1.32,1.32-3.15,2.02-5.21,2.02ZM7.22,19.69c-.71,0-1.29.19-1.66.56-1.19,1.19-.48,4.58,2.25,7.32,1.39,1.39,3.08,2.37,4.63,2.69.56.12,1.94.3,2.68-.44,1.2-1.19.49-4.58-2.25-7.32-1.89-1.89-4.08-2.81-5.66-2.81Z"/> <path d="M65.86,35.37c-2,0-3.83-.66-5.2-2.02-3.4-3.4-2.41-9.72,2.25-14.39,4.67-4.67,10.98-5.66,14.39-2.25,3.4,3.4,2.41,9.72-2.25,14.39-2.8,2.8-6.19,4.27-9.19,4.27ZM72.11,19.69c-1.57,0-3.77.92-5.66,2.81-2.74,2.74-3.45,6.12-2.25,7.32,1.2,1.2,4.58.48,7.32-2.25,2.74-2.74,3.45-6.12,2.25-7.32-.37-.37-.95-.56-1.66-.56Z"/> <path d="M49.65,22.26c-.52,0-1.04-.06-1.56-.2-1.74-.45-3.17-1.59-4.14-3.3-1.45-2.56-1.69-6.21-.64-9.76h0C45.12,2.93,49.99-.93,54.39.2c1.74.45,3.17,1.59,4.14,3.3,1.45,2.56,1.69,6.21.64,9.76-1.59,5.36-5.57,9-9.52,9ZM48.11,10.42h0c-.79,2.68-.42,4.79.2,5.88.29.51.64.82,1.04.93,1.3.33,3.92-1.6,5.04-5.39.79-2.68.42-4.79-.2-5.88-.29-.51-.64-.82-1.03-.92-1.3-.34-3.92,1.59-5.04,5.38Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset50AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <line className="cls-1" x1="30" y1="3" x2="30" y2="15"/> <line className="cls-1" x1="49.09" y1="10.91" x2="40.61" y2="19.39"/> <line className="cls-1" x1="57" y1="30" x2="45" y2="30"/> <line className="cls-1" x1="49.09" y1="49.09" x2="40.61" y2="40.61"/> <line className="cls-1" x1="30" y1="57" x2="30" y2="45"/> <line className="cls-1" x1="10.91" y1="49.09" x2="19.39" y2="40.61"/> <line className="cls-1" x1="3" y1="30" x2="15" y2="30"/> <line className="cls-1" x1="10.91" y1="10.91" x2="19.39" y2="19.39"/> <line className="cls-1" x1="30" y1="3" x2="30" y2="15"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset50BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.88 72.88"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M34.57,56.77c-.65,0-1.29-.26-1.77-.73l-15.95-15.95c-.68-.68-.91-1.7-.59-2.61C23.42,17.44,43.53-2.41,66.66.24h0c3.11.36,5.62,2.87,5.98,5.98,2.63,23.11-17.22,43.22-37.23,50.4-.28.1-.56.15-.84.15ZM21.52,37.69l13.67,13.67c15.4-6.14,34.89-23.42,32.48-44.57-.09-.82-.76-1.48-1.58-1.58C44.92,2.77,27.65,22.28,21.52,37.69Z"/> <path d="M9.01,70.57c-1.75,0-3.46-.69-4.74-1.98-1.76-1.76-2.41-4.31-1.69-6.66,0-.01.03-.09.03-.1.93-2.98,2.54-6.5,4.65-10.14,1.06-1.84,2.88-3.05,4.98-3.33,2.09-.28,4.16.42,5.65,1.92l4.69,4.69c1.49,1.49,2.19,3.55,1.92,5.65-.28,2.1-1.49,3.92-3.32,4.98-3.69,2.14-7.1,3.7-10.14,4.65,0,0-.1.03-.1.03-.63.19-1.28.29-1.92.29ZM13.13,53.31c-.09,0-.17,0-.24.02-.55.07-1.03.39-1.3.87-1.92,3.33-3.38,6.49-4.21,9.14-.27.9.21,1.5.43,1.72.22.22.82.7,1.67.45,2.71-.85,5.87-2.3,9.19-4.23.48-.28.8-.75.87-1.31.04-.32.03-.94-.49-1.46l-4.69-4.69c-.42-.42-.89-.51-1.23-.51Z"/> <path d="M18.62,40.81H6.07c-2.1,0-4.02-1.06-5.14-2.84-1.1-1.75-1.24-3.9-.35-5.76,2.93-6.15,10.65-16.31,29.36-15.29,1.38.07,2.44,1.25,2.36,2.63-.07,1.38-1.23,2.45-2.63,2.36-15.03-.81-21.66,6.32-24.58,12.44-.2.41-.04.77.06.94.1.15.38.51.91.51h12.54c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M38.1,72.88c-1.11,0-2.22-.31-3.2-.93-1.78-1.12-2.84-3.04-2.84-5.14v-12.54c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v12.54c0,.53.35.82.51.91.17.11.52.26.94.06,6.13-2.92,13.26-9.55,12.44-24.58-.08-1.38.98-2.56,2.36-2.63,1.39-.09,2.56.98,2.63,2.36,1.02,18.73-9.14,26.43-15.29,29.36-.82.39-1.69.58-2.56.58Z"/> <path d="M47.75,33.9c-4.84,0-8.78-3.94-8.78-8.78s3.94-8.78,8.78-8.78,8.78,3.94,8.78,8.78-3.94,8.78-8.78,8.78ZM47.75,21.34c-2.08,0-3.78,1.7-3.78,3.78s1.7,3.78,3.78,3.78,3.78-1.7,3.78-3.78-1.7-3.78-3.78-3.78Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset51AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <line className="cls-1" x1="42" y1="30" x2="18" y2="30"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset51BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.57 74.57"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M37.28,54.57c-9.53,0-17.29-7.76-17.29-17.29s7.76-17.29,17.29-17.29,17.29,7.76,17.29,17.29-7.76,17.29-17.29,17.29ZM37.28,24.99c-6.78,0-12.29,5.51-12.29,12.29s5.51,12.29,12.29,12.29,12.29-5.51,12.29-12.29-5.51-12.29-12.29-12.29Z"/> <path d="M37.28,74.57C16.73,74.57,0,57.84,0,37.28S16.73,0,37.28,0s37.28,16.73,37.28,37.28c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5c0-17.8-14.48-32.28-32.28-32.28S5,19.48,5,37.28s14.48,32.28,32.28,32.28c5.73,0,11.36-1.52,16.28-4.4,1.19-.7,2.72-.3,3.42.9.7,1.19.3,2.72-.9,3.42-5.68,3.32-12.18,5.08-18.8,5.08Z"/> <path d="M60.44,58.77c-3.31,0-6.5-1.3-8.89-3.68-3.47-3.47-4.55-8.74-2.77-13.44.74-1.94.97-3.99.68-6.09-.19-1.37.77-2.63,2.14-2.81,1.38-.18,2.63.77,2.81,2.14.39,2.89.06,5.85-.96,8.54-1.09,2.86-.45,6.05,1.63,8.13,1.81,1.81,4.39,2.58,6.91,2.06,2.45-.5,4.38-2.1,5.29-4.39,2.04-5.12,2.72-10.54,2.02-16.13-.17-1.37.8-2.62,2.17-2.79,1.37-.18,2.62.8,2.79,2.17.8,6.35-.01,12.78-2.33,18.61-1.52,3.82-4.86,6.6-8.92,7.43-.86.18-1.72.26-2.57.26Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset52AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <g> <line className="cls-1" x1="39" y1="21" x2="21" y2="39"/> <line className="cls-1" x1="39" y1="39" x2="21" y2="21"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset52BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 76.65 63.61"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M44.84,63.61c-9.72,0-18.68-4.32-24.76-11.89h-.17C8.94,51.73,0,42.79,0,31.81S8.94,11.89,19.92,11.89h.17C26.17,4.32,35.12,0,44.84,0c1.38,0,2.5,1.12,2.5,2.5v58.61c0,1.38-1.12,2.5-2.5,2.5ZM19.92,16.89c-8.23,0-14.92,6.69-14.92,14.92s6.69,14.92,14.92,14.92h1.4c.79,0,1.54.38,2.01,1.01,4.62,6.23,11.45,10.07,19.02,10.76V5.11c-7.57.69-14.4,4.53-19.02,10.76-.47.64-1.22,1.01-2.01,1.01h-1.4Z"/> <path d="M58.13,55.48c-1.09,0-2.1-.72-2.41-1.83-.37-1.33.4-2.71,1.73-3.08,8.36-2.34,14.2-10.06,14.2-18.77s-5.84-16.41-14.2-18.75c-1.33-.37-2.11-1.75-1.73-3.08.37-1.33,1.75-2.11,3.08-1.73,10.51,2.95,17.85,12.64,17.85,23.57s-7.34,20.64-17.85,23.58c-.23.06-.45.09-.68.09Z"/> <path d="M58.85,41.71c-.85,0-1.68-.43-2.15-1.22-.71-1.19-.32-2.72.87-3.43,1.87-1.12,2.99-3.08,2.99-5.26s-1.15-4.15-2.99-5.25c-1.19-.71-1.57-2.24-.87-3.43.71-1.19,2.25-1.57,3.43-.87,3.35,2,5.43,5.66,5.43,9.55s-2.08,7.56-5.43,9.56c-.4.24-.84.35-1.28.35Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset53AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <g> <line className="cls-1" x1="30" y1="18" x2="30" y2="42"/> <line className="cls-1" x1="42" y1="30" x2="18" y2="30"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset53BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 57.79 70.46"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M25.27,42.19h-11.37c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.37c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M38.41,30.28H13.9c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h24.51c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M38.41,18.38H13.9c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h24.51c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> <path d="M27.32,70.46h-12.08c-8.4,0-15.24-6.83-15.24-15.24V15.24C0,6.83,6.83,0,15.24,0h21.84c8.4,0,15.24,6.83,15.24,15.24v15.89c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5v-15.89c0-5.64-4.59-10.24-10.24-10.24H15.24c-5.64,0-10.24,4.59-10.24,10.24v39.99c0,5.64,4.59,10.24,10.24,10.24h12.08c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M46.04,63.09c-6.48,0-11.74-5.27-11.74-11.74s5.27-11.74,11.74-11.74,11.74,5.27,11.74,11.74-5.27,11.74-11.74,11.74ZM46.04,44.61c-3.72,0-6.74,3.03-6.74,6.74s3.03,6.74,6.74,6.74,6.74-3.03,6.74-6.74-3.03-6.74-6.74-6.74Z"/> <path d="M53.41,70.46c-.64,0-1.28-.24-1.77-.73l-5.6-5.6-5.6,5.6c-.98.98-2.56.98-3.54,0-.98-.98-.98-2.56,0-3.54l7.37-7.37c.94-.94,2.6-.94,3.54,0l7.37,7.37c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset54AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M56.63,25.5c.25,1.46.37,2.97.37,4.5,0,14.91-12.09,27-27,27S3,44.91,3,30,15.09,3,30,3c5.07,0,9.81,1.4,13.86,3.82"/> <polyline className="cls-1" points="51 15 30 36 18 24"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset54BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 70.77 71.7"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M63.03,71.7H7.74c-4.27,0-7.74-3.46-7.74-7.72V7.74C0,3.47,3.47,0,7.74,0h42.45c1.68,0,3.28.36,4.75,1.08,1.1.49,2.18,1.24,3.12,2.18l9.44,9.42c.93.93,1.67,2,2.22,3.19.68,1.43,1.05,3.06,1.05,4.69v43.4c0,4.27-3.47,7.74-7.74,7.74ZM7.74,5c-1.51,0-2.74,1.23-2.74,2.74v56.24c0,1.5,1.23,2.72,2.74,2.72h55.29c1.51,0,2.74-1.23,2.74-2.74V20.57c0-.89-.2-1.78-.58-2.57-.31-.67-.73-1.27-1.23-1.77l-9.44-9.42c-.51-.51-1.09-.92-1.71-1.19-.86-.42-1.73-.61-2.64-.61H7.74Z"/> <path d="M50.69,21.1h-30.61c-2.85,0-5.16-2.32-5.16-5.16V2.63c0-1.38,1.12-2.5,2.5-2.5h35.94c1.38,0,2.5,1.12,2.5,2.5v13.3c0,2.85-2.32,5.16-5.16,5.16ZM19.91,5.13v10.8c0,.09.07.16.16.16h30.61c.09,0,.16-.07.16-.16V5.13h-30.94Z"/> <path d="M35.38,57.5c-6.97,0-12.63-5.67-12.63-12.63s5.67-12.63,12.63-12.63,12.63,5.67,12.63,12.63-5.67,12.63-12.63,12.63ZM35.38,37.23c-4.21,0-7.63,3.42-7.63,7.63s3.42,7.63,7.63,7.63,7.63-3.42,7.63-7.63-3.42-7.63-7.63-7.63Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset55AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 6"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <line className="cls-1" x1="51" y1="3" x2="3" y2="3"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset55BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66.55 73.5"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M20.91,73.5c-5.36,0-10.72-2.04-14.79-6.12-8.16-8.16-8.16-21.43,0-29.59L39.6,4.31c5.74-5.74,15.08-5.74,20.82,0,5.74,5.74,5.74,15.08,0,20.82L27.52,58.03c-1.61,1.61-3.75,2.5-6.03,2.5s-4.42-.89-6.03-2.5c-1.61-1.61-2.5-3.75-2.5-6.03s.89-4.42,2.5-6.03l29.73-29.73c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-29.73,29.73c-.67.67-1.03,1.55-1.03,2.49s.37,1.83,1.03,2.49c1.33,1.33,3.66,1.33,4.99,0L56.89,21.6c3.79-3.79,3.79-9.96,0-13.75-3.79-3.79-9.96-3.79-13.75,0L9.65,41.32c-6.21,6.21-6.21,16.31,0,22.52,6.21,6.21,16.31,6.21,22.52,0l30.11-30.11c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-30.11,30.11c-4.08,4.08-9.44,6.12-14.79,6.12Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset56AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 42 42"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <line className="cls-1" x1="39" y1="3" x2="3" y2="39"/> <line className="cls-1" x1="39" y1="39" x2="3" y2="3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset56BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.88 73.24"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M49.52,73.24h-27.17c-3.11,0-5.65-2.53-5.65-5.65v-20.81c0-2.43,1.97-4.4,4.4-4.4h29.67c2.43,0,4.4,1.97,4.4,4.4v20.81c0,3.11-2.53,5.65-5.65,5.65ZM21.7,47.38v20.21c0,.36.29.65.65.65h27.17c.36,0,.65-.29.65-.65v-20.21h-28.47Z"/> <path d="M52.36,21.09H19.51c-1.55,0-2.81-1.26-2.81-2.81V5.65c0-3.11,2.53-5.65,5.65-5.65h27.17c3.11,0,5.65,2.53,5.65,5.65v12.63c0,1.55-1.26,2.81-2.81,2.81ZM21.7,16.09h28.47V5.65c0-.36-.29-.65-.65-.65h-27.17c-.36,0-.65.29-.65.65v10.44Z"/> <path d="M54.18,63.54h-1.52c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h1.52c7,0,12.69-5.69,12.69-12.69v-12.06c0-7-5.69-12.69-12.69-12.69H17.69c-7,0-12.69,5.69-12.69,12.69v12.06c0,7,5.69,12.69,12.69,12.69h1.52c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5h-1.52C7.94,63.54,0,55.6,0,45.84v-12.06c0-9.76,7.94-17.69,17.69-17.69h36.49c9.75,0,17.69,7.94,17.69,17.69v12.06c0,9.76-7.94,17.69-17.69,17.69Z"/> <path d="M50.2,34.24h-8.22c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h8.22c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset57AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <line className="cls-1" x1="27" y1="3" x2="27" y2="51"/> <line className="cls-1" x1="51" y1="27" x2="3" y2="27"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset57BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.56 71.56"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M8.97,71.56c-1.38,0-2.5-1.12-2.5-2.5v-13.7c0-1.38,1.12-2.5,2.5-2.5h13.7c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5h-11.2v11.2c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M35.88,71.56h-.14c-11.34-.05-22.1-5.54-28.79-14.72-.81-1.12-.57-2.68.55-3.49,1.11-.81,2.68-.57,3.49.55,5.77,7.92,15.05,12.65,24.84,12.67,16.95-.03,30.73-13.82,30.73-30.78S52.75,5,35.78,5,5,18.81,5,35.78c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5C0,16.05,16.05,0,35.78,0s35.78,16.05,35.78,35.78-15.97,35.7-35.64,35.78h-.04Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset58AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 56.46"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M25.41,3.46L4.41,16.58c-.88.55-1.41,1.51-1.41,2.54v28.34c0,3.31,2.69,6,6,6h12v-15h12v15h12c3.31,0,6-2.69,6-6v-28.34c0-1.03-.53-2-1.41-2.54L28.59,3.46c-.97-.61-2.21-.61-3.18,0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset58BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 78.52 78.51"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M2.86,17.52c-.86,0-1.69-.44-2.16-1.24-.7-1.19-.3-2.72.89-3.42L17.91,3.3c2.22-1.29,4.48-2.35,6.74-3.15,1.3-.46,2.73.22,3.19,1.52.46,1.3-.22,2.73-1.52,3.19-1.96.69-3.94,1.62-5.88,2.75L4.12,17.18c-.4.23-.83.34-1.26.34Z"/> <path d="M63.48,78.14c-.43,0-.87-.11-1.26-.34-1.19-.7-1.59-2.23-.89-3.42l9.57-16.32c1.12-1.91,2.05-3.89,2.77-5.88.47-1.3,1.91-1.97,3.2-1.5,1.3.47,1.97,1.91,1.5,3.2-.83,2.27-1.89,4.52-3.16,6.7l-9.57,16.32c-.46.79-1.3,1.24-2.16,1.24Z"/> <path d="M40.6,78.51c-3.7,0-7.23-1.45-9.9-4.12L4.12,47.81C1.02,44.7-.44,40.43.12,36.08c.56-4.35,3.05-8.12,6.84-10.33l17.96-10.51c11-6.44,24.98-4.64,33.99,4.37h0s0,0,0,0c9.01,9.01,10.81,22.99,4.37,33.99l-10.51,17.96c-2.22,3.79-5.98,6.28-10.33,6.84-.61.08-1.22.12-1.83.12ZM39.07,16.39c-3.99,0-8.01,1.03-11.63,3.16l-17.96,10.51c-2.44,1.43-4.04,3.85-4.4,6.66-.36,2.8.58,5.55,2.58,7.55l26.59,26.59c2,2,4.75,2.94,7.55,2.58,2.8-.36,5.23-1.97,6.66-4.4l10.51-17.96c5.29-9.04,3.81-20.53-3.59-27.93h0c-4.44-4.44-10.34-6.75-16.3-6.75Z"/> <path d="M19.18,75.11c-4.04,0-8.08-1.54-11.16-4.62h0s0,0,0,0c-2.98-2.98-4.62-6.94-4.62-11.16s1.64-8.18,4.62-11.16c.98-.98,2.56-.98,3.54,0l18.79,18.79c.98.98.98,2.56,0,3.54-3.08,3.08-7.12,4.62-11.16,4.62ZM9.99,53.68c-1.04,1.68-1.6,3.62-1.6,5.65,0,2.88,1.12,5.59,3.16,7.62h0c3.6,3.6,9.12,4.12,13.28,1.56l-14.84-14.84Z"/> <path d="M57.14,23.87c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l5.08-5.08c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-5.08,5.08c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset59AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <polyline className="cls-1" points="15 18 3 30 15 42"/> <line className="cls-1" x1="39" y1="30" x2="3" y2="30"/> </g> <path className="cls-1" d="M21,51c0,3.31,2.69,6,6,6h18c3.31,0,6-2.69,6-6V9c0-3.31-2.69-6-6-6h-18c-3.31,0-6,2.69-6,6"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset59BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 58.83 75.03"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M46.77,75.03c-4.31,0-8.3-2.31-10.43-6.03-.35-.61-.78-1.18-1.29-1.69-1.52-1.5-3.53-2.33-5.65-2.33-2.89,0-5.55,1.56-6.95,4.08-2.05,3.68-6.03,5.97-10.39,5.97-6.65,0-12.05-5.41-12.05-12.05V12.06C0,5.41,5.41,0,12.05,0c4.36,0,8.34,2.29,10.39,5.97,1.4,2.52,4.06,4.08,6.95,4.08s5.57-1.57,6.98-4.09c2.05-3.68,6.03-5.96,10.39-5.96,6.65,0,12.06,5.41,12.06,12.06v50.92c0,6.65-5.41,12.05-12.05,12.05ZM29.4,59.98c3.45,0,6.71,1.35,9.18,3.79.83.83,1.54,1.75,2.11,2.75,1.24,2.17,3.57,3.51,6.08,3.51,3.89,0,7.05-3.16,7.05-7.05V12.06c0-3.89-3.17-7.06-7.05-7.06-2.55,0-4.86,1.3-6.02,3.39-2.29,4.11-6.63,6.66-11.35,6.66s-9.04-2.55-11.32-6.65c-1.17-2.1-3.48-3.4-6.03-3.4-3.89,0-7.05,3.17-7.05,7.06v50.92c0,3.89,3.17,7.05,7.05,7.05,2.55,0,4.86-1.3,6.03-3.4,2.28-4.1,6.62-6.65,11.32-6.65Z"/> <path d="M14.42,54.09H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.92c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M56.33,54.09h-11.92c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.92c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M33.04,54.09h-7.24c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h7.24c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset5AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 56.25 56.25"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M32.4,38.77c-6.15-3.62-11.29-8.77-14.92-14.92-.68-1.16-.44-2.64.51-3.59l4.29-4.29c.97-.97,1.16-2.48.45-3.66l-3.84-6.4c-2.01-3.35-6.63-3.92-9.39-1.16l-4.72,4.72c-1.17,1.17-1.86,2.79-1.76,4.45,1.29,21.12,18.19,38.02,39.32,39.32,1.66.1,3.27-.59,4.45-1.76l4.72-4.72c2.76-2.76,2.19-7.38-1.16-9.39l-6.4-3.84c-1.18-.71-2.69-.52-3.66.45l-4.29,4.29c-.95.95-2.43,1.19-3.59.51Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset5BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.12 73.75"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M34.3,73.75H14.25c-7.99,0-14.25-4.73-14.25-10.76v-8.96c0-6.03,6.26-10.76,14.25-10.76h26.04c2.81,0,5.29,1.44,6.74,3.62l9.96-7c3.9-2.74,9.26-1.95,12.2,1.8,1.52,1.93,2.18,4.43,1.82,6.85-.36,2.45-1.68,4.58-3.71,6.01l-23.27,16.34c-2.64,1.85-6.1,2.87-9.74,2.87ZM14.25,48.27c-5.01,0-9.25,2.64-9.25,5.76v8.96c0,3.12,4.24,5.76,9.25,5.76h20.05c2.59,0,5.09-.72,6.87-1.96l23.27-16.34c.89-.63,1.47-1.57,1.63-2.65.16-1.09-.13-2.16-.81-3.03-1.3-1.66-3.67-2-5.39-.79l-11.51,8.09c-.36,4.14-3.84,7.4-8.07,7.4h-17.39c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h17.39c1.71,0,3.1-1.39,3.1-3.1s-1.39-3.1-3.1-3.1H14.25Z"/> <g> <path d="M32.4,28.42c-6.57,0-12.73-2.72-17.36-7.65C10.45,15.88,7.92,9.39,7.92,2.5c0-1.38,1.12-2.5,2.5-2.5,13.5,0,24.48,11.63,24.48,25.92,0,1.38-1.12,2.5-2.5,2.5h0ZM13.08,5.19c1.12,9.33,7.99,16.75,16.66,18.03-1.12-9.33-7.99-16.75-16.66-18.03Z"/> <path d="M32.4,28.42c-1.38,0-2.5-1.12-2.5-2.5C29.9,11.63,40.88,0,54.38,0c1.38,0,2.5,1.12,2.5,2.5,0,14.29-10.98,25.92-24.48,25.92ZM51.72,5.19c-8.67,1.28-15.54,8.7-16.66,18.03,4.17-.61,8.02-2.64,11.06-5.88,3.11-3.32,5.06-7.56,5.6-12.15Z"/> <path d="M32.4,36.22c-1.38,0-2.5-1.12-2.5-2.5v-7.81c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v7.81c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset60AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <polyline className="cls-1" points="42 27 30 39 18 27"/> <line className="cls-1" x1="30" y1="3" x2="30" y2="39"/> </g> <path className="cls-1" d="M9,21c-3.31,0-6,2.69-6,6v18c0,3.31,2.69,6,6,6h42c3.31,0,6-2.69,6-6v-18c0-3.31-2.69-6-6-6"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset60BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 70.7 71.7"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M60.29,71.7c-.33,0-.66-.07-.99-.2-1.27-.55-1.85-2.02-1.31-3.28,5.32-12.38,7.7-25.41,7.7-32.84v-.42c0-16.52-13.44-29.96-29.96-29.96h-.39c-16.29.19-29.57,13.63-29.57,29.96,0,2.78-.27,5.63-.82,8.72-.25,1.36-1.54,2.26-2.9,2.02-1.36-.24-2.26-1.54-2.02-2.9.5-2.79.75-5.35.75-7.83C.78,15.91,16.28.22,35.32,0h.42c19.28,0,34.96,15.68,34.96,34.96v.42c0,9.54-3.26,23.53-8.11,34.82-.41.95-1.33,1.51-2.3,1.51Z"/> <path d="M45.67,71.7c-.34,0-.69-.07-1.02-.22-1.26-.56-1.82-2.04-1.26-3.3,4.15-9.27,7.01-16.94,7.45-24.22.08-1.38,1.22-2.45,2.65-2.34,1.38.08,2.43,1.27,2.34,2.65-.48,8.03-3.5,16.19-7.88,25.96-.42.93-1.33,1.48-2.28,1.48Z"/> <path d="M2.5,59.99c-1.21,0-2.28-.88-2.47-2.12-.21-1.36.72-2.64,2.09-2.85,8.29-1.29,12.5-8.04,12.5-20.07s9.48-21.13,21.13-21.13c9.3,0,17.41,5.97,20.17,14.85.41,1.32-.32,2.72-1.64,3.13-1.32.41-2.72-.32-3.13-1.64-2.11-6.78-8.3-11.34-15.4-11.34-8.89,0-16.13,7.23-16.13,16.13,0,14.45-5.94,23.33-16.73,25.01-.13.02-.26.03-.39.03Z"/> <path d="M30.82,71c-.57,0-1.15-.2-1.62-.59-1.05-.89-1.18-2.47-.29-3.52,6.6-7.78,9.81-17.84,9.81-30.75,0-2.4-.92-3.47-2.98-3.47-1.39,0-2.17,1.33-2.31,2.58-.16,1.37-1.41,2.35-2.76,2.2-1.37-.16-2.36-1.39-2.2-2.76.46-4.06,3.52-7.01,7.28-7.01s7.98,2.22,7.98,8.47c0,14.15-3.6,25.26-11,33.99-.49.58-1.2.88-1.91.88ZM13.97,68.35c-1.05,0-2.02-.66-2.37-1.71-.44-1.31.27-2.73,1.58-3.16,7.09-2.36,11.3-8.13,13.67-18.71.3-1.35,1.63-2.19,2.99-1.89,1.35.3,2.2,1.64,1.89,2.99-1.73,7.75-5.38,18.5-16.97,22.37-.26.09-.53.13-.79.13Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset61AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <path className="cls-1" d="M52.71,15.39c-6.42,3.53-14.25,5.61-22.71,5.61s-16.26-2.07-22.66-5.58"/> <path className="cls-1" d="M7.3,44.61c6.41-3.53,14.25-5.61,22.7-5.61s16.26,2.07,22.66,5.58"/> <line className="cls-1" x1="30" y1="3" x2="30" y2="57"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset61BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 63.01 75.05"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M53.43,75.05h-30.53c-2.48,0-4.84-.95-6.63-2.67l-13.31-12.76c-3.52-3.37-3.95-8.84-1-12.72l10.66-14.02V9.59C12.62,4.3,16.92,0,22.2,0s9.59,4.3,9.59,9.59v17.02c0,.47.3.88.74,1.02l20.46,6.68c6,1.96,10.03,7.51,10.03,13.82v17.32c0,5.29-4.3,9.59-9.59,9.59ZM12.62,41.14l-6.68,8.78c-1.41,1.86-1.21,4.47.48,6.09l13.31,12.76c.86.82,1.99,1.28,3.17,1.28h30.53c2.53,0,4.59-2.06,4.59-4.59v-17.32c0-4.14-2.64-7.78-6.58-9.07l-20.46-6.68c-2.5-.82-4.19-3.14-4.19-5.77V9.59c0-2.53-2.06-4.59-4.59-4.59s-4.59,2.06-4.59,4.59v41.8c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5v-10.25Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset62AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 50.6 63"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <line className="cls-1" x1="3" y1="3" x2="3" y2="60"/> <path className="cls-1" d="M3,3h41.59c2.54,0,3.93,2.97,2.3,4.92l-10.9,13.08,10.9,13.08c1.63,1.95.24,4.92-2.3,4.92H3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset62BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.35 71.56"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M38.57,71.56c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5c16.97,0,30.78-13.81,30.78-30.78S55.54,5,38.57,5,7.79,18.81,7.79,35.78c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5C2.79,16.05,18.84,0,38.57,0s35.78,16.05,35.78,35.78-16.05,35.78-35.78,35.78Z"/> <path d="M38.57,38.28c-1.38,0-2.5-1.12-2.5-2.5V14.79c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v20.99c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> <path d="M38.57,71.56H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h36.07c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M24.69,60.14H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h22.19c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M16.74,48.72H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h14.24c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M45.34,45.05c-.64,0-1.28-.24-1.77-.73l-6.77-6.77c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l6.77,6.77c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset63AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M45,15v36c0,3.31-2.69,6-6,6H15c-3.31,0-6-2.69-6-6V15"/> <path className="cls-1" d="M18,15v-6c0-3.31,2.69-6,6-6h6c3.31,0,6,2.69,6,6v6"/> <line className="cls-1" x1="3" y1="15" x2="51" y2="15"/> <line className="cls-1" x1="21" y1="30" x2="21" y2="45"/> <line className="cls-1" x1="33" y1="30" x2="33" y2="45"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset63BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.39 71.27"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M26.74,53.48H2.5c-1.38,0-2.5-1.12-2.5-2.5v-24.24C0,12,12,0,26.74,0s26.74,12,26.74,26.74-12,26.74-26.74,26.74ZM5,48.48h21.74c11.99,0,21.74-9.75,21.74-21.74S38.73,5,26.74,5,5,14.75,5,26.74v21.74Z"/> <path d="M69.89,71.27h-24.25c-6.69,0-13.11-2.49-18.05-7.02-1.02-.93-1.09-2.51-.16-3.53.93-1.02,2.51-1.09,3.53-.16,4.03,3.68,9.24,5.71,14.68,5.71h21.75v-21.73c0-5.93-2.35-11.47-6.62-15.61-.99-.96-1.02-2.54-.05-3.54s2.54-1.02,3.54-.05c5.25,5.09,8.14,11.91,8.14,19.2v24.23c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset64AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="3 24 3 3 24 3"/> <polyline className="cls-1" points="51 30 51 51 30 51"/> <line className="cls-1" x1="3" y1="3" x2="51" y2="51"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset64BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.99 70.36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M57.77,70.36H15.22c-4.35,0-7.89-3.54-7.89-7.89v-22.99c0-1.38,1.12-2.5,2.5-2.5h53.33c1.38,0,2.5,1.12,2.5,2.5v22.99c0,4.35-3.54,7.89-7.89,7.89ZM12.33,41.98v20.49c0,1.59,1.3,2.89,2.89,2.89h42.56c1.59,0,2.89-1.3,2.89-2.89v-20.49H12.33Z"/> <path d="M70.49,41.98H2.5c-1.38,0-2.5-1.12-2.5-2.5v-8.61c0-5.01,4.08-9.09,9.09-9.09h54.81c5.01,0,9.09,4.08,9.09,9.09v8.61c0,1.38-1.12,2.5-2.5,2.5ZM5,36.98h62.99v-6.11c0-2.26-1.84-4.09-4.09-4.09H9.09c-2.26,0-4.09,1.84-4.09,4.09v6.11Z"/> <path d="M36.5,70.36c-1.38,0-2.5-1.12-2.5-2.5V24.27c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v43.58c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M36.5,26.77c-10.5,0-19.04-8.54-19.04-19.04,0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,7.74,6.3,14.04,14.04,14.04s14.04-6.3,14.04-14.04c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,10.5-8.54,19.04-19.04,19.04Z"/> <path d="M36.5,26.77c-4.91,0-8.61-5.76-8.61-13.39S31.59,0,36.5,0s8.61,5.76,8.61,13.39-3.7,13.39-8.61,13.39ZM36.5,5c-1.44,0-3.61,3.35-3.61,8.39s2.17,8.39,3.61,8.39,3.61-3.35,3.61-8.39-2.17-8.39-3.61-8.39Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset65AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="21 3 21 21 3 21"/> <polyline className="cls-1" points="57 21 39 21 39 3"/> <polyline className="cls-1" points="39 57 39 39 57 39"/> <polyline className="cls-1" points="3 39 21 39 21 57"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset65BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 80.25 72.52"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M46.7,72.52h-13.14c-1.38,0-2.5-1.12-2.5-2.5v-22.76c0-4.03-1.51-7.88-4.25-10.83l-12.44-13.42c-3.76-4.06-4.72-9.72-2.51-14.79C14.08,3.15,18.89,0,24.42,0h31.41c5.53,0,10.34,3.15,12.55,8.21,2.21,5.07,1.25,10.73-2.5,14.79h0l-12.43,13.42c-2.74,2.96-4.24,6.8-4.24,10.83v22.77c0,1.38-1.12,2.5-2.5,2.5ZM36.06,67.52h8.14v-20.27c0-5.29,1.98-10.34,5.58-14.23l12.43-13.42c2.85-3.08,2.69-6.87,1.59-9.39-1.1-2.52-3.77-5.22-7.97-5.22h-31.41c-4.2,0-6.87,2.69-7.97,5.22s-1.26,6.31,1.59,9.39l12.44,13.42c3.6,3.88,5.58,8.94,5.58,14.23v20.26ZM64.05,21.31h0,0Z"/> <path d="M57.18,72.52H23.07c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h34.1c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M46.69,51.76c-1.04,0-2-.65-2.36-1.68-.45-1.3.24-2.73,1.54-3.18.18-.06,18.4-6.43,26.07-12.59,2.07-1.67,3.31-3.88,3.32-5.92,0-1.6-.76-3.03-2.27-4.25-3.49-2.82-7.58-.72-7.75-.63-1.22.64-2.73.18-3.38-1.03-.65-1.21-.21-2.71,1-3.37.29-.16,7.15-3.8,13.27,1.13,3.42,2.76,4.14,5.95,4.13,8.15,0,3.54-1.94,7.21-5.18,9.82-8.34,6.7-26.78,13.15-27.56,13.42-.27.09-.55.14-.82.14Z"/> <path d="M33.56,51.76c-.27,0-.55-.04-.82-.14-.78-.27-19.22-6.71-27.56-13.42C1.94,35.6,0,31.93,0,28.39c0-2.19.71-5.39,4.13-8.15,6.12-4.94,12.98-1.29,13.27-1.13,1.21.66,1.66,2.18,1,3.39-.66,1.21-2.18,1.66-3.39,1-.16-.08-4.25-2.18-7.74.64-1.51,1.22-2.28,2.65-2.27,4.25,0,2.04,1.24,4.26,3.32,5.92,7.67,6.16,25.88,12.53,26.07,12.59,1.3.45,1.99,1.88,1.54,3.18-.36,1.03-1.33,1.68-2.36,1.68Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset66AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="3 21 3 3 21 3"/> <polyline className="cls-1" points="39 3 57 3 57 21"/> <polyline className="cls-1" points="57 39 57 57 39 57"/> <polyline className="cls-1" points="21 57 3 57 3 39"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset66BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 73.61 73.61"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M28.19,53.5c-.73,0-1.46-.19-2.12-.57-1.33-.77-2.12-2.14-2.12-3.67v-24.91c0-1.53.79-2.9,2.12-3.67,1.33-.77,2.91-.77,4.24,0l21.58,12.46h0c1.33.77,2.12,2.14,2.12,3.67s-.79,2.9-2.12,3.67l-21.58,12.46c-.66.38-1.39.57-2.12.57ZM28.95,25.67v22.27l19.29-11.14-19.29-11.14Z"/> <path d="M53.31,73.61H20.3c-11.19,0-20.3-9.11-20.3-20.3V20.3C0,9.11,9.11,0,20.3,0h33c11.19,0,20.3,9.11,20.3,20.3v33c0,11.19-9.11,20.3-20.3,20.3ZM20.3,5c-8.44,0-15.3,6.86-15.3,15.3v33c0,8.44,6.86,15.3,15.3,15.3h33c8.44,0,15.3-6.86,15.3-15.3V20.3c0-8.44-6.86-15.3-15.3-15.3H20.3Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset67AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="51 24 51 3 30 3"/> <polyline className="cls-1" points="3 30 3 51 24 51"/> <line className="cls-1" x1="51" y1="3" x2="3" y2="51"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset67BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.56 71.56"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M25.98,32.59c-.16,0-.32-.02-.49-.05-.16-.04-.31-.08-.46-.15-.15-.06-.3-.14-.43-.22-.14-.1-.27-.2-.38-.32-.12-.11-.22-.24-.31-.38-.1-.13-.17-.28-.24-.43-.06-.15-.11-.31-.14-.46-.03-.17-.05-.33-.05-.49,0-.17.02-.33.05-.49s.08-.32.14-.47c.07-.15.14-.3.23-.43.09-.14.2-.27.31-.38.12-.12.25-.22.38-.31.14-.09.28-.17.44-.23.15-.07.3-.11.46-.15.33-.06.66-.06.98,0,.16.04.32.08.47.15.15.06.3.14.43.23.14.09.27.19.38.31.47.46.73,1.11.73,1.77,0,.16,0,.32-.05.49-.03.15-.08.31-.14.46-.06.15-.14.3-.23.43-.09.14-.19.27-.31.38-.11.12-.24.22-.38.32-.13.08-.28.16-.43.22-.15.07-.31.11-.47.15-.16.03-.32.05-.49.05Z"/> <path d="M45.57,32.58c-.66,0-1.31-.26-1.77-.73-.47-.46-.73-1.1-.73-1.76,0-.17,0-.33.05-.49.03-.16.08-.32.14-.47.06-.15.14-.3.23-.43.09-.14.19-.27.31-.38.93-.93,2.61-.93,3.53,0,.12.11.22.24.31.38.1.13.17.28.23.43.07.15.12.31.15.47s.05.32.05.49c0,.16-.02.32-.05.49-.03.15-.08.31-.15.46-.06.15-.14.3-.23.43-.09.14-.19.27-.31.38-.46.47-1.1.73-1.76.73Z"/> </g> <path d="M35.78,71.56C16.05,71.56,0,55.51,0,35.78S16.05,0,35.78,0s35.78,16.05,35.78,35.78-16.05,35.78-35.78,35.78ZM35.78,5c-16.97,0-30.78,13.81-30.78,30.78s13.81,30.78,30.78,30.78,30.78-13.81,30.78-30.78S52.75,5,35.78,5Z"/> <path d="M35.79,55.41c-7.75,0-14.79-4.58-17.96-11.67-.56-1.26,0-2.74,1.26-3.3,1.26-.56,2.74,0,3.3,1.26,2.36,5.29,7.62,8.71,13.39,8.71s11.03-3.42,13.37-8.7c.56-1.26,2.04-1.83,3.3-1.28,1.26.56,1.83,2.03,1.28,3.3-3.14,7.09-10.18,11.68-17.94,11.68Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset68AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="24 45 3 24 24 3"/> <line className="cls-1" x1="3" y1="24" x2="51" y2="24"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset68BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.56 71.56"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M35.78,71.56C16.05,71.56,0,55.51,0,35.78S16.05,0,35.78,0s35.78,16.05,35.78,35.78-16.05,35.78-35.78,35.78ZM35.78,5c-16.97,0-30.78,13.81-30.78,30.78s13.81,30.78,30.78,30.78,30.78-13.81,30.78-30.78S52.75,5,35.78,5Z"/> <path d="M35.78,38.28c-1.38,0-2.5-1.12-2.5-2.5V14.79c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v20.99c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M47.76,38.28h-11.98c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.98c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset69AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 55.5 36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polyline className="cls-1" points="52.5 3 22.5 33 3 13.5"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset69BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 81.96 64.01"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M40.12,64.01c-4,0-7.99-1.52-11.03-4.56l-15.89-15.89H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.74c.66,0,1.3.26,1.77.73l16.62,16.62c4.13,4.13,10.86,4.13,14.99,0l11.92-11.92-13.98-13.98c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l15.75,15.75c.47.47.73,1.1.73,1.77s-.26,1.3-.73,1.77l-13.69,13.69c-3.04,3.04-7.04,4.56-11.03,4.56Z"/> <path d="M79.46,46.49h-16.39c-.66,0-1.3-.26-1.77-.73l-17.26-17.26-2.5,2.5c-2.04,2.04-4.76,3.17-7.65,3.17s-5.6-1.12-7.65-3.17c-4.21-4.21-4.21-11.07,0-15.29l12.12-12.12c2.31-2.32,5.39-3.59,8.67-3.59s6.35,1.28,8.67,3.59l4.12,4.12h19.64c1.38,0,2.5,1.12,2.5,2.5v33.78c0,1.38-1.12,2.5-2.5,2.5ZM64.11,41.49h12.86V12.71h-18.17c-.66,0-1.3-.26-1.77-.73l-4.85-4.85c-1.37-1.37-3.19-2.13-5.13-2.13s-3.76.75-5.13,2.13l-12.12,12.12c-2.27,2.27-2.27,5.95,0,8.22,1.1,1.1,2.56,1.7,4.11,1.7s3.01-.61,4.11-1.7l4.27-4.27c.98-.98,2.56-.98,3.54,0l18.3,18.29Z"/> <path d="M39.77,31.73c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l10.39-10.39c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-10.39,10.39c-.49.49-1.13.73-1.77.73Z"/> <path d="M35.26,12.73c-.67,0-1.33-.27-1.82-.79l-4.09-4.36c-1.67-1.78-4.39-2.13-6.46-.83l-4.85,3.05c-2.02,1.27-4.35,1.94-6.74,1.94H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h8.81c1.44,0,2.85-.41,4.07-1.18l4.85-3.05c4.09-2.57,9.46-1.88,12.77,1.64l4.09,4.36c.94,1.01.89,2.59-.11,3.53-.48.45-1.1.68-1.71.68Z"/> <path d="M49.38,60.18c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l9.05-9.05c3.46-3.46,8.06-5.37,12.96-5.37h9.84c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5h-9.84c-3.56,0-6.9,1.39-9.42,3.9l-9.05,9.05c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset6AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 51"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M26.32,9.95l-1.63-4.9c-.41-1.22-1.55-2.05-2.85-2.05h-12.84c-3.31,0-6,2.69-6,6v33c0,3.31,2.69,6,6,6h42c3.31,0,6-2.69,6-6v-24c0-3.31-2.69-6-6-6h-21.84c-1.29,0-2.44-.83-2.85-2.05Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset6BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 75.31 66.31"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M67.28,55.62H8.03c-4.42,0-8.03-3.6-8.03-8.02V8.02C0,3.6,3.6,0,8.03,0h59.26c4.42,0,8.02,3.6,8.02,8.02v39.58c0,4.42-3.6,8.02-8.02,8.02ZM8.03,5c-1.67,0-3.03,1.36-3.03,3.02v39.58c0,1.67,1.36,3.02,3.03,3.02h59.26c1.67,0,3.02-1.36,3.02-3.02V8.02c0-1.67-1.36-3.02-3.02-3.02H8.03Z"/> <path d="M42.05,37.38c-.64,0-1.28-.24-1.77-.73l-11.37-11.37-4.43,4.43c-.47.47-1.1.73-1.77.73h-7.36c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h6.33l5.46-5.46c.94-.94,2.6-.94,3.54,0l11.37,11.37,4.84-4.84c.47-.47,1.1-.73,1.77-.73h11.29c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5h-10.25l-5.88,5.88c-.49.49-1.13.73-1.77.73Z"/> <path d="M37.65,66.31c-1.38,0-2.5-1.12-2.5-2.5v-10.68c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v10.68c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M56.69,66.31H18.62c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h38.07c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset70AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="30 3 51 24 30 45"/> <line className="cls-1" x1="51" y1="24" x2="3" y2="24"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset70BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.56 71.56"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M30.11,50.78c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l10.51-10.51c.06-.06.09-.14.09-.22s-.03-.16-.09-.22l-10.51-10.51c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l10.51,10.51c1,1,1.56,2.34,1.56,3.76s-.55,2.75-1.56,3.76l-10.51,10.51c-.49.49-1.13.73-1.77.73Z"/> <path d="M35.78,71.56C16.05,71.56,0,55.51,0,35.78S16.05,0,35.78,0s35.78,16.05,35.78,35.78-16.05,35.78-35.78,35.78ZM35.78,5c-16.97,0-30.78,13.81-30.78,30.78s13.81,30.78,30.78,30.78,30.78-13.81,30.78-30.78S52.75,5,35.78,5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset71AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 51 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="48 51 24 27 48 3"/> <polyline className="cls-1" points="27 51 3 27 27 3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset71BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.56 71.56"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M35.78,71.56C16.05,71.56,0,55.51,0,35.78S16.05,0,35.78,0s35.78,16.05,35.78,35.78-16.05,35.78-35.78,35.78ZM35.78,5c-16.97,0-30.78,13.81-30.78,30.78s13.81,30.78,30.78,30.78,30.78-13.81,30.78-30.78S52.75,5,35.78,5Z"/> <path d="M27.64,46.41c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l16.27-16.27c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-16.27,16.27c-.49.49-1.13.73-1.77.73Z"/> <path d="M43.91,46.41c-.64,0-1.28-.24-1.77-.73l-16.27-16.27c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l16.27,16.27c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset72AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 51 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="3 3 27 27 3 51"/> <polyline className="cls-1" points="24 3 48 27 24 51"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset72BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 77.16 78.89"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M69.13,68.45H8.03c-3.28,0-5.95-2.67-5.95-5.95V18.47c0-3.46,2.82-6.28,6.28-6.28h60.43c3.46,0,6.28,2.82,6.28,6.28v44.03c0,3.28-2.67,5.95-5.95,5.95ZM8.36,17.19c-.71,0-1.28.57-1.28,1.28v44.03c0,.52.43.95.95.95h61.1c.52,0,.95-.42.95-.95V18.47c0-.71-.57-1.28-1.28-1.28H8.36Z"/> <path d="M38.58,55.4c-8.31,0-15.08-6.76-15.08-15.08s6.76-15.08,15.08-15.08,15.08,6.76,15.08,15.08-6.76,15.08-15.08,15.08ZM38.58,30.24c-5.56,0-10.08,4.52-10.08,10.08s4.52,10.08,10.08,10.08,10.08-4.52,10.08-10.08-4.52-10.08-10.08-10.08Z"/> <path d="M54.98,17.19H22.17c-.83,0-1.61-.41-2.07-1.1-.46-.69-.56-1.56-.25-2.33l3.39-8.4c1.31-3.25,4.42-5.35,7.93-5.35h14.81c3.5,0,6.62,2.1,7.93,5.35l3.39,8.4c.31.77.22,1.65-.25,2.33-.46.69-1.24,1.1-2.07,1.1ZM25.88,12.19h25.4l-2.01-4.97c-.54-1.35-1.84-2.22-3.29-2.22h-14.81c-1.46,0-2.75.87-3.29,2.22l-2.01,4.97Z"/> <path d="M2.5,78.89c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54L72.89,2.47c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54L4.27,78.16c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset73AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 30 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polyline className="cls-1" points="27 51 3 27 27 3"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset73BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 76.92 74.81"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M53.02,74.81h-29.12c-10.19,0-18.48-8.29-18.48-18.48v-12.13c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v12.13c0,7.43,6.05,13.48,13.48,13.48h29.12c7.43,0,13.48-6.05,13.48-13.48v-12.13c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v12.13c0,10.19-8.29,18.48-18.48,18.48Z"/> <g> <path d="M48.44,17.47c-1.24,0-2.31-.92-2.48-2.18l-1.35-10.3h-12.3l-1.35,10.3c-.18,1.37-1.43,2.34-2.8,2.15-1.37-.18-2.33-1.44-2.15-2.8l1.64-12.47c.16-1.24,1.22-2.17,2.48-2.17h16.69c1.25,0,2.32.93,2.48,2.17l1.64,12.47c.18,1.37-.78,2.62-2.15,2.8-.11.01-.22.02-.33.02Z"/> <path d="M38.85,46.7h-.78c-4.11,0-8.02-1.77-10.73-4.86-2.71-3.09-3.97-7.21-3.43-11.29.18-1.37,1.43-2.33,2.8-2.15,1.37.18,2.33,1.43,2.15,2.8-.35,2.65.47,5.33,2.23,7.34,1.76,2.01,4.31,3.16,6.98,3.16h.78c2.67,0,5.21-1.15,6.98-3.16,1.77-2.01,2.58-4.69,2.23-7.34-.18-1.37.79-2.62,2.15-2.8,1.37-.17,2.62.79,2.8,2.15.53,4.08-.72,8.19-3.43,11.29-2.71,3.09-6.62,4.86-10.73,4.86Z"/> <path d="M14.28,46.7c-4.73,0-9.15-2.34-11.81-6.27-2.66-3.92-3.21-8.88-1.46-13.27l3.94-10.02C9.04,6.73,18.92,0,30.12,0c.72,0,1.4.31,1.88.85s.69,1.26.6,1.97l-1.64,12.47c-.18,1.37-1.43,2.34-2.8,2.15-1.37-.18-2.33-1.44-2.15-2.8l1.24-9.46c-7.91,1.02-14.66,6.21-17.65,13.79l-3.94,10.03c-1.15,2.9-.8,6.04.95,8.63,1.76,2.59,4.55,4.07,7.67,4.07,4.65,0,8.61-3.47,9.21-8.08l.42-3.08c.19-1.37,1.44-2.32,2.81-2.14,1.37.19,2.33,1.44,2.14,2.81l-.42,3.07c-.92,7.08-7.01,12.42-14.17,12.42Z"/> <path d="M62.64,46.7c-7.16,0-13.25-5.35-14.17-12.44l-.41-3.05c-.19-1.37.77-2.63,2.14-2.81,1.37-.18,2.63.77,2.81,2.14l.42,3.07c.6,4.62,4.56,8.09,9.21,8.09,3.12,0,5.92-1.48,7.67-4.07,1.75-2.58,2.1-5.72.95-8.62l-3.95-10.04c-1.62-4.13-4.42-7.64-8.1-10.14-2.88-1.96-6.13-3.2-9.55-3.64l1.24,9.46c.18,1.37-.78,2.62-2.15,2.8-1.37.19-2.62-.78-2.8-2.15l-1.64-12.47c-.09-.71.12-1.43.6-1.97s1.16-.85,1.88-.85c5.46,0,10.73,1.62,15.24,4.7,4.51,3.08,7.95,7.38,9.93,12.45l3.94,10.03c1.74,4.38,1.19,9.35-1.47,13.26-2.66,3.92-7.08,6.27-11.81,6.27Z"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset74AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 69.57"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path className="cls-1" d="M49.09,15.7c-10.54-10.54-27.64-10.54-38.18,0-7.24,7.24-9.51,17.56-6.81,26.74"/> <polyline className="cls-1" points="36.4 18.14 49.09 15.7 46.65 3"/> </g> <g> <path className="cls-1" d="M10.91,53.88c10.54,10.54,27.64,10.54,38.18,0,7.19-7.19,9.48-17.44,6.86-26.57"/> <polyline className="cls-1" points="23.6 51.43 10.91 53.88 13.35 66.57"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset74BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.96 76.03"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M33.56,28.39c-1.51,0-2.93-.59-3.99-1.65l-11.46-11.46c-3.49-3.49-3.49-9.17,0-12.66,1.69-1.69,3.94-2.62,6.33-2.62s4.64.93,6.33,2.62l2.79,2.79,2.79-2.79c1.69-1.69,3.94-2.62,6.33-2.62s4.64.93,6.33,2.62,2.62,3.94,2.62,6.33-.93,4.64-2.62,6.33l-11.46,11.46c-1.07,1.07-2.48,1.65-3.99,1.65ZM24.44,5c-1.06,0-2.05.41-2.79,1.16-1.54,1.54-1.54,4.05,0,5.59l11.46,11.46c.16.16.34.19.46.19s.3-.03.46-.19l11.46-11.46c.75-.75,1.16-1.74,1.16-2.79s-.41-2.05-1.16-2.79t0,0c-1.49-1.49-4.09-1.49-5.59,0l-4.56,4.56c-.94.94-2.6.94-3.54,0l-4.56-4.56c-.75-.75-1.74-1.16-2.79-1.16Z"/> <path d="M34.3,76.03H14.25c-7.86,0-14.25-6.39-14.25-14.25v-12.75c0-7.86,6.39-14.25,14.25-14.25h23.84c3.75,0,7.05,1.98,8.89,4.96l8.16-8.16c4.07-4.07,10.7-4.07,14.77,0,4.07,4.07,4.07,10.7,0,14.77,0,0-19.15,19.12-25.53,25.5-2.69,2.69-6.27,4.17-10.08,4.17ZM14.25,39.78c-5.1,0-9.25,4.15-9.25,9.25v12.75c0,5.1,4.15,9.25,9.25,9.25h20.05c2.47,0,4.79-.96,6.54-2.71,6.38-6.38,25.53-25.5,25.53-25.5,2.12-2.12,2.12-5.57,0-7.7-2.12-2.12-5.58-2.12-7.7,0l-10.12,10.12h0c0,5.77-4.69,10.46-10.46,10.46h-15.18c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h15.18c3.01,0,5.46-2.45,5.46-5.46,0-.2-.01-.39-.03-.59,0-.05-.02-.11-.02-.17-.37-2.66-2.65-4.71-5.41-4.71H14.25Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset75AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 64.79"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M49.09,15.7c-10.54-10.54-27.64-10.54-38.18,0s-10.54,27.64,0,38.18,27.64,10.54,38.18,0c7.22-7.22,9.5-17.52,6.83-26.67"/> <polyline className="cls-1" points="36.4 18.14 49.09 15.7 46.65 3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset75BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.02 59.23"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M55.47,38.89c-.16,0-.33-.02-.49-.05-.16-.03-.32-.08-.47-.14-.15-.06-.29-.14-.43-.23-.14-.09-.26-.2-.38-.31-.46-.46-.73-1.11-.73-1.77,0-.16.02-.33.05-.49.03-.16.08-.32.14-.47.06-.15.14-.29.23-.43.09-.13.2-.26.31-.38.12-.11.24-.22.38-.31.14-.09.28-.17.43-.23.15-.06.31-.11.47-.14.81-.16,1.67.1,2.26.68.46.47.73,1.11.73,1.77s-.27,1.3-.73,1.77c-.47.46-1.11.73-1.77.73Z"/> <path d="M64.74,59.23H9.28c-5.12,0-9.28-4.16-9.28-9.28V9.28C0,4.16,4.16,0,9.28,0h62.24c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5H9.28c-2.36,0-4.28,1.92-4.28,4.28s1.92,4.28,4.28,4.28h55.46c5.12,0,9.28,4.16,9.28,9.28v27.12c0,5.12-4.16,9.28-9.28,9.28ZM5,17.51v32.44c0,2.36,1.92,4.28,4.28,4.28h55.46c2.36,0,4.28-1.92,4.28-4.28v-27.12c0-2.36-1.92-4.28-4.28-4.28H9.28c-1.54,0-3-.38-4.28-1.05Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset76AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 64.79"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M10.91,15.7c10.54-10.54,27.64-10.54,38.18,0,10.54,10.54,10.54,27.64,0,38.18-10.54,10.54-27.64,10.54-38.18,0-7.22-7.22-9.5-17.52-6.83-26.67"/> <polyline className="cls-1" points="23.6 18.14 10.91 15.7 13.35 3"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset76BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54.89 82.46"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path d="M16.17,82.46c-.95,0-1.92-.25-2.84-.75-2.61-1.45-3.65-4.38-2.53-7.15l10-24.78H5.73c-1.85,0-3.54-.86-4.62-2.35s-1.39-3.36-.82-5.12L12.65,3.97c.77-2.37,2.95-3.97,5.45-3.97h19.72c1.9,0,3.68.94,4.74,2.52s1.28,3.58.56,5.34l-7.14,17.68h13.17c2.16,0,4.12,1.2,5.1,3.13.98,1.93.8,4.21-.47,5.96l-33.05,45.44c-1.14,1.56-2.81,2.39-4.56,2.39ZM18.09,5c-.31,0-.59.2-.69.5L5.04,43.84c-.1.3.02.54.1.65.08.11.26.3.58.3h18.78c.83,0,1.61.41,2.07,1.1.46.69.56,1.56.25,2.33l-11.39,28.21c-.07.16-.24.59.32.9.56.31.83-.06.93-.21L49.74,31.69c.21-.3.15-.57.06-.75-.09-.18-.28-.39-.64-.39h-16.88c-.83,0-1.61-.41-2.07-1.1-.46-.69-.56-1.56-.25-2.33l8.52-21.11c.12-.31,0-.56-.07-.67-.08-.12-.26-.32-.6-.32h-19.72Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset77AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 64.79 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <polyline className="cls-1" points="34.79 15 34.79 30 43.79 30"/> <g> <path className="cls-1" d="M15.69,49.09c-10.54-10.54-10.54-27.64,0-38.18C26.24.36,43.33.36,53.88,10.91c10.54,10.54,10.54,27.64,0,38.18-7.22,7.22-17.52,9.5-26.67,6.83"/> <polyline className="cls-1" points="18.14 36.4 15.69 49.09 3 46.65"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset77BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 75.24 77.8"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M39.54,32.38c-5.32,0-9.64-4.33-9.64-9.64s4.33-9.64,9.64-9.64,9.64,4.33,9.64,9.64-4.33,9.64-9.64,9.64ZM39.54,18.09c-2.56,0-4.64,2.08-4.64,4.64s2.08,4.64,4.64,4.64,4.64-2.08,4.64-4.64-2.08-4.64-4.64-4.64Z"/> <path d="M39.54,58.87c-6.96,0-22.74-18.52-22.74-36.13C16.8,10.2,27,0,39.54,0s22.74,10.2,22.74,22.74c0,17.61-15.78,36.13-22.74,36.13ZM39.54,53.87h.01-.01ZM39.54,5c-9.78,0-17.74,7.96-17.74,17.74,0,16,14.46,30.99,17.74,31.13,3.27-.14,17.74-15.13,17.74-31.13,0-9.78-7.96-17.74-17.74-17.74Z"/> <path d="M49.32,77.8c-2.91,0-5.82-.57-8.59-1.72l-8.16-3.39c-4.23-1.77-9.09-1.76-13.34,0l-4.31,1.8c-3.35,1.38-7.13,1.01-10.13-1-3-2-4.79-5.36-4.79-8.96v-14.24c0-4.37,2.6-8.28,6.63-9.96l10.68-4.45c1.44-.61,3.04-1.07,4.74-1.38,1.36-.24,2.66.67,2.9,2.02.24,1.36-.67,2.66-2.02,2.9-1.34.24-2.58.59-3.68,1.06l-10.69,4.45c-2.16.9-3.56,3-3.56,5.35v14.24c0,1.96.94,3.72,2.57,4.81,1.63,1.09,3.61,1.29,5.43.54l4.3-1.79c5.48-2.27,11.74-2.27,17.19,0l8.16,3.39c4.3,1.79,9.04,1.79,13.34,0l10.69-4.45c2.16-.9,3.55-3,3.55-5.35v-14.24c0-1.96-.94-3.71-2.57-4.8-1.64-1.09-3.62-1.28-5.44-.52l-4.32,1.78c-1.15.5-2.42.9-3.72,1.17-1.35.29-2.68-.59-2.96-1.94s.59-2.68,1.94-2.96c.96-.2,1.9-.5,2.79-.88l4.36-1.79c3.33-1.39,7.12-1.03,10.13.98,3.01,2,4.8,5.35,4.8,8.96v14.24c0,4.37-2.6,8.28-6.63,9.96l-10.7,4.45c-2.77,1.15-5.68,1.73-8.59,1.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset78AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <polyline className="cls-1" points="34.5 42 22.5 30 34.5 18"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset78BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.63 68.38"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M36.31,68.38c-1.21,0-2.36-.47-3.22-1.33l-7.65-7.65c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l7.33,7.33,7.33-7.33c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-7.65,7.65c-.86.86-2,1.33-3.22,1.33Z"/> <path d="M36.31,68.38c-1.38,0-2.5-1.12-2.5-2.5v-32.77c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v32.77c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> <path d="M57.39,66.21c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5c5.64,0,10.24-4.59,10.24-10.24v-28.31H5v28.31c0,5.64,4.59,10.24,10.24,10.24,1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5c-8.4,0-15.24-6.83-15.24-15.24v-30.81c0-1.38,1.12-2.5,2.5-2.5h67.63c1.38,0,2.5,1.12,2.5,2.5v30.81c0,8.4-6.83,15.24-15.24,15.24Z"/> <path d="M70.13,22.67H2.5c-1.38,0-2.5-1.12-2.5-2.5v-4.93C0,6.83,6.83,0,15.24,0h6.21c3.03,0,5.96.89,8.47,2.57,2.9,1.95,6.65,2.98,10.82,2.98h23.33c4.72,0,8.56,3.84,8.56,8.56v6.06c0,1.38-1.12,2.5-2.5,2.5ZM5,17.67h62.63v-3.56c0-1.96-1.6-3.56-3.56-3.56h-23.33c-5.17,0-9.88-1.32-13.61-3.82-1.68-1.13-3.65-1.72-5.68-1.72h-6.21c-5.64,0-10.24,4.59-10.24,10.24v2.43Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset79AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <polyline className="cls-1" points="25.5 18 37.5 30 25.5 42"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset79BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.63 66.21"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M64.6,66.21H8.03c-4.42,0-8.03-3.6-8.03-8.02V20.17c0-1.38,1.12-2.5,2.5-2.5h67.63c1.38,0,2.5,1.12,2.5,2.5v38.02c0,4.42-3.6,8.02-8.03,8.02ZM5,22.67v35.52c0,1.67,1.36,3.02,3.03,3.02h56.58c1.67,0,3.03-1.36,3.03-3.02V22.67H5Z"/> <path d="M70.13,22.67H2.5c-1.38,0-2.5-1.12-2.5-2.5v-4.93C0,6.83,6.83,0,15.24,0h6.21c3.03,0,5.96.89,8.47,2.57,2.9,1.95,6.65,2.98,10.83,2.98h23.33c4.72,0,8.56,3.84,8.56,8.56v6.06c0,1.38-1.12,2.5-2.5,2.5ZM5,17.67h62.63v-3.56c0-1.96-1.6-3.56-3.56-3.56h-23.33c-5.17,0-9.88-1.32-13.61-3.82-1.68-1.13-3.65-1.72-5.68-1.72h-6.21c-5.64,0-10.24,4.59-10.24,10.24v2.43Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset7AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M45,24v27c0,3.31-2.69,6-6,6H9c-3.31,0-6-2.69-6-6V9c0-3.31,2.69-6,6-6h15"/> <path className="cls-1" d="M30,24h15L24,3v15c0,3.31,2.69,6,6,6Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset7BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.18 72.63"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M35.32,53.52c-4.72,0-9.16-1.84-12.5-5.18-.92-.92-1.75-1.97-2.49-3.13-.74-1.17-.39-2.71.77-3.45,1.16-.74,2.71-.39,3.45.77.54.85,1.14,1.61,1.8,2.27,2.39,2.39,5.58,3.71,8.96,3.71s6.57-1.32,8.96-3.71l18.19-18.17c2.39-2.41,3.72-5.6,3.72-8.97s-1.32-6.56-3.72-8.98c-4.93-4.93-12.98-4.93-17.95.01l-4.86,4.88c-.98.98-2.56.98-3.54,0-.98-.97-.98-2.56,0-3.54l4.86-4.89c6.92-6.89,18.14-6.89,25.03,0,3.34,3.37,5.18,7.81,5.18,12.51s-1.84,9.14-5.17,12.5l-18.2,18.17c-3.34,3.34-7.78,5.17-12.5,5.17Z"/> <path d="M17.68,72.63c-4.72,0-9.16-1.84-12.5-5.18-3.34-3.31-5.18-7.76-5.18-12.51s1.84-9.17,5.18-12.51l18.17-18.17c6.9-6.87,18.12-6.87,25.02,0,.95.95,1.79,2.01,2.49,3.17.72,1.18.35,2.72-.83,3.44-1.18.72-2.72.35-3.44-.83-.5-.81-1.09-1.56-1.75-2.23-4.95-4.93-13-4.93-17.95,0l-18.16,18.16c-2.4,2.4-3.72,5.58-3.72,8.97s1.32,6.59,3.71,8.97c2.4,2.4,5.58,3.72,8.97,3.72s6.57-1.32,8.96-3.71l4.89-4.89c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54l-4.89,4.89c-3.34,3.34-7.78,5.18-12.5,5.18Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset80AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 30 54"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <polyline className="cls-1" points="3 3 27 27 3 51"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset80BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 49.92 70.46"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M24.96,60.4c-.16,0-.32-.02-.49-.05-.16-.03-.31-.08-.46-.14-.15-.07-.3-.14-.44-.23-.13-.09-.26-.2-.38-.31-.46-.47-.73-1.11-.73-1.77,0-.16.02-.33.05-.49.03-.16.08-.32.14-.47.07-.15.14-.29.23-.43.09-.13.2-.26.31-.38.12-.11.25-.22.38-.31.14-.09.28-.17.44-.23.15-.06.3-.11.46-.14.32-.07.66-.07.98,0,.16.03.32.08.47.14.15.06.29.14.43.23.14.09.27.2.38.31.12.12.22.25.31.38.09.14.17.28.23.43.06.15.11.31.14.47.03.16.05.33.05.49s-.02.33-.05.49c-.03.16-.08.31-.14.47-.06.15-.14.29-.23.43-.09.13-.19.26-.31.38-.11.11-.24.22-.38.31-.14.09-.28.16-.43.23-.15.06-.31.11-.47.14-.16.03-.33.05-.49.05Z"/> <path d="M41.89,70.46H8.02c-4.42,0-8.02-3.6-8.02-8.02V8.03C0,3.6,3.6,0,8.02,0h33.87c4.42,0,8.02,3.6,8.02,8.03v54.41c0,4.42-3.6,8.02-8.02,8.02ZM8.02,5c-1.67,0-3.02,1.36-3.02,3.03v54.41c0,1.67,1.36,3.02,3.02,3.02h33.87c1.67,0,3.02-1.36,3.02-3.02V8.03c0-1.67-1.36-3.03-3.02-3.03H8.02Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset81AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 57 57"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M15,25.5c0-5.8,4.7-10.5,10.5-10.5"/> <g> <circle className="cls-1" cx="25.5" cy="25.5" r="22.5" transform="translate(-1.54 1.63) rotate(-3.56)"/> <line className="cls-1" x1="42" y1="42" x2="54" y2="54"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset81BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 49.92 70.46"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M24.96,61.9c-.16,0-.33-.01-.49-.04-.16-.04-.32-.09-.47-.15-.15-.06-.29-.14-.43-.23-.13-.09-.26-.19-.38-.31-.11-.11-.22-.24-.31-.38-.09-.13-.17-.28-.23-.43s-.11-.31-.14-.47c-.03-.16-.05-.32-.05-.49,0-.16.02-.32.05-.48.03-.16.08-.32.14-.47s.14-.3.23-.43c.09-.14.2-.27.31-.38.12-.12.25-.22.38-.31.14-.09.28-.17.43-.23.15-.07.31-.12.47-.15.82-.16,1.68.11,2.26.69.11.11.22.24.31.38.09.13.17.28.23.43s.11.31.14.47c.03.16.05.32.05.48,0,.17-.02.33-.05.49-.03.16-.08.32-.14.47s-.14.3-.23.43c-.09.14-.2.27-.31.38-.47.47-1.11.73-1.77.73Z"/> <path d="M41.89,70.46H8.02c-4.42,0-8.02-3.6-8.02-8.02V8.02C0,3.6,3.6,0,8.02,0h33.87c4.42,0,8.02,3.6,8.02,8.02v54.41c0,4.42-3.6,8.02-8.02,8.02ZM8.02,5c-1.67,0-3.02,1.36-3.02,3.02v54.41c0,1.67,1.36,3.02,3.02,3.02h33.87c1.67,0,3.02-1.36,3.02-3.02V8.02c0-1.67-1.36-3.02-3.02-3.02H8.02Z"/> <path d="M47.42,53.63H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h44.92c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset82AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 59.87 54.25"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <line className="cls-1" x1="29.94" y1="18" x2="29.94" y2="30"/> <line className="cls-1" x1="29.94" y1="42" x2="29.94" y2="42"/> </g> <path className="cls-1" d="M24.74,6L3.81,42.25c-2.31,4,.58,9,5.2,9h41.86c4.62,0,7.51-5,5.2-9L35.13,6c-2.31-4-8.08-4-10.39,0Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset82BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.56 70.47"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M57,51.03c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l11.18-11.18c.12-.12.14-.26.14-.35s-.03-.23-.14-.35l-11.18-11.18c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l11.18,11.18c1.04,1.04,1.61,2.42,1.61,3.88s-.57,2.85-1.61,3.88l-11.18,11.18c-.49.49-1.13.73-1.77.73Z"/> <path d="M69.06,37.73H21.17c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h47.89c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> <path d="M23.18,70.47h-7.95c-8.4,0-15.23-6.84-15.23-15.25V15.25C0,6.84,6.83,0,15.23,0h7.95c8.4,0,15.23,6.84,15.23,15.25v6.02c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5v-6.02c0-5.65-4.59-10.25-10.23-10.25h-7.95c-5.64,0-10.23,4.6-10.23,10.25v39.97c0,5.65,4.59,10.25,10.23,10.25h7.95c5.64,0,10.23-4.6,10.23-10.25v-6.02c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v6.02c0,8.41-6.83,15.25-15.23,15.25Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset83AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 63"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path className="cls-1" d="M45,24c0,18-21,36-21,36,0,0-21-18-21-36C3,12.4,12.4,3,24,3s21,9.4,21,21Z"/> <circle className="cls-1" cx="24" cy="24" r="9"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset83BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 49.92 70.46"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M24.96,58.98c-.66,0-1.3-.27-1.76-.73-.12-.12-.22-.25-.32-.38-.09-.14-.16-.28-.23-.44-.06-.15-.11-.3-.14-.46-.03-.16-.05-.33-.05-.49,0-.66.27-1.31.74-1.77.58-.58,1.44-.85,2.25-.68.16.03.32.08.47.14.15.06.29.14.43.23.14.09.27.2.38.31.47.47.73,1.11.73,1.77s-.26,1.3-.73,1.77c-.11.11-.24.22-.38.31-.14.09-.28.17-.43.23-.15.06-.31.11-.47.14s-.33.05-.49.05Z"/> <path d="M41.89,70.46H8.02c-4.42,0-8.02-3.6-8.02-8.02V8.02C0,3.6,3.6,0,8.02,0h33.87c4.42,0,8.03,3.6,8.03,8.02v54.41c0,4.42-3.6,8.02-8.03,8.02ZM8.02,5c-1.67,0-3.02,1.36-3.02,3.02v54.41c0,1.67,1.36,3.02,3.02,3.02h33.87c1.67,0,3.03-1.36,3.03-3.02V8.02c0-1.67-1.36-3.02-3.03-3.02H8.02Z"/> <path d="M30.57,15.27h-11.23c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h11.23c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset84AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <polyline className="cls-1" points="30 15 30 30 39 30"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset84BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 71.01 46.91"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M66.27,39.98c-.81,0-1.63-.21-2.37-.64l-14.93-8.62c-.77-.45-1.25-1.27-1.25-2.17v-10.19c0-.89.48-1.72,1.25-2.17l14.93-8.62c1.48-.86,3.25-.86,4.74,0,1.48.86,2.37,2.39,2.37,4.1v23.56c0,1.71-.89,3.25-2.37,4.1-.74.43-1.56.64-2.37.64ZM52.72,27.11l13.29,7.67V12.13l-13.29,7.67v7.31Z"/> <path d="M46.96,46.91H8.02c-4.42,0-8.02-3.6-8.02-8.02V8.02C0,3.6,3.6,0,8.02,0h38.94c4.42,0,8.02,3.6,8.02,8.02v30.86c0,4.42-3.6,8.02-8.02,8.02ZM8.02,5c-1.67,0-3.02,1.36-3.02,3.02v30.86c0,1.67,1.36,3.02,3.02,3.02h38.94c1.67,0,3.02-1.36,3.02-3.02V8.02c0-1.67-1.36-3.02-3.02-3.02H8.02Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset85AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <g> <line className="cls-1" x1="30" y1="45" x2="30" y2="27"/> <line className="cls-1" x1="30" y1="15" x2="30" y2="15"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset85BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.52 58.71"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M62.73,38.28c-1.38,0-2.5-1.12-2.5-2.5v-7.81c0-12.67-10.31-22.97-22.97-22.97S14.29,15.3,14.29,27.97v7.81c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5v-7.81C9.29,12.55,21.84,0,37.26,0s27.97,12.55,27.97,27.97v7.81c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M61.81,58.71h-5.44c-1.38,0-2.5-1.12-2.5-2.5v-20.43c0-1.38,1.12-2.5,2.5-2.5h5.44c7.01,0,12.72,5.7,12.72,12.72s-5.7,12.72-12.72,12.72ZM58.87,53.71h2.94c4.25,0,7.72-3.46,7.72-7.72s-3.46-7.72-7.72-7.72h-2.94v15.43Z"/> <path d="M18.16,58.71h-5.44c-7.01,0-12.72-5.7-12.72-12.72s5.7-12.72,12.72-12.72h5.44c1.38,0,2.5,1.12,2.5,2.5v20.43c0,1.38-1.12,2.5-2.5,2.5ZM12.72,38.28c-4.25,0-7.72,3.46-7.72,7.72s3.46,7.72,7.72,7.72h2.94v-15.43h-2.94Z"/> <path d="M56.37,58.71h-10.89c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h10.89c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset86AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <g> <path className="cls-1" d="M22.5,22.5c0-4.79,4.49-8.53,9.5-7.24,2.53.65,4.59,2.72,5.24,5.24.99,3.83-.97,7.36-4.1,8.81-2,.93-3.15,3.07-3.15,5.27v1.42"/> <line className="cls-1" x1="30" y1="45" x2="30" y2="45"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset86BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66.39 73.48"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M22.36,45.01c-12.75,0-22.36-5.09-22.36-11.83s9.61-11.83,22.36-11.83,22.36,5.09,22.36,11.83-9.61,11.83-22.36,11.83ZM22.36,26.35c-10.6,0-17.36,4.05-17.36,6.83s6.76,6.83,17.36,6.83,17.36-4.05,17.36-6.83-6.76-6.83-17.36-6.83Z"/> <path d="M22.36,59.25c-12.75,0-22.36-5.09-22.36-11.83,0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,2.79,6.76,6.83,17.36,6.83s17.36-4.05,17.36-6.83c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,6.75-9.61,11.83-22.36,11.83Z"/> <path d="M22.36,73.48c-12.75,0-22.36-5.09-22.36-11.83,0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,2.79,6.76,6.83,17.36,6.83s17.36-4.05,17.36-6.83c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,6.75-9.61,11.83-22.36,11.83Z"/> <path d="M2.5,65.04c-1.38,0-2.5-1.12-2.5-2.5v-25.74c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v25.74c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M42.21,64.15c-1.38,0-2.5-1.12-2.5-2.5v-28.47c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v28.47c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M44.04,52.13c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5c10.59,0,17.36-4.04,17.36-6.83,0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,6.74-9.61,11.83-22.36,11.83Z"/> <path d="M44.04,23.66c-12.75,0-22.36-5.09-22.36-11.83S31.29,0,44.04,0s22.36,5.09,22.36,11.83-9.61,11.83-22.36,11.83ZM44.04,5c-10.6,0-17.36,4.04-17.36,6.83s6.76,6.83,17.36,6.83,17.36-4.05,17.36-6.83-6.76-6.83-17.36-6.83Z"/> <path d="M44.04,37.89c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5c10.59,0,17.36-4.05,17.36-6.83,0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,6.75-9.61,11.83-22.36,11.83Z"/> <path d="M44.04,66.36c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5c10.59,0,17.36-4.05,17.36-6.83,0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,6.75-9.61,11.83-22.36,11.83Z"/> <path d="M63.89,57.03c-1.38,0-2.5-1.12-2.5-2.5V11.83c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v42.7c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M24.18,26.39c-1.38,0-2.5-1.12-2.5-2.5v-12.06c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v12.06c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset87AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <g> <line className="cls-1" x1="30" y1="15" x2="30" y2="33"/> <line className="cls-1" x1="30" y1="45" x2="30" y2="45"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset87BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.02 66.36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M66.42,52.48H7.6c-4.19,0-7.6-3.41-7.6-7.6V7.6C0,3.41,3.41,0,7.6,0h58.83c4.19,0,7.6,3.41,7.6,7.6v37.28c0,4.19-3.41,7.6-7.6,7.6ZM7.6,5c-1.43,0-2.6,1.17-2.6,2.6v37.28c0,1.43,1.17,2.6,2.6,2.6h58.83c1.43,0,2.6-1.17,2.6-2.6V7.6c0-1.43-1.17-2.6-2.6-2.6H7.6Z"/> <path d="M71.52,40.73H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h69.02c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M51.73,66.36h-29.44c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h29.44c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M37.01,66.36c-1.38,0-2.5-1.12-2.5-2.5v-12.53c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v12.53c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset88AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="27"/> <line className="cls-1" x1="10.91" y1="49.09" x2="49.09" y2="10.91"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset88BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.02 69.38"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M14.21,13.69c-.66,0-1.3-.27-1.77-.73-.12-.12-.22-.24-.31-.38-.09-.14-.17-.28-.23-.43-.06-.15-.11-.31-.14-.47-.04-.16-.05-.33-.05-.49,0-.66.27-1.3.73-1.77.93-.93,2.6-.93,3.53,0,.47.47.74,1.11.74,1.77,0,.16-.02.33-.05.49-.03.16-.08.32-.14.47-.07.15-.14.29-.23.43-.09.14-.2.26-.32.38-.46.46-1.11.73-1.76.73Z"/> <path d="M26.67,13.69c-.66,0-1.3-.27-1.77-.73-.11-.12-.22-.25-.31-.38-.09-.14-.17-.28-.23-.43-.06-.15-.11-.31-.14-.47s-.05-.33-.05-.49c0-.66.27-1.3.73-1.77.58-.58,1.44-.84,2.26-.68.16.03.32.08.47.14.15.07.29.14.43.23.13.09.26.2.38.31.46.47.73,1.11.73,1.77,0,.16-.02.33-.05.49-.03.16-.08.32-.14.47-.06.15-.14.29-.23.43-.09.13-.2.26-.31.38-.12.11-.25.22-.38.31-.14.09-.28.17-.43.23-.15.06-.31.11-.47.14-.16.03-.33.05-.49.05Z"/> <path d="M39.13,13.69c-.16,0-.33-.02-.49-.05-.16-.03-.32-.08-.47-.14-.15-.06-.29-.14-.43-.23-.13-.09-.26-.2-.38-.31-.11-.12-.21-.24-.31-.38-.09-.14-.16-.28-.23-.43-.06-.15-.11-.31-.14-.47s-.05-.33-.05-.49.02-.33.05-.49.08-.32.14-.47c.07-.15.14-.29.23-.43.09-.13.2-.26.31-.38.12-.11.25-.22.38-.31.14-.09.28-.16.43-.23.15-.06.31-.11.47-.14.81-.16,1.68.1,2.26.68.46.47.73,1.11.73,1.77,0,.16-.01.33-.05.49-.03.16-.08.32-.14.47-.06.15-.14.29-.23.43-.09.14-.2.26-.31.38-.46.46-1.11.73-1.77.73Z"/> <path d="M66.42,69.38H7.6c-4.19,0-7.6-3.41-7.6-7.6V7.6C0,3.41,3.41,0,7.6,0h58.83c4.19,0,7.6,3.41,7.6,7.6v54.18c0,4.19-3.41,7.6-7.6,7.6ZM7.6,5c-1.43,0-2.6,1.17-2.6,2.6v54.18c0,1.43,1.17,2.6,2.6,2.6h58.83c1.43,0,2.6-1.17,2.6-2.6V7.6c0-1.43-1.17-2.6-2.6-2.6H7.6Z"/> <path d="M71.52,22.27H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h69.02c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M54.28,37.19H19.74c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h34.53c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M38.12,52.11h-18.37c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h18.37c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset89AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 48 57.18"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M40.26,53.61l-16.26-11.61-16.26,11.61c-1.99,1.42-4.74,0-4.74-2.44V9c0-3.31,2.69-6,6-6h30c3.31,0,6,2.69,6,6v42.17c0,2.44-2.76,3.86-4.74,2.44Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset89BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.02 69.38"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M66.42,69.38H7.6c-4.19,0-7.6-3.41-7.6-7.6V7.6C0,3.41,3.41,0,7.6,0h58.83c4.19,0,7.6,3.41,7.6,7.6v54.18c0,4.19-3.41,7.6-7.6,7.6ZM7.6,5c-1.43,0-2.6,1.17-2.6,2.6v54.18c0,1.43,1.17,2.6,2.6,2.6h58.83c1.43,0,2.6-1.17,2.6-2.6V7.6c0-1.43-1.17-2.6-2.6-2.6H7.6Z"/> <path d="M71.52,22.27H2.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h69.02c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M54.28,37.19H19.74c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h34.54c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M38.12,52.11h-18.38c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h18.38c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset8AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60.97 61.23"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M26.74,3.32C15.8,4.98,6.83,13.51,4.56,24.34c-1.27,6.08-.42,11.86,1.86,16.84l-3.33,13.31c-.55,2.2,1.44,4.19,3.64,3.64l13.49-3.37c3.78,1.64,7.99,2.46,12.43,2.19,13.92-.86,25.17-12.72,25.32-26.67.17-16.43-14.34-29.52-31.23-26.96Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset8BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.55 74.55"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M32.62,74.55c-.42,0-.84,0-1.26-.02C14.43,73.88.67,60.12.02,43.19-.6,26.64,11.23,12.23,27.56,9.68h0c1.92-.3,3.86.25,5.32,1.5,1.43,1.22,2.25,3.01,2.25,4.89v21.88c0,.81.66,1.47,1.47,1.47h21.88c1.88,0,3.67.82,4.89,2.25,1.25,1.46,1.8,3.4,1.5,5.32-2.48,15.91-16.23,27.56-32.25,27.56ZM28.59,14.6c-.09,0-.17,0-.26.02h0c-13.82,2.16-23.84,14.36-23.31,28.38.54,14.09,12.44,25.99,26.53,26.53,14.05.53,26.22-9.49,28.38-23.31.07-.47-.06-.95-.36-1.3-.2-.23-.54-.5-1.09-.5h-21.88c-3.57,0-6.47-2.9-6.47-6.47v-21.88c0-.58-.31-.93-.5-1.09-.29-.24-.65-.38-1.04-.38ZM27.94,12.15h0,0Z"/> <path d="M71.57,31.55h-26.08c-1.38,0-2.5-1.12-2.5-2.5V2.98c0-.96.47-1.86,1.25-2.42.78-.56,1.79-.71,2.69-.39,12.8,4.39,23.06,14.65,27.45,27.45.31.9.16,1.91-.39,2.69-.56.78-1.46,1.25-2.42,1.25ZM69.66,29.23s0,0,0,0c0,0,0,0,0,0ZM47.99,26.55h20.63c-3.95-9.22-11.42-16.68-20.63-20.63v20.63Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset90AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 59.8 57.22"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M32.91,4.82l6.71,12.85,14.33,2.36c2.72.45,3.8,3.78,1.86,5.74l-10.18,10.26,2.17,14.27c.41,2.72-2.4,4.77-4.87,3.55l-13.03-6.47-13.03,6.47c-2.46,1.22-5.28-.83-4.87-3.55l2.17-14.27L3.99,25.77c-1.94-1.96-.86-5.29,1.86-5.74l14.33-2.36,6.71-12.85c1.27-2.43,4.75-2.43,6.02,0Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset90BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60.64 71.71"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <g> <path d="M44.82,21.21h-17.26c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h17.26c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M15.82,21.21c-.17,0-.33-.02-.49-.05-.16-.03-.32-.08-.47-.14-.15-.07-.29-.14-.43-.23s-.26-.2-.38-.31c-.47-.47-.73-1.11-.73-1.77,0-.16.01-.33.05-.49.03-.16.08-.32.14-.47.06-.15.14-.29.23-.43.09-.14.19-.26.31-.38.12-.11.24-.22.38-.31s.28-.17.43-.23c.15-.06.31-.11.47-.14.81-.17,1.67.1,2.25.68.47.47.74,1.11.74,1.77s-.27,1.3-.74,1.77c-.46.46-1.1.73-1.76.73Z"/> </g> <g> <path d="M44.82,38.36h-17.26c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h17.26c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M15.82,38.35c-.16,0-.33-.01-.49-.04-.16-.04-.32-.09-.47-.15-.15-.06-.29-.14-.43-.23-.14-.09-.26-.19-.38-.31-.12-.11-.22-.24-.31-.38-.09-.13-.17-.28-.23-.43-.06-.15-.11-.31-.14-.47-.04-.16-.05-.32-.05-.49,0-.16.01-.32.05-.48.03-.16.08-.32.14-.47.06-.15.14-.3.23-.43.09-.14.19-.27.31-.38.12-.12.24-.22.38-.31.14-.09.28-.17.43-.23.15-.07.31-.12.47-.15.81-.16,1.67.1,2.25.69.47.46.74,1.11.74,1.76s-.27,1.31-.74,1.77c-.46.47-1.1.73-1.76.73Z"/> </g> <g> <path d="M44.82,55.5h-17.26c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h17.26c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M15.82,55.5c-.17,0-.33-.02-.49-.05-.16-.03-.32-.08-.47-.14-.15-.07-.29-.14-.43-.23-.14-.1-.26-.2-.38-.32-.47-.46-.73-1.1-.73-1.76,0-.17.01-.33.05-.49.03-.16.08-.32.14-.47.06-.15.14-.3.23-.43.09-.14.19-.27.31-.38.12-.12.24-.22.38-.31s.28-.17.43-.23c.15-.06.31-.11.47-.14.81-.17,1.67.1,2.25.68.47.46.74,1.11.74,1.77s-.27,1.3-.74,1.76c-.46.47-1.1.74-1.76.74Z"/> </g> </g> <path d="M53.04,71.71H7.6c-4.19,0-7.6-3.41-7.6-7.6V7.6C0,3.41,3.41,0,7.6,0h45.45c4.19,0,7.6,3.41,7.6,7.6v56.52c0,4.19-3.41,7.6-7.6,7.6ZM7.6,5c-1.43,0-2.6,1.17-2.6,2.6v56.52c0,1.43,1.17,2.6,2.6,2.6h45.45c1.43,0,2.6-1.17,2.6-2.6V7.6c0-1.43-1.17-2.6-2.6-2.6H7.6Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset91AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 57"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <path className="cls-1" d="M3.14,19.5C2.07,11.65,7.11,3.9,15.01,3.08c5.96-.62,11.24,2.62,13.63,7.52.57,1.17,2.15,1.17,2.72,0,2.39-4.9,7.67-8.14,13.63-7.52,7.9.82,12.94,8.57,11.87,16.42-2.51,18.31-26.86,34.5-26.86,34.5,0,0-24.35-16.19-26.86-34.5Z"/> </g>
+    </svg>
+  );
+};
+
+
+export const Asset91BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 76.53 71.71"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M53.97,71.71h-31.41c-1.8,0-3.47-.8-4.6-2.2-1.14-1.42-1.57-3.26-1.18-5.05,2.2-9.99,11.24-17.24,21.48-17.24s19.28,7.25,21.48,17.24c.4,1.79-.03,3.63-1.18,5.05-1.13,1.4-2.8,2.2-4.6,2.2ZM38.26,52.21c-7.92,0-14.9,5.6-16.6,13.32-.09.42.08.71.19.85.12.15.34.34.7.34h31.41c.36,0,.58-.18.7-.34.11-.14.28-.43.19-.85-1.7-7.72-8.68-13.32-16.6-13.32Z"/> <path d="M38.26,40.94c-7.27,0-13.18-5.91-13.18-13.18s5.91-13.18,13.18-13.18,13.18,5.91,13.18,13.18-5.91,13.18-13.18,13.18ZM38.26,19.58c-4.51,0-8.18,3.67-8.18,8.18s3.67,8.18,8.18,8.18,8.18-3.67,8.18-8.18-3.67-8.18-8.18-8.18Z"/> <path d="M68.93,71.71H7.6c-4.19,0-7.6-3.41-7.6-7.6V7.6C0,3.41,3.41,0,7.6,0h61.33c4.19,0,7.6,3.41,7.6,7.6v56.52c0,4.19-3.41,7.6-7.6,7.6ZM7.6,5c-1.43,0-2.6,1.17-2.6,2.6v56.52c0,1.43,1.17,2.6,2.6,2.6h61.33c1.43,0,2.6-1.17,2.6-2.6V7.6c0-1.43-1.17-2.6-2.6-2.6H7.6Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset92AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66 66"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="33" cy="24" r="9"/> <path className="cls-1" d="M15,57v-3c0-6.63,5.37-12,12-12h12c6.63,0,12,5.37,12,12v3"/> </g> <circle className="cls-1" cx="33" cy="33" r="30"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset92BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 62.35 71.77"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M25.59,71.77h-15.66c-5.48,0-9.93-4.46-9.93-9.93V9.93C0,4.46,4.46,0,9.93,0h38.71c5.48,0,9.93,4.46,9.93,9.93v21.98c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5V9.93c0-2.72-2.21-4.93-4.93-4.93H9.93c-2.72,0-4.93,2.21-4.93,4.93v51.91c0,2.72,2.21,4.93,4.93,4.93h15.66c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <g> <path d="M43.93,68.82c-8.53,0-15.47-6.94-15.47-15.47s6.94-15.47,15.47-15.47,15.47,6.94,15.47,15.47-6.94,15.47-15.47,15.47ZM43.93,42.89c-5.77,0-10.47,4.7-10.47,10.47s4.7,10.47,10.47,10.47,10.47-4.7,10.47-10.47-4.7-10.47-10.47-10.47Z"/> <path d="M59.85,71.77c-.64,0-1.28-.24-1.77-.73l-6.75-6.75c-.98-.98-.98-2.56,0-3.54s2.56-.98,3.54,0l6.75,6.75c.98.98.98,2.56,0,3.54-.49.49-1.13.73-1.77.73Z"/> </g> <path d="M40.59,22.7h-22.6c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h22.6c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset93AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 69"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M21,57h-12c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h12"/> </g> <g> <rect className="cls-1" x="33" y="48" width="24" height="18" rx="3" ry="3"/> <path className="cls-1" d="M39,48v-6c0-3.31,2.69-6,6-6h0c3.31,0,6,2.69,6,6v6"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset93BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 79.37 57.39"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M39.68,43.77c-8.31,0-15.08-6.76-15.08-15.08s6.76-15.08,15.08-15.08,15.08,6.76,15.08,15.08-6.76,15.08-15.08,15.08ZM39.68,18.62c-5.56,0-10.08,4.52-10.08,10.08s4.52,10.08,10.08,10.08,10.08-4.52,10.08-10.08-4.52-10.08-10.08-10.08Z"/> <path d="M39.68,57.09s0,0,0,0c-14.96,0-28.93-9.63-39.33-27.12-.47-.79-.47-1.77,0-2.56C10.75,9.93,24.72.3,39.68.3s28.93,9.63,39.33,27.11c.47.79.47,1.77,0,2.56-10.4,17.48-24.37,27.12-39.33,27.12ZM5.42,28.7c9.36,15.1,21.49,23.39,34.26,23.39s24.9-8.29,34.26-23.39c-9.36-15.1-21.49-23.39-34.26-23.39S14.79,13.6,5.42,28.7Z"/> <path d="M13.49,57.39c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54L64.11.73c.98-.98,2.56-.98,3.54,0,.98.98.98,2.56,0,3.54L15.26,56.66c-.49.49-1.13.73-1.77.73Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset94AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54 69"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M24,57h-15c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h9"/> </g> <path className="cls-1" d="M47.49,60.51l-5.49,5.49-5.49-5.49c-2.25-2.25-3.51-5.3-3.51-8.49v-7.03l9-6,9,6v7.03c0,3.18-1.26,6.23-3.51,8.49Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset94BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66.51 62.2"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M46.32,62.2h-29.81c-1.38,0-2.5-1.12-2.5-2.5v-24.43c0-.38.08-.75.25-1.09L27.79,6.22c1.26-2.64,3.49-4.63,6.26-5.6,2.79-.98,5.8-.8,8.46.5,2.63,1.26,4.63,3.49,5.59,6.26.97,2.79.8,5.79-.5,8.46l-3.66,7.55h9.16c4.41,0,8.4,2.07,10.94,5.68,2.54,3.61,3.15,8.06,1.66,12.21l-3.47,9.71c-2.4,6.71-8.8,11.21-15.92,11.21ZM19.01,57.2h27.31c5.02,0,9.52-3.17,11.21-7.9l3.47-9.71c.93-2.6.55-5.39-1.04-7.65-1.59-2.26-4.09-3.56-6.85-3.56h-13.15c-.86,0-1.66-.44-2.12-1.17-.46-.73-.51-1.64-.13-2.42l5.41-11.14c.71-1.46.8-3.1.27-4.62-.53-1.51-1.61-2.72-3.05-3.41-1.47-.72-3.11-.81-4.64-.28-1.51.53-2.72,1.61-3.41,3.05l-13.29,27.45v21.36Z"/> <path d="M16.51,62.2H4.58c-2.53,0-4.58-2.05-4.58-4.58v-29.65c0-2.53,2.05-4.58,4.58-4.58h11.93c1.38,0,2.5,1.12,2.5,2.5v33.81c0,1.38-1.12,2.5-2.5,2.5ZM5,57.2h9.01v-28.81H5v28.81Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset95AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 64.51"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M24,57h-15c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c4.03,0,7.59,1.99,9.77,5.03"/> </g> <polyline className="cls-1" points="57 48 43.52 61.51 36.01 53.99"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset95BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 74.3 69.05"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M70.62,26.22H3.68c-1.68,0-3.1-1.09-3.54-2.71s.24-3.28,1.69-4.13L33.05,1.11h0c2.53-1.48,5.68-1.48,8.2,0l31.22,18.27c1.45.85,2.13,2.51,1.69,4.13-.44,1.62-1.86,2.71-3.54,2.71ZM8.58,21.22h57.14l-26.99-15.79c-.97-.57-2.18-.57-3.16,0l-26.99,15.79Z"/> <path d="M63.51,58.36H10.79c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h52.71c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M67.69,69.05H6.61c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h61.07c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M14.69,58.36c-1.38,0-2.5-1.12-2.5-2.5V23.72c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v32.15c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M29.66,58.36c-1.38,0-2.5-1.12-2.5-2.5V23.72c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v32.15c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M44.63,58.36c-1.38,0-2.5-1.12-2.5-2.5V23.72c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v32.15c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M59.6,58.36c-1.38,0-2.5-1.12-2.5-2.5V23.72c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v32.15c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset96AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 57.02 69"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M24,57h-15c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c1.04,0,2.04.13,3,.38"/> </g> <g> <line className="cls-1" x1="54" y1="57" x2="36" y2="57"/> <polyline className="cls-1" points="45 48 54.02 56.98 45 66"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset96BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 72.79 69.95"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M36.39,69.95c-1.63,0-3.26-.24-4.84-.72l-20.72-6.31c-6.48-1.97-10.83-7.85-10.83-14.62V9.57C0,6.51,1.41,3.71,3.87,1.89,6.33.06,9.42-.47,12.35.42l20.66,6.3c2.21.67,4.55.68,6.77,0L60.44.42c2.93-.89,6.02-.36,8.48,1.46,2.46,1.82,3.87,4.62,3.87,7.68v38.72c0,6.77-4.35,12.65-10.83,14.63l-20.72,6.31c-1.58.48-3.21.72-4.84.72ZM9.55,5c-.96,0-1.9.31-2.7.9-1.17.87-1.85,2.21-1.85,3.67v38.72c0,4.56,2.93,8.51,7.29,9.84l20.72,6.31c2.21.68,4.55.68,6.77,0l20.72-6.31c4.36-1.33,7.29-5.28,7.29-9.84V9.57c0-1.46-.67-2.8-1.85-3.67-1.17-.87-2.65-1.12-4.04-.7h0l-20.66,6.3c-3.17.96-6.52.96-9.68,0L10.89,5.21c-.44-.14-.9-.2-1.34-.2ZM61.17,2.81h0,0Z"/> <path d="M36.39,69.8c-1.38,0-2.5-1.12-2.5-2.5V9.72c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v57.58c0,1.38-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset97AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 57 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M24,57h-15c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c4.97,0,9.23,3.02,11.05,7.32"/> </g> <line className="cls-1" x1="54" y1="57" x2="36" y2="57"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset97BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 51.63 74.11"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M25.86,74.11c-5.85,0-10.61-4.76-10.61-10.61v-3.39c0-5.85-2.42-11.26-6.82-15.25C3.07,39.96,0,33.02,0,25.81,0,11.58,11.58,0,25.81,0s25.82,11.58,25.82,25.81c0,6.98-2.74,13.49-7.73,18.39-.11.16-.24.31-.39.44-4.47,3.94-7.04,9.57-7.04,15.46v3.39c0,5.85-4.76,10.61-10.62,10.61ZM25.81,5C14.34,5,5,14.34,5,25.81c0,5.81,2.47,11.4,6.79,15.34,5.37,4.87,8.46,11.77,8.46,18.95v3.39c0,3.1,2.52,5.61,5.61,5.61s5.62-2.52,5.62-5.61v-3.39c0-7.14,3.02-13.97,8.32-18.84.08-.11.18-.22.28-.32,4.23-3.99,6.56-9.36,6.56-15.13,0-11.48-9.34-20.81-20.82-20.81Z"/> <path d="M34.08,60.68h-16.42c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h16.42c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> <path d="M25.87,60.68c-1.38,0-2.5-1.12-2.5-2.5v-27.94c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v27.94c0,1.38-1.12,2.5-2.5,2.5Z"/> <path d="M25.87,32.74c-4.55,0-8.25-3.7-8.25-8.25,0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,1.79,1.46,3.25,3.25,3.25s3.25-1.46,3.25-3.25c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5c0,4.55-3.7,8.25-8.25,8.25Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset98AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 54.36 66.36"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M30,57H9c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c2.62,0,5.05.84,7.03,2.27"/> </g> <g> <line className="cls-1" x1="51.36" y1="50.64" x2="38.64" y2="63.36"/> <line className="cls-1" x1="51.36" y1="63.36" x2="38.64" y2="50.64"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset98BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 79.37 56.79"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M39.68,43.47c-8.31,0-15.08-6.76-15.08-15.08s6.76-15.08,15.08-15.08,15.08,6.76,15.08,15.08-6.76,15.08-15.08,15.08ZM39.68,18.31c-5.56,0-10.08,4.52-10.08,10.08s4.52,10.08,10.08,10.08,10.08-4.52,10.08-10.08-4.52-10.08-10.08-10.08Z"/> <path d="M39.68,56.79s0,0,0,0c-14.96,0-28.93-9.63-39.33-27.12-.47-.79-.47-1.77,0-2.56C10.75,9.63,24.72,0,39.68,0s28.93,9.63,39.33,27.11c.47.79.47,1.77,0,2.56-10.4,17.48-24.37,27.12-39.33,27.12ZM5.42,28.39c9.36,15.1,21.49,23.39,34.26,23.39s24.9-8.29,34.26-23.39c-9.36-15.1-21.49-23.39-34.26-23.39S14.79,13.29,5.42,28.39Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset99AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 57 69"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <circle className="cls-1" cx="24" cy="15" r="12"/> <path className="cls-1" d="M24,57h-15c-3.31,0-6-2.69-6-6h0c0-6.63,5.37-12,12-12h18c1.54,0,3.01.29,4.36.82"/> </g> <g> <line className="cls-1" x1="45" y1="48" x2="45" y2="66"/> <line className="cls-1" x1="54" y1="57" x2="36" y2="57"/> </g> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset99BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 66.91 74.84"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <g> <path d="M52.35,53.21c-.64,0-1.28-.24-1.77-.73-.98-.98-.98-2.56,0-3.54l11.18-11.18c.19-.19.19-.5,0-.7l-11.18-11.18c-.98-.98-.98-2.56,0-3.54.98-.98,2.56-.98,3.54,0l11.18,11.18c2.14,2.14,2.14,5.63,0,7.77l-11.18,11.18c-.49.49-1.13.73-1.77.73Z"/> <path d="M64.41,39.92H16.52c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h47.89c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> <path d="M20.58,74.84h-9.36c-6.18,0-11.21-5.03-11.21-11.21V11.21C0,5.03,5.03,0,11.21,0h9.36c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5h-9.36c-3.43,0-6.21,2.79-6.21,6.21v52.41c0,3.43,2.79,6.21,6.21,6.21h9.36c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5Z"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset9AIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 60 60"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <circle className="cls-1" cx="30" cy="30" r="12"/> <path className="cls-1" d="M42,18v16.8c0,3.98,3.22,7.2,7.2,7.2h0c3.26,0,6.17-2.18,6.97-5.34.78-3.06,1.03-6.34.66-9.72-1.38-12.56-11.72-22.69-24.31-23.83C15.63,1.58,1.58,15.63,3.11,32.52c1.14,12.58,11.27,22.93,23.83,24.31,5.44.6,10.59-.42,15.05-2.64"/> </g> </g>
+    </svg>
+  );
+};
+
+
+export const Asset9BIcon = ({ size = 16, className = '' }: { size?: number, className?: string }) => {
+  return (
+    <svg
+      height={size}
+      width={size}
+      viewBox="0 0 69.82 70.62"
+      fill="currentColor" // Apply fill at the SVG level, paths can override
+      stroke="currentColor" // Apply stroke at the SVG level, paths can override
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ color: 'currentcolor' }} // Ensures CSS color cascades
+    >
+      <g > <g> <path d="M24.61,46.56h-6.06C8.32,46.56,0,38.25,0,28.02v-10C0,9.55,5.71,2.18,13.89.08c1.33-.34,2.7.46,3.04,1.8.34,1.34-.46,2.7-1.8,3.04-5.96,1.53-10.13,6.92-10.13,13.09v10c0,7.47,6.08,13.54,13.54,13.54h6.06c7.47,0,13.54-6.08,13.54-13.54v-10c0-6.18-4.17-11.56-10.13-13.09-1.34-.34-2.14-1.71-1.8-3.04.34-1.34,1.71-2.14,3.04-1.8,8.18,2.1,13.89,9.47,13.89,17.94v10c0,10.23-8.32,18.54-18.54,18.54Z"/> <path d="M40.82,70.62c-11.99,0-21.74-9.75-21.74-21.74v-4.81c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v4.81c0,9.23,7.51,16.74,16.74,16.74s16.74-7.51,16.74-16.74v-15.82c0-1.38,1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5v15.82c0,11.99-9.75,21.74-21.74,21.74Z"/> <path d="M60.06,35.56c-5.38,0-9.76-4.38-9.76-9.76s4.38-9.76,9.76-9.76,9.76,4.38,9.76,9.76-4.38,9.76-9.76,9.76ZM60.06,21.04c-2.62,0-4.76,2.13-4.76,4.76s2.13,4.76,4.76,4.76,4.76-2.13,4.76-4.76-2.13-4.76-4.76-4.76Z"/> </g> </g>
     </svg>
   );
 };

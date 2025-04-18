@@ -20,6 +20,7 @@ export const myProvider = isTestEnvironment
         'chat-model-reasoning': reasoningModel,
         'title-model': titleModel,
         'artifact-model': artifactModel,
+        'quote-model': chatModel,
       },
     })
   : customProvider({
@@ -39,6 +40,7 @@ export const myProvider = isTestEnvironment
         'title-model': google('gemini-2.0-flash'), // Use Gemini Pro
         // 'artifact-model': xai('grok-2-1212'),
         'artifact-model': google('gemini-2.5-pro-exp-03-25'), // Use Gemini Pro
+        'quote-model': google('gemini-2.0-flash'),
       },
       // imageModels: { // Commenting out image models for now, can be re-added if needed
       //   'small-model': xai.image('grok-2-image'),

@@ -1,157 +1,231 @@
-'use client';
+"use client"
 
-import { useState } from 'react';
-import type { User } from 'next-auth';
+import * as React from "react"
+import Link from "next/link";
 import { useRouter } from 'next/navigation';
-
-import { PlusIcon } from '@/components/icons';
+import { useSidebar } from "@/components/ui/sidebar";
+import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { PlusIcon } from "@/components/icons";
 import { SidebarHistory } from '@/components/sidebar-history';
 import { SidebarUserNav } from '@/components/sidebar-user-nav';
-import { Button } from '@/components/ui/button';
+import type { User } from 'next-auth';
+import {
+  AudioWaveform,
+  BookOpen,
+  Bot,
+  Command,
+  Frame,
+  GalleryVerticalEnd,
+  Map,
+  PieChart,
+  Settings2,
+  SquareTerminal,
+} from "lucide-react"
+import {
+  CircleUser,
+  Package2,
+  Search,
+  Bell,
+  Home,
+  ShoppingCart,
+  Package,
+  Users,
+  LineChart,
+  PanelLeft,
+  PlusCircle,
+} from "lucide-react"
+import {
+  Asset642CIcon,
+  RcwIcon,
+  Asset1478CIcon,
+  Asset63BIcon,
+  Asset1301CIcon,
+  Asset136CIcon,
+  Asset1470CIcon,
+  Asset171BIcon,
+  Asset65AIcon,
+  Asset631CIcon
+} from "@/components/icons"
+
+import { NavMain } from "@/components/nav-main"
+import { NavProjects } from "@/components/nav-projects"
+import { NavUser } from "@/components/nav-user"
+import { TeamSwitcher } from "@/components/team-switcher"
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
-  SidebarMenu,
-  useSidebar,
-} from '@/components/ui/sidebar';
-import Link from 'next/link';
-import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
-import { HomeIcon, FileIcon, ClockRewind, Asset161BIcon, Asset124BIcon } from '@/components/icons';
-import { TooltipProvider } from '@/components/ui/tooltip';
-import { BookmarksContent } from './bookmarks-content';
-import { SettingsContent } from './settings-content';
-import { HomeContent } from './home-content';
-import { cn } from '@/lib/utils';
+  SidebarRail,
+  SidebarMenu
+} from "@/components/ui/sidebar"
 
-type ActiveSection = 'home' | 'bookmarks' | 'history' | 'settings';
+// This is sample data.
+const data = {
+  user: {
+    name: "shadcn",
+    email: "m@example.com",
+    image: "/avatars/shadcn.jpg",
+  },
+  teams: [
+    {
+      id: "t1",
+      name: "Royal Canin",
+      logo: RcwIcon,
+      plan: "Enterprise",
+    },
+    {
+      name: "Acme Corp.",
+      logo: AudioWaveform,
+      plan: "Startup",
+    },
+    {
+      name: "Evil Corp.",
+      logo: Command,
+      plan: "Free",
+    },
+  ],
+  navMain: [
+    {
+      title: "Search",
+      url: "#",
+      icon: Asset65AIcon as any,
+      isActive: true,
+      items: [
+        {
+          title: "History",
+          url: "#",
+        },
+        {
+          title: "Starred",
+          url: "#",
+        },
+        {
+          title: "Settings",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Social",
+      url: "#",
+      icon: Asset136CIcon as any,
+      items: [
+        {
+          title: "Genesis",
+          url: "#",
+        },
+        {
+          title: "Explorer",
+          url: "#",
+        },
+        {
+          title: "Quantum",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Programmatic",
+      url: "#",
+      icon: Asset1470CIcon as any,
+      items: [
+        {
+          title: "Introduction",
+          url: "#",
+        },
+        {
+          title: "Get Started",
+          url: "#",
+        },
+        {
+          title: "Tutorials",
+          url: "#",
+        },
+        {
+          title: "Changelog",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Commerce",
+      url: "#",
+      icon: Asset631CIcon as any,
+      items: [
+        {
+          title: "General",
+          url: "#",
+        },
+        {
+          title: "Team",
+          url: "#",
+        },
+        {
+          title: "Billing",
+          url: "#",
+        },
+        {
+          title: "Limits",
+          url: "#",
+        },
+      ],
+    },
+  ],
+  projects: [
+    {
+      name: "Design Engineering",
+      url: "#",
+      icon: Frame,
+    },
+    {
+      name: "Sales & Marketing",
+      url: "#",
+      icon: PieChart,
+    },
+    {
+      name: "Travel",
+      url: "#",
+      icon: Map,
+    },
+  ],
+}
 
-export function AppSidebar({ user }: { user: User | undefined }) {
+// Define props to include user
+interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
+  user?: User;
+}
+
+export function AppSidebar({ user, ...props }: AppSidebarProps) {
   const router = useRouter();
   const { setOpenMobile } = useSidebar();
-  const [activeSection, setActiveSection] = useState<ActiveSection>('home');
 
-  const getButtonClass = (section: ActiveSection) => {
-    return cn(
-      'rounded-lg',
-      activeSection === section ? 'bg-muted text-foreground' : 'text-muted-foreground'
-    );
-  };
+  const currentUser = user || data.user as User;
 
   return (
-    <Sidebar className="group-data-[side=left]:border-r-0 flex flex-col">
-      <div className="flex flex-row justify-center items-center gap-2 px-4 py-1.5 border-b">
-        <TooltipProvider delayDuration={0}>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className={getButtonClass('home')}
-                aria-label="Home"
-                onClick={() => setActiveSection('home')}
-              >
-                <HomeIcon size={20} />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="right" sideOffset={5}>
-              Home
-            </TooltipContent>
-          </Tooltip>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className={getButtonClass('bookmarks')}
-                aria-label="Snippets"
-                onClick={() => setActiveSection('bookmarks')}
-              >
-                <Asset124BIcon size={20} />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="right" sideOffset={5}>
-              Snippets
-            </TooltipContent>
-          </Tooltip>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className={getButtonClass('history')}
-                aria-label="History"
-                onClick={() => setActiveSection('history')}
-              >
-                <ClockRewind size={20} />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="right" sideOffset={5}>
-              History
-            </TooltipContent>
-          </Tooltip>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className={getButtonClass('settings')}
-                aria-label="Settings"
-                onClick={() => setActiveSection('settings')}
-              >
-                <Asset161BIcon size={20} />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="right" sideOffset={5}>
-              Settings
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      </div>
-      {activeSection === 'history' && (
+    <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <SidebarMenu>
-          <div className="flex flex-row justify-between items-center">
-            <Link
-              href="/"
-              onClick={() => {
-                setOpenMobile(false);
-              }}
-              className="flex flex-row gap-3 items-center"
-            >
-              <span className="text-lg font-semibold px-2 hover:bg-muted rounded-md cursor-pointer">
-                Chatbot
-              </span>
-            </Link>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  variant="ghost"
-                  type="button"
-                  className="p-2 h-fit"
-                  onClick={() => {
-                    setOpenMobile(false);
-                    router.push('/');
-                    router.refresh();
-                  }}
-                >
-                  <PlusIcon />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent align="end">New Chat</TooltipContent>
-            </Tooltip>
-          </div>
-        </SidebarMenu>
+        <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
-      )}
-      <SidebarContent className="flex-grow">
-        {activeSection === 'home' && <HomeContent />}
-        {activeSection === 'history' && <SidebarHistory user={user} />}
-        {activeSection === 'bookmarks' && <BookmarksContent />}
-        {activeSection === 'settings' && <SettingsContent />}
+      <SidebarContent>
+        {false ? (
+           <SidebarHistory user={user} /> 
+        ) : (
+          <>
+            <NavMain items={data.navMain} />
+            <NavProjects projects={data.projects} />
+          </>
+        )}
       </SidebarContent>
-      <SidebarFooter>{user && <SidebarUserNav user={user} />}</SidebarFooter>
+      <SidebarFooter>
+        <NavUser user={{ 
+          name: currentUser.name ?? 'User Name',
+          email: currentUser.email ?? 'user@example.com',
+          avatar: currentUser.image ?? '/avatars/default.png'
+        }} />
+      </SidebarFooter>
+      <SidebarRail />
     </Sidebar>
-  );
+  )
 }

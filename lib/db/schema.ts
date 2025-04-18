@@ -64,25 +64,20 @@ export type DBMessage = InferSelectModel<typeof message>;
 export const snippet = pgTable(
   'Snippet', // Table name changed
   {
+    id: uuid('id').primaryKey().notNull().defaultRandom(), // Unique ID as primary key
     userId: uuid('userId') // Foreign key to user
       .notNull()
       .references(() => user.id),
-    chatId: uuid('chatId') // Foreign key to chat
-      .notNull()
+    chatId: uuid('chatId') // Foreign key to chat - Nullable by default
       .references(() => chat.id),
-    messageId: uuid('messageId') // Foreign key to message
-      .notNull()
+    messageId: uuid('messageId') // Foreign key to message - Nullable by default
       .references(() => message.id),
     title: text('title').notNull().default('Untitled Snippet'), // Updated default title
     text: text('text').notNull(), // Added text column
+    groupId: text('groupId'), // Nullable by default
     createdAt: timestamp('createdAt').defaultNow().notNull(), // Timestamp for when snippet was created
   },
-  (table) => {
-    return {
-      // Composite primary key to ensure a user can only bookmark a specific message once
-      pk: primaryKey({ columns: [table.userId, table.chatId, table.messageId] }),
-    };
-  },
+  // Composite primary key removed
 );
 
 // Renamed exported type

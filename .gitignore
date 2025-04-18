@@ -44,7 +44,3 @@ yarn-error.log*
 
 # Local Storage
 /local_storage/
-
-# Editor directories
-.vscode/
-.cursor/

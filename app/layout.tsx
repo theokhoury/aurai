@@ -1,3 +1,4 @@
+import * as React from "react";
 import { Toaster } from 'sonner';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
@@ -5,6 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { auth } from '@/app/(auth)/auth';
 import { AppSidebar } from '@/components/app-sidebar';
 import { SidebarProvider } from '@/components/ui/sidebar';
+import { SnippetGroupProvider } from '@/components/providers/snippet-group-provider';
 
 import './globals.css';
 
@@ -60,10 +62,6 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      // `next-themes` injects an extra classname to the body element to avoid
-      // visual flicker before hydration. Hence the `suppressHydrationWarning`
-      // prop is necessary to avoid the React hydration mismatch warning.
-      // https://github.com/pacocoursey/next-themes?tab=readme-ov-file#with-app
       suppressHydrationWarning
       className={`${geist.variable} ${geistMono.variable}`}
     >
@@ -75,22 +73,24 @@ export default async function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <SidebarProvider defaultOpen={true}>
-            <div className="flex h-dvh w-full overflow-hidden">
-              <AppSidebar user={session?.user} />
-              <main className="flex-1 overflow-y-auto bg-background">
-                {children}
-              </main>
-            </div>
-          </SidebarProvider>
-          <Toaster position="top-center" />
-        </ThemeProvider>
+        <SnippetGroupProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <SidebarProvider defaultOpen={true}>
+              <div className="flex h-dvh w-full overflow-hidden">
+                <AppSidebar user={session?.user} />
+                <main className="flex-1 overflow-y-auto bg-background">
+                  {children}
+                </main>
+              </div>
+            </SidebarProvider>
+            <Toaster position="top-center" />
+          </ThemeProvider>
+        </SnippetGroupProvider>
       </body>
     </html>
   );

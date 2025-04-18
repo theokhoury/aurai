@@ -359,7 +359,8 @@ export async function deleteMessagesByChatIdAfterTimestamp({
     }
   } catch (error) {
     console.error(
-      'Failed to delete messages by id after timestamp from database',
+      'Failed to delete messages by chat id after timestamp from database',
+      error,
     );
     throw error;
   }
@@ -379,7 +380,6 @@ export async function updateChatVisiblityById({
     throw error;
   }
 }
-
 export async function getSnippetsByChatId({
   chatId,
   userId,
@@ -404,27 +404,45 @@ export async function addSnippet({
   messageId,
   title,
   text,
+  groupId,
 }: {
   userId: string;
   chatId: string;
   messageId: string;
   title: string;
   text: string;
+  groupId?: string;
 }) {
   try {
-    return await db.insert(snippet).values({
-      userId,
-      chatId,
-      messageId,
-      title,
-      text,
-      createdAt: new Date(),
-    });
-  } catch (error) {
-    if (error instanceof Error && error.message.includes('duplicate key value violates unique constraint "Snippet_pkey"')) {
-      console.warn('Attempted to add duplicate snippet. Ignoring.');
-      return;
+    const [existing] = await db
+        .select()
+        .from(snippet)
+        .where(and(
+          eq(snippet.userId, userId),
+          eq(snippet.chatId, chatId),
+          eq(snippet.messageId, messageId)
+        ))
+        .limit(1);
+
+    if (existing) {
+      console.log(`Snippet for message ${messageId} already exists. Skipping add.`);
+      return existing;
     }
+
+    const [newSnippet] = await db
+      .insert(snippet)
+      .values({
+        userId,
+        chatId,
+        messageId,
+        title,
+        text,
+        groupId,
+      })
+      .returning();
+
+    return newSnippet;
+  } catch (error) {
     console.error('Failed to add snippet to database', error);
     throw error;
   }
@@ -455,61 +473,107 @@ export async function removeSnippet({
   }
 }
 
-export async function getSnippetsByUserIdWithMessages({ 
-  userId 
-}: { 
-  userId: string 
-}) {
+export async function getSnippetsByUserIdWithMessages({ userId }: { userId: string }) {
   try {
-    return await db
+    const snippetsWithMessages = await db
       .select({
+        id: snippet.id,
+        userId: snippet.userId,
+        chatId: snippet.chatId,
         messageId: snippet.messageId,
         title: snippet.title,
-        bookmarkCreatedAt: snippet.createdAt,
-        chatId: snippet.chatId,
+        text: snippet.text,
+        groupId: snippet.groupId,
+        createdAt: snippet.createdAt,
         messageParts: message.parts,
       })
       .from(snippet)
-      .innerJoin(message, eq(snippet.messageId, message.id))
+      .leftJoin(message, eq(snippet.messageId, message.id))
       .where(eq(snippet.userId, userId))
       .orderBy(desc(snippet.createdAt));
+
+    return snippetsWithMessages;
   } catch (error) {
-    console.error('Failed to get snippets with messages from database', error);
+    console.error('Failed to get snippets with messages from database:', error);
     throw error;
   }
 }
 
-export async function updateSnippet({
+export async function createManualSnippet({
   userId,
-  chatId,
-  messageId,
-  newTitle,
-  newText,
-}: {
-  userId: string;
-  chatId: string;
-  messageId: string;
-  newTitle?: string;
-  newText: string;
-}) {
+  title,
+  text,
+  groupId,
+}: Pick<Snippet, 'userId' | 'title' | 'text' | 'groupId'>) {
   try {
-    const valuesToUpdate: { text: string; title?: string } = { text: newText };
-    if (newTitle !== undefined && newTitle.trim() !== '') {
-      valuesToUpdate.title = newTitle;
-    }
+    const [newSnippet] = await db
+      .insert(snippet)
+      .values({
+        userId,
+        chatId: null,
+        messageId: null,
+        title,
+        text,
+        groupId,
+      })
+      .returning();
+    return newSnippet;
+  } catch (error) {
+    console.error('Failed to create manual snippet in database:', error);
+    throw error;
+  }
+}
 
-    return await db
+export async function updateSnippetContent({
+  id,
+  userId,
+  title,
+  text,
+}: Pick<Snippet, 'id' | 'userId' | 'title' | 'text'>) {
+  try {
+    const [updatedSnippet] = await db
       .update(snippet)
-      .set(valuesToUpdate)
+      .set({
+        title: title,
+        text: text,
+      })
       .where(
         and(
-          eq(snippet.userId, userId),
-          eq(snippet.chatId, chatId),
-          eq(snippet.messageId, messageId),
-        ),
-      );
+          eq(snippet.id, id),
+          eq(snippet.userId, userId)
+        )
+      )
+      .returning();
+    
+    if (!updatedSnippet) {
+        throw new Error('Snippet not found or user does not have permission to update.');
+    }
+    return updatedSnippet;
   } catch (error) {
-    console.error('Failed to update snippet in database', error);
+    console.error('Failed to update snippet content in database:', error);
     throw error;
   }
 }
+
+export async function deleteSnippetById({
+  id,
+  userId,
+}: Pick<Snippet, 'id' | 'userId'>) {
+  try {
+    const deletedRows = await db
+      .delete(snippet)
+      .where(
+        and(
+          eq(snippet.id, id),
+          eq(snippet.userId, userId)
+        )
+      )
+      .returning();
+
+    return deletedRows.length > 0;
+  } catch (error) {
+    console.error('Failed to delete snippet by ID from database:', error);
+    throw error;
+  }
+}
+

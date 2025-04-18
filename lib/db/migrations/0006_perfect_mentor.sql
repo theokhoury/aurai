@@ -44,3 +44,33 @@ ALTER TABLE "Snippet" ALTER COLUMN "text" DROP DEFAULT;
 -- EXCEPTION
 --  WHEN duplicate_object THEN null;
 -- END $$;
+
+CREATE TABLE IF NOT EXISTS "Snippet" (
+	"userId" uuid NOT NULL,
+	"chatId" uuid NOT NULL,
+	"messageId" uuid NOT NULL,
+	"title" text DEFAULT 'Untitled Snippet' NOT NULL,
+	"text" text NOT NULL,
+	"createdAt" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "Snippet_userId_chatId_messageId_pk" PRIMARY KEY("userId","chatId","messageId")
+);
+--> statement-breakpoint
+DROP TABLE "Vote_v2";--> statement-breakpoint
+DROP TABLE "Vote";--> statement-breakpoint
+DO $$ BEGIN
+ ALTER TABLE "Snippet" ADD CONSTRAINT "Snippet_userId_User_id_fk" FOREIGN KEY ("userId") REFERENCES "public"."User"("id") ON DELETE no action ON UPDATE no action;
+EXCEPTION
+ WHEN duplicate_object THEN null;
+END $$;
+--> statement-breakpoint
+DO $$ BEGIN
+ ALTER TABLE "Snippet" ADD CONSTRAINT "Snippet_chatId_Chat_id_fk" FOREIGN KEY ("chatId") REFERENCES "public"."Chat"("id") ON DELETE no action ON UPDATE no action;
+EXCEPTION
+ WHEN duplicate_object THEN null;
+END $$;
+--> statement-breakpoint
+DO $$ BEGIN
+ ALTER TABLE "Snippet" ADD CONSTRAINT "Snippet_messageId_Message_v2_id_fk" FOREIGN KEY ("messageId") REFERENCES "public"."Message_v2"("id") ON DELETE no action ON UPDATE no action;
+EXCEPTION
+ WHEN duplicate_object THEN null;
+END $$;

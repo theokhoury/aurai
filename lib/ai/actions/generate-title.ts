@@ -39,3 +39,4 @@ export async function generateTitleFromAssistantMessage(
     return 'Bookmarked Message'; // Fallback on error
   }
 } 
+ 

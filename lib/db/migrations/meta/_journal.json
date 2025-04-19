@@ -57,6 +57,13 @@
       "when": 1744964033799,
       "tag": "0007_flawless_giant_man",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1745048305758,
+      "tag": "0008_slippery_lily_hollister",
+      "breakpoints": true
     }
   ]
 }

@@ -18,7 +18,16 @@ const runMigrate = async () => {
   console.log('⏳ Running migrations...');
 
   const start = Date.now();
-  await migrate(db, { migrationsFolder: './lib/db/migrations' });
+
+  console.log('Starting Drizzle migrate function...');
+  try {
+    await migrate(db, { migrationsFolder: './lib/db/migrations' });
+    console.log('Drizzle migrate function completed successfully.');
+  } catch (error) {
+    console.error('Error during Drizzle migrate function:', error);
+    throw error;
+  }
+  
   const end = Date.now();
 
   console.log('✅ Migrations completed in', end - start, 'ms');

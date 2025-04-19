@@ -1,1 +1,1 @@
-ALTER TABLE "Snippet" ADD COLUMN "groupId" text;
+-- ALTER TABLE "Snippet" ADD COLUMN "groupId" text; --> Commented out problematic line

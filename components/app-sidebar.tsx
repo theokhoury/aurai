@@ -121,7 +121,7 @@ const data = {
       title: "Search",
       url: "#",
       icon: Asset65AIcon as any,
-      isActive: true,
+      isActive: false,
       items: [
         {
           title: "History",

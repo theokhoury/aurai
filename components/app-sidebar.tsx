@@ -5,11 +5,11 @@ import { createContext, useContext, useState } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
 import useSWR from 'swr';
-import { fetcher } from '@/lib/utils';
-import { useSidebar } from "@/components/ui/sidebar";
+import { fetcher, cn } from '@/lib/utils';
+import { useSidebar, Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail, SidebarMenu } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { PlusIcon } from "@/components/icons";
+import { PlusIcon, Asset642CIcon, RcwIcon, Asset1478CIcon, Asset63BIcon, Asset1301CIcon, Asset136CIcon, Asset1470CIcon, Asset171BIcon, Asset65AIcon, Asset631CIcon } from "@/components/icons";
 import { SidebarHistory } from '@/components/sidebar-history';
 import { SidebarUserNav } from '@/components/sidebar-user-nav';
 import type { User } from 'next-auth';
@@ -23,8 +23,6 @@ import {
   Settings2,
   SquareTerminal,
   ChevronRightIcon,
-} from "lucide-react"
-import {
   CircleUser,
   Package2,
   Search,
@@ -38,42 +36,20 @@ import {
   PlusCircle,
 } from "lucide-react"
 import {
-  Asset642CIcon,
-  RcwIcon,
-  Asset1478CIcon,
-  Asset63BIcon,
-  Asset1301CIcon,
-  Asset136CIcon,
-  Asset1470CIcon,
-  Asset171BIcon,
-  Asset65AIcon,
-  Asset631CIcon
-} from "@/components/icons"
-
-import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
-import { NavUser } from "@/components/nav-user"
-import { TeamSwitcher } from "@/components/team-switcher"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarRail,
-  SidebarMenu
-} from "@/components/ui/sidebar"
-import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { cn } from "@/lib/utils";
-import { 
+import { emitter } from '@/lib/event-emitter';
+import {
   PanelGroup, 
   Panel, 
   PanelResizeHandle 
 } from 'react-resizable-panels';
-import { emitter } from '@/lib/event-emitter';
+import { NavMain } from "@/components/nav-main";
+import { NavProjects } from "@/components/nav-projects";
+import { NavUser } from "@/components/nav-user";
+import { TeamSwitcher } from "@/components/team-switcher";
 
 // Define the type for a snippet group
 export interface SnippetGroup {
@@ -301,7 +277,7 @@ export function AppSidebar({ user, ...props }: AppSidebarProps) {
                           variant="ghost"
                           className="w-full justify-start h-8 px-2"
                         >
-                          <IconComponent className="mr-2 size-4 flex-shrink-0" aria-hidden="true" />
+                          <IconComponent className="mr-2 size-4 shrink-0" aria-hidden="true" />
                           <span className="flex-1 text-sm font-medium truncate text-left">{group.name}</span>
                           <ChevronRightIcon
                             className={cn(

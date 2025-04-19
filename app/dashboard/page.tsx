@@ -13,6 +13,22 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { 
+  LoaderIcon, 
+  AlertTriangleIcon, 
+  XIcon, 
+  EditIcon, 
+  SaveIcon, 
+  XCircleIcon, 
+  PlusCircleIcon, 
+  Trash2Icon, 
+  UsersIcon,
+  GroupIcon,
+  AlertCircleIcon,
+  FileTextIcon,
+  Package
+} from 'lucide-react'
+import { Markdown } from '@/components/markdown'
 
 export default function Page() {
   return (
@@ -44,7 +60,7 @@ export default function Page() {
             <div className="aspect-video rounded-xl bg-muted/50" />
             <div className="aspect-video rounded-xl bg-muted/50" />
           </div>
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" />
+          <div className="min-h-screen flex-1 rounded-xl bg-muted/50 md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>

@@ -9,6 +9,12 @@ import {
   Trash2,
   type LucideIcon,
 } from "lucide-react"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 import { Input } from "@/components/ui/input"
 import {
@@ -30,6 +36,8 @@ import {
 
 // Import the context hook and type
 import { useSnippetGroups, type SnippetGroup } from '@/components/app-sidebar';
+import { cn } from "@/lib/utils"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
 // Remove props, component will use context
 export function NavProjects() {
@@ -100,10 +108,21 @@ export function NavProjects() {
                   />
                 </div>
               ) : (
-                <a href={item.url} className="flex items-center w-full">
-                  <item.icon />
-                  <span className="ml-2 flex-1 truncate">{item.name}</span>
-                </a>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a
+                      href={`/snippets?group=${item.id}`}
+                      className={cn(
+                        'flex size-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:size-8'
+                      )}
+                    >
+                      <item.icon />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{item.name}</p>
+                  </TooltipContent>
+                </Tooltip>
               )}
             </SidebarMenuButton>
             <DropdownMenu>

@@ -5,13 +5,15 @@ import { Greeting } from './greeting';
 import { memo } from 'react';
 import equal from 'fast-deep-equal';
 import type { UseChatHelpers } from '@ai-sdk/react';
-import type { Bookmark } from '@/lib/db/schema';
+import type { Snippet } from '@/lib/db/schema';
+import useSWR from 'swr';
+import { fetcher } from '@/lib/utils';
 
 interface MessagesProps {
   chatId: string;
   status: UseChatHelpers['status'];
   messages: Array<UIMessage>;
-  bookmarks: Array<Bookmark> | undefined;
+  bookmarks: Array<Snippet> | undefined;
   setMessages: UseChatHelpers['setMessages'];
   reload: UseChatHelpers['reload'];
   isReadonly: boolean;
@@ -27,6 +29,11 @@ function PureMessages({
   reload,
   isReadonly,
 }: MessagesProps) {
+  const { data: snippetsData } = useSWR<Snippet[]>(
+    chatId ? `/api/snippets?chatId=${chatId}` : null,
+    fetcher
+  );
+
   const [messagesContainerRef, messagesEndRef] =
     useScrollToBottom<HTMLDivElement>();
 
@@ -37,18 +44,22 @@ function PureMessages({
     >
       {messages.length === 0 && <Greeting />}
 
-      {messages.map((message, index) => (
-        <PreviewMessage
-          key={message.id}
-          chatId={chatId}
-          message={message}
-          isLoading={status === 'streaming' && messages.length - 1 === index}
-          isBookmarked={bookmarks?.some((bookmark) => bookmark.messageId === message.id)}
-          setMessages={setMessages}
-          reload={reload}
-          isReadonly={isReadonly}
-        />
-      ))}
+      {messages.map((message, index) => {
+        const snippetId = snippetsData?.find(s => s.messageId === message.id)?.id ?? undefined;
+
+        return (
+          <PreviewMessage
+            key={message.id}
+            chatId={chatId}
+            message={message}
+            isLoading={status === 'streaming' && messages.length - 1 === index}
+            setMessages={setMessages}
+            reload={reload}
+            isReadonly={isReadonly}
+            snippetId={snippetId}
+          />
+        );
+      })}
 
       {status === 'submitted' &&
         messages.length > 0 &&

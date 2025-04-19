@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import type { HandleProps } from "@xyflow/react";
-import React from "react";
+import React, { forwardRef, HTMLAttributes } from "react";
 
 import { BaseHandle } from "@/components/flow/base-handle";
 
@@ -13,10 +13,10 @@ const flexDirections = {
 	left: "flex-row",
 };
 
-const LabeledHandle = React.forwardRef<
+const LabeledHandle = forwardRef<
 	HTMLDivElement,
 	HandleProps &
-		React.HTMLAttributes<HTMLDivElement> & {
+		HTMLAttributes<HTMLDivElement> & {
 			title: string;
 			handleClassName?: string;
 			labelClassName?: string;

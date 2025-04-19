@@ -5,6 +5,9 @@ import { memo } from 'react';
 import equal from 'fast-deep-equal';
 import { UIArtifact } from './artifact';
 import { UseChatHelpers } from '@ai-sdk/react';
+import useSWR from 'swr';
+import { fetcher } from '@/lib/utils';
+import type { Snippet } from '@/lib/db/schema';
 
 export interface ArtifactMessagesProps {
   chatId: string;
@@ -27,22 +30,32 @@ function PureArtifactMessages({
   const [messagesContainerRef, messagesEndRef] =
     useScrollToBottom<HTMLDivElement>();
 
+  const { data: snippetsData } = useSWR<Snippet[]>(
+    chatId ? `/api/snippets?chatId=${chatId}` : null,
+    fetcher
+  );
+
   return (
     <div
       ref={messagesContainerRef}
       className="flex flex-col gap-4 h-full items-center overflow-y-scroll px-4 pt-20"
     >
-      {messages.map((message, index) => (
-        <PreviewMessage
-          chatId={chatId}
-          key={message.id}
-          message={message}
-          isLoading={status === 'streaming' && messages.length - 1 === index}
-          setMessages={setMessages}
-          reload={reload}
-          isReadonly={isReadonly}
-        />
-      ))}
+      {messages.map((message, index) => {
+        const snippetId = snippetsData?.find(s => s.messageId === message.id)?.id ?? undefined;
+        
+        return (
+          <PreviewMessage
+            chatId={chatId}
+            key={message.id}
+            message={message}
+            isLoading={status === 'streaming' && messages.length - 1 === index}
+            setMessages={setMessages}
+            reload={reload}
+            isReadonly={isReadonly}
+            snippetId={snippetId}
+          />
+        );
+      })}
 
       <div
         ref={messagesEndRef}

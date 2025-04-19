@@ -3,6 +3,7 @@ import { useCopyToClipboard } from 'usehooks-ts';
 import { useSWRConfig } from 'swr';
 import type { Snippet } from '@/lib/db/schema';
 import { useState, memo } from 'react';
+import { nanoid } from 'nanoid';
 
 import { CopyIcon } from './icons';
 import { BookmarkIcon, ThumbsDownIcon } from 'lucide-react';
@@ -32,12 +33,12 @@ export function PureMessageActions({
   chatId,
   message,
   isLoading,
-  isBookmarked,
+  snippetId,
 }: {
   chatId: string;
   message: Message;
   isLoading: boolean;
-  isBookmarked: boolean | undefined;
+  snippetId: string | null | undefined;
 }) {
   const { mutate } = useSWRConfig();
   const [_, copyToClipboard] = useCopyToClipboard();
@@ -88,7 +89,8 @@ export function PureMessageActions({
               if (currentSnippets.some(s => s.messageId === messageToBookmark.id)) {
                   return currentSnippets;
               }
-              const optimisticSnippet: Snippet = {
+              const optimisticSnippet: Snippet & { id: string } = {
+                  id: nanoid(),
                   userId: '',
                   chatId,
                   messageId: messageToBookmark.id,
@@ -134,7 +136,7 @@ export function PureMessageActions({
                   onClick={() => setSelectedGroupId(group.id)}
                   className="justify-start"
                 >
-                  <group.icon className="mr-2 h-4 w-4" />
+                  <group.icon className="mr-2 size-4" />
                   {group.name}
                 </Button>
               ))}
@@ -193,7 +195,7 @@ export function PureMessageActions({
               className="py-1 px-2 h-fit text-muted-foreground"
               variant="outline"
               onClick={async () => {
-                if (isBookmarked) {
+                if (snippetId) {
                   const removePromise = fetch('/api/snippet', {
                     method: 'POST',
                     body: JSON.stringify({
@@ -228,12 +230,12 @@ export function PureMessageActions({
               }}
             >
               <BookmarkIcon
-                className={cn(isBookmarked ? 'fill-current text-foreground' : '')}
+                className={cn(snippetId ? 'fill-current text-foreground' : '')}
               />
             </Button>
           </TooltipTrigger>
           <TooltipContent>
-            {isBookmarked ? 'Remove bookmark' : 'Bookmark message'}
+            {snippetId ? 'Remove snippet' : 'Save as snippet'}
           </TooltipContent>
         </Tooltip>
 
@@ -277,7 +279,7 @@ export const MessageActions = memo(
   PureMessageActions,
   (prevProps, nextProps) => {
     if (prevProps.isLoading !== nextProps.isLoading) return false;
-    if (prevProps.isBookmarked !== nextProps.isBookmarked) return false;
+    if (prevProps.snippetId !== nextProps.snippetId) return false;
     if (!equal(prevProps.message, nextProps.message)) return false;
 
     return true;

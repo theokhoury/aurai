@@ -42,7 +42,7 @@ export function BookmarksContent() {
   };
 
   return (
-    <ScrollArea className="h-full flex-grow">
+    <ScrollArea className="h-full grow">
       <div className="p-4 space-y-4">
         <div className="flex items-center justify-between">
           <Link href="/snippets" className="group">
@@ -78,7 +78,7 @@ export function BookmarksContent() {
         )}
         {error && (
           <Alert variant="destructive">
-            <AlertTriangleIcon className="h-4 w-4" />
+            <AlertTriangleIcon className="size-4" />
             <AlertTitle>Error</AlertTitle>
             <AlertDescription>
               Failed to load bookmarks. Please try again later.

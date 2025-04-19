@@ -1,14 +1,26 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import useSWR from 'swr';
-import { useSearchParams } from 'next/navigation';
-import { fetcher } from '@/lib/utils';
-import { LoaderIcon, AlertTriangleIcon, XIcon, EditIcon, SaveIcon, XCircleIcon, PlusCircleIcon, Trash2Icon } from 'lucide-react';
+import { useSearchParams, useRouter } from 'next/navigation';
+import { cn, fetcher } from '@/lib/utils';
+import { 
+  LoaderIcon, 
+  AlertTriangleIcon, 
+  XIcon, 
+  EditIcon, 
+  SaveIcon, 
+  XCircleIcon, 
+  PlusCircleIcon, 
+  Trash2Icon, 
+  UsersIcon,
+  GroupIcon,
+  AlertCircleIcon,
+  FileTextIcon,
+} from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import type { Snippet } from '@/lib/db/schema';
 import { ChatHeader } from '@/components/chat-header';
-import { cn } from '@/lib/utils';
 import { Markdown } from '@/components/markdown';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Button } from '@/components/ui/button';
@@ -26,7 +38,6 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  Tooltip,
   Legend,
   ResponsiveContainer,
 } from 'recharts';
@@ -55,6 +66,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { Label } from '@/components/ui/label';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 // Helper function type
 type MessagePart = { type: string; text?: string };
@@ -386,42 +402,64 @@ export default function SnippetsPage() {
             <Panel defaultSize={40} minSize={25}>
               <div className="p-4 h-full flex flex-col">
                 {/* Header Row with Filter and Add Button */}
-                <div className="flex justify-between items-center mb-3 flex-shrink-0">
+                <div className="flex justify-between items-center mb-3 shrink-0">
                   <div className="flex items-center gap-2"> {/* Group title and button */}
                     <h2 className="text-lg font-semibold">Snippets</h2>
                     <Button 
-                      variant="ghost" 
-                      size="icon" 
-                      className="h-6 w-6 text-muted-foreground hover:text-foreground" 
+                      variant="outline" 
+                      size="sm" 
+                      className="ml-auto gap-1.5 text-sm shrink-0"
                       onClick={handleCreateNewSnippet}
-                      title="Create new snippet"
                     >
                       <PlusCircleIcon className="size-4" />
                     </Button>
                   </div>
                   
                   {/* Filter Dropdown */}
-                  <div className="w-[180px]"> {/* Constrain width */} 
-                    <Select 
-                      value={selectedGroupIdFilter ?? 'all'} 
-                      onValueChange={(value) => setSelectedGroupIdFilter(value === 'all' ? null : value)}
-                    >
-                      <SelectTrigger className="h-8"> {/* Remove w-full, maybe adjust height */} 
-                        <SelectValue placeholder="Filter by Group" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="all">All Groups</SelectItem>
-                        {snippetGroups?.map((group) => (
-                          <SelectItem key={group.id} value={group.id}>
-                            {group.name}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                  <div className="w-[180px]"> {/* Constrain width */}
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Select 
+                            value={selectedGroupIdFilter ?? 'all'} 
+                            onValueChange={(value) => setSelectedGroupIdFilter(value === 'all' ? null : value)}
+                          >
+                            <SelectTrigger className="h-8"> {/* Adjust height as needed */}
+                              <SelectValue placeholder="Filter by Group" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="all">
+                                <div className="flex items-center gap-2">
+                                  <FileTextIcon className="size-4 text-muted-foreground"/> {/* Generic icon for all */}
+                                  All Groups
+                                </div>
+                              </SelectItem>
+                              {snippetGroups && snippetGroups.map(group => (
+                                <SelectItem key={group.id} value={group.id}>
+                                  <div className="flex items-center gap-2">
+                                    <GroupIcon className="size-4 text-muted-foreground"/>
+                                    {group.name}
+                                  </div>
+                                </SelectItem>
+                              ))}
+                              <SelectItem value="unassigned">
+                                <div className="flex items-center gap-2">
+                                  <UsersIcon className="size-4 text-muted-foreground"/>
+                                  Unassigned
+                                </div>
+                              </SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Filter snippets by group</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </div>
                 </div>
 
-                <div className="flex-grow overflow-y-auto">
+                <div className="grow overflow-y-auto">
                   {isLoading && (
                     <div className="flex items-center justify-center py-8 text-muted-foreground">
                       <LoaderIcon className="mr-2 size-4 animate-spin" />
@@ -430,7 +468,7 @@ export default function SnippetsPage() {
                   )}
                   {error && (
                     <Alert variant="destructive" className="m-4">
-                      <AlertTriangleIcon className="h-4 w-4" />
+                      <AlertTriangleIcon className="size-4" />
                       <AlertTitle>Error</AlertTitle>
                       <AlertDescription>Could not load snippets.</AlertDescription>
                     </Alert>
@@ -445,7 +483,7 @@ export default function SnippetsPage() {
                       <TableHeader>
                         <TableRow>
                           <TableHead className="whitespace-nowrap">Title</TableHead>
-                          <TableHead className="w-[150px] text-right whitespace-nowrap text-center">Group</TableHead>
+                          <TableHead className="w-[150px] whitespace-nowrap text-center">Group</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -472,7 +510,7 @@ export default function SnippetsPage() {
                                 <TableCell className="text-right">
                                   <Badge 
                                     variant={badgeVariant} 
-                                    className="text-xs whitespace-nowrap overflow-hidden text-ellipsis max-w-full block text-center"
+                                    className="text-xs truncate max-w-full block text-center"
                                     title={groupName} // Show full name on hover
                                   >
                                     {groupName}
@@ -498,7 +536,7 @@ export default function SnippetsPage() {
                   <Button 
                     variant="ghost"
                     size="icon"
-                    className="absolute top-1 right-1 h-6 w-6 rounded-full text-muted-foreground hover:text-foreground z-10 border"
+                    className="absolute top-1 right-1 size-6 rounded-full text-muted-foreground hover:text-foreground z-10 border"
                     onClick={handleCloseViewer}
                     aria-label="Close snippet viewer"
                     disabled={isSaving || isDeleting}
@@ -525,19 +563,19 @@ export default function SnippetsPage() {
                         <div className="flex gap-1 pl-2">
                           {isEditing ? (
                             <>
-                              <Button variant="ghost" size="icon" className="h-7 w-7" onClick={handleSaveClick} title="Save changes" disabled={isSaving || isDeleting}>
+                              <Button variant="ghost" size="icon" className="size-7" onClick={handleSaveClick} title="Save changes" disabled={isSaving || isDeleting}>
                                 {isSaving ? <LoaderIcon className="size-4 animate-spin" /> : <SaveIcon className="size-4" />}
                               </Button>
-                              <Button variant="ghost" size="icon" className="h-7 w-7" onClick={handleCancelClick} title="Cancel editing" disabled={isSaving || isDeleting}>
+                              <Button variant="ghost" size="icon" className="size-7" onClick={handleCancelClick} title="Cancel editing" disabled={isSaving || isDeleting}>
                                 <XCircleIcon className="size-4" />
                               </Button>
                             </>
                           ) : (
                             <>
-                              <Button variant="ghost" size="icon" className="h-7 w-7" onClick={handleEditClick} title="Edit snippet" disabled={isDeleting}>
+                              <Button variant="ghost" size="icon" className="size-7" onClick={handleEditClick} title="Edit snippet" disabled={isDeleting}>
                                 <EditIcon className="size-4" />
                               </Button>
-                              <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive hover:text-destructive/80" onClick={handleDeleteClick} title="Delete snippet" disabled={isDeleting}>
+                              <Button variant="ghost" size="icon" className="size-7 text-destructive hover:text-destructive/80" onClick={handleDeleteClick} title="Delete snippet" disabled={isDeleting}>
                                 {isDeleting ? <LoaderIcon className="size-4 animate-spin" /> : <Trash2Icon className="size-4" />}
                               </Button>
                             </>
@@ -575,10 +613,10 @@ export default function SnippetsPage() {
                           disabled={isSaving}
                         />
                         <div className="flex gap-1 pl-2">
-                          <Button variant="ghost" size="icon" className="h-7 w-7" onClick={handleSaveClick} title="Save new snippet" disabled={isSaving}>
+                          <Button variant="ghost" size="icon" className="size-7" onClick={handleSaveClick} title="Save new snippet" disabled={isSaving}>
                             {isSaving ? <LoaderIcon className="size-4 animate-spin" /> : <SaveIcon className="size-4" />}
                           </Button>
-                          <Button variant="ghost" size="icon" className="h-7 w-7" onClick={handleCancelClick} title="Cancel creation" disabled={isSaving}>
+                          <Button variant="ghost" size="icon" className="size-7" onClick={handleCancelClick} title="Cancel creation" disabled={isSaving}>
                             <XCircleIcon className="size-4" />
                           </Button>
                         </div>

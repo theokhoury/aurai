@@ -23,7 +23,7 @@ const PurePreviewMessage = ({
   chatId,
   message,
   isLoading,
-  isBookmarked,
+  snippetId,
   setMessages,
   reload,
   isReadonly,
@@ -31,7 +31,7 @@ const PurePreviewMessage = ({
   chatId: string;
   message: UIMessage;
   isLoading: boolean;
-  isBookmarked: boolean | undefined;
+  snippetId: string | null | undefined;
   setMessages: UseChatHelpers['setMessages'];
   reload: UseChatHelpers['reload'];
   isReadonly: boolean;
@@ -225,7 +225,7 @@ const PurePreviewMessage = ({
                 chatId={chatId}
                 message={message}
                 isLoading={isLoading}
-                isBookmarked={isBookmarked}
+                snippetId={snippetId}
               />
             )}
           </div>
@@ -241,7 +241,7 @@ export const PreviewMessage = memo(
     if (prevProps.isLoading !== nextProps.isLoading) return false;
     if (prevProps.message.id !== nextProps.message.id) return false;
     if (!equal(prevProps.message.parts, nextProps.message.parts)) return false;
-    if (prevProps.isBookmarked !== nextProps.isBookmarked) return false;
+    if (prevProps.snippetId !== nextProps.snippetId) return false;
 
     return true;
   },

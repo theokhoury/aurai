@@ -174,7 +174,7 @@ export function GenerateTextNode({
 							showDescription
 						>
 							<Button variant="outline" size="sm" className="h-7 px-2">
-								<Plus className="h-4 w-4 mr-1" />
+								<Plus className="size-4 mr-1" />
 								New tool output
 							</Button>
 						</EditableHandleDialog>

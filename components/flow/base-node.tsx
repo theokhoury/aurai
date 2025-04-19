@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { forwardRef } from "react";
 
-export const BaseNode = React.forwardRef<
+export const BaseNode = forwardRef<
 	HTMLDivElement,
 	React.HTMLAttributes<HTMLDivElement> & { selected?: boolean }
 >(({ className, selected, ...props }, ref) => (

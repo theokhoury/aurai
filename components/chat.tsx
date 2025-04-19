@@ -5,7 +5,7 @@ import { useChat } from '@ai-sdk/react';
 import { useState, useEffect, FormEvent } from 'react';
 import useSWR, { useSWRConfig } from 'swr';
 import { ChatHeader } from '@/components/chat-header';
-import { fetcher, generateUUID } from '@/lib/utils';
+import { fetcher, generateUUID, cn } from '@/lib/utils';
 import type { Snippet } from '@/lib/db/schema';
 import { Artifact } from './artifact';
 import { MultimodalInput } from './multimodal-input';
@@ -18,7 +18,6 @@ import { getChatHistoryPaginationKey } from './sidebar-history';
 import { emitter } from '@/lib/event-emitter';
 import { Button } from '@/components/ui/button';
 import { CrossSmallIcon } from './icons';
-import { cn } from '@/lib/utils';
 
 // Type for the displayed bookmark state
 interface DisplayedBookmark {
@@ -199,11 +198,11 @@ export function Chat({
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="h-4 w-4 shrink-0 rounded-full"
+                      className="size-4 shrink-0 rounded-full"
                       onClick={() => removeSelectedBookmark(bookmark)}
                       aria-label={`Remove snippet: ${bookmark.title}`}
                     >
-                      <CrossSmallIcon className="size-3" />
+                      <CrossSmallIcon size={12} />
                     </Button>
                   </div>
                 ))}
@@ -212,11 +211,11 @@ export function Chat({
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute right-1 top-1 h-6 w-6 rounded-full text-muted-foreground hover:text-foreground"
+                className="absolute right-1 top-1 size-6 rounded-full text-muted-foreground hover:text-foreground"
                 onClick={clearSelectedBookmarks}
                 aria-label="Clear all selected snippets"
               >
-                <CrossSmallIcon className="size-4" />
+                <CrossSmallIcon size={16} />
               </Button>
             </div>
           )}

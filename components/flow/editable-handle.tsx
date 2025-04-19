@@ -13,8 +13,7 @@ import { BaseHandle } from "@/components/flow/base-handle";
 import type { HandleProps, Node } from "@xyflow/react";
 import { useOnSelectionChange } from "@xyflow/react";
 import { Edit2, Trash } from "lucide-react";
-import React, { useState } from "react";
-import { useCallback } from "react";
+import React, { useState, useCallback, forwardRef, HTMLAttributes } from "react";
 
 type HandleEditorProps = {
 	variant: "edit" | "create";
@@ -119,7 +118,7 @@ const EditableHandleDialog = ({
 EditableHandleDialog.displayName = "EditableHandleDialog";
 
 type EditableHandleProps = HandleProps &
-	React.HTMLAttributes<HTMLDivElement> & {
+	HTMLAttributes<HTMLDivElement> & {
 		nodeId: string;
 		handleId: string;
 		name: string;
@@ -136,7 +135,7 @@ type EditableHandleProps = HandleProps &
 		showDescription?: boolean;
 	};
 
-const EditableHandle = React.forwardRef<HTMLDivElement, EditableHandleProps>(
+const EditableHandle = forwardRef<HTMLDivElement, EditableHandleProps>(
 	(
 		{
 			nodeId,
@@ -156,27 +155,26 @@ const EditableHandle = React.forwardRef<HTMLDivElement, EditableHandleProps>(
 	) => {
 		const [isEditing, setIsEditing] = useState(label.length === 0);
 
+		const resetEditing = useCallback(() => {
+			if (label.length === 0) {
+				onDelete(handleId);
+				return;
+			}
+			setIsEditing(false);
+		}, [label, onDelete, handleId]);
+
 		const handleSelectionChange = useCallback(
 			({ nodes }: { nodes: Node[] }) => {
 				if (isEditing && !nodes.some((node) => node.id === nodeId)) {
 					resetEditing();
 				}
 			},
-			[isEditing, nodeId],
+			[isEditing, nodeId, resetEditing],
 		);
 
 		useOnSelectionChange({
 			onChange: handleSelectionChange,
 		});
-
-		const resetEditing = () => {
-			if (label.length === 0) {
-				onDelete(handleId);
-				return;
-			}
-
-			setIsEditing(false);
-		};
 
 		const handleSave = (newLabel: string, newDescription?: string) => {
 			return onUpdateTool(handleId, newLabel, newDescription);

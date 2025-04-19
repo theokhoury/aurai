@@ -1,14 +1,23 @@
-import { NextResponse } from 'next/server';
-import { promises as fs } from 'fs';
-import path from 'path';
-import mime from 'mime-types';
+import { NextRequest, NextResponse } from 'next/server';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+// import mime from 'mime-types'; // Removed default import
+import { lookup } from 'mime-types';
 
+// Removed @ts-ignore
 export async function GET(
-  request: Request,
-  { params }: { params: { filename: string } }
+  request: NextRequest // Only accept request
+  // Removed second argument: { params }: { params: { filename: string } }
 ) {
   try {
-    const requestedFilename = decodeURIComponent(params.filename);
+    // Get filename from query parameter
+    const filename = request.nextUrl.searchParams.get('filename');
+
+    if (!filename) {
+      return NextResponse.json({ error: 'Missing filename query parameter' }, { status: 400 });
+    }
+
+    const requestedFilename = decodeURIComponent(filename);
 
     // Basic security check: Ensure filename doesn't contain path traversal elements
     // and resolves within the intended directory.
@@ -34,7 +43,7 @@ export async function GET(
     const fileBuffer = await fs.readFile(filePath);
 
     // Determine content type
-    const contentType = mime.lookup(filePath) || 'application/octet-stream';
+    const contentType = lookup(filePath) || 'application/octet-stream';
 
     // Return file content
     return new NextResponse(fileBuffer, {

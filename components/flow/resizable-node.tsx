@@ -1,11 +1,11 @@
 import { cn } from "@/lib/utils";
 import { BaseNode } from "@/components/flow/base-node";
 import { NodeResizer } from "@xyflow/react";
-import React from "react";
+import React, { forwardRef, HTMLAttributes } from "react";
 
-export const ResizableNode = React.forwardRef<
+export const ResizableNode = forwardRef<
 	HTMLDivElement,
-	React.HTMLAttributes<HTMLDivElement> & {
+	HTMLAttributes<HTMLDivElement> & {
 		selected: boolean;
 	}
 >(({ className, selected, style, children, ...props }, ref) => (
